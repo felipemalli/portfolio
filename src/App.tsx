@@ -13,7 +13,7 @@ function App() {
         <p className="text-gray-700">
           Portfolio
         </p>
-        <section className='relative'>
+        <section className='relative w-[89.938rem] h-[52] m-auto'>
           <ProjectArea></ProjectArea>
           <SearchBar></SearchBar>
           <CourseArea></CourseArea>
