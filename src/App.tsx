@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CourseArea from './components/CourseArea'
 import ProjectArea from './components/ProjectArea'
+import { SearchBar } from './components/SearchBar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,8 +13,9 @@ function App() {
         <p className="text-gray-700">
           Portfolio
         </p>
-        <section>
+        <section className='relative'>
           <ProjectArea></ProjectArea>
+          <SearchBar></SearchBar>
           <CourseArea></CourseArea>
         </section>
       </main>
