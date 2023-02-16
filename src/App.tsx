@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
   
   return (
-    <div className="bg-[#fbfbfb] h-screen">
+    <div className="bg-[#fbfbfb] h-auto">
       <header></header>
       <main>
         <p className="text-gray-700">
