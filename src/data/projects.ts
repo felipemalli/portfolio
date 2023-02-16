@@ -17,7 +17,7 @@ interface IProject {
 const projects: IProject[] = [
   {
     name: 'Portfolio',
-    description: 'Page developed to expose my projects, courses taken and skills already trained. I will develop a backend for this application soon!',
+    description: 'Project developed to expose my knowledge. Projects, courses taken, skills already trained, my future steps and goals. OBS: I will develop a backend for this application soon!',
     hasDeploy: false,
     inProgress: true,
     techAreas: {
