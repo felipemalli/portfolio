@@ -11,7 +11,7 @@ export default function CourseArea() {
         <Card type='course' name='Full Stack Web development'></Card>
         <Card type='course' name='Amazon Web Services (AWS): Essencial'></Card>
       </div>
-      <h2 className='text-4xl font-bold text-[#220909]'>Courses</h2>
+      <h2 className='text-4xl font-bold text-[#220909] select-none'>Courses</h2>
     </div>
   )
 }
