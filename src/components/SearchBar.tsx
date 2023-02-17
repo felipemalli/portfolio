@@ -11,7 +11,7 @@ export const SearchBar: React.FC = () => {
   // console.log(filteredTechs)
 
   return (
-    <div className='flex items-center bg-[#fbfbfb] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-9 rounded-full p-0.5'>
+    <div className='flex items-center bg-[#fbfbfb] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-9 rounded-full p-0.5 shadow-md hover:shadow-lg'>
       <button className='flex justify-center items-center w-7 h-7 left-1 pr-0.5 rounded-full absolute bg-[#d9d9d9] hover:bg-[#eaeced]'>
         <img className='w-3.5' src="src/assets/icons/searchIcon.svg"></img>
       </button>
