@@ -8,12 +8,12 @@ export const TechAreaButton: React.FC<{techArea: string, enable: boolean}> = ({ 
     <>
       {
         enable ? (
-          <button className="w-24 h-8 bg-[#d9d9d9] hover:bg-[#dedede] rounded-md text-sm">
+          <button className='w-16 h-8 bg-[#d9d9d9] hover:bg-[#e4e4e4] active:bg-green-400 rounded-md text-sm transition-color duration-200 '>
             {techArea}
           </button>
         ) : (
           <></>
-          // <button className="w-16 h-8 bg-[#d9d9d9] hover:bg-[#dedede] rounded-md text-sm opacity-40">
+          // <button className='w-16 h-8 bg-[#d9d9d9] hover:bg-[#dedede] rounded-md text-sm opacity-40'>
           //   {techArea}
           // </button>
         )
