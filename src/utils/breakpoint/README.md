@@ -1,0 +1,1 @@
+After a lot of research and nothing good, this is the best solution I discovered to solve vite's problem with exporting tailwind configuration to js.
