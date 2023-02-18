@@ -1,15 +1,13 @@
-import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import CourseArea from './components/CourseArea';
 import ProjectArea from './components/ProjectArea';
 import { SearchBar } from './components/SearchBar';
-// import { getBreakpoint } from './utils/breakpoint/updateBreakpoint';
+import { breakpoints } from './utils/breakpoints';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isXl = useMediaQuery(breakpoints.isXl)
+  console.log(isXl)
 
-  console.log('called')
-
-  // getBreakpoint()
 
   return (
     <div>
