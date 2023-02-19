@@ -1,15 +1,10 @@
 import { motion } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
+import { TypeAnimation } from 'react-type-animation';
 import CourseArea from './components/CourseArea';
 import ProjectArea from './components/ProjectArea';
 import { SearchBar } from './components/SearchBar';
-import { breakpoints } from './utils/breakpoints';
 
 function App() {
-  const isXl = useMediaQuery(breakpoints.isXl)
-  console.log(isXl)
-
-
   return (
     <div>
       <main className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
@@ -33,7 +28,16 @@ function App() {
           <section className='flex flex-col xl:flex-row justify-center 2xl:justify-evenly items-center 2xl:gap-32 gap-3 -mt-10 2xl:mt-0'>
             <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-10'>
               <h1 className='text-[#212C35] text-6xl font-semibold text-center xl:text-left'>Felipe Malliagros</h1>
-              <h3 className='text-[#58656F] text-2xl font-semibold mt-7 text-center xl:text-left'>Full stack developer</h3>
+              <div className='text-[#58656F] text-2xl font-semibold mt-7 text-center xl:text-left'>
+                <TypeAnimation sequence={[
+                  'Full Stack',
+                  3000,
+                  'Back End',
+                  3000,
+                ]} speed={50} wrapper='span' repeat={Infinity} cursor={false}
+                />
+                <span> developer</span>
+              </div>
               <p className='text-[#58656F] text-base font-normal mt-7 text-center xl:text-left'>I'm a logic and creativity guy. Specialized in backend, but I like all areas of web development. I'm always studying to keep myself qualified and updated.</p>
               <div className='mt-7 text-center xl:text-left'>
                 <button className='w-32 h-14 mr-4 bg-[#D5685A] hover:bg-[#e4e4e4] hover:text-[#58656F] text-[#fbfbfb] active:bg-green-400 rounded-md text-sm transition-color duration-200 '>
