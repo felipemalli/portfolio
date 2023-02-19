@@ -1,18 +1,20 @@
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { TechAreaButton } from './TechAreaButton';
 
 export interface CardProps {
+  key?: string,
   type: 'project' | 'course';
   name: string,
   image: string,
 }
 
-export const Card: React.FC<CardProps> = ({ type, name, image }: CardProps) => {
+export const Card: React.FC<CardProps> = ({ key, type, name, image }: CardProps) => {
 
   const [screen, setScreen] = useState<'photoFrame' | 'singleSkillTable' | 'doubleSkillTable'>('photoFrame');
 
   return (
-    <div className={`flex flex-col justify-evenly	w-56 p- content-between items-center border rounded-2xl border-gray-300 shadow-md hover:outline hover:outline-2 hover:outline-gray-300 ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+    <motion.div whileHover={{ scale: 1.05 }} key={key} className={`flex flex-col justify-evenly	w-56 p- content-between items-center border rounded-2xl border-gray-300 shadow-md ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 w-56  pt-1 text-gray-900 font-medium text-center
       ${type === 'project' ? 'text-lg' : 'text-sm'}`}
         onClick={ () => console.log('teste')}
@@ -28,6 +30,6 @@ export const Card: React.FC<CardProps> = ({ type, name, image }: CardProps) => {
         <TechAreaButton techArea='Back' enable={true}></TechAreaButton>
         <TechAreaButton techArea='Devops' enable={true}></TechAreaButton>
       </div>
-    </div>
+    </motion.div>
   )
 }
