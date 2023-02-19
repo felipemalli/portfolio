@@ -3,7 +3,7 @@ import { Card } from './Card'
 export default function CourseArea() {
 
   return (
-    <div className='flex flex-col justify-evenly items-center h-[26rem] m-auto rounded-b-[5rem] border border-[#737E86]'>
+    <div className='flex flex-col justify-evenly items-center bg-[#fbfbfb] h-[26rem] m-auto md:rounded-b-[5rem] border border-[#737E86]'>
       <div className='flex justify-center items-center gap-[0.938rem]'>
         <Card type='course' name='Microservices with NodeJS and React' image=''></Card>
         <Card type='course' name='PRO FIGMA | User Interface Design From Beginner to Expert' image=''></Card>
