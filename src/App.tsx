@@ -1,4 +1,3 @@
-import { Carrosel } from './components/Carrosel';
 import { LandingPage } from './pages/LandingPage';
 
 function App() {
@@ -6,7 +5,6 @@ function App() {
     <div>
       <LandingPage />
       <a className='' href='#header'> /\ </a>
-      <Carrosel></Carrosel>
     </div>
   )
 }
