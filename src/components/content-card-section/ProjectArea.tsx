@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMediaQuery } from 'react-responsive';
-import { breakpoints } from '../../../utils/breakpoints';
-import { Card } from "../../shared/Card";
+import { breakpoints } from '../../utils/breakpoints';
+import { Card, CARD_SIZE } from "../shared/Card";
 
 const data = [
   { image: 'src/assets/courses/aws-geekuniversity.jpg', name: 'aws 1'},
@@ -16,10 +16,21 @@ const data = [
   { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 2'},
   { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 3'},
   { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 4'},
+  { image: 'src/assets/courses/aws-geekuniversity.jpg', name: 'aws 4'},
+  { image: 'src/assets/courses/aws-geekuniversity.jpg', name: 'aws 6'},
+  { image: 'src/assets/courses/microservices-stephengrinder.jpg', name: 'microservices 7'},
+  { image: 'src/assets/courses/microservices-stephengrinder.jpg', name: 'microservices 8'},
+  { image: 'src/assets/courses/profigma-lucasmarte.jpg', name: 'profigma 8'},
+  { image: 'src/assets/courses/profigma-lucasmarte.jpg', name: 'profigma 9'},
+  { image: 'src/assets/courses/tailwind-bradtraversy.jpg', name: 'tailwind 6'},
+  { image: 'src/assets/courses/tailwind-bradtraversy.jpg', name: 'tailwind 5'},
+  { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 8'},
+  { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 9'},
+  { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 0'},
+  { image: 'src/assets/courses/webdevelopment-trybe.png', name: 'webdevelopment 5'},
 ]
 
-const CARD_SIZE = 239 // to scroll the perfect amount and not break a card
-const TIME_TO_CARD_SWAP = 225 // time to not break scroll movement
+const TIME_TO_CARD_SCROLL = 300 // time to not break scroll movement
 
 export default function ProjectArea() {
   const [index, setIndex] = useState(0)
@@ -32,6 +43,7 @@ export default function ProjectArea() {
   const isXl = useMediaQuery(breakpoints.isXl)
   const is2Xl = useMediaQuery(breakpoints.is2xl)
   const cardsOnScreenQuantity: number = is2Xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1
+  const cardsScrollMultiplier: number = isMd ? 2 : 1
 
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
@@ -41,7 +53,7 @@ export default function ProjectArea() {
         setTimeout(() => {
           setButtonClickable(true);
           resolve();
-        }, TIME_TO_CARD_SWAP * cardsOnScreenQuantity);
+        }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
       })
       checkEndOfScroll()
     }
@@ -84,8 +96,7 @@ export default function ProjectArea() {
           <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
         </button>
         
-        <div id='project-content' className="w-[15rem] md:w-[30rem] lg:w-[45rem] xl:w-[60rem] 2xl:w-[75rem]
-        hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[15rem]">
+        <div id='project-content' className={`w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[15rem]`}>
           {data.map((d) => (
             <Card cardKey={d.name} type={'project'} name={d.name} image={d.image}></Card>
           ))}

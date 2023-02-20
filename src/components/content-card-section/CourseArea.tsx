@@ -1,4 +1,4 @@
-import { Card } from '../../shared/Card'
+import { Card } from '../shared/Card'
 
 export default function CourseArea() {
 
