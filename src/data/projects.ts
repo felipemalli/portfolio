@@ -2,7 +2,7 @@ interface IProject {
   name: string,
   description: string,
   inProgress: boolean,
-  imagePath?: string,
+  image?: string,
   techAreas: {
     frontendSkills?: string[],
     backendSkills?: string[],
