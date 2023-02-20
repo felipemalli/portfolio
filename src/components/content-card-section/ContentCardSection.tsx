@@ -1,9 +1,8 @@
-import { IChildrenProps } from '../../interfaces'
-import CourseArea from './particular-components/CourseArea'
-import ProjectArea from './particular-components/ProjectArea'
-import { SearchBar } from './particular-components/SearchBar'
+import CourseArea from './CourseArea'
+import { SearchBar } from './particular/SearchBar'
+import ProjectArea from './ProjectArea'
 
-export const ContentCardSection: React.FC<IChildrenProps> = ({children}: IChildrenProps) => {
+export const ContentCardSection: React.FC = () => {
   return (
     <section className='relative mt-36 md:mt-0'>
       <ProjectArea></ProjectArea>

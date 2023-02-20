@@ -1,4 +1,4 @@
-import { NavOption } from './particular-components/NavOption';
+import { NavOption } from './particular/NavOption';
 
 export const Header: React.FC = () => {
   return (

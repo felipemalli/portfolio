@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import CourseArea from '../components/content-card-section/particular-components/CourseArea';
-import ProjectArea from '../components/content-card-section/particular-components/ProjectArea';
-import { SearchBar } from '../components/content-card-section/particular-components/SearchBar';
+import CourseArea from '../components/content-card-section/CourseArea';
+import { SearchBar } from '../components/content-card-section/particular/SearchBar';
+import ProjectArea from '../components/content-card-section/ProjectArea';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
 
