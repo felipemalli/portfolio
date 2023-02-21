@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { breakpoints } from '../../utils/breakpoints';
 import { Card, CARD_SIZE } from '../shared/Card';
+import { SliderFiveColumns } from '../shared/SliderFiveColumns';
 
 const data = [
   { image: 'src/assets/courses/aws-geekuniversity.jpg', name: 'aws 1'},
@@ -95,26 +96,20 @@ export const ProjectArea: React.FC = () => {
   return (
     <div className='flex flex-col justify-evenly items-center h-[26rem] m-auto md:rounded-t-[5rem] shadow-inner bg-[#D5685A]'>
       <h2 className='text-4xl font-bold text-[#f9f9f9] select-none -mb-5'>Projects</h2>
-      <div className={'flex justify-center items-center gap-[0.938rem]'}>
 
-        <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
-          onClick={() => handleClick(scrollLeft)}
-        >
-          <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
-        </button>
-        
+      <SliderFiveColumns id={'project-content'} CARD_SIZE={CARD_SIZE}>
+        {/* <div id='project-content' className='w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar grid grid-rows-4 grid-flow-col items-center justify-start overflow-x-auto scroll-smooth h-[16rem]'>
+          { backendSkills.map((name) => (
+            <SkillCard key={name} type={'backend'} name={name}/>
+          )) }
+        </div> */}
         <div id='project-content' className={'w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]'}>
           {data.map((d) => (
             <Card key={d.name} type={'project'} name={d.name} image={d.image}></Card>
           ))}
         </div>
+      </SliderFiveColumns>
 
-        <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
-          onClick={() => handleClick(scrollRight)}
-        >
-          <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
-        </button>
-      </div>
 
 
 
