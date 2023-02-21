@@ -15,7 +15,7 @@ export const Card: React.FC<CardProps> = ({ key: cardKey, type, name, image }: C
   // const [screen, setScreen] = useState<'photoFrame' | 'singleSkillTable' | 'doubleSkillTable'>('photoFrame');
 
   return (
-    <div key={cardKey} className={`${CARD_MARGIN_X} hover:scale-105 flex flex-col justify-evenly ${CARD_WIDTH} p- content-between items-center border rounded-2xl border-gray-300 shadow-md ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+    <div key={cardKey} className={`${CARD_MARGIN_X} transition ease-in-out hover:scale-105 flex flex-col justify-evenly ${CARD_WIDTH} p- content-between items-center border rounded-2xl border-gray-300 shadow-md ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} pt-1 text-gray-900 font-medium text-center
       ${type === 'project' ? 'text-lg' : 'text-sm'}`}
       onClick={ () => console.log('teste')}

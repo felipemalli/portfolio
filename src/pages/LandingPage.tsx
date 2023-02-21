@@ -11,10 +11,10 @@ export const LandingPage: React.FC = () => {
   return (
     <div>
       <main className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
-        <motion.div animate={{ y: 0 }} initial={{ y: -400 }} transition={{ type: 'tween', duration: 1.5 }}>
+        <motion.div initial={{ y: -400 }} animate={{ y: 0 }} transition={{ type: 'tween', duration: 1.5 }}>
           <Header />
         </motion.div>
-        <motion.div animate={{ y: 0 }} initial={{ y: 700 }} transition={{ type: 'tween', duration: 1.5 }}>
+        <motion.div initial={{ opacity: 0.5, y: 700 }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'tween', duration: 1.5 }}>
           <IntroductionSection />
           <section className='relative mt-36 md:mt-0'>
             <ProjectArea></ProjectArea>
