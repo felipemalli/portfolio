@@ -1,11 +1,10 @@
-import { LandingPage } from './pages/LandingPage';
+import { AppRoutes } from './routes/index';
 
 function App() {
   return (
-    <div>
-      <LandingPage />
-      <a className='' href='#header'> /\ </a>
-    </div>
+    <>
+      <AppRoutes />
+    </>
   )
 }
 
