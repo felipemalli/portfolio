@@ -32,7 +32,7 @@ const data = [
 
 const TIME_TO_CARD_SCROLL = 300; // time to not break scroll movement
 
-export default function ProjectArea() {
+export const ProjectArea: React.FC = () => {
   const [buttonClickable, setButtonClickable] = useState(true);
   const [rightArrowClickable, setRightArrowClickable] = useState(true);
   const [leftArrowClickable, setLeftArrowClickable] = useState(false);
@@ -93,8 +93,8 @@ export default function ProjectArea() {
   };
 
   return (
-    <div className='flex flex-col justify-evenly items-center bg-[#D5685A] h-[26rem] m-auto md:rounded-t-[5rem] shadow-inner'>
-      <h2 className='text-4xl font-bold text-[#f9f9f9] select-none'>Projects</h2>
+    <div className='flex flex-col justify-evenly items-center h-[26rem] m-auto md:rounded-t-[5rem] shadow-inner bg-[#D5685A]'>
+      <h2 className='text-4xl font-bold text-[#f9f9f9] select-none -mb-5'>Projects</h2>
       <div className={'flex justify-center items-center gap-[0.938rem]'}>
 
         <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
@@ -103,7 +103,7 @@ export default function ProjectArea() {
           <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
         </button>
         
-        <div id='project-content' className={'w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[15rem]'}>
+        <div id='course-content' className={'w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]'}>
           {data.map((d) => (
             <Card key={d.name} type={'project'} name={d.name} image={d.image}></Card>
           ))}
@@ -121,4 +121,4 @@ export default function ProjectArea() {
       {/* <Carousel cardDataList={data[index]}></Carousel> */}
     </div>
   );
-}
+};
