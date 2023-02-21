@@ -1,6 +1,6 @@
-import CourseArea from './CourseArea';
+import { CourseArea } from './CourseArea';
 import { SearchBar } from './particular/SearchBar';
-import ProjectArea from './ProjectArea';
+import { ProjectArea } from './ProjectArea';
 
 export const ContentCardSection: React.FC = () => {
   return (

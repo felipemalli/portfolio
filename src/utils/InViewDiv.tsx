@@ -1,10 +1,6 @@
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-
-interface IChildrenProps {
-  children: React.ReactNode;
-}
-
+import { IChildrenProps } from '../interfaces';
 interface IInviewProps extends IChildrenProps {
   translation?: string,
   duration?: string,
