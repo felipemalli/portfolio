@@ -103,7 +103,7 @@ export const ProjectArea: React.FC = () => {
           <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
         </button>
         
-        <div id='course-content' className={'w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]'}>
+        <div id='project-content' className={'w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]'}>
           {data.map((d) => (
             <Card key={d.name} type={'project'} name={d.name} image={d.image}></Card>
           ))}
