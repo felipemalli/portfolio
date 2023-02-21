@@ -1,0 +1,19 @@
+on: [push, pull_request]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify git's repository
+        uses: actions/checkout@v2
+
+      - name: Install node with a version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 19
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Execute lint to verify erros
+        run: npm run lint
