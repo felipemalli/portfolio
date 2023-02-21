@@ -1,16 +1,18 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
-interface CardProps {
+// interface CardProps {
   
-}
+// }
 
-export const CardArrow: React.FC<{type: string, name: string}> = ({ type, name }: {type: string, name: string}) => {
+// export const CardArrow: React.FC<{type: string, name: string}> = ({ type, name }: {type: string, name: string}) => {
 
-  const [isAllowed, setIsAllowed] = useState<boolean>(false);
+//   const [isAllowed, setIsAllowed] = useState<boolean>(false);
 
-  return (
-    <div className={`${isAllowed ? '' : 'cursor-not-allowed'}`}>
+//   return (
+//     <div className={`${isAllowed ? '' : 'cursor-not-allowed'}`}>
 
-    </div>
-  )
-}
+//     </div>
+//   );
+// };
+
+export { };

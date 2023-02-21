@@ -2,38 +2,52 @@ interface ICourse {
   name: string,
   description: string,
   inProgress: boolean,
-  image: string,
+  image?: string,
   techAreas: {
-    frontendSkills?: string[],
-    backendSkills?: string[],
-    devopsSkills?: string[],
+    frontend?: {
+      skills?: string[],
+    }
+    backend?: {
+      skills?: string[],
+    }
+    devops?: {
+      skills?: string[],
+    }
   }
   hours: number,
-  instructor: string,
   certificateLink?: string,
+  instructor: string,
 }
 
 const courses: ICourse[] = [
   {
     name: 'Full Stack web development',
-    description: "Where I learned to code. In addition to the thousands of hours invested in learning, I've done a huge amount of projects in this course. Most aren't on github.",
+    description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
     image: 'courses/webdevelopment-trybe.png',
     techAreas: {
-      frontendSkills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
-      backendSkills: ['Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Jest', 'JWT', 'BCrypt', 'SOLID', 'OOP']
+      frontend:{
+        skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
+      },
+      backend: {
+        skills: ['Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Jest', 'JWT', 'BCrypt', 'SOLID', 'OOP']
+      },
     },
     hours: 1500,
     instructor: 'Brad Traversy',
   },
   {
     name: 'Java Bootcamp',
-    description: "I learn Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I've done a lot of projects in this course and most aren't on github. ",
+    description: 'I learn Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
     image: 'courses/webdevelopment-trybe.png',
     techAreas: {
-      backendSkills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
-      devopsSkills: ['Docker'],
+      backend: {
+        skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
+      },
+      devops: {
+        skills: ['Docker'],
+      }
     },
     hours: 500,
     instructor: 'Wipro and Trybe',
@@ -44,9 +58,15 @@ const courses: ICourse[] = [
     inProgress: false,
     image: 'courses/microservices-stephengrinder.jpg',
     techAreas: {
-      frontendSkills: ['Typescript', 'React', 'Next', 'Tailwind'],
-      backendSkills: ['Node', 'Express', 'Jest', 'JWT', 'Cookies' ],
-      devopsSkills: ['Docker', 'Kubernetes', 'Scaffolding'],
+      frontend:{
+        skills: ['Typescript', 'React', 'Next', 'Tailwind'],
+      },
+      backend: {
+        skills: ['Node', 'Express', 'Jest', 'JWT', 'Cookies' ],
+      },
+      devops: {
+        skills: ['Docker', 'Kubernetes', 'Scaffolding'],
+      }
     },
     hours: 54.5,
     instructor: 'Stephen Grinder',
@@ -58,7 +78,9 @@ const courses: ICourse[] = [
     inProgress: false,
     image: 'courses/aws-geekuniversity.jpg',
     techAreas: {
-      devopsSkills: ['AWS'],
+      devops: {
+        skills: ['AWS'],
+      }
     },
     hours: 12.5,
     instructor: 'Geek University',
@@ -70,7 +92,9 @@ const courses: ICourse[] = [
     inProgress: true,
     image: 'courses/profigma-lucasmarte.jpg',
     techAreas: {
-      frontendSkills: ['Figma'],
+      frontend:{
+        skills: ['Figma'],
+      }
     },
     hours: 14.5,
     instructor: 'Lucas Marte',
@@ -81,11 +105,13 @@ const courses: ICourse[] = [
     inProgress: true,
     image: 'courses/tailwind-bradtraversy.jpg',
     techAreas: {
-      frontendSkills: ['HTML', 'Tailwind'],
+      frontend:{
+        skills: ['HTML', 'Tailwind'],
+      }
     },
     hours: 12.5,
     instructor: 'Brad Traversy',
   },
-]
+];
 
-export { courses }
+export { courses };

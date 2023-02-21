@@ -1,10 +1,9 @@
-import { motion } from "framer-motion"
-import { TypeAnimation } from "react-type-animation"
+import { motion } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 export const IntroductionSection: React.FC = () => {
-  
   return (
-    <section className='flex flex-col xl:flex-row justify-center 2xl:justify-evenly items-center 2xl:gap-32 gap-3 -mt-10 2xl:mt-0'>
+    <section className='flex flex-col xl:flex-row justify-center 2xl:justify-evenly items-center 2xl:gap-32 gap-3 md:-mt-10 2xl:mt-0 h-screen md:h-auto'>
       <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-10'>
         <h1 className='text-[#212C35] text-6xl font-semibold text-center xl:text-left'>Felipe Malliagros</h1>
         <div className='text-[#58656F] text-2xl font-semibold mt-7 text-center xl:text-left'>
@@ -17,7 +16,7 @@ export const IntroductionSection: React.FC = () => {
           />
           <span> developer</span>
         </div>
-        <p className='text-[#58656F] text-base font-normal mt-7 text-center xl:text-left'>I'm a logic and creativity guy. Specialized in backend, but I like all areas of web development. I'm always studying to keep myself qualified and updated.</p>
+        <p className='text-[#58656F] text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>I{'>'}m a logic and creativity guy. Specialized in backend, but I like all areas of web development. I{'>'}m always studying to keep myself qualified and updated.</p>
         <div className='mt-7 text-center xl:text-left'>
           <button className='w-32 h-14 mr-4 bg-[#D5685A] hover:bg-[#e4e4e4] hover:text-[#58656F] text-[#fbfbfb] active:bg-green-400 rounded-md text-sm transition-color duration-200 '>
             Contact me
@@ -32,5 +31,5 @@ export const IntroductionSection: React.FC = () => {
       </div>
       <img src="src/assets/icons/cleanArrow.svg" className='absolute bottom-4 invisible xl:visible'></img>
     </section>
-  )
-}
+  );
+};
