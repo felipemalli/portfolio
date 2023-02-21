@@ -16,7 +16,7 @@ interface ICourse {
 const courses: ICourse[] = [
   {
     name: 'Full Stack web development',
-    description: "Where I learned to code. In addition to the thousands of hours invested in learning, I've done a huge amount of projects in this course. Most aren't on github.",
+    description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
     image: 'courses/webdevelopment-trybe.png',
     techAreas: {
@@ -28,7 +28,7 @@ const courses: ICourse[] = [
   },
   {
     name: 'Java Bootcamp',
-    description: "I learn Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I've done a lot of projects in this course and most aren't on github. ",
+    description: 'I learn Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
     image: 'courses/webdevelopment-trybe.png',
     techAreas: {
@@ -86,6 +86,6 @@ const courses: ICourse[] = [
     hours: 12.5,
     instructor: 'Brad Traversy',
   },
-]
+];
 
-export { courses }
+export { courses };

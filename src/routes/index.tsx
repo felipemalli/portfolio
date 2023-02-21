@@ -1,5 +1,5 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
-import { LandingPage } from "../pages/LandingPage";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import { LandingPage } from '../pages/LandingPage';
 
 export function AppRoutes() {
 
@@ -9,7 +9,7 @@ export function AppRoutes() {
         <Route path="/" element={<LandingPage/>} />
       </>
     )
-  )
+  );
 
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }

@@ -25,5 +25,5 @@ export const LandingPage: React.FC = () => {
         <img src="src/assets/background/circle.svg" className='absolute opacity-80 -top-[70%] left-[70%] 2xl:-top-[80%] -z-10 scale-125 invisible xl:visible'></img>
       </main>
     </div>
-  )
-}
+  );
+};

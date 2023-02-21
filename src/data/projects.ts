@@ -25,6 +25,6 @@ const projects: IProject[] = [
     },
     codeLink: 'https://github.com/felipemalli/portfolio',
   }
-]
+];
 
-export { projects }
+export { projects };

@@ -1,6 +1,6 @@
-import CourseArea from './CourseArea'
-import { SearchBar } from './particular/SearchBar'
-import ProjectArea from './ProjectArea'
+import CourseArea from './CourseArea';
+import { SearchBar } from './particular/SearchBar';
+import ProjectArea from './ProjectArea';
 
 export const ContentCardSection: React.FC = () => {
   return (
@@ -9,5 +9,5 @@ export const ContentCardSection: React.FC = () => {
       <SearchBar></SearchBar>
       <CourseArea></CourseArea>
     </section>
-  )
-}
+  );
+};

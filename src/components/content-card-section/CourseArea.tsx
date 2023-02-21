@@ -1,4 +1,4 @@
-import { Card } from '../shared/Card'
+import { Card } from '../shared/Card';
 
 export default function CourseArea() {
 
@@ -13,5 +13,5 @@ export default function CourseArea() {
       </div>
       <h2 className='text-4xl font-bold text-[#220909] select-none'>Courses</h2>
     </div>
-  )
+  );
 }

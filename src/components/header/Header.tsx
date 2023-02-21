@@ -10,5 +10,5 @@ export const Header: React.FC = () => {
         <NavOption>More about me</NavOption>
       </nav>
     </header>
-  )
-}
+  );
+};

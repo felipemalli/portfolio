@@ -1,8 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export const TechAreaButton: React.FC<{techArea: string, enable: boolean}> = ({ techArea, enable }: {techArea: string, enable: boolean}) => {
 
-  const [screen, setScreen] = useState<'photoFrame' | 'singleSkillTable' | 'doubleSkillTable'>('photoFrame');
+  // const [screen, setScreen] = useState<'photoFrame' | 'singleSkillTable' | 'doubleSkillTable'>('photoFrame');
 
   return (
     <>
@@ -19,5 +19,5 @@ export const TechAreaButton: React.FC<{techArea: string, enable: boolean}> = ({ 
         )
       }
     </>
-  )
-}
+  );
+};

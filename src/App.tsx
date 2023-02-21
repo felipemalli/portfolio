@@ -5,7 +5,7 @@ function App() {
     <>
       <AppRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
