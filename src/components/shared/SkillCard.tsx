@@ -2,13 +2,13 @@ const CARD_WIDTH = 'w-[224px]';
 const CARD_MARGIN_X = 'mx-[8px]';
 export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGIN_X.replace(/[^0-9]/g, ''))));
 
-export interface SkillCardProps {
+export interface ISkillCardProps {
   key?: string,
   type: 'backend' | 'frontend' | 'devops';
   name: string,
 }
 
-export const SkillCard: React.FC<SkillCardProps> = ({ key: cardKey, type, name }: SkillCardProps) => {
+export const SkillCard: React.FC<ISkillCardProps> = ({ key: cardKey, type, name }: ISkillCardProps) => {
 
   return (
     <div key={cardKey} className={`cursor-pointer ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'backend' ? 'h-[3rem] bg-[#f9f9f9]' : 'h-[3.575rem] bg-[#f7f7f7]'}`}

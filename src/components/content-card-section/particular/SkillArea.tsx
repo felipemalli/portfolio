@@ -1,11 +1,11 @@
 import { useChangeAreaContext } from '../../../contexts/changeAreaContext';
 import { SkillCard } from '../../shared/SkillCard';
 
-interface SkillAreaProps {
+interface ISkillAreaProps {
   skills: string[]
 }
 
-export const SkillArea: React.FC<SkillAreaProps> = ({ skills }: SkillAreaProps) => {
+export const SkillArea: React.FC<ISkillAreaProps> = ({ skills }: ISkillAreaProps) => {
   const { areaName } = useChangeAreaContext();
 
   return (
