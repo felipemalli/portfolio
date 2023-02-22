@@ -1,4 +1,4 @@
-interface ICourse {
+export interface ICourse {
   name: string,
   description: string,
   inProgress: boolean,
@@ -19,12 +19,12 @@ interface ICourse {
   instructor: string,
 }
 
-const courses: ICourse[] = [
+export const courses: ICourse[] = [
   {
     name: 'Full Stack web development',
     description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
-    image: 'courses/webdevelopment-trybe.png',
+    image: 'src/assets/courses/webdevelopment-trybe.png',
     techAreas: {
       frontend:{
         skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
@@ -38,9 +38,9 @@ const courses: ICourse[] = [
   },
   {
     name: 'Java Bootcamp',
-    description: 'I learn Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
+    description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
-    image: 'courses/webdevelopment-trybe.png',
+    image: 'src/assets/courses/javabootcamp-trybe-and-wipro.jpg',
     techAreas: {
       backend: {
         skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
@@ -56,7 +56,7 @@ const courses: ICourse[] = [
     name: 'Microservices with NodeJS and React',
     description: 'I learned Kubernetes and all the logic of microservices, their various problems and alternatives. The course taught how a message broker works and its integration with the various Microservices. In general, I learned how to build, deploy, and scale an E-Commerce app using Microservices.',
     inProgress: false,
-    image: 'courses/microservices-stephengrinder.jpg',
+    image: 'src/assets/courses/microservices-stephengrinder.jpg',
     techAreas: {
       frontend:{
         skills: ['Typescript', 'React', 'Next', 'Tailwind'],
@@ -76,7 +76,7 @@ const courses: ICourse[] = [
     name: 'Amazon Web Services (AWS): Essential',
     description: 'I learned all essential tools of AWS. IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancing, Route 53, CloudFront and a quick look at serverless computing (Lambda functions).',
     inProgress: false,
-    image: 'courses/aws-geekuniversity.jpg',
+    image: 'src/assets/courses/aws-geekuniversity.jpg',
     techAreas: {
       devops: {
         skills: ['AWS'],
@@ -90,7 +90,7 @@ const courses: ICourse[] = [
     name: 'PRO FIGMA | User interface design from beginner to expert',
     description: 'I learned how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
     inProgress: true,
-    image: 'courses/profigma-lucasmarte.jpg',
+    image: 'src/assets/courses/profigma-lucasmarte.jpg',
     techAreas: {
       frontend:{
         skills: ['Figma'],
@@ -103,7 +103,20 @@ const courses: ICourse[] = [
     name: 'Tailwind CSS from scratch | Learn by building projects',
     description: 'I learned Tailwind and how to make excellent projects with this technologies',
     inProgress: true,
-    image: 'courses/tailwind-bradtraversy.jpg',
+    image: 'src/assets/courses/tailwind-bradtraversy.jpg',
+    techAreas: {
+      frontend:{
+        skills: ['HTML', 'Tailwind'],
+      }
+    },
+    hours: 12.5,
+    instructor: 'Brad Traversy',
+  },
+  {
+    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
+    description: 'I learned Tailwind and how to make excellent projects with this technologies',
+    inProgress: true,
+    image: 'src/assets/courses/tailwind-bradtraversy.jpg',
     techAreas: {
       frontend:{
         skills: ['HTML', 'Tailwind'],
@@ -114,4 +127,3 @@ const courses: ICourse[] = [
   },
 ];
 
-export { courses };
