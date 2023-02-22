@@ -20,7 +20,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   const isXl = useMediaQuery(breakpoints.isXl);
   const is2Xl = useMediaQuery(breakpoints.is2xl);
   const cardsOnScreenQuantity: number = is2Xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1;
-  const cardsScrollMultiplier: number = isMd ? 2 : 1;
+  const cardsScrollMultiplier: number = is2Xl? 2.2 : isMd ? 2 : 1;
   
   const [slider, setSlider] = useState<Element | null>(null);
   const sliderDivRef = useRef(null);
@@ -46,6 +46,21 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
     }
   }, [sliderDivRef, areaName]);
 
+  const findClosestMultiple = (inputNum: number, minMultiple: number) => {
+    const multiple = Math.ceil(inputNum / minMultiple) * minMultiple;
+    return multiple;
+  };
+
+  const fixPositionOfScroll = () => {
+    if (slider && slider?.scrollLeft % CARD_SIZE != 0) {
+      slider.scrollLeft = findClosestMultiple(slider.scrollLeft, CARD_SIZE);
+    }
+  };
+
+  useEffect(() => {
+    fixPositionOfScroll();
+  }, [slider]);
+
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
       setButtonClickable(false);
@@ -56,14 +71,14 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
           resolve();
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
       });
+      fixPositionOfScroll();
       checkEndOfScroll();
     }
   };
 
-  function checkEndOfScroll() {
+  const checkEndOfScroll = () => {
     const MARGIN_ERROR = 3;
     if (slider) {
-      console.log('teste');
       if (slider?.scrollWidth - slider?.scrollLeft < slider?.clientWidth + MARGIN_ERROR) {
         setRightArrowClickable(false);
       } else if (!rightArrowClickable) {
@@ -75,7 +90,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
         setLeftArrowClickable(true);
       }
     }
-  }
+  };
 
   const scrollLeft = () => {
     if (buttonClickable && slider) {
