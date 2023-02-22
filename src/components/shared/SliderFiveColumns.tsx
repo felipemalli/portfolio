@@ -26,7 +26,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   
   useEffect(() => {
     checkEndOfScroll();
-  }, []);
+  }, [slider]);
 
   useEffect(() => {
     if (sliderDivRef.current) {
@@ -55,6 +55,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   function checkEndOfScroll() {
     const MARGIN_ERROR = 3;
     if (slider) {
+      console.log('teste');
       if (slider?.scrollWidth - slider?.scrollLeft < slider?.clientWidth + MARGIN_ERROR) {
         setRightArrowClickable(false);
       } else if (!rightArrowClickable) {
