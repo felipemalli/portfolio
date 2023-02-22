@@ -21,38 +21,6 @@ export interface ICourse {
 
 export const courses: ICourse[] = [
   {
-    name: 'Full Stack web development',
-    description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
-    inProgress: false,
-    image: 'src/assets/courses/webdevelopment-trybe.png',
-    techAreas: {
-      frontend:{
-        skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
-      },
-      backend: {
-        skills: ['Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Jest', 'JWT', 'BCrypt', 'SOLID', 'OOP']
-      },
-    },
-    hours: 1500,
-    instructor: 'Brad Traversy',
-  },
-  {
-    name: 'Java Bootcamp',
-    description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
-    inProgress: false,
-    image: 'src/assets/courses/javabootcamp-trybe-and-wipro.jpg',
-    techAreas: {
-      backend: {
-        skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
-      },
-      devops: {
-        skills: ['Docker'],
-      }
-    },
-    hours: 500,
-    instructor: 'Wipro and Trybe',
-  },
-  {
     name: 'Microservices with NodeJS and React',
     description: 'I learned Kubernetes and all the logic of microservices, their various problems and alternatives. The course taught how a message broker works and its integration with the various Microservices. In general, I learned how to build, deploy, and scale an E-Commerce app using Microservices.',
     inProgress: false,
@@ -87,8 +55,43 @@ export const courses: ICourse[] = [
     certificateLink: 'https://www.udemy.com/certificate/UC-889787a5-7efc-41f7-9ad8-8f336c7fe421/',
   },
   {
+    name: 'Full Stack web development',
+    description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
+    inProgress: false,
+    image: 'src/assets/courses/webdevelopment-trybe.jpg',
+    techAreas: {
+      frontend:{
+        skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
+      },
+      backend: {
+        skills: ['Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Jest', 'JWT', 'BCrypt', 'SOLID', 'OOP']
+      },
+      devops: {
+        skills: ['Docker'],
+      }
+    },
+    hours: 1500,
+    instructor: 'Brad Traversy',
+  },
+  {
+    name: 'Java Bootcamp',
+    description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
+    inProgress: false,
+    image: 'src/assets/courses/javabootcamp-trybe-and-wipro.jpg',
+    techAreas: {
+      backend: {
+        skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
+      },
+      devops: {
+        skills: ['Docker'],
+      }
+    },
+    hours: 500,
+    instructor: 'Wipro and Trybe',
+  },
+  {
     name: 'PRO FIGMA | User interface design from beginner to expert',
-    description: 'I learned how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
+    description: 'I am learning how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
     inProgress: true,
     image: 'src/assets/courses/profigma-lucasmarte.jpg',
     techAreas: {
@@ -101,7 +104,7 @@ export const courses: ICourse[] = [
   },
   {
     name: 'Tailwind CSS from scratch | Learn by building projects',
-    description: 'I learned Tailwind and how to make excellent projects with this technologies',
+    description: 'I am learning Tailwind and how to make excellent projects with this technologies',
     inProgress: true,
     image: 'src/assets/courses/tailwind-bradtraversy.jpg',
     techAreas: {
@@ -114,16 +117,19 @@ export const courses: ICourse[] = [
   },
   {
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
-    description: 'I learned Tailwind and how to make excellent projects with this technologies',
+    description: 'I am learning ...',
     inProgress: true,
-    image: 'src/assets/courses/tailwind-bradtraversy.jpg',
+    image: 'src/assets/courses/cleanarchitecture-rodrigomanguinho.jpg',
     techAreas: {
-      frontend:{
-        skills: ['HTML', 'Tailwind'],
+      backend: {
+        skills: [''],
+      },
+      devops: {
+        skills: [''],
       }
     },
     hours: 12.5,
-    instructor: 'Brad Traversy',
+    instructor: 'Rodrigo Manguinho',
   },
 ];
 
