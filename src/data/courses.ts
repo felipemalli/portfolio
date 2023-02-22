@@ -5,18 +5,23 @@ export interface ICourse {
   image?: string,
   techAreas: {
     frontend?: {
+      inProgress?: boolean,
       skills?: string[],
     }
     backend?: {
+      inProgress?: boolean,
       skills?: string[],
     }
     devops?: {
+      inProgress?: boolean,
       skills?: string[],
     }
   }
-  hours: number,
-  certificateLink?: string,
-  instructor: string,
+  extras: {
+    hours: number,
+    certificateLink?: string,
+    instructor: string,
+  }
 }
 
 export const courses: ICourse[] = [
@@ -36,9 +41,11 @@ export const courses: ICourse[] = [
         skills: ['Docker', 'Kubernetes', 'Scaffolding'],
       }
     },
-    hours: 54.5,
-    instructor: 'Stephen Grinder',
-    certificateLink: 'https://www.udemy.com/certificate/UC-09cd33eb-0627-427f-bf86-f36e299f469f/',
+    extras: {
+      hours: 54.5,
+      instructor: 'Stephen Grinder',
+      certificateLink: 'https://www.udemy.com/certificate/UC-09cd33eb-0627-427f-bf86-f36e299f469f/',
+    }
   },
   {
     name: 'Amazon Web Services (AWS): Essential',
@@ -50,9 +57,11 @@ export const courses: ICourse[] = [
         skills: ['AWS'],
       }
     },
-    hours: 12.5,
-    instructor: 'Geek University',
-    certificateLink: 'https://www.udemy.com/certificate/UC-889787a5-7efc-41f7-9ad8-8f336c7fe421/',
+    extras: {
+      hours: 12.5,
+      instructor: 'Geek University',
+      certificateLink: 'https://www.udemy.com/certificate/UC-889787a5-7efc-41f7-9ad8-8f336c7fe421/',
+    }
   },
   {
     name: 'Full Stack web development',
@@ -70,8 +79,10 @@ export const courses: ICourse[] = [
         skills: ['Docker'],
       }
     },
-    hours: 1500,
-    instructor: 'Brad Traversy',
+    extras: {
+      hours: 1500,
+      instructor: 'Brad Traversy',
+    }
   },
   {
     name: 'Java Bootcamp',
@@ -86,8 +97,10 @@ export const courses: ICourse[] = [
         skills: ['Docker'],
       }
     },
-    hours: 500,
-    instructor: 'Wipro and Trybe',
+    extras: {
+      hours: 500,
+      instructor: 'Wipro and Trybe',
+    }
   },
   {
     name: 'PRO FIGMA | User interface design from beginner to expert',
@@ -99,8 +112,10 @@ export const courses: ICourse[] = [
         skills: ['Figma'],
       }
     },
-    hours: 14.5,
-    instructor: 'Lucas Marte',
+    extras: {
+      hours: 14.5,
+      instructor: 'Lucas Marte',
+    }
   },
   {
     name: 'Tailwind CSS from scratch | Learn by building projects',
@@ -112,8 +127,10 @@ export const courses: ICourse[] = [
         skills: ['HTML', 'Tailwind'],
       }
     },
-    hours: 12.5,
-    instructor: 'Brad Traversy',
+    extras: {
+      hours: 12.5,
+      instructor: 'Brad Traversy',
+    }
   },
   {
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
@@ -128,8 +145,10 @@ export const courses: ICourse[] = [
         skills: [''],
       }
     },
-    hours: 12.5,
-    instructor: 'Rodrigo Manguinho',
+    extras: {
+      hours: 12.5,
+      instructor: 'Rodrigo Manguinho',
+    }
   },
 ];
 

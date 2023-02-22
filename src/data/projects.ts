@@ -17,9 +17,11 @@ export interface IProject {
       skills?: string[],
     }
   },
-  browserLink?: string,
-  codeLink: string,
-  apiLink?: string,
+  extras: {
+    browserLink?: string,
+    codeLink: string,
+    apiLink?: string,
+  }
 }
 
 export const projects: IProject[] = [
@@ -32,6 +34,8 @@ export const projects: IProject[] = [
         skills: ['Typescript', 'React', 'Vite', 'Tailwind', 'Figma'],
       }
     },
-    codeLink: 'https://github.com/felipemalli/portfolio',
+    extras: {
+      codeLink: 'https://github.com/felipemalli/portfolio',
+    }
   }
 ];
