@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useChangeAreaContext } from '../../contexts/changeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
 
@@ -23,6 +24,8 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   
   const [slider, setSlider] = useState<Element | null>(null);
   const sliderDivRef = useRef(null);
+
+  const { areaName } = useChangeAreaContext();
   
   useEffect(() => {
     checkEndOfScroll();
@@ -33,10 +36,15 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
       const sliderDivFather: HTMLDivElement = sliderDivRef.current;
       const sliderDivCollection: HTMLCollectionOf<Element> = sliderDivFather.children;
       if (sliderDivCollection){
-        setSlider(sliderDivCollection[0]);
+        if (areaName === 'knowledge') {
+          setSlider(sliderDivCollection[0]);
+        }
+        if (areaName === 'skills') {
+          setSlider(sliderDivCollection[1]);
+        }
       }
     }
-  }, [sliderDivRef]);
+  }, [sliderDivRef, areaName]);
 
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
