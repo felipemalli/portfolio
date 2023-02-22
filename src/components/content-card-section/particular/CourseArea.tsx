@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useChangeAreaContext } from '../../../contexts/changeAreaContext';
 import { Card } from '../../shared/Card';
 
 const data = [
@@ -29,11 +29,10 @@ const data = [
 ];
 
 export const CourseArea: React.FC = () => {
-  const [hideCard, setHideCard] = useState(false);
-  console.log(setHideCard);
+  const { areaName } = useChangeAreaContext();
 
   return (
-    <div id='course-content' className={`${hideCard && 'hidden'} w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]`}>
+    <div className={`${areaName != 'knowledge' && 'hidden'} w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]`}>
       {data.map((d) => (
         <Card key={d.name} type={'course'} name={d.name} image={d.image}></Card>
       ))}
