@@ -39,8 +39,8 @@ export const CourseArea: React.FC = () => {
 
   return (
     <div className='flex flex-col justify-evenly items-center h-[26rem] m-auto md:rounded-b-[5rem] border border-[#737E86] bg-[#fbfbfb] pt-1'>
-      <SliderFiveColumns id={'course-content'} CARD_SIZE={CARD_SIZE}>
-        <div id='course-content' className={`${hideCard && 'hidden'} w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar grid grid-rows-4 grid-flow-col items-center justify-start overflow-x-auto scroll-smooth h-[16rem]`}>
+      <SliderFiveColumns CARD_SIZE={CARD_SIZE}>
+        <div className={`${hideCard && 'hidden'} w-[240px] md:w-[480px] lg:w-[720px] xl:w-[960px] 2xl:w-[1200px] hide-horizontal-scrollbar grid grid-rows-4 grid-flow-col items-center justify-start overflow-x-auto scroll-smooth h-[16rem]`}>
           { backendSkills.map((name) => (
             <SkillCard key={name} type={'backend'} name={name}/>
           )) }
