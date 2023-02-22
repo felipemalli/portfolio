@@ -53,7 +53,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
 
   const fixPositionOfScroll = () => {
     if (slider && slider?.scrollLeft % CARD_SIZE != 0) {
-      slider.scrollLeft = findClosestMultiple(slider.scrollLeft, CARD_SIZE);
+      slider.scrollLeft = (findClosestMultiple(slider.scrollLeft, CARD_SIZE));
     }
   };
 
@@ -71,7 +71,6 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
           resolve();
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
       });
-      fixPositionOfScroll();
       checkEndOfScroll();
     }
   };
@@ -96,11 +95,13 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
     if (buttonClickable && slider) {
       slider.scrollLeft -= CARD_SIZE * cardsOnScreenQuantity;
     }
+    fixPositionOfScroll();
   };
   const scrollRight = () => {
     if (buttonClickable && slider) {
       slider.scrollLeft += CARD_SIZE * cardsOnScreenQuantity;
     }
+    fixPositionOfScroll();
   };
 
   return (
