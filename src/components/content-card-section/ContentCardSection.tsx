@@ -1,13 +1,15 @@
-import { CourseArea } from './CourseArea';
+import { BottonContentCard } from './BottonContentCard';
+import { ChangeAreaButtons } from './particular/changeAreaButtons';
 import { SearchBar } from './particular/SearchBar';
-import { ProjectArea } from './ProjectArea';
+import { TopContentCard } from './TopContentCard';
 
 export const ContentCardSection: React.FC = () => {
   return (
     <section className='relative mt-36 md:mt-0'>
-      <ProjectArea></ProjectArea>
+      <TopContentCard></TopContentCard>
+      <ChangeAreaButtons />
       <SearchBar></SearchBar>
-      <CourseArea></CourseArea>
+      <BottonContentCard></BottonContentCard>
     </section>
   );
 };

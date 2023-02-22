@@ -1,7 +1,9 @@
 # Portfolio
 
-Project to share my knowledge through the projects I've done.
+Project to share my knowledge through projects I've done.
 
 ## Technologies in this project
 
-Typescript, React, Vite and Tailwind
+Typescript, React, Tailwind and Figma.
+
+Vite for faster development

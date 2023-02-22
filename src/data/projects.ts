@@ -1,4 +1,4 @@
-interface IProject {
+export interface IProject {
   name: string,
   description: string,
   inProgress: boolean,
@@ -22,7 +22,7 @@ interface IProject {
   apiLink?: string,
 }
 
-const projects: IProject[] = [
+export const projects: IProject[] = [
   {
     name: 'Portfolio',
     description: 'Project developed to expose my knowledge. Projects, courses taken, skills already trained, my future steps and goals. OBS: I will develop a backend for this application soon!',
@@ -35,5 +35,3 @@ const projects: IProject[] = [
     codeLink: 'https://github.com/felipemalli/portfolio',
   }
 ];
-
-export { projects };
