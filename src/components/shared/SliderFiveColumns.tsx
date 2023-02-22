@@ -4,13 +4,13 @@ import { useChangeAreaContext } from '../../contexts/changeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
 
-interface SliderProps extends IChildrenProps {
+interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
 }
 
 const TIME_TO_CARD_SCROLL = 300; // time to not break scroll movement
 
-export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }: SliderProps ) => {
+export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE }: ISliderProps ) => {
   const [buttonClickable, setButtonClickable] = useState(true);
   const [rightArrowClickable, setRightArrowClickable] = useState(true);
   const [leftArrowClickable, setLeftArrowClickable] = useState(false);
@@ -52,7 +52,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   };
 
   const fixPositionOfScroll = () => {
-    if (slider && slider?.scrollLeft % CARD_SIZE != 0) {
+    if (slider && slider?.scrollLeft % CARD_SIZE !== 0) {
       slider.scrollLeft = (findClosestMultiple(slider.scrollLeft, CARD_SIZE));
     }
   };
