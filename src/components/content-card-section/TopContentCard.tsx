@@ -10,7 +10,7 @@ export const TopContentCard: React.FC = () => {
 
   return (
     <div className='flex flex-col justify-evenly items-center h-[26rem] m-auto md:rounded-t-[5rem] shadow-inner bg-[#D5685A]'>
-      <h2 className={`text-[#f9f9f9] select-none -mb-5 font-semibold ${areaName === 'knowledge' ? 'text-4xl ' : 'text-[2rem]'}`}>
+      <h2 className={`text-[#f9f9f9] select-none -mb-5 h-10 font-semibold ${areaName === 'knowledge' ? 'text-4xl ' : 'text-[2rem]'}`}>
         {areaName === 'knowledge' ? 'Projects' : 'BackEnd + DevOps'}
       </h2>
       <SliderFiveColumns CARD_SIZE={CARD_SIZE}>

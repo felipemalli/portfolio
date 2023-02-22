@@ -14,7 +14,7 @@ export const BottonContentCard: React.FC = () => {
         <CourseArea/>
         <SkillArea skills={bottonSkills}/>
       </SliderFiveColumns>
-      <h2 className={`text-[#272727] select-none -mt-2 font-semibold ${areaName === 'knowledge' ? 'text-4xl ' : 'text-[2rem]'}`}>
+      <h2 className={`text-[#272727] select-none -mt-2 h-10 font-semibold ${areaName === 'knowledge' ? 'text-4xl ' : 'text-[2rem]'}`}>
         {areaName === 'knowledge' ? 'Courses' : 'FrontEnd + UI/UI'}
       </h2>
     </div>
