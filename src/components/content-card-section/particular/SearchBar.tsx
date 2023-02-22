@@ -21,7 +21,7 @@ export const SearchBar: React.FC = () => {
         required
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#c3b8b8] bg-[#d9d9d9] hover:bg-[#eaeced]'>
+      <button className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#c3b8b8] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]'>
         <img src="src/assets/icons/filterIcon.svg" className='w-4.5 rounded-r-full mr-1.5'></img>
       </button>
     </div>
