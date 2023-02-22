@@ -29,7 +29,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   
   useEffect(() => {
     checkEndOfScroll();
-  }, [slider]);
+  }, [slider, cardsOnScreenQuantity]);
 
   useEffect(() => {
     if (sliderDivRef.current) {
