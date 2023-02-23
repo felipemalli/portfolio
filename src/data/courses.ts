@@ -1,5 +1,5 @@
-type ILinkName = 'Certificate' | 'Code' | 'Browser' | 'API'
-type IBottonRightTag = 'Hours' | 'Browser'
+export type ILinkName = 'Certificate' | 'Code' | 'Browser' | 'API'
+export type IBottonRightTag = 'Hours' | 'Browser'
 
 export interface ICard {
   name: string,
