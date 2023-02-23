@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { ICourse } from '../../data/courses';
-import { IProject } from '../../data/projects';
-import { TechAreaButtonGroup } from './TechAreaButtonGroup';
+import { ICard } from '../../data/courses';
+import { ButtonCardManager } from './ButtonCardManager';
 const CARD_WIDTH = 'w-[224px]';
 const CARD_MARGIN_X = 'mx-[8px]';
 export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGIN_X.replace(/[^0-9]/g, ''))));
@@ -9,15 +8,15 @@ export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGI
 
 export interface ICardProps {
   key: string,
-  card: IProject | ICourse,
+  card: ICard,
   type: 'project' | 'course',
 }
 
-export type ITechArea = 'frontend' | 'backend' | 'devops'
+export type ITechAreaNames = 'frontend' | 'backend' | 'devops'
 export interface IFrameState {
   screen: 'photoFrame' | 'infoFrame' | 'skillFrame',
   page?: number,
-  techArea?: ITechArea
+  techArea?: ITechAreaNames
 }
 
 export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardProps) => {
@@ -31,7 +30,7 @@ export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardPr
     if (frame.screen === 'photoFrame') setFrame({ screen: 'infoFrame' });
     else setFrame({ screen: 'photoFrame' });
   };
-
+ 
   const hasFrontend = !!card.techAreas.frontend;
   const hasBackend = !!card.techAreas.backend;
   const hasDevops = !!card.techAreas.devops;
@@ -47,10 +46,11 @@ export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardPr
       <hr className='w-52 h-0.5 bg-[#d9d9d9] border-0 rounded m-0 p-0'></hr>
       <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 bg-[#d9d9d9] rounded-lg cursor-pointer'>
         {frame.screen === 'photoFrame' && <img src={card.image} alt='Course image' className='bg-cover flex h-32 w-52 border rounded-lg'/>}
-        {frame.screen === 'skillFrame' && <div>Skill Frame of {frame?.techArea}</div>}
+        {frame.screen === 'skillFrame' && 
+          <div>Skill Frame of {frame?.techArea}</div>}
         {frame.screen === 'infoFrame' && <div>Info Frame</div>}
       </div>
-      <TechAreaButtonGroup enableTechArea={{hasFrontend, hasBackend, hasDevops}} frame={frame} setFrame={setFrame}/>
+      <ButtonCardManager enableTechArea={{hasFrontend, hasBackend, hasDevops}} links={card.links} frame={frame} setFrame={setFrame}/>
     </div>
   );
 };
