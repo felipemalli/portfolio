@@ -1,14 +1,14 @@
-import { IFrameState, ITechArea } from './Card';
+import { IFrameState, ITechAreaNames } from './Card';
 
 interface ITechAreaButtonProps {
-  techAreaAbreviation: string,
-  techArea: ITechArea,
   enable: boolean,
+  techAreaAbreviation: string,
+  techArea: ITechAreaNames,
   frame: IFrameState,
   setFrame: (arg0: IFrameState) => void,
 }
 
-export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ techAreaAbreviation, techArea, enable, frame, setFrame }: ITechAreaButtonProps) => {
+export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ enable, techAreaAbreviation, techArea, frame, setFrame }: ITechAreaButtonProps) => {
   const handleClick = () => {
     if (frame.screen === 'skillFrame' && frame.techArea === techArea) {
       setFrame({ screen: 'photoFrame' });
@@ -19,7 +19,7 @@ export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ techAreaAbrevia
   };
 
   return (
-    <button className={`transition-all ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-green-400' : 'bg-[#d9d9d9] hover:bg-[#e4e4e4]'} rounded-md text-sm duration-200`}
+    <button className={`transition-all duration-200 ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-green-400' : 'bg-[#d9d9d9] hover:bg-[#e4e4e4]'} rounded-md text-sm`}
       onClick={() => enable && handleClick()}
     >
       {techAreaAbreviation}
