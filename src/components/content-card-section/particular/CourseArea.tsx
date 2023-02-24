@@ -8,7 +8,7 @@ export const CourseArea: React.FC = () => {
   return (
     <div className={`${areaName !== 'knowledge' && 'hidden'} w-[242px] md:w-[484px] lg:w-[726px] xl:w-[968px] 2xl:w-[1210px] hide-horizontal-scrollbar flex items-center justify-start overflow-x-auto scroll-smooth h-[16rem]`}>
       {courses.map((course) => (
-        <Card key={course.name} card={course} type={'course'}></Card>
+        <Card key={course.name} card={course}></Card>
       ))}
     </div>
   );

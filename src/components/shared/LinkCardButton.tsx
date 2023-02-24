@@ -1,4 +1,4 @@
-import { ILinkName } from '../../data/courses';
+import { ILinkName } from '../../interfaces';
 
 interface ILinkButtonProps {
   enable: boolean,

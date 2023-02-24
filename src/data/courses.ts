@@ -1,39 +1,9 @@
-export type ILinkName = 'Certificate' | 'Code' | 'Browser' | 'API'
-export type IBottonRightTag = 'Hours' | 'Browser'
-
-export interface ICard {
-  name: string,
-  creator: string,
-  description: string,
-  inProgress: boolean,
-  image?: string,
-  techAreas: {
-    frontend?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-    backend?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-    devops?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-  },
-  links: {
-    name: ILinkName,
-    link: string,
-  }[],
-  bottonRightTag: {
-    name: IBottonRightTag,
-    value?: number
-  },
-}
+import { ICard } from '../interfaces';
 
 export const courses: ICard[] = [
   {
     name: 'Microservices with NodeJS and React',
+    type: 'course',
     creator: 'Stephen Grinder',
     description: 'I learned Kubernetes and all the logic of microservices, their various problems and alternatives. The course taught how a message broker works and its integration with the various Microservices. In general, I learned how to build, deploy, and scale an E-Commerce app using Microservices.',
     inProgress: false,
@@ -62,6 +32,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'Amazon Web Services (AWS): Essential',
+    type: 'course',
     creator: 'Geek University',
     description: 'I learned all essential tools of AWS. IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancing, Route 53, CloudFront and a quick look at serverless computing (Lambda functions).',
     inProgress: false,
@@ -84,6 +55,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'Full Stack web development',
+    type: 'course',
     creator: 'Trybe',
     description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
@@ -112,6 +84,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'Java Bootcamp',
+    type: 'course',
     creator: 'Wipro and Trybe',
     description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
@@ -137,6 +110,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'PRO FIGMA | User interface design from beginner to expert',
+    type: 'course',
     creator: 'Lucas Marte',
     description: 'I am learning how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
     inProgress: true,
@@ -159,6 +133,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'Tailwind CSS from scratch | Learn by building projects',
+    type: 'course',
     creator: 'Brad Traversy',
     description: 'I am learning Tailwind and how to make excellent projects with this technologies',
     inProgress: true,
@@ -181,6 +156,7 @@ export const courses: ICard[] = [
   },
   {
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
+    type: 'course',
     creator: 'Rodrigo Manguinho',
     description: 'I am learning ...',
     inProgress: true,
