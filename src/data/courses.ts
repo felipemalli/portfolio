@@ -10,15 +10,15 @@ export interface ICard {
   techAreas: {
     frontend?: {
       inProgress?: boolean,
-      skills?: string[],
+      skills: string[],
     },
     backend?: {
       inProgress?: boolean,
-      skills?: string[],
+      skills: string[],
     },
     devops?: {
       inProgress?: boolean,
-      skills?: string[],
+      skills: string[],
     },
   },
   links: {
