@@ -14,12 +14,12 @@ export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ enable, techAre
       setFrame({ screen: 'photoFrame' });
     }
     if (frame.techArea !== techArea) {
-      setFrame({ screen: 'skillFrame', page: 1, techArea: `${techArea}` });
+      setFrame({ screen: 'skillFrame', techArea: `${techArea}` });
     }
   };
 
   return (
-    <button className={`transition-all duration-200 ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-green-400' : 'bg-[#d9d9d9] hover:bg-[#e4e4e4]'} rounded-md text-sm`}
+    <button className={`transition-all duration-200 ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-[#7ce79e]' : 'bg-[#d9d9d9] hover:bg-[#e4e4e4]'} rounded-md text-sm`}
       onClick={() => enable && handleClick()}
     >
       {techAreaAbreviation}
