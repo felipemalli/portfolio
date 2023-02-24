@@ -1,13 +1,13 @@
-const otherSkills: string[] = ['Design Patterns', 'OOP', 'Microservices', 'Clean Architecture'];
+const otherSkills: string[] = ['Design Patterns', 'OOP', 'SOLID', 'Microservices', 'Clean Architecture'];
 
-const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS', 'Cloud'];
+const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS'];
 
-const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'Python', 'JWT', 'Cookies', 'BCrypt'];
+const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'Python', 'JWT', 'Cookies'];
 
 const frontendSkills: string[] = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'Redux', 'Next', 'Jest', 'React Testing Library', 'Tailwind', 'Material-UI', 'Figma'];
 
 
-const topSkills = backendSkills.concat(devopsSkills).concat(otherSkills);
+const topSkills = backendSkills.concat(otherSkills).concat(devopsSkills);
 const bottonSkills = frontendSkills;
 
 export { bottonSkills, topSkills };

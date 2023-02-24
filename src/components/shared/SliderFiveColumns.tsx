@@ -4,13 +4,13 @@ import { useChangeAreaContext } from '../../contexts/changeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
 
-interface SliderProps extends IChildrenProps {
+interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
 }
 
-const TIME_TO_CARD_SCROLL = 300; // time to not break scroll movement
+const TIME_TO_CARD_SCROLL = 320; // time to not break scroll movement
 
-export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }: SliderProps ) => {
+export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE }: ISliderProps ) => {
   const [buttonClickable, setButtonClickable] = useState(true);
   const [rightArrowClickable, setRightArrowClickable] = useState(true);
   const [leftArrowClickable, setLeftArrowClickable] = useState(false);
@@ -52,7 +52,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
   };
 
   const fixPositionOfScroll = () => {
-    if (slider && slider?.scrollLeft % CARD_SIZE != 0) {
+    if (slider && ((slider?.scrollLeft % CARD_SIZE) > 1)) {
       slider.scrollLeft = (findClosestMultiple(slider.scrollLeft, CARD_SIZE));
     }
   };
@@ -89,19 +89,19 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
         setLeftArrowClickable(true);
       }
     }
+    fixPositionOfScroll();
   };
 
   const scrollLeft = () => {
     if (buttonClickable && slider) {
       slider.scrollLeft -= CARD_SIZE * cardsOnScreenQuantity;
     }
-    fixPositionOfScroll();
   };
+
   const scrollRight = () => {
     if (buttonClickable && slider) {
       slider.scrollLeft += CARD_SIZE * cardsOnScreenQuantity;
     }
-    fixPositionOfScroll();
   };
 
   return (
@@ -109,7 +109,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
-        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
+        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Previous slider button'></img>
       </button>
       <div ref={sliderDivRef}>
         {children}
@@ -117,7 +117,7 @@ export const SliderFiveColumns: React.FC<SliderProps> = ({ children, CARD_SIZE }
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollRight)}
       >
-        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
+        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Next slider button'></img>
       </button>
     </div>
   );

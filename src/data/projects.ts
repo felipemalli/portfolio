@@ -1,37 +1,33 @@
-export interface IProject {
-  name: string,
-  description: string,
-  inProgress: boolean,
-  image?: string,
-  techAreas: {
-    frontend?: {
-      inProgress?: boolean,
-      skills?: string[],
-    }
-    backend?: {
-      inProgress?: boolean,
-      skills?: string[],
-    }
-    devops?: {
-      inProgress?: boolean,
-      skills?: string[],
-    }
-  },
-  browserLink?: string,
-  codeLink: string,
-  apiLink?: string,
-}
+import { ICard } from './courses';
 
-export const projects: IProject[] = [
+export const projects: ICard[] = [
   {
     name: 'Portfolio',
+    creator: 'Felipe Vahia Malliagros',
     description: 'Project developed to expose my knowledge. Projects, courses taken, skills already trained, my future steps and goals. OBS: I will develop a backend for this application soon!',
     inProgress: true,
+    image: 'src/assets/projects/portfolio.webp',
     techAreas: {
       frontend: {
         skills: ['Typescript', 'React', 'Vite', 'Tailwind', 'Figma'],
       }
     },
-    codeLink: 'https://github.com/felipemalli/portfolio',
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/portfolio'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: ''
+      },
+    ],
+    bottonRightTag: {
+      name: 'Browser',
+    }
   }
 ];

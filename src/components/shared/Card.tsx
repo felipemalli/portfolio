@@ -1,50 +1,61 @@
 import { useState } from 'react';
-import { TechAreaButton } from './TechAreaButton';
+import { ICard } from '../../data/courses';
+import { ButtonCardManager } from './ButtonCardManager';
+import { SkillFrame } from './SkillFrame';
+import { SkillInfo } from './SkillInfo';
+
 const CARD_WIDTH = 'w-[224px]';
-const CARD_MARGIN_X = 'mx-[8px]';
+const CARD_MARGIN_X = 'mx-[9px]';
 export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGIN_X.replace(/[^0-9]/g, ''))));
 
-export interface CardProps {
-  key?: string,
-  type: 'project' | 'course';
-  name: string,
-  image: string,
-}
-export type TechArea = 'frontend' | 'backend' | 'devops'
-export interface FrameState {
-  screen: 'photoFrame' | 'skillFrame' | 'infoFrame';
-  page?: number,
-  techArea?: TechArea
+export interface ICardProps {
+  card: ICard,
+  type: 'project' | 'course',
 }
 
+export type ITechAreaNames = 'frontend' | 'backend' | 'devops'
+export interface IFrameState {
+  screen: 'photoFrame' | 'infoFrame' | 'skillFrame',
+  techArea?: ITechAreaNames
+}
 
-export const Card: React.FC<CardProps> = ({ key: cardKey, type, name, image }: CardProps) => {
-  const [frame, setFrame] = useState<FrameState>({ screen: 'photoFrame' });
+export const Card: React.FC<ICardProps> = ({ card, type }: ICardProps) => {
+  const [frame, setFrame] = useState<IFrameState>({ screen: 'photoFrame' });
 
   const clickOnFrame = () => {
     if (frame.screen === 'photoFrame') setFrame({ screen: 'infoFrame' });
-    if (frame.screen === 'infoFrame') setFrame({ screen: 'photoFrame' });
   };
 
+  const clickOnTitle = () => {
+    if (frame.screen === 'photoFrame') setFrame({ screen: 'infoFrame' });
+    else setFrame({ screen: 'photoFrame' });
+  };
+ 
+  const hasFrontend = !!(card.techAreas.frontend && card.techAreas.frontend.skills.length > 0);
+  const hasBackend = !!(card.techAreas.backend && card.techAreas.backend.skills.length > 0);
+  const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
+
   return (
-    <div key={cardKey} className={`${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
-      <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} pt-1 text-gray-900 font-medium text-center hover:text-gray-600
+    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+      <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} px-[6px] pt-1 text-gray-900 font-medium text-center hover:text-gray-600
       ${type === 'project' ? 'text-lg' : 'text-sm'}`}
-      onClick={ () => setFrame({ screen: 'photoFrame' }) }
+      onClick={clickOnTitle}
       >
-        {name}
+        {card.name}
       </h3>
-      <hr className='w-52 h-0.5 bg-[#d9d9d9] border-0 rounded m-0 p-0'></hr>
-      <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 bg-[#d9d9d9] rounded-md cursor-pointer'>
-        {frame.screen === 'photoFrame' && <img src={image} alt='Course image' className='bg-cover flex h-32 w-52 border rounded-lg'/>}
-        {frame.screen === 'skillFrame' && <div>Skill Frame of {frame?.techArea}</div>}
-        {frame.screen === 'infoFrame' && <div>Info Frame</div>}
+      <hr className='w-52 h-0.5 bg-[#d9d9d9] m-0 p-0'></hr>
+      <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 rounded-lg cursor-pointer'>
+        {frame.screen === 'photoFrame' && 
+          <img src={card.image} alt='Course image' className='bg-[#d9d9d9] flex h-full w-full border rounded-lg'/>
+        }
+        {frame.screen === 'skillFrame' &&
+          <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} />
+        }
+        {frame.screen === 'infoFrame' && 
+          <SkillInfo creator={card.creator} description={card.description}/>
+        }
       </div>
-      <div className='flex space-x-2'>
-        <TechAreaButton techAreaAbreviation='Front' techArea='frontend' enable={true} setFrame={setFrame}></TechAreaButton>
-        <TechAreaButton techAreaAbreviation='Back' techArea='backend' enable={true} setFrame={setFrame}></TechAreaButton>
-        <TechAreaButton techAreaAbreviation='Devops' techArea='devops' enable={true} setFrame={setFrame}></TechAreaButton>
-      </div>
+      <ButtonCardManager enableTechArea={{hasFrontend, hasBackend, hasDevops}} links={card.links} frame={frame} setFrame={setFrame}/>
     </div>
   );
 };
