@@ -8,7 +8,6 @@ export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGI
 
 
 export interface ICardProps {
-  key: string,
   card: ICard,
   type: 'project' | 'course',
 }
@@ -19,7 +18,7 @@ export interface IFrameState {
   techArea?: ITechAreaNames
 }
 
-export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardProps) => {
+export const Card: React.FC<ICardProps> = ({ card, type }: ICardProps) => {
   const [frame, setFrame] = useState<IFrameState>({ screen: 'photoFrame' });
 
   const clickOnFrame = () => {
@@ -36,7 +35,7 @@ export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardPr
   const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
 
   return (
-    <div key={cardKey} className={`${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+    <div className={`${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} px-1.5 pt-1 text-gray-900 font-medium text-center hover:text-gray-600
       ${type === 'project' ? 'text-lg' : 'text-sm'}`}
       onClick={clickOnTitle}
@@ -45,7 +44,7 @@ export const Card: React.FC<ICardProps> = ({ key: cardKey, card, type }: ICardPr
       </h3>
       <hr className='w-52 h-0.5 bg-[#d9d9d9] m-0 p-0'></hr>
       <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 rounded-lg cursor-pointer'>
-        {frame.screen === 'photoFrame' && <img src={card.image} alt='Course image' className='bg-[#d9d9d9] bg-cover flex h-full w-full border rounded-lg'/>}
+        {frame.screen === 'photoFrame' && <img src={card.image} alt='Course image' className='bg-[#d9d9d9] flex h-full w-full border rounded-lg'/>}
         {frame.screen === 'skillFrame' &&
           <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} />}
         {frame.screen === 'infoFrame' && <div>Info Frame</div>}
