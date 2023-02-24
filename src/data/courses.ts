@@ -37,7 +37,7 @@ export const courses: ICard[] = [
     creator: 'Stephen Grinder',
     description: 'I learned Kubernetes and all the logic of microservices, their various problems and alternatives. The course taught how a message broker works and its integration with the various Microservices. In general, I learned how to build, deploy, and scale an E-Commerce app using Microservices.',
     inProgress: false,
-    image: 'src/assets/courses/microservices-stephengrinder.jpg',
+    image: 'src/assets/courses/microservices-stephengrinder.webp',
     techAreas: {
       frontend:{
         skills: ['Typescript', 'React', 'Next', 'Tailwind'],
@@ -65,7 +65,7 @@ export const courses: ICard[] = [
     creator: 'Geek University',
     description: 'I learned all essential tools of AWS. IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancing, Route 53, CloudFront and a quick look at serverless computing (Lambda functions).',
     inProgress: false,
-    image: 'src/assets/courses/aws-geekuniversity.jpg',
+    image: 'src/assets/courses/aws-geekuniversity.webp',
     techAreas: {
       devops: {
         skills: ['AWS'],
@@ -87,7 +87,7 @@ export const courses: ICard[] = [
     creator: 'Trybe',
     description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
-    image: 'src/assets/courses/webdevelopment-trybe.jpg',
+    image: 'src/assets/courses/webdevelopment-trybe.webp',
     techAreas: {
       frontend:{
         skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
@@ -115,7 +115,7 @@ export const courses: ICard[] = [
     creator: 'Wipro and Trybe',
     description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
-    image: 'src/assets/courses/javabootcamp-trybe-and-wipro.jpg',
+    image: 'src/assets/courses/javabootcamp-trybe-and-wipro.webp',
     techAreas: {
       backend: {
         skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
@@ -140,7 +140,7 @@ export const courses: ICard[] = [
     creator: 'Lucas Marte',
     description: 'I am learning how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
     inProgress: true,
-    image: 'src/assets/courses/profigma-lucasmarte.jpg',
+    image: 'src/assets/courses/profigma-lucasmarte.webp',
     techAreas: {
       frontend:{
         skills: ['Figma'],
@@ -162,7 +162,7 @@ export const courses: ICard[] = [
     creator: 'Brad Traversy',
     description: 'I am learning Tailwind and how to make excellent projects with this technologies',
     inProgress: true,
-    image: 'src/assets/courses/tailwind-bradtraversy.jpg',
+    image: 'src/assets/courses/tailwind-bradtraversy.webp',
     techAreas: {
       frontend:{
         skills: ['HTML', 'Tailwind'],
@@ -184,7 +184,7 @@ export const courses: ICard[] = [
     creator: 'Rodrigo Manguinho',
     description: 'I am learning ...',
     inProgress: true,
-    image: 'src/assets/courses/cleanarchitecture-rodrigomanguinho.jpg',
+    image: 'src/assets/courses/cleanarchitecture-rodrigomanguinho.webp',
     techAreas: {
       backend: {
         skills: [''],

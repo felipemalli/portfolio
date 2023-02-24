@@ -109,7 +109,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
-        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
+        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Previous slider button'></img>
       </button>
       <div ref={sliderDivRef}>
         {children}
@@ -117,7 +117,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollRight)}
       >
-        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5'></img>
+        <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Next slider button'></img>
       </button>
     </div>
   );

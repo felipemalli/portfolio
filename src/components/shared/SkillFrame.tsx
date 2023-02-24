@@ -46,12 +46,12 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills }: ISk
       ))}
       {skillsByEight && page !== 0 && (
         <button className='absolute -left-[4px] top-1/2 -translate-y-1/2 -translate-x-1/2 text-xs w-9 p-2.5' onClick={() => setPage(page - 1)}>
-          <img src="src/assets/icons/circularArrow.svg"></img>
+          <img src="src/assets/icons/circularArrow.svg" alt='Previous page button'></img>
         </button>
       )}
       {skillsByEight && skillsByEight.length > 1 && page < skillsByEight.length - 1 && (
         <button className='absolute -right-[22px] top-1/2 -translate-y-1/2  text-xs rotate-180 w-9 p-2.5' onClick={() => setPage(page + 1)}>
-          <img src="src/assets/icons/circularArrow.svg"></img>
+          <img src="src/assets/icons/circularArrow.svg" alt='Next page button'></img>
         </button>
       )}
     </div>

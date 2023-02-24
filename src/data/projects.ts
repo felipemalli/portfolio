@@ -6,7 +6,7 @@ export const projects: ICard[] = [
     creator: 'Felipe Vahia Malliagros',
     description: 'Project developed to expose my knowledge. Projects, courses taken, skills already trained, my future steps and goals. OBS: I will develop a backend for this application soon!',
     inProgress: true,
-    image: 'src/assets/projects/portfolio.png',
+    image: 'src/assets/projects/portfolio.webp',
     techAreas: {
       frontend: {
         skills: ['Typescript', 'React', 'Vite', 'Tailwind', 'Figma'],
