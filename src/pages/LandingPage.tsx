@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
+import { } from '../utils/preventScrolling';
 
 export const LandingPage: React.FC = () => {
   return (
