@@ -8,7 +8,7 @@ interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
 }
 
-const TIME_TO_CARD_SCROLL = 300; // time to not break scroll movement
+const TIME_TO_CARD_SCROLL = 400; // time to not break scroll movement
 
 export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE }: ISliderProps ) => {
   const [buttonClickable, setButtonClickable] = useState(true);
@@ -52,7 +52,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   };
 
   const fixPositionOfScroll = () => {
-    if (slider && slider?.scrollLeft % CARD_SIZE !== 0) {
+    if (slider && ((slider?.scrollLeft % CARD_SIZE) > 1)) {
       slider.scrollLeft = (findClosestMultiple(slider.scrollLeft, CARD_SIZE));
     }
   };
@@ -95,13 +95,12 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     if (buttonClickable && slider) {
       slider.scrollLeft -= CARD_SIZE * cardsOnScreenQuantity;
     }
-    fixPositionOfScroll();
   };
+
   const scrollRight = () => {
     if (buttonClickable && slider) {
       slider.scrollLeft += CARD_SIZE * cardsOnScreenQuantity;
     }
-    fixPositionOfScroll();
   };
 
   return (
