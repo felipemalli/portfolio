@@ -18,9 +18,6 @@ interface IButtonCardManagerProps {
 }
 
 export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTechArea: {hasFrontend, hasBackend, hasDevops}, links, frame, setFrame }: IButtonCardManagerProps) => {
-
-  console.log(links);
-
   return (
     <div className='flex w-[204px] gap-x-2'>
       {frame.screen === 'infoFrame' ? (

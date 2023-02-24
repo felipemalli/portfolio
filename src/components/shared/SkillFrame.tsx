@@ -33,7 +33,7 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills }: ISk
   }, [techArea]);
 
   return (
-    <div className="bg-[#fbfbfb] h-full w-full grid grid-cols-2 grid-rows-4 border border-[#cfcfcf] rounded-lg relative">
+    <div className="h-full w-full grid grid-cols-2 grid-rows-4 border border-[#cfcfcf] rounded-lg relative">
       <hr className="absolute rotate-90 bg-[#cfcfcf] w-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"/>
       <hr className="absolute bg-[#cfcfcf] w-52 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4"/>
       <hr className="absolute bg-[#cfcfcf] w-52 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"/>
