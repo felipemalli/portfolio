@@ -8,7 +8,7 @@ interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
 }
 
-const TIME_TO_CARD_SCROLL = 400; // time to not break scroll movement
+const TIME_TO_CARD_SCROLL = 320; // time to not break scroll movement
 
 export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE }: ISliderProps ) => {
   const [buttonClickable, setButtonClickable] = useState(true);
@@ -89,6 +89,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         setLeftArrowClickable(true);
       }
     }
+    fixPositionOfScroll();
   };
 
   const scrollLeft = () => {
