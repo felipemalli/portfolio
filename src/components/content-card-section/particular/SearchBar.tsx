@@ -1,12 +1,11 @@
-import { useEffect, useRef } from 'react';
-import { useCourseContext, useProjectContext, useSearchContext } from '../../../contexts';
+import { useEffect, useRef, useState } from 'react';
+import { useChangeAreaContext, useCourseContext, useProjectContext, useSearchContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
 import { FilterBox } from './FilterBox';
-// import { useProjectContext } from '../../../contexts/projectContext';
 
 export const SearchBar: React.FC = () => {
-  const { search, setSearch } = useSearchContext();
+  const { search, setSearch, applyFiltersBoolean } = useSearchContext();
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const checkboxValues = [
@@ -32,12 +31,20 @@ export const SearchBar: React.FC = () => {
 
   const { allProjects, setFilteredProjects } = useProjectContext();
   const { allCourses, setFilteredCourses } = useCourseContext();
+  const { areaName } = useChangeAreaContext();
+  const [showCleanText, setShowCleanText] = useState<boolean>(false);
+
+  useEffect(() => {
+    applyFilters();
+  }, [checkboxes, applyFiltersBoolean]);
 
 
   useEffect(() => {
     if (!search) {
-      setFilteredProjects(allProjects);
-      setFilteredCourses(allCourses);
+      applyFilters();
+      setShowCleanText(false);
+    } else {
+      setShowCleanText(true);
     }
   }, [search]);
 
@@ -51,10 +58,14 @@ export const SearchBar: React.FC = () => {
   };
 
 
-  const filterByArea = (cards: ICard[]) => {
-    const checkboxAreas = checkboxes
+  const giveCheckboxAreas = () => {
+    return checkboxes
       .filter((checkbox) => checkbox.isChecked)
       .map((checkbox) => checkbox.value);
+  };
+
+  const filterByArea = (cards: ICard[]) => {
+    const checkboxAreas = giveCheckboxAreas();
 
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
       (checkboxAreas.some((area: string) => area in card.techAreas))
@@ -64,10 +75,15 @@ export const SearchBar: React.FC = () => {
   };
 
   const applyFilters = () => {
-    const filteredProjects = filterBySkill(filterByArea(allProjects));
-    const filteredCourses = filterBySkill(filterByArea(allCourses));
-    setFilteredProjects(filteredProjects);
-    setFilteredCourses(filteredCourses);
+    if (areaName === 'knowledge') {
+      const filteredProjects = filterBySkill(filterByArea(allProjects));
+      const filteredCourses = filterBySkill(filterByArea(allCourses));
+      setFilteredProjects(filteredProjects);
+      setFilteredCourses(filteredCourses);
+    }
+    if (areaName === 'skills') {
+      console.log('a');
+    }
   };
 
   return (
@@ -76,12 +92,21 @@ export const SearchBar: React.FC = () => {
         onClick={() => applyFilters()}>
         <img className='w-3.5' src="src/assets/icons/searchIcon.svg" alt='Search technology'></img>
       </button>
-      <input type="text" className='text-sm pl-8 bg-[#d9d9d9] rounded-l-full border-y-2 border-l-2 border-[#c3b8b8] w-full h-8 focus:border-r-2 focus:border-[#D5685A] outline-none'
+      <input type="text" className='text-sm pl-8 bg-[#d9d9d9] rounded-full border-2 border-[#c3b8b8] w-full h-8 focus:border-r-2 focus:border-[#D5685A] outline-none'
         placeholder="Search Technology"
         ref={inputRef}
         onChange={(e) => setSearch(e.target.value)}
+        value={search}
       />
-      <FilterBox checkboxes={checkboxes} handleCheckboxChange={handleCheckboxChange} applyFilters={applyFilters}/>
+      {showCleanText &&
+        <button className={`text-center pl-[1px] w-7 h-7 ${areaName === 'knowledge' ? 'right-10' : 'right-[4px]'} rounded-full absolute text-[#645454] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]`}
+          onClick={() => setSearch('')}>
+          X
+        </button> 
+      }
+      {areaName === 'knowledge' &&
+        <FilterBox checkboxes={checkboxes} handleCheckboxChange={handleCheckboxChange} applyFilters={applyFilters} giveCheckboxAreas={giveCheckboxAreas}/>
+      }
     </div>
   );
 };
