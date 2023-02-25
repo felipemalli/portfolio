@@ -5,7 +5,7 @@ export interface IFilterBoxProps {
   checkboxes: ICheckboxProps[];
   handleCheckboxChange: (id: number) => void;
   applyFilters: () => void;
-  giveCheckboxAreas: () => ICheckboxProps[];
+  giveCheckboxAreas: () => string[];
 }
 
 export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckboxChange, applyFilters, giveCheckboxAreas }: IFilterBoxProps) => {
