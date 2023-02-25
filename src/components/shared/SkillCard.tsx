@@ -1,7 +1,7 @@
 import { useChangeAreaContext, useSearchContext } from '../../contexts';
 
 const CARD_WIDTH = 'w-[224px]';
-const CARD_MARGIN_X = 'mx-[8px]';
+const CARD_MARGIN_X = 'mx-[9px]';
 export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGIN_X.replace(/[^0-9]/g, ''))));
 
 export interface ISkillCardProps {
