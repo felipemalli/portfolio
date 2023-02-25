@@ -1,28 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
-import { useCourseContext } from '../../../contexts/courseContext';
+import { useEffect, useRef } from 'react';
+import { useCourseContext, useSearchContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
+import { FilterBox } from './FilterBox';
 // import { useProjectContext } from '../../../contexts/projectContext';
 
 export const SearchBar: React.FC = () => {
-  const [search, setSearch] = useState<string>('');
+  const { search, setSearch } = useSearchContext();
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const [filterBox, setFilterBox] = useState<boolean>(false);
-  const filterBoxRef = useRef<HTMLInputElement | null>(null);
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (filterBoxRef.current && !filterBoxRef.current.contains(event.target as Node)) {
-      setFilterBox(false);
-    }
-  };
+  const checkboxValues = [
+    { id: 1, value: 'frontend', label: 'FrontEnd', isChecked: true },
+    { id: 2, value: 'backend', label: 'BackEnd', isChecked: true },
+    { id: 3, value: 'devops', label: 'DevOps', isChecked: true },
+  ];
+  
+  const { checkboxes, handleCheckboxChange } = useCheckbox(checkboxValues);
 
   useEffect(() => {
     const handleEnterPress = (event: KeyboardEvent) => {
@@ -40,13 +33,6 @@ export const SearchBar: React.FC = () => {
   // const { allProjects, filteredProjects, setFilteredProjects } = useProjectContext();
   const { allCourses, setFilteredCourses } = useCourseContext();
 
-  const checkboxValues = [
-    { id: 1, value: 'frontend', label: 'FrontEnd', isChecked: true },
-    { id: 2, value: 'backend', label: 'BackEnd', isChecked: true },
-    { id: 3, value: 'devops', label: 'DevOps', isChecked: true },
-  ];
-  
-  const { checkboxes, handleCheckboxChange } = useCheckbox(checkboxValues);
 
   useEffect(() => {
     if (!search) {
@@ -63,21 +49,18 @@ export const SearchBar: React.FC = () => {
     return filteredCards;
   };
 
+
   const filterByArea = (cards: ICard[]) => {
     const checkboxAreas = checkboxes
       .filter((checkbox) => checkbox.isChecked)
       .map((checkbox) => checkbox.value);
 
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
-      (checkboxAreas.some((area) => area in card.techAreas))
+      (checkboxAreas.some((area: string) => area in card.techAreas))
     ));
 
     return filteredCards;
   };
-
-  useEffect(() => {
-    applyFilters();
-  }, [checkboxes]);
 
   const applyFilters = () => {
     const filteredCourses = filterBySkill(filterByArea(allCourses));
@@ -95,36 +78,7 @@ export const SearchBar: React.FC = () => {
         ref={inputRef}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div>
-        {filterBox && (
-          <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-[#d9d9d9] border-4 border-[#c3b8b8]'>
-            <div>
-              <p className='text-sm text-center'>CARDS WITH</p>
-              <hr className='bg-[#c3b8b8] h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
-            </div>
-            {checkboxes.map(({id, value, label, isChecked}) => (
-
-              <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full'>
-                <input
-                  type="checkbox"
-                  value={value}
-                  id={`checkbox-${id}`}
-                  checked={isChecked}
-                  onChange={() => {
-                    handleCheckboxChange(id);
-                    applyFilters();
-                  }}
-                />
-                {label}
-              </label>
-            ))}
-          </div>
-        )}
-        <button className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#b8bbc3] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]'
-          onClick={() => setFilterBox(!filterBox)}>
-          <img src="src/assets/icons/filterIcon.svg" className='w-4.5 rounded-r-full mr-1.5' alt='Filter technology'></img>
-        </button>
-      </div>
+      <FilterBox checkboxes={checkboxes} handleCheckboxChange={handleCheckboxChange} applyFilters={applyFilters}/>
     </div>
   );
 };

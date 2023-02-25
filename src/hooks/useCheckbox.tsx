@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-interface ICheckboxProps {
+export interface ICheckboxProps {
   id: number;
   value: string;
   label: string;
