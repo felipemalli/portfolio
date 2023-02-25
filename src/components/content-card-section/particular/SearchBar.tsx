@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { useCourseContext, useSearchContext } from '../../../contexts';
+import { useCourseContext, useProjectContext, useSearchContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
 import { FilterBox } from './FilterBox';
@@ -30,12 +30,13 @@ export const SearchBar: React.FC = () => {
   });
 
 
-  // const { allProjects, filteredProjects, setFilteredProjects } = useProjectContext();
+  const { allProjects, setFilteredProjects } = useProjectContext();
   const { allCourses, setFilteredCourses } = useCourseContext();
 
 
   useEffect(() => {
     if (!search) {
+      setFilteredProjects(allProjects);
       setFilteredCourses(allCourses);
     }
   }, [search]);
@@ -63,7 +64,9 @@ export const SearchBar: React.FC = () => {
   };
 
   const applyFilters = () => {
+    const filteredProjects = filterBySkill(filterByArea(allProjects));
     const filteredCourses = filterBySkill(filterByArea(allCourses));
+    setFilteredProjects(filteredProjects);
     setFilteredCourses(filteredCourses);
   };
 
