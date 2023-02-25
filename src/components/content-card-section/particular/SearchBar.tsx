@@ -38,7 +38,6 @@ export const SearchBar: React.FC = () => {
     applyFilters();
   }, [checkboxes, applyFiltersBoolean]);
 
-
   useEffect(() => {
     if (!search) {
       applyFilters();
@@ -56,7 +55,6 @@ export const SearchBar: React.FC = () => {
     ));
     return filteredCards;
   };
-
 
   const giveCheckboxAreas = () => {
     return checkboxes
@@ -76,10 +74,14 @@ export const SearchBar: React.FC = () => {
 
   const applyFilters = () => {
     if (areaName === 'knowledge') {
-      const filteredProjects = filterBySkill(filterByArea(allProjects));
-      const filteredCourses = filterBySkill(filterByArea(allCourses));
-      setFilteredProjects(filteredProjects);
-      setFilteredCourses(filteredCourses);
+      if (allProjects.length > 0) {
+        const filteredProjects = filterBySkill(filterByArea(allProjects));
+        setFilteredProjects(filteredProjects);
+      }
+      if (allCourses.length > 0) {
+        const filteredCourses = filterBySkill(filterByArea(allCourses));
+        setFilteredCourses(filteredCourses);
+      }
     }
     if (areaName === 'skills') {
       console.log('a');
