@@ -29,6 +29,9 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const { areaName } = useChangeAreaContext();
   const { filteredProjects } = useProjectContext();
   const { filteredCourses } = useCourseContext();
+
+  type Timeout = ReturnType<typeof setTimeout>;
+  const [timeoutId, setTimeoutId] = useState<Timeout | null>(null);
   
   useEffect(() => {
     checkEndOfScroll();
@@ -64,15 +67,22 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     fixPositionOfScroll();
   }, [slider]);
 
+  useEffect(() => {
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [timeoutId]);
+
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
       setButtonClickable(false);
       scroll();
       await new Promise<void>((resolve) => {
-        setTimeout(() => {
+        const newTimeoutId = setTimeout(() => {
           setButtonClickable(true);
           resolve();
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
+        setTimeoutId(newTimeoutId);
       });
       checkEndOfScroll();
     }
