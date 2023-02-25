@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useCourseContext, useProjectContext } from '../../contexts';
 import { useChangeAreaContext } from '../../contexts/changeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
@@ -23,13 +24,15 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const cardsScrollMultiplier: number = is2Xl? 2.2 : isMd ? 2 : 1;
   
   const [slider, setSlider] = useState<Element | null>(null);
-  const sliderDivRef = useRef(null);
+  const sliderDivRef = useRef<HTMLInputElement | null>(null);
 
   const { areaName } = useChangeAreaContext();
+  const { filteredProjects } = useProjectContext();
+  const { filteredCourses } = useCourseContext();
   
   useEffect(() => {
     checkEndOfScroll();
-  }, [slider, cardsOnScreenQuantity]);
+  }, [slider, cardsOnScreenQuantity, filteredProjects, filteredCourses]);
 
   useEffect(() => {
     if (sliderDivRef.current) {
