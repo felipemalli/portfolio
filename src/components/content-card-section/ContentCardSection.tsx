@@ -5,7 +5,7 @@ import { TopContentCard } from './TopContentCard';
 
 export const ContentCardSection: React.FC = () => {
   return (
-    <section className='relative mt-36 md:mt-0'>
+    <section id='content' className='relative mt-36 md:mt-0'>
       <TopContentCard></TopContentCard>
       <ChangeAreaButtons />
       <SearchBar></SearchBar>
