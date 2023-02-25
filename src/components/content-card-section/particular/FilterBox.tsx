@@ -5,9 +5,10 @@ export interface IFilterBoxProps {
   checkboxes: ICheckboxProps[];
   handleCheckboxChange: (id: number) => void;
   applyFilters: () => void;
+  giveCheckboxAreas: () => ICheckboxProps[];
 }
 
-export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckboxChange, applyFilters }: IFilterBoxProps) => {
+export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckboxChange, applyFilters, giveCheckboxAreas }: IFilterBoxProps) => {
   const [filterBox, setFilterBox] = useState<boolean>(false);
   const filterBoxRef = useRef<HTMLDivElement | null>(null);
   const filterBoxButton = useRef<HTMLButtonElement | null>(null);
@@ -25,12 +26,8 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
     }
   };
 
-  useEffect(() => {
-    applyFilters();
-  }, [checkboxes]);
-
   return (
-    <div>
+    <div className='absolute right-[2px]'>
       {filterBox && (
         <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-[#d9d9d9] border-4 border-[#c3b8b8]'>
           <div>
@@ -55,9 +52,10 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
           ))}
         </div>
       )}
-      <button ref={filterBoxButton} className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#b8bbc3] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]'
+      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2 pl-2 border-[#b8bbc3]  hover:bg-[#eaeced] active:bg-[#d9d9d9] ${filterBox ? 'bg-[#eaeced]' : 'bg-[#d9d9d9]'} `}
         onClick={() => setFilterBox(!filterBox)}>
-        <img src="src/assets/icons/filterIcon.svg" className='w-4.5 rounded-r-full mr-1.5' alt='Filter technology'></img>
+        <img src="src/assets/icons/filterIcon.svg" className={`w-4.5 rounded-r-full mr-1.5' alt='Filter technology
+        ${giveCheckboxAreas().length < 3 && ''}`}></img>
       </button>
     </div>
   );
