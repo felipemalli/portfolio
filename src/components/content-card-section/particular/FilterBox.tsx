@@ -54,8 +54,11 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
       )}
       <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2 pl-2 border-[#b8bbc3]  hover:bg-[#eaeced] active:bg-[#d9d9d9] ${filterBox ? 'bg-[#eaeced]' : 'bg-[#d9d9d9]'} `}
         onClick={() => setFilterBox(!filterBox)}>
-        <img src="src/assets/icons/filterIcon.svg" className={`w-4.5 rounded-r-full mr-1.5' alt='Filter technology
-        ${giveCheckboxAreas().length < 3 && ''}`}></img>
+        <svg className={`${giveCheckboxAreas().length < 3 ? 'stroke-[#D5685A]' : 'stroke-[#645454]'} `} xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+          <g strokeLinecap="round" strokeWidth="2">
+            <path d="M15.079 12.742H10.35M7.65 12.742H2.92M15.079 8H9M6.298 8H2.921M15.08 3.258h-3.378M9 3.258H2.921M10.35 14.52v-3.556M6.298 9.778V6.222M11.702 5.036V1.48"/>
+          </g>
+        </svg>
       </button>
     </div>
   );
