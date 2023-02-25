@@ -1,3 +1,2 @@
-export interface IChildrenProps {
-  children: React.ReactNode;
-}
+export * from './ICard';
+export * from './IChildrenProps';

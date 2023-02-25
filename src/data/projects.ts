@@ -1,8 +1,9 @@
-import { ICard } from './courses';
+import { ICard } from '../interfaces';
 
 export const projects: ICard[] = [
   {
     name: 'Portfolio',
+    type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Project developed to expose my knowledge. Projects, courses taken, skills already trained, my future steps and goals. OBS: I will develop a backend for this application soon!',
     inProgress: true,

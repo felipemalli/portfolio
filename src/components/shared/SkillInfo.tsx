@@ -35,7 +35,7 @@ export const SkillInfo: React.FC<ISkillInfoProps> = ({ creator, description }: I
   useEffect(() => {
     let STRING_LIMIT = 176;
     if (creator !== 'Felipe Vahia Malliagros') {
-      STRING_LIMIT = 112;
+      STRING_LIMIT = 110;
     }
     setStringList(divideStringIntoLists(description, STRING_LIMIT));
     setPage(0);
@@ -43,10 +43,10 @@ export const SkillInfo: React.FC<ISkillInfoProps> = ({ creator, description }: I
 
   return (
     <div className='h-full w-full flex flex-col items-center'>
-      {creator != 'Felipe Vahia Malliagros' && <p className='text-sm font-light border rounded-md border-[#cfcfcf] py-0.5 w-full text-center  mb-1.5'>Instructor - {creator}</p>}
+      {creator != 'Felipe Vahia Malliagros' && <p className='text-sm font-light border rounded-md border-[#cfcfcf] pt-0.5 w-full text-center  mb-1.5'>Instructor - {creator}</p>}
       <div className="h-screen w-full border border-[#cfcfcf] rounded-lg relative">
         {stringList && stringList[page].map((string) => (
-          <p className={`w-full text-[13px] ${creator != 'Felipe Vahia Malliagros' ? 'pt-[7px] pb-[5px]' : 'pt-[4px]'} px-1.5 font-light flex justify-start`} key={string + String(Date.now())}>
+          <p className={`w-full text-[13px] ${creator != 'Felipe Vahia Malliagros' ? 'pt-[8px] pb-[5px]' : 'pt-[4px]'} px-1.5 font-light flex justify-start`} key={string + String(Date.now())}>
             {string}
           </p>
         ))}

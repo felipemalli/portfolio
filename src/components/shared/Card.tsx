@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ICard } from '../../data/courses';
+import { ICard } from '../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
 import { SkillFrame } from './SkillFrame';
 import { SkillInfo } from './SkillInfo';
@@ -10,7 +10,6 @@ export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGI
 
 export interface ICardProps {
   card: ICard,
-  type: 'project' | 'course',
 }
 
 export type ITechAreaNames = 'frontend' | 'backend' | 'devops'
@@ -19,7 +18,7 @@ export interface IFrameState {
   techArea?: ITechAreaNames
 }
 
-export const Card: React.FC<ICardProps> = ({ card, type }: ICardProps) => {
+export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
   const [frame, setFrame] = useState<IFrameState>({ screen: 'photoFrame' });
 
   const clickOnFrame = () => {
@@ -36,17 +35,17 @@ export const Card: React.FC<ICardProps> = ({ card, type }: ICardProps) => {
   const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
 
   return (
-    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} px-[6px] pt-1 text-gray-900 font-medium text-center hover:text-gray-600
-      ${type === 'project' ? 'text-lg' : 'text-sm'}`}
+      ${card.type === 'project' ? 'text-lg' : 'text-sm'}`}
       onClick={clickOnTitle}
       >
         {card.name}
       </h3>
       <hr className='w-52 h-0.5 bg-[#d9d9d9] m-0 p-0'></hr>
-      <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 rounded-lg cursor-pointer'>
+      <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
-          <img src={card.image} alt='Course image' className='bg-[#d9d9d9] flex h-full w-full border rounded-lg'/>
+          <img src={card.image} alt='Course image' className='cursor-pointer bg-[#d9d9d9] flex h-full w-full border rounded-lg'/>
         }
         {frame.screen === 'skillFrame' &&
           <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} />

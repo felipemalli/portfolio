@@ -1,4 +1,4 @@
-import { ILinkName } from '../../data/courses';
+import { ILinkName } from '../../interfaces';
 import { IFrameState } from './Card';
 import { LinkButton } from './LinkCardButton';
 import { TechAreaButton } from './TechAreaCardButton';

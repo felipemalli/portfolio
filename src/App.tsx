@@ -1,11 +1,17 @@
-import { ChangeAreaProvider } from './contexts/changeAreaContext';
+import { ChangeAreaProvider, CourseProvider, ProjectProvider, SearchProvider } from './contexts';
 import { AppRoutes } from './routes/index';
 
 function App() {
   return (
-    <ChangeAreaProvider>
-      <AppRoutes />
-    </ChangeAreaProvider>
+    <SearchProvider>
+      <ChangeAreaProvider>
+        <ProjectProvider>
+          <CourseProvider>
+            <AppRoutes />
+          </CourseProvider>
+        </ProjectProvider>
+      </ChangeAreaProvider>
+    </SearchProvider>
   );
 }
 
