@@ -8,7 +8,22 @@ export const SearchBar: React.FC = () => {
   const [search, setSearch] = useState<string>('');
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [filterBox, setFilterBox] = useState<boolean>(false);
-  
+  const filterBoxRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (filterBoxRef.current && !filterBoxRef.current.contains(event.target as Node)) {
+      setFilterBox(false);
+    }
+  };
+
   useEffect(() => {
     const handleEnterPress = (event: KeyboardEvent) => {
       if (event.key === 'Enter') {
@@ -26,8 +41,8 @@ export const SearchBar: React.FC = () => {
   const { allCourses, setFilteredCourses } = useCourseContext();
 
   const checkboxValues = [
-    { id: 1, value: 'frontend', label: 'Front End', isChecked: true },
-    { id: 2, value: 'backend', label: 'Back End', isChecked: true },
+    { id: 1, value: 'frontend', label: 'FrontEnd', isChecked: true },
+    { id: 2, value: 'backend', label: 'BackEnd', isChecked: true },
     { id: 3, value: 'devops', label: 'DevOps', isChecked: true },
   ];
   
@@ -40,10 +55,10 @@ export const SearchBar: React.FC = () => {
   }, [search]);
 
   const filterBySkill = (cards: ICard[]) => {
-    const filteredCards: ICard[] = cards.filter((tech: ICard) => (
-      (tech.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
-      (tech.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
-      (tech.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
+    const filteredCards: ICard[] = cards.filter((card: ICard) => (
+      (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
+      (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
+      (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
     ));
     return filteredCards;
   };
@@ -53,16 +68,12 @@ export const SearchBar: React.FC = () => {
       .filter((checkbox) => checkbox.isChecked)
       .map((checkbox) => checkbox.value);
 
-    const filteredCards: ICard[] = cards.filter((tech: ICard) => (
-      (checkboxAreas.some((area) => area in tech.techAreas))
+    const filteredCards: ICard[] = cards.filter((card: ICard) => (
+      (checkboxAreas.some((area) => area in card.techAreas))
     ));
 
     return filteredCards;
   };
-
-  // const filterByBigCourse = () => {
-  //   console.log('a');
-  // };
 
   useEffect(() => {
     applyFilters();
@@ -86,9 +97,14 @@ export const SearchBar: React.FC = () => {
       />
       <div>
         {filterBox && (
-          <div className='absolute flex flex-col items-center justify-between w-40 h-32 right-0 bottom-11 rounded-xl bg-[#d9d9d9] border boder- border-[#c3b8b8]'>
+          <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-[#d9d9d9] border-4 border-[#c3b8b8]'>
+            <div>
+              <p className='text-sm text-center'>CARDS WITH</p>
+              <hr className='bg-[#c3b8b8] h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
+            </div>
             {checkboxes.map(({id, value, label, isChecked}) => (
-              <label key={id} htmlFor={`checkbox-${id}`}>
+
+              <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full'>
                 <input
                   type="checkbox"
                   value={value}
@@ -104,7 +120,7 @@ export const SearchBar: React.FC = () => {
             ))}
           </div>
         )}
-        <button className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#c3b8b8] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]'
+        <button className='rounded-r-full border-y-2 border-r-2 h-8 px-2 border-[#b8bbc3] bg-[#d9d9d9] hover:bg-[#eaeced] active:bg-[#d9d9d9]'
           onClick={() => setFilterBox(!filterBox)}>
           <img src="src/assets/icons/filterIcon.svg" className='w-4.5 rounded-r-full mr-1.5' alt='Filter technology'></img>
         </button>
