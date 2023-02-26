@@ -3,6 +3,6 @@ export const menuVariants = {
     opacity: 1,
   },
   closed: {
-    opacity: 0.8,
+    opacity: 0.5,
   },
 };
