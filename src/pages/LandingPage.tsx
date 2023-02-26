@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
+import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
 import { } from '../utils/preventScrolling';
@@ -18,8 +19,8 @@ export const LandingPage: React.FC = () => {
           </motion.div>
           <img src="src/assets/background/circle.svg" className='absolute opacity-80 -top-[70%] left-[70%] 2xl:-top-[80%] -z-10 scale-125 invisible xl:visible' alt='Background circle'></img>
         </main>
-        <div className='my-[50rem]'/>
       </div>
+      <Footer />
     </div>
   );
 };
