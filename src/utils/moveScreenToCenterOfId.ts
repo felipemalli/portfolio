@@ -1,4 +1,4 @@
-export const moveScreenToCenterOfId = (event: React.MouseEvent<HTMLAnchorElement>, componentId: string): void => {
+export const moveScreenToCenterOfId = (event: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLElement, MouseEvent>, componentId: string): void => {
   event.preventDefault();
   const target = document.getElementById(componentId);
   if (target) {
