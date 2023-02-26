@@ -3,13 +3,13 @@ import { IAreaName, useChangeAreaContext } from '../../contexts';
 import { IChildrenProps } from '../../interfaces';
 import { moveScreenToCenterOfId } from '../../utils/moveScreenToCenterOfId';
 
-interface NavOptionProps extends IChildrenProps {
+interface NavOptionNavigationProps extends IChildrenProps {
   componentId: string;
   areaNameNav?: IAreaName;
   className?: string;
 }
 
-export const NavOption: React.FC<NavOptionProps> = ({ children, componentId, areaNameNav, className }: NavOptionProps) => {
+export const NavOptionNavigation: React.FC<NavOptionNavigationProps> = ({ children, componentId, areaNameNav, className }: NavOptionNavigationProps) => {
   const { areaName, toggleChangeArea } = useChangeAreaContext();
   
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
