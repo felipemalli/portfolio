@@ -1,10 +1,10 @@
 import { createContext, useCallback, useContext, useState } from 'react';
 import { IChildrenProps } from '../interfaces';
 
-type AreaName = 'knowledge' | 'skills'
+export type IAreaName = 'knowledge' | 'skills'
 
 interface IChangeAreaContextData {
-  areaName: AreaName;
+  areaName: IAreaName;
   toggleChangeArea: () => void;
 }
 
@@ -15,7 +15,7 @@ export const useChangeAreaContext = () => {
 };
 
 export const ChangeAreaProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
-  const [areaName, setChangeAreaName] = useState<AreaName>('knowledge');
+  const [areaName, setChangeAreaName] = useState<IAreaName>('knowledge');
 
   const toggleChangeArea = useCallback(() => {
     setChangeAreaName((oldAreaName) => oldAreaName === 'knowledge' ? 'skills' : 'knowledge');
