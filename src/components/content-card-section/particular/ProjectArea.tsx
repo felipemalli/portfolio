@@ -21,6 +21,7 @@ export const ProjectArea: React.FC = () => {
       {filteredProjects.map((project: ICard) => (
         <Card key={project.name} card={project}></Card>
       ))}
+      {filteredProjects.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Projects not found 😭</h3>}
     </motion.div>
   );
 };

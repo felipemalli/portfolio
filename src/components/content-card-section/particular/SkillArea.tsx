@@ -15,6 +15,7 @@ export const SkillArea: React.FC<ISkillAreaProps> = ({ skills }: ISkillAreaProps
       { skills.map((name) => (
         <SkillCard key={name} type={'backend'} name={name}/>
       )) }
+      {skills.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Skill not found 😭</h3>}
     </motion.div>
   );
 };

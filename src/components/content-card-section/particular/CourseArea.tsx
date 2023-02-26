@@ -21,6 +21,7 @@ export const CourseArea: React.FC = () => {
       {filteredCourses.map((course: ICard) => (
         <Card key={course.name} card={course}></Card>
       ))}
+      {filteredCourses.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Courses not found 😭</h3>}
     </motion.div>
   );
 };
