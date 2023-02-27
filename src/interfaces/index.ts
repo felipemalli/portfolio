@@ -1,4 +1,5 @@
 export * from './ICard';
 export * from './IChildrenProps';
-export * from './ISkillCards';
+export * from './ISkillCard';
 export * from './ITechAreaNames';
+
