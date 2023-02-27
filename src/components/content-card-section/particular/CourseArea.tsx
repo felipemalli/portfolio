@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
-import { useChangeAreaContext } from '../../../contexts/changeAreaContext';
-import { useCourseContext } from '../../../contexts/courseContext';
+import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
+import { useCourseContext } from '../../../contexts/CourseContext';
 import { courses } from '../../../data/courses';
 import { ICard } from '../../../interfaces';
 import { menuVariants } from '../../../utils/motionVariants';

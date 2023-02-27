@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useCourseContext, useProjectContext } from '../../contexts';
-import { useChangeAreaContext } from '../../contexts/changeAreaContext';
+import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
 

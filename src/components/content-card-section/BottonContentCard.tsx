@@ -1,4 +1,4 @@
-import { useChangeAreaContext } from '../../contexts/changeAreaContext';
+import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
 import { bottonSkills } from '../../data/skills';
 import { CARD_SIZE } from '../shared/Card';
 import { SliderFiveColumns } from '../shared/SliderFiveColumns';
