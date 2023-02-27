@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
+import { ITechAreaNames } from '../../interfaces';
 
 export interface ISkillFrameProps {
-  techArea: 'backend' | 'frontend' | 'devops';
+  techArea: ITechAreaNames;
   skills: string[];
 }
 
