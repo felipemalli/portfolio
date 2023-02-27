@@ -117,6 +117,37 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     }
   };
 
+  const [sliderClicked, setSliderClicked] = useState<boolean>(false);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (sliderDivRef.current && sliderDivRef.current !== event.target && !sliderDivRef.current.contains(event.target as Node)) {
+      setSliderClicked(false);
+    }
+  };
+
+  const verifyArrow = (event: KeyboardEvent) => {
+    if (sliderClicked) {
+      if (['ArrowLeft', 'ArrowRight'].indexOf(event.code) > -1) {
+        checkEndOfScroll();
+        event.preventDefault();
+      }
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener('keydown', verifyArrow);
+    return () => {
+      window.removeEventListener('keydown', verifyArrow);
+    };
+  });
+
   return (
     <div className={'flex justify-center items-center gap-[0.938rem]'}>
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
@@ -124,7 +155,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       >
         <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Previous slider button'></img>
       </button>
-      <div ref={sliderDivRef}>
+      <div ref={sliderDivRef} onClick={() => setSliderClicked(true)}>
         {children}
       </div>
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
