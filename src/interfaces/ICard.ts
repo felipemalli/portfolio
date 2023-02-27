@@ -25,7 +25,7 @@ export interface ICard {
     name: ILinkName,
     link: string,
   }[],
-  bottonRightTag: {
+  bottonRightTag?: {
     name: IBottonRightTag,
     value?: number
   },
