@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useCourseContext, useProjectContext } from '../../contexts';
-import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
-import { IChildrenProps } from '../../interfaces';
-import { breakpoints } from '../../utils/breakpoints';
+import { useCourseContext, useProjectContext } from '../../../contexts';
+import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
+import { IChildrenProps } from '../../../interfaces';
+import { breakpoints } from '../../../utils/breakpoints';
 
 interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number

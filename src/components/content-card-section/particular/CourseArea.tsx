@@ -5,7 +5,7 @@ import { useCourseContext } from '../../../contexts/CourseContext';
 import { courses } from '../../../data/courses';
 import { ICard } from '../../../interfaces';
 import { menuVariants } from '../../../utils/motionVariants';
-import { Card } from '../../shared/Card';
+import { Card } from '../../shared/Card/Card';
 
 export const CourseArea: React.FC = () => {
   const { areaName } = useChangeAreaContext();

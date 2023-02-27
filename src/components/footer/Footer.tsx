@@ -1,5 +1,5 @@
-import { NavOptionLink } from '../shared/NavOptionLink';
-import { NavOptionNavigation } from '../shared/NavOptionNavigation';
+import { NavOptionLink } from '../shared/Nav/NavOptionLink';
+import { NavOptionNavigation } from '../shared/Nav/NavOptionNavigation';
 
 export const Footer: React.FC = () => {
   return (

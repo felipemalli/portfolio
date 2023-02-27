@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { menuVariants } from '../../../utils/motionVariants';
-import { SkillCard } from '../../shared/SkillCard';
+import { SkillCard } from '../../shared/SkillCard/SkillCard';
 
 interface ISkillAreaProps {
   type: 'top' | 'botton';

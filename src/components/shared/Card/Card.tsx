@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ICard, ITechAreaNames } from '../../interfaces';
+import { ICard, ITechAreaNames } from '../../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
 import { InfoFrame } from './InfoFrame';
 import { SkillFrame } from './SkillFrame';

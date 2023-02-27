@@ -1,5 +1,5 @@
-import { ILinkName } from '../../interfaces';
-import { openUrl } from '../../utils/openUrl';
+import { ILinkName } from '../../../interfaces';
+import { openUrl } from '../../../utils/openUrl';
 
 interface ILinkButtonProps {
   enable: boolean,
