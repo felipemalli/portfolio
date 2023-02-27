@@ -1,12 +1,18 @@
 import { createContext, useCallback, useContext, useState } from 'react';
-import { IChildrenProps, ISkillCard } from '../interfaces';
+import { IChildrenProps } from '../interfaces';
 
 interface ISkillContextData {
-  allSkills: ISkillCard[];
-  setAllSkills: (allSkills: ISkillCard[]) => void;
+  allBottonSkills: string[];
+  setAllBottonSkills: (allBottonSkills: string[]) => void;
 
-  filteredSkills: ISkillCard[] | []
-  setFilteredSkills: (filteredSkills: ISkillCard[]) => void;
+  filteredBottonSkills: string[] | []
+  setFilteredBottonSkills: (filteredBottonSkills: string[]) => void;
+
+  allTopSkills: string[];
+  setAllTopSkills: (allBottonSkills: string[]) => void;
+
+  filteredTopSkills: string[] | []
+  setFilteredTopSkills: (filteredTopSkills: string[]) => void;
 }
 
 const SkillContext = createContext({} as ISkillContextData);
@@ -16,15 +22,25 @@ export const useSkillContext = () => {
 };
 
 export const SkillProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
-  const [allSkills, setAllSkills] = useState<ISkillCard[]>([]);
-  const [filteredSkills, setFilteredSkills] = useState<ISkillCard[]>([]);
+  const [allBottonSkills, setAllBottonSkills] = useState<string[]>([]);
+  const [filteredBottonSkills, setFilteredBottonSkills] = useState<string[]>([]);
+  const [allTopSkills, setAllTopSkills] = useState<string[]>([]);
+  const [filteredTopSkills, setFilteredTopSkills] = useState<string[]>([]);
 
-  const handleAllSkills = useCallback((allSkills: ISkillCard[]) => {
-    setAllSkills(allSkills);
+  const handleAllBottonSkills = useCallback((allBottonSkills: string[]) => {
+    setAllBottonSkills(allBottonSkills);
   }, []);
 
-  const handleFilteredSkills = useCallback((filteredSkills: ISkillCard[]) => {
-    setFilteredSkills(filteredSkills);
+  const handleFilteredBottonSkills = useCallback((filteredBottonSkills: string[]) => {
+    setFilteredBottonSkills(filteredBottonSkills);
+  }, []);
+
+  const handleAllTopSkills = useCallback((allTopSkills: string[]) => {
+    setAllTopSkills(allTopSkills);
+  }, []);
+
+  const handleFilteredTopSkills = useCallback((filteredTopSkills: string[]) => {
+    setFilteredTopSkills(filteredTopSkills);
   }, []);
 
 
@@ -32,11 +48,17 @@ export const SkillProvider: React.FC<IChildrenProps> = ({ children }: IChildrenP
     <SkillContext.Provider 
       value={ 
         {
-          allSkills, 
-          setAllSkills: handleAllSkills,
+          allBottonSkills, 
+          setAllBottonSkills: handleAllBottonSkills,
 
-          filteredSkills,
-          setFilteredSkills: handleFilteredSkills,
+          filteredBottonSkills,
+          setFilteredBottonSkills: handleFilteredBottonSkills,
+
+          allTopSkills,
+          setAllTopSkills: handleAllTopSkills,
+
+          filteredTopSkills,
+          setFilteredTopSkills: handleFilteredTopSkills,
         } 
       }
     >
