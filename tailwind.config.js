@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         'sans': ['Rubik', 'sans-serif'],
       },
+      scale: {
+        '70': '.7',
+      },
     },
   },
   plugins: [],
