@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export interface ISkillInfoProps {
+export interface IInfoFrameProps {
   creator: string;
   description: string;
 }
 
 type IStringList = string[][]
 
-export const SkillInfo: React.FC<ISkillInfoProps> = ({ creator, description }: ISkillInfoProps) => {
+export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: IInfoFrameProps) => {
   const [page, setPage] = useState<number>(0);
   const [stringList, setStringList] = useState<IStringList>();
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { IAreaName, useChangeAreaContext } from '../../contexts';
-import { IChildrenProps } from '../../interfaces';
-import { moveScreenToCenterOfId } from '../../utils/moveScreenToCenterOfId';
+import { IAreaName, useChangeAreaContext } from '../../../contexts';
+import { IChildrenProps } from '../../../interfaces';
+import { moveScreenToCenterOfId } from '../../../utils/moveScreenToCenterOfId';
 
 interface NavOptionNavigationProps extends IChildrenProps {
   componentId: string;

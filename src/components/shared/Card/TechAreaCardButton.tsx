@@ -1,4 +1,5 @@
-import { IFrameState, ITechAreaNames } from './Card';
+import { ITechAreaNames } from '../../../interfaces/ITechAreaNames';
+import { IFrameState } from './Card';
 
 interface ITechAreaButtonProps {
   enable: boolean,

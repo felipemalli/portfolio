@@ -1,8 +1,8 @@
 import { useSkillContext } from '../../contexts';
 import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
 import { bottonSkills } from '../../data/skills';
-import { CARD_SIZE } from '../shared/Card';
-import { SliderFiveColumns } from '../shared/SliderFiveColumns';
+import { CARD_SIZE } from '../shared/Card/Card';
+import { SliderFiveColumns } from '../shared/Slider/SliderFiveColumns';
 import { CourseArea } from './particular/CourseArea';
 import { SkillArea } from './particular/SkillArea';
 

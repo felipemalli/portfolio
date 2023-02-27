@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { ICard, ITechAreaNames } from '../../interfaces';
+import { ICard, ITechAreaNames } from '../../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
+import { InfoFrame } from './InfoFrame';
+import { PhotoFrame } from './PhotoFrame';
 import { SkillFrame } from './SkillFrame';
-import { SkillInfo } from './SkillInfo';
 
 const CARD_WIDTH = 'w-[224px]';
 const CARD_MARGIN_X = 'mx-[9px]';
@@ -41,16 +42,16 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
       >
         {card.name}
       </h3>
-      <hr className='w-52 h-0.5 bg-[#d9d9d9] m-0 p-0'></hr>
-      <div onClick={clickOnFrame} className='flex items-center justify-center w-52 h-32 rounded-lg'>
+      <hr className='w-52 h-[1px] bg-[#cfcfcf] m-0 p-0 border-none'></hr>
+      <div onClick={clickOnFrame} className='relative flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
-          <img src={card.image} alt='Course image' className='cursor-pointer bg-[#d9d9d9] flex h-full w-full border rounded-lg'/>
+          <PhotoFrame image={card.image} inProgress={card.inProgress} bottonRightTag={card.bottonRightTag} backgroundColor={card.type === 'project' ? '#f9f9f9' : '#f7f7f7'}/>
         }
         {frame.screen === 'skillFrame' &&
-          <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} />
+          <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} inProgress={card.techAreas[frame.techArea ?? 'frontend']?.inProgress ?? false}/>
         }
         {frame.screen === 'infoFrame' && 
-          <SkillInfo creator={card.creator} description={card.description}/>
+          <InfoFrame creator={card.creator} description={card.description}/>
         }
       </div>
       <ButtonCardManager enableTechArea={{hasFrontend, hasBackend, hasDevops}} links={card.links} frame={frame} setFrame={setFrame}/>

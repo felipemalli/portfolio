@@ -5,7 +5,7 @@ import { useProjectContext } from '../../../contexts/ProjectContext';
 import { projects } from '../../../data/projects';
 import { ICard } from '../../../interfaces';
 import { menuVariants } from '../../../utils/motionVariants';
-import { Card } from '../../shared/Card';
+import { Card } from '../../shared/Card/Card';
 
 export const ProjectArea: React.FC = () => {
   const { areaName } = useChangeAreaContext();
