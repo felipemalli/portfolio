@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ICard, ITechAreaNames } from '../../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
 import { InfoFrame } from './InfoFrame';
+import { PhotoFrame } from './PhotoFrame';
 import { SkillFrame } from './SkillFrame';
 
 const CARD_WIDTH = 'w-[224px]';
@@ -44,9 +45,8 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
       <hr className='w-52 h-[1px] bg-[#cfcfcf] m-0 p-0 border-none'></hr>
       <div onClick={clickOnFrame} className='relative flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
-          <img src={card.image} alt='Course image' className='cursor-pointer bg-[#d9d9d9] flex h-full w-full border rounded-lg border-[#cfcfcf]'/>
+          <PhotoFrame image={card.image} inProgress={card.inProgress} />
         }
-        {frame.screen === 'photoFrame' && card.inProgress && <div className='absolute bg-[#FC6363] w-full text-center font-medium text-[#2E3E4B] text-sm py-1.5 opacity-95 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>In progress</div>}
         {frame.screen === 'skillFrame' &&
           <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} inProgress={card.techAreas[frame.techArea ?? 'frontend']?.inProgress ?? false}/>
         }
