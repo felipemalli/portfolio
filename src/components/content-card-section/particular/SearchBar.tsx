@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useChangeAreaContext, useCourseContext, useProjectContext, useSearchContext } from '../../../contexts';
+import { useChangeAreaContext, useCourseContext, useProjectContext, useSearchContext, useSkillContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
 import { FilterBox } from './FilterBox';
@@ -31,6 +31,7 @@ export const SearchBar: React.FC = () => {
 
   const { allProjects, setFilteredProjects } = useProjectContext();
   const { allCourses, setFilteredCourses } = useCourseContext();
+  const { allBottonSkills, allTopSkills, setFilteredBottonSkills, setFilteredTopSkills } = useSkillContext();
   const { areaName } = useChangeAreaContext();
   const [showCleanText, setShowCleanText] = useState<boolean>(false);
 
@@ -47,7 +48,7 @@ export const SearchBar: React.FC = () => {
     }
   }, [search]);
 
-  const filterBySkill = (cards: ICard[]) => {
+  const filterCardBySkill = (cards: ICard[]) => {
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
       (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
       (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
@@ -62,7 +63,7 @@ export const SearchBar: React.FC = () => {
       .map((checkbox) => checkbox.value);
   };
 
-  const filterByArea = (cards: ICard[]) => {
+  const filterCardByArea = (cards: ICard[]) => {
     const checkboxAreas = giveCheckboxAreas();
 
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
@@ -72,19 +73,27 @@ export const SearchBar: React.FC = () => {
     return filteredCards;
   };
 
+  const filterBySkill = (skills: string[]) => {
+    const filteredSkills: string[] = skills.filter((skill: string) => (
+      skill.toLowerCase().includes(search.toLowerCase())
+    ));
+    return filteredSkills;
+  };
+
   const applyFilters = () => {
-    if (areaName === 'knowledge') {
-      if (allProjects.length > 0) {
-        const filteredProjects = filterBySkill(filterByArea(allProjects));
-        setFilteredProjects(filteredProjects);
-      }
-      if (allCourses.length > 0) {
-        const filteredCourses = filterBySkill(filterByArea(allCourses));
-        setFilteredCourses(filteredCourses);
-      }
+    if (allProjects.length > 0) {
+      const filteredProjects = filterCardBySkill(filterCardByArea(allProjects));
+      setFilteredProjects(filteredProjects);
     }
-    if (areaName === 'skills') {
-      console.log('a');
+    if (allCourses.length > 0) {
+      const filteredCourses = filterCardBySkill(filterCardByArea(allCourses));
+      setFilteredCourses(filteredCourses);
+    }
+    if (allCourses.length > 0) {
+      const filteredTopSkills = filterBySkill(allTopSkills);
+      const filteredBottonSkills = filterBySkill(allBottonSkills);
+      setFilteredTopSkills(filteredTopSkills);
+      setFilteredBottonSkills(filteredBottonSkills);
     }
   };
 
