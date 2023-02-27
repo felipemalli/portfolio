@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useCourseContext, useProjectContext } from '../../contexts';
-import { useChangeAreaContext } from '../../contexts/changeAreaContext';
+import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
 import { IChildrenProps } from '../../interfaces';
 import { breakpoints } from '../../utils/breakpoints';
 
@@ -117,6 +117,34 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     }
   };
 
+  const [sliderClicked, setSliderClicked] = useState<boolean>(false);
+  
+  const handleSliderClick = useCallback(() => {
+    setSliderClicked(true);
+  }, []);
+
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    if (sliderDivRef.current && sliderDivRef.current !== event.target && !sliderDivRef.current.contains(event.target as Node)) {
+      setSliderClicked(false);
+    }
+  }, []);
+  
+  const verifyArrow = useCallback((event: KeyboardEvent) => {
+    if (sliderClicked && ['ArrowLeft', 'ArrowRight'].includes(event.code)) {
+      event.preventDefault();
+      checkEndOfScroll();
+    }
+  }, [checkEndOfScroll, sliderClicked]);
+  
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('keydown', verifyArrow);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('keydown', verifyArrow);
+    };
+  }, [handleClickOutside, verifyArrow]);
+
   return (
     <div className={'flex justify-center items-center gap-[0.938rem]'}>
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
@@ -124,7 +152,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       >
         <img src="src/assets/icons/doubleArrow.svg" className='w-4.5' alt='Previous slider button'></img>
       </button>
-      <div ref={sliderDivRef}>
+      <div ref={sliderDivRef} onClick={() => handleSliderClick()}>
         {children}
       </div>
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}

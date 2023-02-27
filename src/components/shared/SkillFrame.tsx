@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useSearchContext } from '../../contexts';
+import { ITechAreaNames } from '../../interfaces';
 
 export interface ISkillFrameProps {
-  techArea: 'backend' | 'frontend' | 'devops';
+  techArea: ITechAreaNames;
   skills: string[];
 }
 
@@ -32,6 +34,14 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills }: ISk
     setPage(0);
   }, [techArea]);
 
+
+  const { setSearch, setApplyFiltersBoolean, applyFiltersBoolean } = useSearchContext();
+
+  const handleClick = (skill: string) => {
+    setSearch(skill);
+    setApplyFiltersBoolean(!applyFiltersBoolean);
+  };
+
   return (
     <div className="h-full w-full grid grid-cols-2 grid-rows-4 border border-[#cfcfcf] rounded-lg relative">
       <hr className="absolute rotate-90 bg-[#cfcfcf] w-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"/>
@@ -39,9 +49,10 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills }: ISk
       <hr className="absolute bg-[#cfcfcf] w-52 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"/>
       <hr className="absolute bg-[#cfcfcf] w-52 bottom-1/4 left-1/2 transform -translate-x-1/2 translate-y-1/4"/>
       {skillsByEight && skillsByEight[page].map((skill) => (
-        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-[#eaeced] active:bg-[#f9f9f9]`} key={skill + String(Date.now())}>
+        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-[#eaeced] active:bg-[#f9f9f9]`} key={skill + String(Date.now())}
+          onClick={() => handleClick(skill)}
+        >
           <p className={'truncate overflow-hidden overflow-ellipsis'}>{skill}</p>
-          {/* <div className={`${!maxCharactersAndSpaces(skill) && 'hidden'} hover:flex absolute bg-slate-400 top-1/2 w-32 h-4`}>{skill}</div> */}
         </button>
       ))}
       {skillsByEight && page !== 0 && (

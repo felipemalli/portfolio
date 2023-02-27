@@ -1,4 +1,4 @@
-import { ChangeAreaProvider, CourseProvider, ProjectProvider, SearchProvider } from './contexts';
+import { ChangeAreaProvider, CourseProvider, ProjectProvider, SearchProvider, SkillProvider } from './contexts';
 import { AppRoutes } from './routes/index';
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
       <ChangeAreaProvider>
         <ProjectProvider>
           <CourseProvider>
-            <AppRoutes />
+            <SkillProvider>
+              <AppRoutes />
+            </SkillProvider>
           </CourseProvider>
         </ProjectProvider>
       </ChangeAreaProvider>

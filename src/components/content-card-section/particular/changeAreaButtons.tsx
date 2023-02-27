@@ -1,4 +1,4 @@
-import { useChangeAreaContext } from '../../../contexts/changeAreaContext';
+import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 
 export const ChangeAreaButtons: React.FC = () => {
   const { toggleChangeArea } = useChangeAreaContext();
