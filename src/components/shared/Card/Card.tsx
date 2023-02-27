@@ -45,7 +45,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
       <hr className='w-52 h-[1px] bg-[#cfcfcf] m-0 p-0 border-none'></hr>
       <div onClick={clickOnFrame} className='relative flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
-          <PhotoFrame image={card.image} inProgress={card.inProgress} />
+          <PhotoFrame image={card.image} inProgress={card.inProgress} bottonRightTag={card.bottonRightTag}/>
         }
         {frame.screen === 'skillFrame' &&
           <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} inProgress={card.techAreas[frame.techArea ?? 'frontend']?.inProgress ?? false}/>
