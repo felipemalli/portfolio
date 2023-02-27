@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ICard } from '../../interfaces';
+import { ICard, ITechAreaNames } from '../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
 import { SkillFrame } from './SkillFrame';
 import { SkillInfo } from './SkillInfo';
@@ -12,7 +12,6 @@ export interface ICardProps {
   card: ICard,
 }
 
-export type ITechAreaNames = 'frontend' | 'backend' | 'devops'
 export interface IFrameState {
   screen: 'photoFrame' | 'infoFrame' | 'skillFrame',
   techArea?: ITechAreaNames
