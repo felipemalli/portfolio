@@ -89,11 +89,13 @@ export const SearchBar: React.FC = () => {
       const filteredCourses = filterCardBySkill(filterCardByArea(allCourses));
       setFilteredCourses(filteredCourses);
     }
-    if (allCourses.length > 0) {
-      const filteredTopSkills = filterBySkill(allTopSkills);
+    if (allBottonSkills.length > 0) {
       const filteredBottonSkills = filterBySkill(allBottonSkills);
-      setFilteredTopSkills(filteredTopSkills);
       setFilteredBottonSkills(filteredBottonSkills);
+    }
+    if (allTopSkills.length > 0) {
+      const filteredTopSkills = filterBySkill(allTopSkills);
+      setFilteredTopSkills(filteredTopSkills);
     }
   };
 
