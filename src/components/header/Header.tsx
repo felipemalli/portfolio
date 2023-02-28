@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
       <nav className='hidden items-center space-x-8 uppercase text-[#58656F] tracking-widest md:flex font-semibold'>
         <NavOptionNavigation className='hover:scale-105' componentId='content' areaNameNav='knowledge'>Knowledge</NavOptionNavigation>
         <NavOptionNavigation className='hover:scale-105' componentId='content' areaNameNav='skills'>Skills</NavOptionNavigation>
-        <NavOptionNavigation className='hover:scale-105' componentId=''>About</NavOptionNavigation>
+        <NavOptionNavigation className='hover:scale-105' componentId='about'>About</NavOptionNavigation>
         <NavOptionLink className='hover:scale-105' url='https://www.linkedin.com/in/felipe-vahia-malliagros/'>Contact</NavOptionLink>
       </nav>
     </header>
