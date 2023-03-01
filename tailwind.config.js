@@ -16,18 +16,24 @@ export default {
           900: '#f7f7f7',
         },
         customGray: {
-          300: '#',
-          400: '#',
-          500: '#',
-          600: '#',
-          700: '#',
+          200: '#ebebeb',
+          300: '#e4e4e4',
+          400: '#d9d9d9',
+          500: '#cfcfcf',
+          600: '#bdbdbd',
         },
         customBlue: {
           300: '#737e86',
           500: '#58656F',
           700: '#2e3e4b',
           900: '#212C35'
-        }
+        },
+        customGreen: {
+          200: '#7ce79e',
+          500: '#27BE58',
+        },
+        icon: '#645454',
+        alert: '#FC6363',
       },
       fontFamily: {
         'sans': ['Rubik', 'sans-serif'],
