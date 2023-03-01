@@ -35,7 +35,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
   const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
 
   return (
-    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-secondary-700' : 'h-[14.75rem] bg-[secondary-900]'}`}>
+    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-secondary-700' : 'h-[14.75rem] bg-secondary-900'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} px-[6px] pt-1 text-gray-900 font-medium text-center hover:text-gray-600
       ${card.type === 'project' ? 'text-lg' : 'text-sm'}`}
       onClick={clickOnTitle}
