@@ -50,7 +50,7 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
       <hr className="absolute bg-[#cfcfcf] w-52 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
       <hr className="absolute bg-[#cfcfcf] w-52 bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/4"/>
       {skillsByEight && skillsByEight[page].map((skill) => (
-        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-[#eaeced] active:bg-secondary-700`} key={skill + String(Date.now())}
+        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-[#ebebeb] active:bg-secondary-700`} key={skill + String(Date.now())}
           onClick={() => handleClick(skill)}
         >
           <p className={'truncate overflow-hidden overflow-ellipsis'}>{skill}</p>
