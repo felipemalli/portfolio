@@ -1,5 +1,5 @@
 import { ChangeAreaProvider, CourseProvider, ProjectProvider, SearchProvider, SkillProvider } from './contexts';
-import { AppRoutes } from './routes/index';
+import { LandingPage } from './pages/LandingPage';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <ProjectProvider>
           <CourseProvider>
             <SkillProvider>
-              <AppRoutes />
+              <LandingPage/>
             </SkillProvider>
           </CourseProvider>
         </ProjectProvider>
