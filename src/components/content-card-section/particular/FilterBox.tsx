@@ -29,10 +29,10 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
   return (
     <div className='absolute right-[2px]'>
       {filterBox && (
-        <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-[#d9d9d9] border-4 border-[#bdbdbd]'>
+        <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
             <p className='text-sm text-center'>CARDS WITH</p>
-            <hr className='bg-[#bdbdbd] h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
+            <hr className='bg-customGray-600 h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
           </div>
           {checkboxes.map(({id, value, label, isChecked}) => (
 
@@ -52,7 +52,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
           ))}
         </div>
       )}
-      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-[#bdbdbd]  hover:bg-[#EBEBEB] active:bg-[#d9d9d9] ${filterBox ? 'bg-[#ebebeb]' : 'bg-[#d9d9d9]'} `}
+      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-customGray-600  hover:bg-customGray-200 active:bg-customGray-400 ${filterBox ? 'bg-customGray-200' : 'bg-customGray-400'} `}
         onClick={() => setFilterBox(!filterBox)}>
         <svg className={`${giveCheckboxAreas().length < 3 ? 'stroke-primary-500' : 'stroke-[#645454]'} `} xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
           <g strokeLinecap="round" strokeWidth="2">

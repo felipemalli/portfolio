@@ -20,7 +20,7 @@ export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ enable, techAre
   };
 
   return (
-    <button className={`transition-all duration-200 ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-[#7ce79e]' : 'bg-[#d9d9d9] hover:bg-[#e4e4e4]'} rounded-md text-sm`}
+    <button className={`transition-all duration-200 ${enable ? 'active:bg-green-400' : 'opacity-50 cursor-default'} w-full h-8 ${frame.techArea === techArea ? 'bg-[#7ce79e]' : 'bg-customGray-400 hover:bg-customGray-300'} rounded-md text-sm`}
       onClick={() => enable && handleClick()}
     >
       {techAreaAbreviation}

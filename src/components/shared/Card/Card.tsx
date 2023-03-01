@@ -42,7 +42,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
       >
         {card.name}
       </h3>
-      <hr className='w-52 h-[1px] bg-[#cfcfcf] m-0 p-0 border-none'></hr>
+      <hr className='w-52 h-[1px] bg-customGray-500 m-0 p-0 border-none'></hr>
       <div onClick={clickOnFrame} className='relative flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
           <PhotoFrame image={card.image} inProgress={card.inProgress} bottonRightTag={card.bottonRightTag} backgroundColor={card.type === 'project' ? 'secondary-700' : 'secondary-900'}/>
