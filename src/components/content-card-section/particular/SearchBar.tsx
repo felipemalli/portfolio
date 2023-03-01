@@ -112,7 +112,7 @@ export const SearchBar: React.FC = () => {
         value={search}
       />
       {showCleanText &&
-        <button className={`text-center text-sm pl-[1px] w-7 h-7 ${areaName === 'knowledge' ? 'right-11' : 'right-[4px]'} rounded-full absolute text-[#645454] bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400`}
+        <button className={`text-center text-sm pl-[1px] w-7 h-7 ${areaName === 'knowledge' ? 'right-11' : 'right-[4px]'} rounded-full absolute text-icon bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400`}
           onClick={() => setSearch('')}>
           X
         </button> 

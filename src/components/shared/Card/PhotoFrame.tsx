@@ -16,15 +16,15 @@ export const PhotoFrame: React.FC<IPhotoFrameProps> = ({ image, inProgress, bott
     <div className='cursor-pointer bg-customGray-400 flex h-full w-full border rounded-lg border-customGray-500'>
       <img src={image} alt='Card image' className='bg-customGray-400 rounded-lg h-full w-full'/>       
       {inProgress && 
-        <div className='absolute bg-[#FC6363] w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-95 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+        <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-95 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
           In progress
         </div>}
 
       {bottonRightTag && bottonRightTag.name === 'Browser' &&
-        <svg className={`absolute -right-[24px] -bottom-[9px] w-10 scale-70 fill-${backgroundColor}`} xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+        <svg className={'absolute -right-[24px] -bottom-[9px] w-10 scale-70'} xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path fill="#CFCFCF" d="M14.194.711A11.5 11.5 0 0 0 1.293 16.196L12 12 14.194.711Z"/>
-          <circle cx="12.5" cy="12.5" r="10"/>
-          <path fill="#27BE58" d="M20.5 12.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
+          <circle className={'fill-secondary-700'} cx="12.5" cy="12.5" r="10"/>
+          <path className='fill-customGreen-500' d="M20.5 12.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
         </svg>
       }
       {bottonRightTag && bottonRightTag.name === 'Hours' && bottonRightTag.value &&
