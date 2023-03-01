@@ -22,8 +22,8 @@ export const PhotoFrame: React.FC<IPhotoFrameProps> = ({ image, inProgress, bott
 
       {bottonRightTag && bottonRightTag.name === 'Browser' &&
         <svg className={'absolute -right-[24px] -bottom-[9px] w-10 scale-70'} xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-          <path fill="#CFCFCF" d="M14.194.711A11.5 11.5 0 0 0 1.293 16.196L12 12 14.194.711Z"/>
-          <circle className={'fill-secondary-700'} cx="12.5" cy="12.5" r="10"/>
+          <path className='fill-customGray-500' d="M14.194.711A11.5 11.5 0 0 0 1.293 16.196L12 12 14.194.711Z"/>
+          <circle className='fill-secondary-700' cx="12.5" cy="12.5" r="10"/>
           <path className='fill-customGreen-500' d="M20.5 12.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
         </svg>
       }
