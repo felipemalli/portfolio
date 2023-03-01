@@ -66,7 +66,7 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
           <img src="src/assets/icons/circularArrow.svg" alt='Next page button'></img>
         </button>
       )}
-      {inProgress && <div className='absolute bg-[#FC6363] w-full text-center font-medium text-[#2E3E4B] text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
+      {inProgress && <div className='absolute bg-[#FC6363] w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
     </div>
   );
 };

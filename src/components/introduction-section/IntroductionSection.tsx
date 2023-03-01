@@ -6,8 +6,8 @@ export const IntroductionSection: React.FC = () => {
   return (
     <section className='flex flex-col xl:flex-row justify-center 2xl:justify-evenly items-center 2xl:gap-32 gap-3 2xl:mt-0 h-screen md:h-auto'>
       <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-10'>
-        <h1 className='text-[#212C35] text-6xl font-semibold text-center xl:text-left'>Felipe Malliagros</h1>
-        <div className='text-[#58656F] text-2xl font-semibold mt-7 text-center xl:text-left'>
+        <h1 className='text-customBlue-900 text-6xl font-semibold text-center xl:text-left'>Felipe Malliagros</h1>
+        <div className='text-customBlue-500 text-2xl font-semibold mt-7 text-center xl:text-left'>
           <TypeAnimation sequence={[
             'Full Stack',
             3000,
@@ -17,14 +17,14 @@ export const IntroductionSection: React.FC = () => {
           />
           <span> developer</span>
         </div>
-        <p className='text-[#58656F] text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>I{'\''}m a logic and creativity guy. Specialized in backend, but I like all areas of web development. I{'\''}m always studying to keep myself qualified and updated.</p>
+        <p className='text-customBlue-500 text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>I{'\''}m a logic and creativity guy. Specialized in backend, but I like all areas of web development. I{'\''}m always studying to keep myself qualified and updated.</p>
         <div className='mt-7 text-center xl:text-left'>
-          <button className='w-32 h-14 mr-4 bg-primary-500 hover:bg-[#e4e4e4] hover:text-[#58656F] text-secondary-500 active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
+          <button className='w-32 h-14 mr-4 bg-primary-500 hover:bg-[#e4e4e4] hover:text-customBlue-500 text-secondary-500 active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
             onClick={() => openUrl('https://www.linkedin.com/in/felipe-vahia-malliagros/')}
           >
             Contact me
           </button>
-          <button className='w-32 h-14 border border-primary-500 hover:bg-[#e4e4e4] text-[#58656F] active:bg-green-400 rounded-md text-sm transition-color duration-200'
+          <button className='w-32 h-14 border border-primary-500 hover:bg-[#e4e4e4] text-customBlue-500 active:bg-green-400 rounded-md text-sm transition-color duration-200'
             onClick={() => openUrl('https://github.com/felipemalli')}
           >
             Repositories

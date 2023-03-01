@@ -12,7 +12,7 @@ export const AboutSection: React.FC = () => {
             md:w-[544px] md:-mr-20 min-h-[416px]
             
             md:rounded-tl-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
-              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-[#2E3E4B]'>
+              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-customBlue-700'>
               About
               </h2>
             </div>
@@ -20,7 +20,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:ml-20
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-[#2E3E4B] p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-customBlue-700 p-10 md:p-14 '>
               <p>
                 Me chamo Felipe Vahia Malliagros, 22 anos e moro no Rio de Janeiro, capital. Cursei metade da graduação de engenharia civil e resolvi mudar de carreira. Desde então, não parei de estudar programação. E é fácil, pois amo programar.
               </p>
@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
               md:w-[544px] md:-ml-20 min-h-[416px]
               
               md:rounded-tr-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
-              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-[#2E3E4B]'>
+              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-customBlue-700'>
               Academics
               </h2>
             </div>
@@ -48,7 +48,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-[#2E3E4B] p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-customBlue-700 p-10 md:p-14 '>
               <p>
                 Graduando em Ciências da Computação na UFF e me aprimorando em cloud e microsserviços. Além dos meus estudos pessoais, tenho intenção de alinhar o caminho dos meus estudos com as necessidades da empresa que eu estiver.
               </p>
