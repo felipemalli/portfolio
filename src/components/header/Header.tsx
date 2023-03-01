@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className='flex justify-between md:justify-center -mb-[72px] xl:justify-start p-6 md:my-6 xl:ml-20 2xl:ml-12'>
+    <header className='flex justify-between md:justify-center -mb-[88px] xl:justify-start p-6 md:my-6 xl:ml-20 2xl:ml-12'>
       <img className='flex h-6 w-6 scale-75 md:-ml-16 md:mr-16' src="src/assets/background/icon.png" alt='Felipevm icon'/>
       <div className='flex'>
         <div className={`${!isOpen ? 'hidden' : 'absolute'} w-screen md:w-auto md:flex md:relative right-1/2 translate-x-1/2 mt-12 md:mt-0 border-y md:border-none`}>
