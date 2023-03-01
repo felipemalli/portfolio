@@ -19,12 +19,12 @@ export const IntroductionSection: React.FC = () => {
         </div>
         <p className='text-[#58656F] text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>I{'\''}m a logic and creativity guy. Specialized in backend, but I like all areas of web development. I{'\''}m always studying to keep myself qualified and updated.</p>
         <div className='mt-7 text-center xl:text-left'>
-          <button className='w-32 h-14 mr-4 bg-[#D5685A] hover:bg-[#e4e4e4] hover:text-[#58656F] text-[#fbfbfb] active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
+          <button className='w-32 h-14 mr-4 bg-primary-500 hover:bg-[#e4e4e4] hover:text-[#58656F] text-secondary-500 active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
             onClick={() => openUrl('https://www.linkedin.com/in/felipe-vahia-malliagros/')}
           >
             Contact me
           </button>
-          <button className='w-32 h-14 border border-[#D5685A] hover:bg-[#e4e4e4] text-[#58656F] active:bg-green-400 rounded-md text-sm transition-color duration-200'
+          <button className='w-32 h-14 border border-primary-500 hover:bg-[#e4e4e4] text-[#58656F] active:bg-green-400 rounded-md text-sm transition-color duration-200'
             onClick={() => openUrl('https://github.com/felipemalli')}
           >
             Repositories

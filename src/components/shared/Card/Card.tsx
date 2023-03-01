@@ -35,7 +35,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
   const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
 
   return (
-    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-[#f9f9f9]' : 'h-[14.75rem] bg-[#f7f7f7]'}`}>
+    <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-secondary-700' : 'h-[14.75rem] bg-[secondary-900]'}`}>
       <h3 className={`pointer-events-auto cursor-pointer flex items-center justify-center h-10 ${CARD_WIDTH} px-[6px] pt-1 text-gray-900 font-medium text-center hover:text-gray-600
       ${card.type === 'project' ? 'text-lg' : 'text-sm'}`}
       onClick={clickOnTitle}
@@ -45,7 +45,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
       <hr className='w-52 h-[1px] bg-[#cfcfcf] m-0 p-0 border-none'></hr>
       <div onClick={clickOnFrame} className='relative flex items-center justify-center w-52 h-32 rounded-lg'>
         {frame.screen === 'photoFrame' && 
-          <PhotoFrame image={card.image} inProgress={card.inProgress} bottonRightTag={card.bottonRightTag} backgroundColor={card.type === 'project' ? '#f9f9f9' : '#f7f7f7'}/>
+          <PhotoFrame image={card.image} inProgress={card.inProgress} bottonRightTag={card.bottonRightTag} backgroundColor={card.type === 'project' ? 'secondary-700' : 'secondary-900'}/>
         }
         {frame.screen === 'skillFrame' &&
           <SkillFrame techArea={frame.techArea ?? 'frontend'} skills={card.techAreas[frame.techArea ?? 'frontend']?.skills ?? ['']} inProgress={card.techAreas[frame.techArea ?? 'frontend']?.inProgress ?? false}/>

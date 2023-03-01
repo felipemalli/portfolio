@@ -5,6 +5,17 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          300: '#E48383',
+          500: '#D5685A'
+        },
+        secondary: {
+          500: '#fbfbfb',
+          700: '#f9f9f9',
+          900: '#f7f7f7',
+        }
+      },
       fontFamily: {
         'sans': ['Rubik', 'sans-serif'],
       },
