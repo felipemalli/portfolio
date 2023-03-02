@@ -33,7 +33,7 @@ export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: I
   }
 
   useEffect(() => {
-    let STRING_LIMIT = 176;
+    let STRING_LIMIT = 163;
     if (creator !== 'Felipe Vahia Malliagros') {
       STRING_LIMIT = 116;
     }
