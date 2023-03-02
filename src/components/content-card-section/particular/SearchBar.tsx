@@ -52,7 +52,8 @@ export const SearchBar: React.FC = () => {
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
       (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
       (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
-      (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
+      (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
+      (card.techAreas.other?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
     ));
     return filteredCards;
   };
@@ -67,7 +68,8 @@ export const SearchBar: React.FC = () => {
     const checkboxAreas = giveCheckboxAreas();
 
     const filteredCards: ICard[] = cards.filter((card: ICard) => (
-      (checkboxAreas.some((area: string) => area in card.techAreas))
+      (checkboxAreas.some((area: string) => area in card.techAreas)) ||
+      ((checkboxAreas.length === 3 || checkboxAreas.length === 0) && card.techAreas.other?.name)
     ));
 
     return filteredCards;
