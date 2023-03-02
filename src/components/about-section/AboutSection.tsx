@@ -20,7 +20,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:ml-20
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-customBlue-700 p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
                 My name is Felipe Vahia Malliagros, 22 years old and I live in Rio de Janeiro, the capital. I attended half of the degree in civil engineering and decided to change careers. Since then, I haven{'\''}t stopped studying programming. And it{'\''}s easy, because I love programming.
               </p>
@@ -48,7 +48,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-lg text-customBlue-700 p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
                 Graduating in Computer Science at UFF and improving myself in cloud and microservices. In addition to my personal studies, I intend to align the path of my studies with the needs of the company I work for.
               </p>
