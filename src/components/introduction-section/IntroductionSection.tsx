@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { AnimatedDiv } from '../../hooks/AnimatedDiv';
 import { openUrl } from '../../utils/openUrl';
 
 export const IntroductionSection: React.FC = () => {
@@ -32,8 +32,11 @@ export const IntroductionSection: React.FC = () => {
         </div>
       </div>
       <div className='md:flex items-center justify-center mt-10 xl:mt-0 hidden'>
-        <motion.img animate={{ y: 0 }} initial={{ y: 700 }} transition={{ type: 'tween', duration: 1.5, delay: 0.5}} src='src/assets/background/felipeEmpty.webp' className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] mt-10' alt='Felipe image'></motion.img>
+        <AnimatedDiv initialAnimation='translate-y-150' finalAnimation='translate-y-0' duration='duration-1400' delay='delay-750'>
+          <img src='src/assets/background/felipeEmpty.webp' className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] mt-10' alt='Felipe image'></img>
+        </AnimatedDiv>
       </div>
     </section>
   );
 };
+
