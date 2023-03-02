@@ -54,7 +54,7 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
           <InfoFrame creator={card.creator} description={card.description}/>
         }
       </div>
-      <ButtonCardManager enableTechArea={{hasFrontend, hasBackend, hasDevops}} links={card.links} frame={frame} setFrame={setFrame}/>
+      <ButtonCardManager enableTechArea={{hasFrontend, hasBackend, hasDevops }} links={card.links} frame={frame} setFrame={setFrame} otherTechAreaName={card.techAreas?.other?.name}/>
     </div>
   );
 };
