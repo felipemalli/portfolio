@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { useCourseContext } from '../../../contexts/CourseContext';
 import { courses } from '../../../data/courses';
-import { AnimatedDiv } from '../../../hooks/AnimatedDiv';
 import { ICard } from '../../../interfaces';
+import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 import { Card } from '../../shared/Card/Card';
 
 export const CourseArea: React.FC = () => {

@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import { AnimatedDiv } from '../../hooks/AnimatedDiv';
+import { AnimatedDiv } from '../../utils/AnimatedDiv';
 import { openUrl } from '../../utils/openUrl';
 
 export const IntroductionSection: React.FC = () => {

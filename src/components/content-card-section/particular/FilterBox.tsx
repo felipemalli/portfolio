@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ICheckboxProps } from '../../../hooks';
-import { AnimatedDiv } from '../../../hooks/AnimatedDiv';
+import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 
 export interface IFilterBoxProps {
   checkboxes: ICheckboxProps[];

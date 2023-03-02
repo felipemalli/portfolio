@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { useProjectContext } from '../../../contexts/ProjectContext';
 import { projects } from '../../../data/projects';
-import { AnimatedDiv } from '../../../hooks/AnimatedDiv';
 import { ICard } from '../../../interfaces';
+import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 import { Card } from '../../shared/Card/Card';
 
 export const ProjectArea: React.FC = () => {
