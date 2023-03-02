@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ICheckboxProps } from '../../../hooks';
+import { AnimatedDiv } from '../../../hooks/AnimatedDiv';
 
 export interface IFilterBoxProps {
   checkboxes: ICheckboxProps[];
@@ -29,7 +30,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
   return (
     <div className='absolute right-[2px]'>
       {filterBox && (
-        <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
+        <AnimatedDiv initialAnimation='opacity-0' finalAnimation='opacity-100' reference={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
             <p className='text-sm text-center'>CARDS WITH</p>
             <hr className='bg-customGray-600 h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
@@ -50,7 +51,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
               {label}
             </label>
           ))}
-        </div>
+        </AnimatedDiv>
       )}
       <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-customGray-600  hover:bg-customGray-200 active:bg-customGray-400 ${filterBox ? 'bg-customGray-200' : 'bg-customGray-400'} `}
         onClick={() => setFilterBox(!filterBox)}>
