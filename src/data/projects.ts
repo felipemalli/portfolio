@@ -94,5 +94,25 @@ export const projects: ICard[] = [
         link: 'https://github.com/felipemalli/drone-feeder#documenta%C3%A7%C3%A3o-da-api'
       },
     ],
-  }
+  },
+  {
+    name: 'Shipinsane',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'Game developed for a Fluminense Federal University (UFF) discipline. It was excellent to train logic a lot and work with OOP and python. It\'s possible to play the game, just follow the steps of code link.',
+    inProgress: false,
+    image: 'src/assets/projects/shipinsane.webp',
+    techAreas: {
+      other: {
+        name: 'Game',
+        skills: ['Python', 'OOP', 'Pygame', 'PPlay'],
+      }
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/game-shipinsane'
+      },
+    ],
+  },
 ];
