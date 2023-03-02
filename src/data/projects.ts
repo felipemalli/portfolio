@@ -5,7 +5,7 @@ export const projects: ICard[] = [
     name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Project developed to expose my knowledge. I started by designing the design in figma, and then applied it to the front-end. While developing, I decided to change some details. OBS: I will develop a backend for this application soon! I developed this frontend project already receiving structured and scalable data. Then, as it would be easy to implement the backend, I\'m going take this opportunity to train something new on the backend/devops.',
+    description: 'Project developed to expose my knowledge. I started by designing the design in figma, and then applied it to the front-end. While developing, I decided to change some details. I avoid to use dependencies, so it has only react and tailwind (to be fair, I use a react-type-animation for this little animation on subtitle).  OBS: I will develop a backend for this application soon! Since I developed this frontend project already receiving structured and scalable data (you can check at src/data), it would be easy to implement the backend. So, I\'m going take this opportunity to train something new with the backend/devops.',
     inProgress: false,
     image: 'src/assets/projects/portfolio.webp',
     techAreas: {
