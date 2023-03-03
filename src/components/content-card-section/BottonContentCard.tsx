@@ -16,7 +16,7 @@ export const BottonContentCard: React.FC = () => {
         <CourseArea/>
         <SkillArea type={'botton'} skills={bottonSkills} setFilteredSkills={setFilteredBottonSkills} setAllSkills={setAllBottonSkills} filteredSkills={filteredBottonSkills} />
       </SliderFiveColumns>
-      <h2 className={`text-customBlue-900 select-none -mt-5 md:-mt-2 h-10 font-semibold ${areaName === 'knowledge' ? 'text-2xl md:text-4xl ' : 'text-[1.3rem] md:text-[2rem]'}`}>
+      <h2 className={`text-customBlue-900 select-none -mt-7 pt-3 md:pt-0 md:-mt-3 h-10 font-semibold ${areaName === 'knowledge' ? 'text-2xl md:text-4xl ' : 'text-[1.3rem] md:text-[2rem]'}`}>
         {areaName === 'knowledge' ? 'Courses' : 'FrontEnd + UI/UX'}
       </h2>
     </div>
