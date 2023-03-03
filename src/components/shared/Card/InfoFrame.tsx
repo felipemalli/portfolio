@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { iconImages } from '../../../assets';
 
 export interface IInfoFrameProps {
   creator: string;
@@ -52,12 +53,12 @@ export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: I
         ))}
         {stringList && page !== 0 && (
           <button className='absolute -left-[4px] top-1/2 -translate-y-1/2 -translate-x-1/2 text-xs w-9 p-2.5' onClick={() => setPage(page - 1)}>
-            <img src="src/assets/icons/circularArrow.svg" alt='Previous page button'></img>
+            <img src={iconImages.circularArrow} alt='Previous page button'></img>
           </button>
         )}
         {stringList && stringList.length > 1 && page < stringList.length - 1 && (
           <button className='absolute -right-[22px] top-1/2 -translate-y-1/2  text-xs rotate-180 w-9 p-2.5' onClick={() => setPage(page + 1)}>
-            <img src="src/assets/icons/circularArrow.svg" alt='Next page button'></img>
+            <img src={iconImages.circularArrow} alt='Next page button'></img>
           </button>
         )}
       </div>

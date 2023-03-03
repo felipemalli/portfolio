@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { iconImages } from '../../../assets';
 import { useChangeAreaContext, useCourseContext, useProjectContext, useSearchContext, useSkillContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
@@ -130,7 +131,7 @@ export const SearchBar: React.FC = () => {
     <div className='flex items-center bg-secondary-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-9 rounded-full p-0.5 shadow-md hover:shadow-lg'>
       <button className='flex justify-center items-center w-7 h-7 left-1 pr-0.5 rounded-full absolute bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400'
         onClick={() => applyFilters()}>
-        <img className='w-3.5' src="src/assets/icons/searchIcon.svg" alt='Search technology'></img>
+        <img className='w-3.5' src={iconImages.searchIcon} alt='Search technology'></img>
       </button>
       <input type="text" className='text-sm pl-8 bg-customGray-400 rounded-full border-2 border-customGray-600 w-full h-8 focus:border-r-2 focus:border-primary-500 outline-none'
         placeholder="Search Technology"
