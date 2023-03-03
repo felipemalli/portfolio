@@ -65,7 +65,7 @@ export const courses: ICard[] = [
         skills: ['Javascript', 'Typescript', 'HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
       },
       backend: {
-        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT', 'BCrypt']
+        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
       },
       devops: {
         skills: ['Docker'],
@@ -163,7 +163,7 @@ export const courses: ICard[] = [
     image: 'src/assets/courses/cleanarchitecture-rodrigomanguinho.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD', 'BCrypt']
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
       },
       devops: {
         skills: ['Docker', 'CI/CD'],

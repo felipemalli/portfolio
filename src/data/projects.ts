@@ -5,12 +5,12 @@ export const projects: ICard[] = [
     name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Project developed to expose my knowledge. I started by designing the design in figma, and then applied it to the front-end. While developing, I decided to change some details. I avoid to use dependencies, so it has only react and tailwind (to be fair, I use a react-type-animation for this little animation on subtitle).  OBS: I will develop a backend for this application soon! Since I developed this frontend project already receiving structured and scalable data (you can check at src/data), it would be easy to implement the backend. So, I\'m going take this opportunity to train something new with the backend/devops.',
+    description: 'Project developed to expose my knowledge. I started by designing the design in figma (you can check the figma sketch on code link), and then applied it to the front-end and decided to change some details. I avoid to use dependencies, so it has only react and tailwind (to be fair, I used a reacttype animation for this little animation on subtitle). OBS: I will develop a backend for this application soon! Since I developed this frontend project already receiving structured and scalable data (you can check at src/data), it would be easy to implement the backend. So, I\'m going take this opportunity to train something new with the backend/devops.',
     inProgress: false,
     image: 'src/assets/projects/portfolio.webp',
     techAreas: {
       frontend: {
-        skills: ['Typescript', 'React', 'Vite', 'Tailwind', 'Figma', 'CSS'],
+        skills: ['Typescript', 'React', 'Tailwind', 'Figma', 'CSS'],
       },
       backend: {
         skills: [''],
@@ -39,7 +39,7 @@ export const projects: ICard[] = [
     name: 'Trybe Futebol Club',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'For an already implemented Front-end, I developed a RESTful Back-end. This project consolidated my knowledge about Object Oriented Programming (OOP) and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of free use of Heroku.',
+    description: 'I developed a RESTful Back-end for a already implemented Front-End. This project consolidated my knowledge about OOP and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of free use of Heroku.',
     inProgress: false,
     image: 'src/assets/projects/trybefutebolclub.webp',
     techAreas: {
@@ -264,7 +264,7 @@ export const projects: ICard[] = [
     name: 'Wallet App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Front-end wallet app that I developed to improve my skills with redux React Redux',
+    description: 'Front-end wallet app that I developed to improve my skills with Redux',
     inProgress: false,
     image: 'src/assets/projects/walletapp.webp',
     techAreas: {
@@ -296,7 +296,7 @@ export const projects: ICard[] = [
     image: 'src/assets/projects/cleanschedule.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD', 'BCrypt']
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
       },
       devops: {
         skills: ['Docker', 'CI/CD'],
@@ -326,7 +326,7 @@ export const projects: ICard[] = [
     image: 'src/assets/projects/todolist.webp',
     techAreas: {
       frontend: {
-        skills: ['Typescript', 'React', 'Material UI'],
+        skills: ['Typescript', 'React', 'Material-UI'],
       },
     },
     links: [
