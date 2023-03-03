@@ -8,8 +8,8 @@ export const Footer: React.FC = () => {
       <nav className='items-center space-x-5 md:space-x-20 lg:space-x-48 uppercase text-secondary-700 font-medium text-sm'>
         <NavOptionNavigation className='hover:opacity-80' componentId='content' areaNameNav='knowledge'>Knowledge</NavOptionNavigation>
         <NavOptionNavigation className='hover:opacity-80' componentId='content' areaNameNav='skills'>Skills</NavOptionNavigation>
-        <NavOptionLink className='hover:opacity-80' url='https://www.linkedin.com/in/felipe-vahia-malliagros/'>Contact</NavOptionLink>
         <NavOptionNavigation className='hover:opacity-80' componentId='about'>About</NavOptionNavigation>
+        <NavOptionLink className='hover:opacity-80' url='https://www.linkedin.com/in/felipe-vahia-malliagros/'>Contact</NavOptionLink>
       </nav>
     </footer>
   );
