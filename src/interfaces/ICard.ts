@@ -20,6 +20,11 @@ export interface ICard {
       inProgress?: boolean,
       skills: string[],
     },
+    other?: {
+      name?: string,
+      inProgress?: boolean,
+      skills: string[],
+    }
   },
   links: {
     name: ILinkName,

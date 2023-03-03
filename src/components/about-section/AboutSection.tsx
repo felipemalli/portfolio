@@ -11,8 +11,8 @@ export const AboutSection: React.FC = () => {
             
             md:w-[544px] md:-mr-20 min-h-[416px]
             
-            md:rounded-tl-[200px] bg-[#fbfbfb] lg:border border-[#E48383] -z-10'>
-              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-[#2E3E4B]'>
+            md:rounded-tl-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
+              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-customBlue-700'>
               About
               </h2>
             </div>
@@ -20,16 +20,16 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:ml-20
             
-            bg-[#fbfbfb] border-2 border-[#E48383] md:rounded-[50px] text-lg text-[#2E3E4B] p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                Me chamo Felipe Vahia Malliagros, 22 anos e moro no Rio de Janeiro, capital. Cursei metade da graduação de engenharia civil e resolvi mudar de carreira. Desde então, não parei de estudar programação. E é fácil, pois amo programar.
+                My name is Felipe Vahia Malliagros, 22 years old and I live in Rio de Janeiro, the capital. I attended half of the degree in civil engineering and decided to change careers. Since then, I haven{'\''}t stopped studying programming. And it{'\''}s easy, because I love programming.
               </p>
               <p className='mt-2'>
-                Fiz estágio por 4 meses na Trybe. Com Scrum, criei e aprimorei conteúdos, exercícios, aulas e projetos. Envolveram HTML, CSS, JavaScript (ES6), React (Context, Redux), testes com Jest e React Testing Library. 
+                I did an internship for 4 months at Trybe. With Scrum, I created and improved content, exercises, classes and projects. They involved HTML, CSS, JavaScript (ES6), React (Context, Redux), tests with Jest and React Testing Library. 
               </p>
             </div>
           </div>
-          <div className="absolute h-1/2 -bottom-1/2 right-0 w-screen bg-[#E48383] -z-20" />
+          <div className="absolute h-1/2 -bottom-1/2 right-0 w-screen bg-primary-300 -z-20" />
         </InViewDiv>
       </aside>
       <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6'>
@@ -39,8 +39,8 @@ export const AboutSection: React.FC = () => {
             
               md:w-[544px] md:-ml-20 min-h-[416px]
               
-              md:rounded-tr-[200px] bg-[#fbfbfb] lg:border border-[#E48383] -z-10'>
-              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-[#2E3E4B]'>
+              md:rounded-tr-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
+              <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-customBlue-700'>
               Academics
               </h2>
             </div>
@@ -48,17 +48,17 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
-            bg-[#fbfbfb] border-2 border-[#E48383] md:rounded-[50px] text-lg text-[#2E3E4B] p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                Graduando em Ciências da Computação na UFF e me aprimorando em cloud e microsserviços. Além dos meus estudos pessoais, tenho intenção de alinhar o caminho dos meus estudos com as necessidades da empresa que eu estiver.
+                Graduating in Computer Science at UFF and improving myself in cloud and microservices. In addition to my personal studies, I intend to align the path of my studies with the needs of the company I work for.
               </p>
               <p className='mt-2'>
-              Após muito tempo de estudo, me sinto confiante para começar a trabalhar com qualquer tecnologia do mercado. 
+                After a long time of study, I feel confident to work with any technology on the market.
               </p>
             </div>
           </div>
         </InViewDiv>
-        <div className="absolute h-3/5 top-0 right-0 w-screen bg-[#E48383] -z-20" />
+        <div className="absolute h-3/5 top-0 right-0 w-screen bg-primary-300 -z-20" />
       </aside>
     </section>
   );

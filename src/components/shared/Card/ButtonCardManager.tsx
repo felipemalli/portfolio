@@ -15,9 +15,10 @@ interface IButtonCardManagerProps {
   }[],
   frame: IFrameState
   setFrame: (arg0: IFrameState) => void,
+  otherTechAreaName?: string,
 }
 
-export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTechArea: {hasFrontend, hasBackend, hasDevops}, links, frame, setFrame }: IButtonCardManagerProps) => {
+export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTechArea: {hasFrontend, hasBackend, hasDevops}, links, frame, setFrame, otherTechAreaName }: IButtonCardManagerProps) => {
   return (
     <div className='flex w-[204px] gap-x-2'>
       {frame.screen === 'infoFrame' ? (
@@ -26,6 +27,8 @@ export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTec
             <LinkButton key={name + String(Date.now())} enable={!!link} name={name} link={link}/>
           ))}
         </>
+      ) : otherTechAreaName ? (
+        <TechAreaButton enable={true} techAreaAbreviation={otherTechAreaName} techArea='other' frame={frame} setFrame={setFrame}></TechAreaButton>
       ) : (
         <>
           <TechAreaButton enable={hasFrontend} techAreaAbreviation='Front' techArea='frontend' frame={frame} setFrame={setFrame}></TechAreaButton>

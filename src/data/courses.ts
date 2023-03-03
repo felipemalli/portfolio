@@ -13,10 +13,10 @@ export const courses: ICard[] = [
         skills: ['Typescript', 'React', 'Next', 'Tailwind'],
       },
       backend: {
-        skills: ['Node', 'Express', 'Jest', 'JWT', 'Cookies' ],
+        skills: ['Typescript', 'Microservices', 'Node', 'Express', 'Jest', 'JWT', 'Cookies'],
       },
       devops: {
-        skills: ['Docker', 'Kubernetes', 'Scaffolding'],
+        skills: ['Docker', 'Kubernetes', 'Scaffolding', 'Github Actions', 'CI/CD'],
       }
     },
     links: [
@@ -62,10 +62,10 @@ export const courses: ICard[] = [
     image: 'src/assets/courses/webdevelopment-trybe.webp',
     techAreas: {
       frontend:{
-        skills: ['HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
+        skills: ['Javascript', 'Typescript', 'HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
       },
       backend: {
-        skills: ['Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Jest', 'JWT', 'BCrypt', 'SOLID', 'OOP']
+        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
       },
       devops: {
         skills: ['Docker'],
@@ -74,7 +74,7 @@ export const courses: ICard[] = [
     links: [
       {
         name: 'Certificate',
-        link: '',
+        link: 'https://www.credential.net/7d7e23ae-d632-4c41-8d44-abbf3a4f00d7',
       },
     ],
     bottonRightTag: {
@@ -91,7 +91,7 @@ export const courses: ICard[] = [
     image: 'src/assets/courses/javabootcamp-trybe-and-wipro.webp',
     techAreas: {
       backend: {
-        skills: ['Java', 'Hibernate', 'Spring', 'Quarkus', 'JUnit', 'OOP'],
+        skills: ['Java', 'Spring', 'Quarkus', 'Hibernate', 'H2', 'JUnit', 'OOP', 'SOLID'],
       },
       devops: {
         skills: ['Docker'],
@@ -100,7 +100,7 @@ export const courses: ICard[] = [
     links: [
       {
         name: 'Certificate',
-        link: '',
+        link: 'https://smartcerts.co/certificate/pymdvkkj',
       }
     ],
     bottonRightTag: {
@@ -135,12 +135,12 @@ export const courses: ICard[] = [
     name: 'Tailwind CSS from scratch | Learn by building projects',
     type: 'course',
     creator: 'Brad Traversy',
-    description: 'I am learning Tailwind and how to make excellent projects with this technologies',
+    description: 'I am learning Tailwind and how to make excellent projects with this technology. I already used the knowledge of this course inside this portfolio page.',
     inProgress: true,
     image: 'src/assets/courses/tailwind-bradtraversy.webp',
     techAreas: {
       frontend:{
-        skills: ['HTML', 'Tailwind'],
+        skills: ['Tailwind', 'CSS', 'HTML'],
       }
     },
     links: [
@@ -155,18 +155,18 @@ export const courses: ICard[] = [
     }
   },
   {
-    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
+    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
     type: 'course',
     creator: 'Rodrigo Manguinho',
-    description: 'I am learning ...',
+    description: 'I am learning a lot with TDD and Clean Architecture. And it\'s being a great oportunity to fix the concepts of SOLID.',
     inProgress: true,
     image: 'src/assets/courses/cleanarchitecture-rodrigomanguinho.webp',
     techAreas: {
       backend: {
-        skills: [''],
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
       },
       devops: {
-        skills: [''],
+        skills: ['Docker', 'CI/CD'],
       }
     },
     links: [

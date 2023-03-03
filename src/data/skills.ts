@@ -1,10 +1,10 @@
-const otherSkills: string[] = ['Design Patterns', 'OOP', 'SOLID', 'Microservices', 'Clean Architecture'];
+const otherSkills: string[] = ['Microservices', 'Design Patterns', 'TDD', 'OOP', 'SOLID', 'DDD', 'Clean Architecture', 'Web Scraping'];
 
-const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS'];
+const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS', 'Github Actions', 'Scaffolding'];
 
-const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'Python', 'JWT', 'Cookies'];
+const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'H2', 'Python', 'JWT', 'Cookies', 'Husky'];
 
-const frontendSkills: string[] = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'Redux', 'Next', 'Jest', 'React Testing Library', 'Tailwind', 'Material-UI', 'Figma'];
+const frontendSkills: string[] = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'Redux', 'Next', 'Jest', 'React Testing Library', 'Tailwind', 'Material-UI', 'Styled Components', 'Figma'];
 
 
 const topSkills = backendSkills.concat(otherSkills).concat(devopsSkills);

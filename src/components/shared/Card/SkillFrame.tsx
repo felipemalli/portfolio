@@ -44,13 +44,13 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
   };
 
   return (
-    <div className="h-full w-full grid grid-cols-2 grid-rows-4 border border-[#cfcfcf] rounded-lg relative">
-      <hr className="absolute rotate-90 bg-[#cfcfcf] w-32 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-      <hr className="absolute bg-[#cfcfcf] w-52 top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/4"/>
-      <hr className="absolute bg-[#cfcfcf] w-52 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-      <hr className="absolute bg-[#cfcfcf] w-52 bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/4"/>
+    <div className="h-full w-full grid grid-cols-2 grid-rows-4 border border-customGray-500 rounded-lg relative">
+      <hr className="absolute rotate-90 bg-customGray-500 w-32 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+      <hr className="absolute bg-customGray-500 w-52 top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/4"/>
+      <hr className="absolute bg-customGray-500 w-52 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+      <hr className="absolute bg-customGray-500 w-52 bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/4"/>
       {skillsByEight && skillsByEight[page].map((skill) => (
-        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-[#eaeced] active:bg-[#f9f9f9]`} key={skill + String(Date.now())}
+        <button className={`w-full ${maxCharactersAndSpaces(skill) ? 'text-xs pt-[8px]' : 'text-sm '} pb-1 pt-[7px] px-1.5 font-light flex justify-start hover:bg-customGray-200 active:bg-secondary-700`} key={skill + String(Date.now())}
           onClick={() => handleClick(skill)}
         >
           <p className={'truncate overflow-hidden overflow-ellipsis'}>{skill}</p>
@@ -66,7 +66,7 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
           <img src="src/assets/icons/circularArrow.svg" alt='Next page button'></img>
         </button>
       )}
-      {inProgress && <div className='absolute bg-[#FC6363] w-full text-center font-medium text-[#2E3E4B] text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
+      {inProgress && <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
     </div>
   );
 };

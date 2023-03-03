@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ICheckboxProps } from '../../../hooks';
+import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 
 export interface IFilterBoxProps {
   checkboxes: ICheckboxProps[];
@@ -29,10 +30,10 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
   return (
     <div className='absolute right-[2px]'>
       {filterBox && (
-        <div ref={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-[#d9d9d9] border-4 border-[#c3b8b8]'>
+        <AnimatedDiv initialAnimation='opacity-0' finalAnimation='opacity-100' reference={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
             <p className='text-sm text-center'>CARDS WITH</p>
-            <hr className='bg-[#c3b8b8] h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
+            <hr className='bg-customGray-600 h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
           </div>
           {checkboxes.map(({id, value, label, isChecked}) => (
 
@@ -50,11 +51,11 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
               {label}
             </label>
           ))}
-        </div>
+        </AnimatedDiv>
       )}
-      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-[#b8bbc3]  hover:bg-[#eaeced] active:bg-[#d9d9d9] ${filterBox ? 'bg-[#eaeced]' : 'bg-[#d9d9d9]'} `}
+      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-customGray-600  hover:bg-customGray-200 active:bg-customGray-400 ${filterBox ? 'bg-customGray-200' : 'bg-customGray-400'} `}
         onClick={() => setFilterBox(!filterBox)}>
-        <svg className={`${giveCheckboxAreas().length < 3 ? 'stroke-[#D5685A]' : 'stroke-[#645454]'} `} xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
+        <svg className={`${giveCheckboxAreas().length < 3 ? 'stroke-primary-500' : 'stroke-icon'} `} xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
           <g strokeLinecap="round" strokeWidth="2">
             <path d="M15.079 12.742H10.35M7.65 12.742H2.92M15.079 8H9M6.298 8H2.921M15.08 3.258h-3.378M9 3.258H2.921M10.35 14.52v-3.556M6.298 9.778V6.222M11.702 5.036V1.48"/>
           </g>
