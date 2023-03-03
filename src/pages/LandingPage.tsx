@@ -8,7 +8,7 @@ import { AnimatedDiv } from '../utils/AnimatedDiv';
 
 export const LandingPage: React.FC = () => {
   return (
-    <main className='w-screen'>
+    <main>
       <article className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
         <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' zindex={10}>
           <Header />
@@ -18,9 +18,9 @@ export const LandingPage: React.FC = () => {
           <IntroductionSection />
           <ContentCardSection />
         </AnimatedDiv>
-        <div className='absolute top-0 right-0 h-[200rem] w-screen -z-10'>
+        <div className='absolute top-0 right-0 w-screen -z-10 invisible xl:visible'>
           <div className="relative w-100% h-[60vw] overflow-hidden -z-10">
-            <img src={backgroundImages.circle} className='absolute -right-[65%] -top-[85%] -z-10 scale-125 invisible xl:visible' alt='Background circle'></img>
+            <img src={backgroundImages.circle} className='absolute -right-[65%] -top-[85%] -z-10 scale-125' alt='Background circle'></img>
           </div>
         </div>
       </article>
