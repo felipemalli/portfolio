@@ -91,7 +91,7 @@ export const courses: ICard[] = [
     image: 'src/assets/courses/javabootcamp-trybe-and-wipro.webp',
     techAreas: {
       backend: {
-        skills: ['Java', 'Spring', 'Quarkus', 'Hibernate', 'JUnit', 'OOP', 'SOLID'],
+        skills: ['Java', 'Spring', 'Quarkus', 'Hibernate', 'H2', 'JUnit', 'OOP', 'SOLID'],
       },
       devops: {
         skills: ['Docker'],

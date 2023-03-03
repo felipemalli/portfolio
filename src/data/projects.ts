@@ -351,7 +351,7 @@ export const projects: ICard[] = [
     name: 'Musicall',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'A full-stack project of a a web music page. I\'m learning a lot with Nest, Prisma and Next doing this project',
+    description: 'A full-stack project of a a web music page. I\'m learning a lot with Nest, Prisma and Next doing this project. Its development is paused, but I will return.',
     inProgress: true,
     image: 'src/assets/projects/musicall.webp',
     techAreas: {
