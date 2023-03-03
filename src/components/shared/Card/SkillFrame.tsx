@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { iconImages } from '../../../assets';
 import { useSearchContext } from '../../../contexts';
 import { ITechAreaNames } from '../../../interfaces';
 
@@ -58,12 +59,12 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
       ))}
       {skillsByEight && page !== 0 && (
         <button className='absolute -left-[4px] top-1/2 -translate-y-1/2 -translate-x-1/2 text-xs w-9 p-2.5 z-10' onClick={() => setPage(page - 1)}>
-          <img src="src/assets/icons/circularArrow.svg" alt='Previous page button'></img>
+          <img src={iconImages.circularArrow} alt='Previous page button'></img>
         </button>
       )}
       {skillsByEight && skillsByEight.length > 1 && page < skillsByEight.length - 1 && (
         <button className='absolute -right-[22px] top-1/2 -translate-y-1/2  text-xs rotate-180 w-9 p-2.5 z-10' onClick={() => setPage(page + 1)}>
-          <img src="src/assets/icons/circularArrow.svg" alt='Next page button'></img>
+          <img src={iconImages.circularArrow} alt='Next page button'></img>
         </button>
       )}
       {inProgress && <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
