@@ -48,13 +48,23 @@ export const SearchBar: React.FC = () => {
     }
   }, [search]);
 
-  const filterCardBySkill = (cards: ICard[]) => {
-    const filteredCards: ICard[] = cards.filter((card: ICard) => (
-      (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
-      (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
-      (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
-      (card.techAreas.other?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
-    ));
+  const filterCardBySkill = (cards: ICard[], exactSkill?: boolean) => {
+    let filteredCards: ICard[];
+    if (exactSkill) {
+      filteredCards = cards.filter((card: ICard) => (
+        (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase() === (search.toLowerCase()))) || 
+        (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase() === (search.toLowerCase()))) ||
+        (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase() === (search.toLowerCase()))) ||
+        (card.techAreas.other?.skills.some((skill) => skill.toLowerCase() === (search.toLowerCase())))
+      ));
+    } else {
+      filteredCards = cards.filter((card: ICard) => (
+        (card.techAreas.backend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) || 
+        (card.techAreas.frontend?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
+        (card.techAreas.devops?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase()))) ||
+        (card.techAreas.other?.skills.some((skill) => skill.toLowerCase().includes(search.toLowerCase())))
+      ));
+    }
     return filteredCards;
   };
 
@@ -75,28 +85,43 @@ export const SearchBar: React.FC = () => {
     return filteredCards;
   };
 
-  const filterBySkill = (skills: string[]) => {
-    const filteredSkills: string[] = skills.filter((skill: string) => (
-      skill.toLowerCase().includes(search.toLowerCase())
-    ));
+  const filterBySkill = (skills: string[], exactSkill?: boolean) => {
+    let filteredSkills: string[];
+    if (exactSkill) {
+      filteredSkills = skills.filter((skill: string) => (
+        skill.toLowerCase() === (search.toLowerCase())
+      ));
+    } else {
+      filteredSkills = skills.filter((skill: string) => (
+        skill.toLowerCase().includes(search.toLowerCase())
+      ));
+    }
     return filteredSkills;
   };
 
+  const checkIfExactSkill = () => {
+    const equalTopSkill = allTopSkills.some((skill) => skill.toLowerCase() === search.toLowerCase());
+    const equalBottonSkill = allBottonSkills.some((skill) => skill.toLowerCase() === search.toLowerCase());
+    return equalBottonSkill || equalTopSkill;
+  };
+
   const applyFilters = () => {
+    const isExactSkill = checkIfExactSkill();
+
     if (allProjects.length > 0) {
-      const filteredProjects = filterCardBySkill(filterCardByArea(allProjects));
+      const filteredProjects = filterCardBySkill(filterCardByArea(allProjects), isExactSkill);
       setFilteredProjects(filteredProjects);
     }
     if (allCourses.length > 0) {
-      const filteredCourses = filterCardBySkill(filterCardByArea(allCourses));
+      const filteredCourses = filterCardBySkill(filterCardByArea(allCourses), isExactSkill);
       setFilteredCourses(filteredCourses);
     }
     if (allBottonSkills.length > 0) {
-      const filteredBottonSkills = filterBySkill(allBottonSkills);
+      const filteredBottonSkills = filterBySkill(allBottonSkills, isExactSkill);
       setFilteredBottonSkills(filteredBottonSkills);
     }
     if (allTopSkills.length > 0) {
-      const filteredTopSkills = filterBySkill(allTopSkills);
+      const filteredTopSkills = filterBySkill(allTopSkills, isExactSkill);
       setFilteredTopSkills(filteredTopSkills);
     }
   };
