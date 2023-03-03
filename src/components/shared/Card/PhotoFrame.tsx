@@ -1,4 +1,4 @@
-import { courseImages } from '../../../assets';
+import { courseImages, projectImages } from '../../../assets';
 import { IBottonRightTag } from '../../../interfaces';
 
 export interface IPhotoFrameProps {
@@ -15,7 +15,7 @@ export const PhotoFrame: React.FC<IPhotoFrameProps> = ({ image, inProgress, bott
 
   return (
     <div className='cursor-pointer bg-customGray-400 flex h-full w-full border rounded-lg border-customGray-500'>
-      <img src={image && courseImages[image]} alt='Card image' className='bg-customGray-400 rounded-lg h-full w-full'/>       
+      <img src={image && (projectImages[image] || courseImages[image])} alt='Card image' className='bg-customGray-400 rounded-lg h-full w-full'/>       
       {inProgress && 
         <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-95 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
           In progress
