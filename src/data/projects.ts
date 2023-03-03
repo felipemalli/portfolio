@@ -96,6 +96,87 @@ export const projects: ICard[] = [
     ],
   },
   {
+    name: 'My Series',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'API REST with a couple routes for handling series and your episodes. It was made with Spring and handling exceptions with ControllerAdvice and ExceptionHandler. I also add a circuit breaker in one route.',
+    inProgress: false,
+    image: 'src/assets/projects/myseries.webp',
+    techAreas: {
+      backend: {
+        skills: ['Java', 'Spring', 'OOP'],
+      },
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/my-series'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: 'https://github.com/felipemalli/my-series#operations'
+      },
+    ],
+  },
+  {
+    name: 'Miles Program',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'API REST for handling miles with Quarkus. This was a challenge of Java bootcamp that I did. In a project in the middle stage of development, I had to implement several functionalities for the project work.',
+    inProgress: false,
+    image: 'src/assets/projects/milesprogram.webp',
+    techAreas: {
+      backend: {
+        skills: ['Java', 'Quarkus', 'Hibernate', 'OOP'],
+      },
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/miles-program'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: ''
+      },
+    ],
+  },
+  {
+    name: 'Register Specialties',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'API REST with simple CRUD for handling professionals and their specialties. It was made with Spring and implementing JAX-RS specification with jersey library.',
+    inProgress: false,
+    image: 'src/assets/projects/registerspecialties.webp',
+    techAreas: {
+      backend: {
+        skills: ['Java', 'Spring', 'Jersey', 'OOP'],
+      },
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/register-specialties'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: 'https://github.com/felipemalli/register-specialties#operations'
+      },
+    ],
+  },
+  {
     name: 'Shipinsane',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
