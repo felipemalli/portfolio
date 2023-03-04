@@ -66,7 +66,6 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
 
   useEffect(() => {
     fixPositionOfScroll();
-    alert('a');
   }, [slider]);
 
   useEffect(() => {
@@ -86,6 +85,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
         setTimeoutId(newTimeoutId);
       });
+      fixPositionOfScroll();
       checkEndOfScroll();
     }
   };
@@ -104,7 +104,6 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         setLeftArrowClickable(true);
       }
     }
-    fixPositionOfScroll();
   };
 
   const scrollLeft = () => {
