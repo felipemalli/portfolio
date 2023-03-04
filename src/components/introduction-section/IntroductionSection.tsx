@@ -18,7 +18,7 @@ export const IntroductionSection: React.FC = () => {
           />
           <span> developer</span>
         </div>
-        <p className='text-customBlue-500 text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>I{'\''}m a logic and creativity guy. Specialized in backend, but I like all areas of web development. I{'\''}m always studying to keep myself qualified and updated.</p>
+        <p className='text-customBlue-500 text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>As a web developer, I possess both logical and creative skills, with expertise in backend development. However, my passion for Web Development extends to all areas of the field.</p>
         <div className='mt-7 text-center xl:text-left'>
           <button className='w-32 h-14 mr-4 bg-primary-500 hover:bg-customGray-300 hover:text-customBlue-500 text-secondary-500 active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
             onClick={() => openUrl('https://www.linkedin.com/in/felipe-vahia-malliagros/')}

@@ -6,7 +6,7 @@ import { TopContentCard } from './TopContentCard';
 
 export const ContentCardSection: React.FC = () => {
   return (
-    <section id='content' className='relative' onClick={(e) => moveScreenToCenterOfId(e, 'content')}>
+    <section id='content' className='mt-5 md:mt-0 relative' onClick={(e) => moveScreenToCenterOfId(e, 'content')}>
       <TopContentCard></TopContentCard>
       <ChangeAreaButtons />
       <SearchBar></SearchBar>
