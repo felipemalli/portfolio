@@ -89,7 +89,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   };
 
   const checkEndOfScroll = () => {
-    const MARGIN_ERROR = 3;
+    const MARGIN_ERROR = 10;
     if (slider) {
       if (slider?.scrollWidth - slider?.scrollLeft < slider?.clientWidth + MARGIN_ERROR) {
         setRightArrowClickable(false);
