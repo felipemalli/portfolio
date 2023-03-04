@@ -108,14 +108,16 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const scrollLeft = () => {
     if (buttonClickable && slider) {
       const scroll = CARD_SIZE * cardsOnScreenQuantity;
-      slider.scrollLeft -= findClosestMultiple(scroll, CARD_SIZE);
+      const scrollQuantity = findClosestMultiple((slider.scrollLeft - scroll), CARD_SIZE);
+      slider.scrollLeft -= scrollQuantity;
     }
   };
 
   const scrollRight = () => {
     if (buttonClickable && slider) {
       const scroll = CARD_SIZE * cardsOnScreenQuantity;
-      slider.scrollLeft += findClosestMultiple(scroll, CARD_SIZE);
+      const scrollQuantity = findClosestMultiple((slider.scrollLeft - scroll), CARD_SIZE);
+      slider.scrollLeft += scrollQuantity;
     }
   };
 
