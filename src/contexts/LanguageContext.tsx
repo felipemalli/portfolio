@@ -24,8 +24,10 @@ export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildr
   const [translations, setTranslations] = useState<ITranslation>({});
 
   useEffect(() => {
+    const moduleUrl = new URL(import.meta.url);
+    const jsonUrl = new URL('../data/languages/pt-br.json', moduleUrl);
     const loadTranslations = async () => {
-      const res = await fetch(`src/data/languages/${language}.json`);
+      const res = await fetch(jsonUrl.href);
       const json = await res.json();
       setTranslations(json);
     };
