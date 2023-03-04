@@ -1,9 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
 import { backgroundImages } from '../../assets';
+import { useLanguageContext } from '../../contexts';
 import { AnimatedDiv } from '../../utils/AnimatedDiv';
 import { openUrl } from '../../utils/openUrl';
 
 export const IntroductionSection: React.FC = () => {
+  const { translations } = useLanguageContext();
+
   return (
     <section className='flex flex-col xl:flex-row justify-center 2xl:justify-evenly items-center 2xl:gap-32 gap-3 2xl:mt-0 h-screen md:h-auto'>
       <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-10'>
@@ -16,7 +19,7 @@ export const IntroductionSection: React.FC = () => {
             3000,
           ]} speed={50} wrapper='span' repeat={Infinity} cursor={false}
           />
-          <span> developer</span>
+          <span> {translations.introduction_subtitle}</span>
         </div>
         <p className='text-customBlue-500 text-base font-normal text-center xl:text-left mx-7 md:mx-0 mt-7'>As a web developer, I possess both logical and creative skills, with expertise in backend development. However, my passion for Web Development extends to all areas of the field.</p>
         <div className='mt-7 text-center xl:text-left'>

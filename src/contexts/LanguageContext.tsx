@@ -25,7 +25,7 @@ export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildr
 
   useEffect(() => {
     const loadTranslations = async () => {
-      const res = await fetch(`../data/languages/${language}.json`);
+      const res = await fetch(`src/data/languages/${language}.json`);
       const json = await res.json();
       setTranslations(json);
     };
