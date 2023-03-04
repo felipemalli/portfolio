@@ -1,19 +1,21 @@
-import { ChangeAreaProvider, CourseProvider, ProjectProvider, SearchProvider, SkillProvider } from './contexts';
+import { ChangeAreaProvider, CourseProvider, LanguageProvider, ProjectProvider, SearchProvider, SkillProvider } from './contexts';
 import { LandingPage } from './pages/LandingPage';
 
 function App() {
   return (
-    <SearchProvider>
-      <ChangeAreaProvider>
-        <ProjectProvider>
-          <CourseProvider>
-            <SkillProvider>
-              <LandingPage/>
-            </SkillProvider>
-          </CourseProvider>
-        </ProjectProvider>
-      </ChangeAreaProvider>
-    </SearchProvider>
+    <LanguageProvider>
+      <SearchProvider>
+        <ChangeAreaProvider>
+          <ProjectProvider>
+            <CourseProvider>
+              <SkillProvider>
+                <LandingPage/>
+              </SkillProvider>
+            </CourseProvider>
+          </ProjectProvider>
+        </ChangeAreaProvider>
+      </SearchProvider>
+    </LanguageProvider>
   );
 }
 

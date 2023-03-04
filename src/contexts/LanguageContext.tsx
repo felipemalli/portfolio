@@ -13,13 +13,13 @@ interface ILanguageContextData {
   translations: ITranslation;
 }
 
-export const LanguageContext = createContext<ILanguageContextData>({} as ILanguageContextData);
+const LanguageContext = createContext<ILanguageContextData>({} as ILanguageContextData);
 
 export const useLanguageContext = () => {
   return useContext(LanguageContext);
 };
 
-const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
+export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
   const [language, setLanguage] = useState<ILanguageOptions>('pt-br');
   const [translations, setTranslations] = useState<ITranslation>({});
 
