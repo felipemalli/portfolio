@@ -10,11 +10,11 @@ export const LandingPage: React.FC = () => {
   return (
     <main>
       <article className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
-        <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' zindex={10}>
+        <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' position='relative' zindex={10}>
           <Header />
         </AnimatedDiv>
  
-        <AnimatedDiv initialAnimation='translate-y-170 opacity-50' finalAnimation='translate-y-0 opacity-100' duration='duration-1900' zindex={0}>
+        <AnimatedDiv initialAnimation='translate-y-170 opacity-50' finalAnimation='translate-y-0 opacity-100' duration='duration-1900' position='relative' zindex={0}>
           <IntroductionSection />
           <ContentCardSection />
         </AnimatedDiv>
