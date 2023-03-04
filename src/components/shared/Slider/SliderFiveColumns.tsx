@@ -22,7 +22,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const isXl = useMediaQuery(breakpoints.isXl);
   const is2Xl = useMediaQuery(breakpoints.is2xl);
   const cardsOnScreenQuantity: number = is2Xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1;
-  const cardsScrollMultiplier: number = is2Xl? 2.2 : isMd ? 2 : 1;
+  const cardsScrollMultiplier: number = is2Xl? 2.01 : isMd ? 1.83 : 1;
   
   const [slider, setSlider] = useState<Element | null>(null);
   const sliderDivRef = useRef<HTMLInputElement | null>(null);
