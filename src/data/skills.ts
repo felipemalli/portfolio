@@ -1,4 +1,4 @@
-const otherSkills: string[] = ['Microservices', 'Design Patterns', 'TDD', 'OOP', 'SOLID', 'DDD', 'Clean Architecture', 'Web Scraping'];
+const otherSkills: string[] = ['Microservices', 'Design Patterns', 'TDD', 'OOP', 'SOLID', 'DDD', 'Clean Architecture', 'Web Scraping', 'CI/CD'];
 
 const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS', 'Github Actions', 'Scaffolding'];
 

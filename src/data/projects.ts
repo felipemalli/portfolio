@@ -10,7 +10,7 @@ export const projects: ICard[] = [
     image: 'portfolio',
     techAreas: {
       frontend: {
-        skills: ['Typescript', 'React', 'Tailwind', 'Figma', 'CSS'],
+        skills: ['Typescript', 'React', 'Tailwind', 'Figma', 'CSS', 'CI/CD'],
       },
       backend: {
         skills: [''],
@@ -299,7 +299,7 @@ export const projects: ICard[] = [
         skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
       },
       devops: {
-        skills: ['Docker', 'CI/CD'],
+        skills: ['Docker'],
       }
     },
     links: [
