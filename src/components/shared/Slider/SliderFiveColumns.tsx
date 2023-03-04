@@ -78,7 +78,6 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     if (buttonClickable) {
       setButtonClickable(false);
       scroll();
-      fixPositionOfScroll();
       await new Promise<void>((resolve) => {
         const newTimeoutId = setTimeout(() => {
           setButtonClickable(true);
@@ -108,13 +107,15 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
 
   const scrollLeft = () => {
     if (buttonClickable && slider) {
-      slider.scrollLeft -= CARD_SIZE * cardsOnScreenQuantity;
+      const scroll = CARD_SIZE * cardsOnScreenQuantity;
+      slider.scrollLeft -= findClosestMultiple(scroll, CARD_SIZE);
     }
   };
 
   const scrollRight = () => {
     if (buttonClickable && slider) {
-      slider.scrollLeft += CARD_SIZE * cardsOnScreenQuantity;
+      const scroll = CARD_SIZE * cardsOnScreenQuantity;
+      slider.scrollLeft += findClosestMultiple(scroll, CARD_SIZE);
     }
   };
 
