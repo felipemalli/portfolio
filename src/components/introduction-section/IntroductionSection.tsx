@@ -33,11 +33,13 @@ export const IntroductionSection: React.FC = () => {
         </div>
       </div>
       <div className='md:flex items-center justify-center mt-10 xl:mt-0 hidden'>
-        <AnimatedDiv initialAnimation='translate-y-150' finalAnimation='translate-y-0' duration='duration-1400' delay='delay-750'>
-          <div className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] mt-10 h-[408.19px] lg:h-[449px] 2xl:h-[544.25px]'>
-            <img src={backgroundImages.felipeEmpty} className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] h- mt-10' alt='Felipe image'></img>
-          </div>
-        </AnimatedDiv>
+        {backgroundImages.felipeEmpty && 
+          <AnimatedDiv initialAnimation='translate-y-150' finalAnimation='translate-y-0' duration='duration-1400' delay='delay-750'>
+            <div className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] mt-10 h-[408.19px] lg:h-[449px] 2xl:h-[544.25px]'>
+              <img src={backgroundImages.felipeEmpty} className='w-[30rem] lg:w-[33rem] 2xl:w-[40rem] h- mt-10' alt='Felipe image'></img>
+            </div>
+          </AnimatedDiv>
+        }
       </div>
     </section>
   );

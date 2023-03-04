@@ -10,9 +10,10 @@ interface IAnimatedDivProps extends IChildrenProps {
   finalAnimation?: string;
   duration?: string;
   delay?: string;
+  zindex?: number;
 }
 
-export const AnimatedDiv: React.FC<IAnimatedDivProps> = ({ children, className, reference, animationState, initialAnimation, finalAnimation, duration, delay }: IAnimatedDivProps) => {
+export const AnimatedDiv: React.FC<IAnimatedDivProps> = ({ children, className, reference, animationState, initialAnimation, finalAnimation, duration, delay, zindex }: IAnimatedDivProps) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -30,7 +31,8 @@ export const AnimatedDiv: React.FC<IAnimatedDivProps> = ({ children, className, 
   return (
     <div 
       ref={reference} 
-      className={`transition-all ${delay || ''} ${duration || 'duration-150'} transform ${isMounted ? `${finalAnimation}` : `${initialAnimation}`} ${className} ease-in-out`}>
+      className={`transition-all ${delay || ''} ${duration || 'duration-150'} transform ${isMounted ? `${finalAnimation}` : `${initialAnimation}`} ${className} ease-in-out`}
+      style={{ position: 'relative', zIndex: zindex }}>
       {children}
     </div>
   );
