@@ -25,7 +25,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </article>
       <div className='absolute bg-primary-300 mt-48 w-screen h-[70rem] sm:h-[65rem] md:h-[71rem] 2xl:h-[60rem] -z-10'/>
-      <article className='md:mx-6 lg:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
+      <article className='mx-auto'>
         <AboutSection />
       </article>
       <Footer />
