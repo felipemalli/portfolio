@@ -90,7 +90,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   };
 
   const checkEndOfScroll = () => {
-    const MARGIN_ERROR = 3;
+    const MARGIN_ERROR = CARD_SIZE / 2;
     if (slider) {
       if (slider?.scrollWidth - slider?.scrollLeft < slider?.clientWidth + MARGIN_ERROR) {
         setRightArrowClickable(false);
@@ -103,18 +103,21 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         setLeftArrowClickable(true);
       }
     }
-    fixPositionOfScroll();
   };
 
   const scrollLeft = () => {
     if (buttonClickable && slider) {
-      slider.scrollLeft -= CARD_SIZE * cardsOnScreenQuantity;
+      const scrollQuantity = CARD_SIZE * cardsOnScreenQuantity;
+      const scrollFixed = findClosestMultiple((slider.scrollLeft - scrollQuantity), CARD_SIZE);
+      slider.scrollLeft = scrollFixed;
     }
   };
 
   const scrollRight = () => {
     if (buttonClickable && slider) {
-      slider.scrollLeft += CARD_SIZE * cardsOnScreenQuantity;
+      const scrollQuantity = CARD_SIZE * cardsOnScreenQuantity;
+      const scrollFixed = findClosestMultiple((slider.scrollLeft + scrollQuantity), CARD_SIZE);
+      slider.scrollLeft = scrollFixed;
     }
   };
 
@@ -147,8 +150,8 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   }, [handleClickOutside, verifyArrow]);
 
   return (
-    <div className={'flex justify-center items-center gap-[0.938rem]'}>
-      <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
+    <div className={'flex justify-center items-center gap-[4px] sm:gap-[12px]'}>
+      <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
         <img src={iconImages.doubleArrow} className='w-4.5' alt='Previous slider button'></img>
@@ -156,7 +159,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <div ref={sliderDivRef} onClick={() => handleSliderClick()}>
         {children}
       </div>
-      <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
+      <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollRight)}
       >
         <img src={iconImages.doubleArrow} className='w-4.5' alt='Next slider button'></img>
