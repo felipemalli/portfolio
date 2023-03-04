@@ -31,12 +31,12 @@ export const IntroductionSection: React.FC = () => {
           <button className='w-32 h-14 mr-4 bg-primary-500 hover:bg-customGray-300 hover:text-customBlue-500 text-secondary-500 active:bg-green-400 rounded-md text-sm transition-color duration-200 font-medium'
             onClick={() => openUrl('https://www.linkedin.com/in/felipe-vahia-malliagros/')}
           >
-            Contact me
+            {translations.introduction_left_button}
           </button>
           <button className='w-32 h-14 border border-primary-500 hover:bg-customGray-300 text-customBlue-500 active:bg-green-400 rounded-md text-sm transition-color duration-200'
             onClick={() => openUrl('https://github.com/felipemalli')}
           >
-            Repositories
+            {translations.introduction_right_button}
           </button>
         </div>
       </div>

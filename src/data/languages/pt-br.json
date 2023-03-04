@@ -4,5 +4,7 @@
   "nav_about": "Sobre",
   "nav_contact": "Contato",
   "introduction_subtitle": "Desenvolvedor",
-  "introduction_description": "Como desenvolvedor web, possuo habilidades lógicas e criativas, com foco em desenvolvimento de back-end. No entanto, minha paixão se estende à todas as áreas."
+  "introduction_description": "Como desenvolvedor web, possuo habilidades lógicas e criativas, com foco em desenvolvimento de back-end. No entanto, minha paixão se estende à todas as áreas.",
+  "introduction_left_button": "Contate-me",
+  "introduction_right_button": "Repositórios"
 }
