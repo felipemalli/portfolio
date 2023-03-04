@@ -36,7 +36,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   
   useEffect(() => {
     checkEndOfScroll();
-  }, [slider, cardsOnScreenQuantity, filteredProjects, filteredCourses, slider?.scrollLeft]);
+  }, [slider, cardsOnScreenQuantity, filteredProjects, filteredCourses]);
 
   useEffect(() => {
     if (sliderDivRef.current) {
@@ -85,11 +85,12 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
         setTimeoutId(newTimeoutId);
       });
+      checkEndOfScroll();
     }
   };
 
   const checkEndOfScroll = () => {
-    const MARGIN_ERROR = 10;
+    const MARGIN_ERROR = 3;
     if (slider) {
       if (slider?.scrollWidth - slider?.scrollLeft < slider?.clientWidth + MARGIN_ERROR) {
         setRightArrowClickable(false);
