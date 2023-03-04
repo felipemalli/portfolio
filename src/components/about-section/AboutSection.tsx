@@ -21,10 +21,10 @@ export const AboutSection: React.FC = () => {
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                My name is Felipe Vahia Malliagros, 22 years old and I live in Rio de Janeiro, the capital. I attended half of the degree in civil engineering and decided to change careers. Since then, I haven{'\''}t stopped studying programming. And it{'\''}s easy, because I love programming.
+                I{'\''}m Felipe Vahia Malliagros, 22 years old and reside in Rio de Janeiro, the capital city. Although I started a degree in civil engineering, I decided to switch career paths. Since then, I have been dedicated to studying programming, which I love.
               </p>
               <p className='mt-2'>
-                I did an internship for 4 months at Trybe. With Scrum, I created and improved content, exercises, classes and projects. They involved HTML, CSS, JavaScript (ES6), React (Context, Redux), tests with Jest and React Testing Library. 
+                At Trybe, I interned for four months and gained experience with Scrum methodology. I created and improved content, exercises and projects that utilized HTML, CSS, JavaScript (ES6), React (Context, Redux), and testing with Jest and React Testing Library.
               </p>
             </div>
           </div>
@@ -49,10 +49,10 @@ export const AboutSection: React.FC = () => {
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                Graduating in Computer Science at UFF and improving myself in cloud and microservices. In addition to my personal studies, I intend to align the path of my studies with the needs of the company I work for.
+              I{'\''}m graduating in Computer Science from UFF and have been actively developing my skills in cloud computing and microservices. In addition to my personal studies, I aim to align my educational path with the needs of the organization that I am work on.
               </p>
               <p className='mt-2'>
-                After a long time of study, I feel confident to work with any technology on the market.
+                After extensive study, I feel confident to work with any technology in the market.
               </p>
             </div>
           </div>
