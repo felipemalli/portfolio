@@ -97,6 +97,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       } else if (!rightArrowClickable) {
         setRightArrowClickable(true);
       }
+      alert(slider.scrollLeft);
       if (slider?.scrollLeft < MARGIN_ERROR) {
         setLeftArrowClickable(false);
       } else if (!leftArrowClickable) {
