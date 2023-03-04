@@ -78,6 +78,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     if (buttonClickable) {
       setButtonClickable(false);
       scroll();
+      fixPositionOfScroll();
       await new Promise<void>((resolve) => {
         const newTimeoutId = setTimeout(() => {
           setButtonClickable(true);
@@ -85,7 +86,6 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
         setTimeoutId(newTimeoutId);
       });
-      fixPositionOfScroll();
       checkEndOfScroll();
     }
   };
@@ -148,7 +148,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
 
   return (
     <div className={'flex justify-center items-center gap-[4px] sm:gap-[12px]'}>
-      <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
+      <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
         <img src={iconImages.doubleArrow} className='w-4.5' alt='Previous slider button'></img>
@@ -156,7 +156,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <div ref={sliderDivRef} onClick={() => handleSliderClick()}>
         {children}
       </div>
-      <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
+      <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollRight)}
       >
         <img src={iconImages.doubleArrow} className='w-4.5' alt='Next slider button'></img>
