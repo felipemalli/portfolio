@@ -10,7 +10,7 @@ interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
 }
 
-const TIME_TO_CARD_SCROLL = 350; // time to not break scroll movement
+const TIME_TO_CARD_SCROLL = 320; // time to not break scroll movement
 
 export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE }: ISliderProps ) => {
   const [buttonClickable, setButtonClickable] = useState(true);
@@ -22,7 +22,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const isXl = useMediaQuery(breakpoints.isXl);
   const is2Xl = useMediaQuery(breakpoints.is2xl);
   const cardsOnScreenQuantity: number = is2Xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1;
-  const cardsScrollMultiplier: number = is2Xl? 2.01 : isMd ? 1.83 : 1;
+  const cardsScrollMultiplier: number = is2Xl? 2.2 : isMd ? 2 : 1;
   
   const [slider, setSlider] = useState<Element | null>(null);
   const sliderDivRef = useRef<HTMLInputElement | null>(null);
