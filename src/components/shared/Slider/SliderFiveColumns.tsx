@@ -147,7 +147,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   }, [handleClickOutside, verifyArrow]);
 
   return (
-    <div className={'flex justify-center items-center gap-[0.938rem]'}>
+    <div className={'flex justify-center items-center gap-[4px]'}>
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-70' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
