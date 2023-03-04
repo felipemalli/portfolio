@@ -38,7 +38,7 @@ export const AboutSection: React.FC = () => {
             
               md:w-[544px] md:-ml-20 min-h-[416px]
               
-              md:rounded-tr-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
+              md:rounded-tr-[200px] bg-secondary-500 md:border border-primary-300 -z-10'>
               <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-customBlue-700'>
               Academics
               </h2>
