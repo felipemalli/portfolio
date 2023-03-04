@@ -4,6 +4,7 @@ import cleanArrow from './cleanArrow.svg';
 import closeIcon from './closeIcon.svg';
 import doubleArrow from './doubleArrow.svg';
 import filterIcon from './filterIcon.svg';
+import languageGlobe from './languageGlobe.svg';
 import menuIcon from './menuIcon.svg';
 import normalArrow from './normalArrow.svg';
 import roundedArrow from './roundedArrow.svg';
@@ -24,5 +25,5 @@ export const iconImages: IIconImages = {
   normalArrow: normalArrow,
   roundedArrow: roundedArrow,
   searchIcon: searchIcon,
-
+  languageGlobe: languageGlobe,
 };
