@@ -66,6 +66,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
 
   useEffect(() => {
     fixPositionOfScroll();
+    alert('a');
   }, [slider]);
 
   useEffect(() => {
