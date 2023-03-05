@@ -9,9 +9,9 @@ export const LandingPage: React.FC = () => {
   return (
     <main>
       <article>
-        <div className='absolute -top-1 left-1/2 translate-x-1/2 w-10 -z-10 invisible xl:visible'>
+        <div className='absolute -top-1 w-10 -z-10 invisible xl:visible'>
           <div className="relative overflow-hidden -z-10 w-screen h-[100vw]">
-            <img src='/assets/background/circle.svg' className='absolute -top-0 -left-0 -z-10 w-[50vw] h-[60vw]' alt='Background circle'></img>
+            <img src='/assets/background/circle.svg' className='absolute top-0 left-1/2 -z-10 w-[50vw] h-[60vw]' alt='Background circle'></img>
           </div>
         </div>
         <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' position='relative' zindex={10}>
@@ -23,7 +23,7 @@ export const LandingPage: React.FC = () => {
         </AnimatedDiv>
       </article>
       <div className='absolute bg-primary-300 mt-48 w-screen h-[60rem] md:h-[71rem] 2xl:h-[60rem] -z-10'/>
-      <article className='mx-auto 2xl:w-[114.938rem]'>
+      <article className='mx-auto 3xl:w-[114.938rem]'>
         <AboutSection />
       </article>
       <Footer />
