@@ -6,5 +6,11 @@
   "introduction_subtitle": "developer",
   "introduction_description": "As a web developer, I possess both logical and creative skills, with expertise in backend development. However, my passion for Web Development extends to all areas of the field.",
   "introduction_left_button": "Contact me",
-  "introduction_right_button": "Repositories"
+  "introduction_right_button": "Repositories",
+  "content_card_top_title": "Projects",
+  "content_card_botton_title": "Courses",
+  "about_first_card_first_paragraph": "I'm Felipe Vahia Malliagros, 22 years old and reside in Rio de Janeiro, the capital city. Although I started a degree in civil engineering, I decided to switch career paths. Since then, I have been dedicated to studying programming, which I love.",
+  "about_first_card_second_paragraph": "At Trybe, I interned for four months and gained experience with Scrum methodology. I created and improved content, exercises and projects that utilized HTML, CSS, JavaScript (ES6), React (Context, Redux), and testing with Jest and React Testing Library.",
+  "about_second_card_first_paragraph": "I'm graduating in Computer Science from UFF and have been actively developing my skills in cloud computing and microservices. In addition to my personal studies, I aim to align my educational path with the needs of the organization that I am work on.",
+  "about_second_card_second_paragraph": "After extensive study, I feel confident to work with any technology in the market."
 }
