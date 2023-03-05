@@ -1,7 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { IChildrenProps } from '../interfaces';
 
-type ILanguageOptions = 'pt-br' | 'en';
+export type ILanguageOptions = 'pt-br' | 'en';
+type ILanguageNameOptions = 'Português' | 'English';
+type ILanguageNames = {
+  [key in ILanguageOptions]: ILanguageNameOptions;
+};
 
 interface ITranslation {
   [key: string]: string;
@@ -10,6 +14,7 @@ interface ITranslation {
 interface ILanguageContextData {
   language: string;
   changeLanguage: (lang: ILanguageOptions) => void;
+  languageNames: ILanguageNames;
   translations: ITranslation;
 }
 
@@ -17,6 +22,11 @@ const LanguageContext = createContext<ILanguageContextData>({} as ILanguageConte
 
 export const useLanguageContext = () => {
   return useContext(LanguageContext);
+};
+
+const languageNames: ILanguageNames = {
+  'pt-br': 'Português',
+  'en': 'English'
 };
 
 export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
@@ -36,6 +46,7 @@ export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildr
 
   const changeLanguage = useCallback((language: ILanguageOptions) => {
     setLanguage(language);
+
   }, [setLanguage]);
 
   return (
@@ -44,6 +55,7 @@ export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildr
         { 
           language,
           changeLanguage,
+          languageNames,
           translations,  
         }
       }
