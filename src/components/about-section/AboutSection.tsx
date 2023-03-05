@@ -1,6 +1,10 @@
+import { useLanguageContext } from '../../contexts';
 import { InViewDiv } from '../../utils/InViewDiv';
 
 export const AboutSection: React.FC = () => {
+
+  const { translations } = useLanguageContext();
+  
   return (
     <section className='flex-col mt-96 mx-auto md:mx-0 overflow-hidden'>
       <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 2xl:px-[200px]'>
@@ -21,10 +25,10 @@ export const AboutSection: React.FC = () => {
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                I{'\''}m Felipe Vahia Malliagros, 22 years old and reside in Rio de Janeiro, the capital city. Although I started a degree in civil engineering, I decided to switch career paths. Since then, I have been dedicated to studying programming, which I love.
+                {translations.about_first_card_first_paragraph}
               </p>
               <p className='mt-2'>
-                At Trybe, I interned for four months and gained experience with Scrum methodology. I created and improved content, exercises and projects that utilized HTML, CSS, JavaScript (ES6), React (Context, Redux), and testing with Jest and React Testing Library.
+                {translations.about_first_card_second_paragraph}
               </p>
             </div>
           </div>
@@ -48,11 +52,11 @@ export const AboutSection: React.FC = () => {
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
-              <p>
-              I{'\''}m graduating in Computer Science from UFF and have been actively developing my skills in cloud computing and microservices. In addition to my personal studies, I aim to align my educational path with the needs of the organization that I am work on.
+              <p> 
+                {translations.about_second_card_first_paragraph} 
               </p>
               <p className='mt-2'>
-                After extensive study, I feel confident to work with any technology in the market.
+                {translations.about_second_card_second_paragraph}
               </p>
             </div>
           </div>
