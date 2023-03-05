@@ -7,7 +7,7 @@ export const AboutSection: React.FC = () => {
   
   return (
     <section className='flex-col mt-96 mx-auto md:mx-0 overflow-hidden'>
-      <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 2xl:px-[200px]'>
+      <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv translation='translateX(-200px)'>
           <div className='flex-col relative w-[85vw] md-w-auto'>
             <div className='relative
@@ -35,7 +35,7 @@ export const AboutSection: React.FC = () => {
         </InViewDiv>
         <div className="absolute h-1/2 -bottom-1/2 right-0 w-screen bg-primary-300 -z-20" />
       </aside>
-      <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 2xl:px-[200px]'>
+      <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv>
           <div className='flex-col w-[85vw] md:w-auto'>
             <div className='relative
