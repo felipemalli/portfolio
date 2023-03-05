@@ -58,7 +58,10 @@ export default {
       },
       transitionDelay: {
         '750': '750ms',
-      }
+      },
+      screens: {
+        '3xl': '1850px',
+      },
     },
   },
   plugins: [],
