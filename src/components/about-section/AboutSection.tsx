@@ -16,7 +16,7 @@ export const AboutSection: React.FC = () => {
             
             md:rounded-tl-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
               <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-customBlue-700'>
-              About
+                {translations.about_first_card_title}
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center z-10 
@@ -44,7 +44,7 @@ export const AboutSection: React.FC = () => {
               
               md:rounded-tr-[200px] bg-secondary-500 md:border border-primary-300 -z-10'>
               <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-customBlue-700'>
-              Academics
+                {translations.about_second_card_title}
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center z-10 
