@@ -7,7 +7,7 @@ export const courses: ICard[] = [
     creator: 'Stephen Grinder',
     description: 'I learned Kubernetes and all the logic of microservices, their various problems and alternatives. The course taught how a message broker works and its integration with the various Microservices. In general, I learned how to build, deploy, and scale an E-Commerce app using Microservices.',
     inProgress: false,
-    image: 'microservices_stephengrinder',
+    image: '/assets/courses/microservices_stephengrinder.webp',
     techAreas: {
       frontend:{
         skills: ['Typescript', 'React', 'Next', 'Tailwind'],
@@ -36,7 +36,7 @@ export const courses: ICard[] = [
     creator: 'Geek University',
     description: 'I learned all essential tools of AWS. IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancing, Route 53, CloudFront and a quick look at serverless computing (Lambda functions).',
     inProgress: false,
-    image: 'aws_geekuniversity',
+    image: '/assets/courses/aws_geekuniversity.webp',
     techAreas: {
       devops: {
         skills: ['AWS'],
@@ -59,7 +59,7 @@ export const courses: ICard[] = [
     creator: 'Trybe',
     description: 'Where I learned to code. In addition to the thousands of hours invested in learning, I\'ve done a huge amount of projects in this course. Most aren\'t on github.',
     inProgress: false,
-    image: 'webdevelopment_trybe',
+    image: '/assets/courses/webdevelopment_trybe.webp',
     techAreas: {
       frontend:{
         skills: ['Javascript', 'Typescript', 'HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
@@ -88,7 +88,7 @@ export const courses: ICard[] = [
     creator: 'Wipro and Trybe',
     description: 'I learned Java for backend. Hibernate, Spring, Quarkus, JUnit, Docker, more about dependecy injections and a lot of other knowledges. I\'ve done a lot of projects in this course and most aren\'t on github. ',
     inProgress: false,
-    image: 'javabootcamp_trybeandwipro',
+    image: '/assets/courses/javabootcamp_trybeandwipro.webp',
     techAreas: {
       backend: {
         skills: ['Java', 'Spring', 'Quarkus', 'Hibernate', 'H2', 'JUnit', 'OOP', 'SOLID'],
@@ -114,7 +114,7 @@ export const courses: ICard[] = [
     creator: 'Lucas Marte',
     description: 'I am learning how to use Figma to design my mobile/web pages and a lot of tips about UI/UX.',
     inProgress: true,
-    image: 'profigma_lucasmarte',
+    image: '/assets/courses/profigma_lucasmarte.webp',
     techAreas: {
       frontend:{
         skills: ['Figma'],
@@ -137,7 +137,7 @@ export const courses: ICard[] = [
     creator: 'Brad Traversy',
     description: 'I am learning Tailwind and how to make excellent projects with this technology. I already used the knowledge of this course inside this portfolio page.',
     inProgress: true,
-    image: 'tailwind_bradtraversy',
+    image: '/assets/courses/tailwind_bradtraversy.webp',
     techAreas: {
       frontend:{
         skills: ['Tailwind', 'CSS', 'HTML'],
@@ -160,7 +160,7 @@ export const courses: ICard[] = [
     creator: 'Rodrigo Manguinho',
     description: 'I am learning a lot with TDD and Clean Architecture. And it\'s being a great oportunity to fix the concepts of SOLID.',
     inProgress: true,
-    image: 'cleanarchitecture_rodrigomanguinho',
+    image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
     techAreas: {
       backend: {
         skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']

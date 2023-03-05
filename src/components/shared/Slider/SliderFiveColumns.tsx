@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { iconImages } from '../../../assets';
 import { useCourseContext, useProjectContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { IChildrenProps } from '../../../interfaces';
@@ -154,7 +153,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollLeft)}
       >
-        <img src={iconImages.doubleArrow} className='w-4.5' alt='Previous slider button'></img>
+        <img src='/assets/icons/doubleArrow.svg' className='w-4.5' alt='Previous slider button'></img>
       </button>
       <div ref={sliderDivRef} onClick={() => handleSliderClick()}>
         {children}
@@ -162,7 +161,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
         onClick={() => handleClick(scrollRight)}
       >
-        <img src={iconImages.doubleArrow} className='w-4.5' alt='Next slider button'></img>
+        <img src='/assets/icons/doubleArrow.svg' className='w-4.5' alt='Next slider button'></img>
       </button>
     </div>
   );
