@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLanguageContext } from '../../../contexts';
 import { ICheckboxProps } from '../../../hooks';
 import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 
@@ -13,6 +14,8 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
   const [filterBox, setFilterBox] = useState<boolean>(false);
   const filterBoxRef = useRef<HTMLDivElement | null>(null);
   const filterBoxButton = useRef<HTMLButtonElement | null>(null);
+
+  const { translations } = useLanguageContext();
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -32,7 +35,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckbo
       {filterBox && (
         <AnimatedDiv initialAnimation='opacity-0' finalAnimation='opacity-100' reference={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
-            <p className='text-sm text-center'>CARDS WITH</p>
+            <p className='text-sm text-center uppercase'>{translations.filterbox_info}</p>
             <hr className='bg-customGray-600 h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
           </div>
           {checkboxes.map(({id, value, label, isChecked}) => (

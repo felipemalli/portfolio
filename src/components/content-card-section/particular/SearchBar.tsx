@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { iconImages } from '../../../assets';
-import { useChangeAreaContext, useCourseContext, useProjectContext, useSearchContext, useSkillContext } from '../../../contexts';
+import { useChangeAreaContext, useCourseContext, useLanguageContext, useProjectContext, useSearchContext, useSkillContext } from '../../../contexts';
 import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
 import { FilterBox } from './FilterBox';
@@ -8,6 +8,8 @@ import { FilterBox } from './FilterBox';
 export const SearchBar: React.FC = () => {
   const { search, setSearch, applyFiltersBoolean } = useSearchContext();
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const { translations } = useLanguageContext();
 
   const checkboxValues = [
     { id: 1, value: 'frontend', label: 'FrontEnd', isChecked: true },
@@ -134,7 +136,7 @@ export const SearchBar: React.FC = () => {
         <img className='w-3.5' src={iconImages.searchIcon} alt='Search technology'></img>
       </button>
       <input type="text" className='text-sm pl-8 bg-customGray-400 rounded-full border-2 border-customGray-600 w-full h-8 focus:border-r-2 focus:border-primary-500 outline-none'
-        placeholder="Search Technology"
+        placeholder={translations.search_placeholder}
         ref={inputRef}
         onChange={(e) => setSearch(e.target.value)}
         value={search}
