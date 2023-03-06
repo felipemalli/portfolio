@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import { useCourseContext, useProjectContext } from '../../../contexts';
+import { useCourseContext, useMediaQueryContext, useProjectContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { IChildrenProps } from '../../../interfaces';
-import { breakpoints } from '../../../utils/breakpoints';
 
 interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number
@@ -16,12 +14,9 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const [rightArrowClickable, setRightArrowClickable] = useState(true);
   const [leftArrowClickable, setLeftArrowClickable] = useState(false);
   
-  const isMd = useMediaQuery(breakpoints.isMd);
-  const isLg = useMediaQuery(breakpoints.isLg);
-  const isXl = useMediaQuery(breakpoints.isXl);
-  const is2Xl = useMediaQuery(breakpoints.is2xl);
-  const cardsOnScreenQuantity: number = is2Xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1;
-  const cardsScrollMultiplier: number = is2Xl? 2.2 : isMd ? 2 : 1;
+  const { isLg, isMd, isXl, is2xl } = useMediaQueryContext();
+  const cardsOnScreenQuantity: number = is2xl ? 5 : isXl ? 4 : isLg ? 3 : isMd ? 2 : 1;
+  const cardsScrollMultiplier: number = is2xl? 2.2 : isMd ? 2 : 1;
   
   const [slider, setSlider] = useState<Element | null>(null);
   const sliderDivRef = useRef<HTMLInputElement | null>(null);
@@ -151,7 +146,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   return (
     <div className={'flex justify-center items-center gap-[4px] sm:gap-[12px]'}>
       <button className={`rounded-full h-11 pl-3.5 pr-3 rotate-180 ${leftArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
-        onClick={() => handleClick(scrollLeft)}
+        onClick={() => leftArrowClickable && handleClick(scrollLeft)}
       >
         <img src='/assets/icons/doubleArrow.svg' className='w-4.5' alt='Previous slider button'></img>
       </button>
@@ -159,7 +154,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         {children}
       </div>
       <button className={`rounded-full h-11 pl-3.5 pr-3 ${rightArrowClickable ? 'hover:opacity-80' : 'opacity-30 cursor-not-allowed'}`}
-        onClick={() => handleClick(scrollRight)}
+        onClick={() => rightArrowClickable && handleClick(scrollRight)}
       >
         <img src='/assets/icons/doubleArrow.svg' className='w-4.5' alt='Next slider button'></img>
       </button>
