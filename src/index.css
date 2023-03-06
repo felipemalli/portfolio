@@ -9,3 +9,21 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+body {
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBCBCB;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AFAFAF;
+}
