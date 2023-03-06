@@ -36,7 +36,7 @@ export const enProjects: ICard[] = [
     }
   },
   {
-    name: 'Trybe Football Club',
+    name: 'Trybe Futebol Club',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'I developed a complete RESTful API with some tests for an already implemented Front-End to handle football match data. I documented the API with Postman. This project consolidated my knowledge about OOP and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of the free use of Heroku.',

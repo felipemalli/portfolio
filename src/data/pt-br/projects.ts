@@ -2,7 +2,7 @@ import { ICard } from '../../interfaces';
 
 export const ptBrProjects: ICard[] = [
   {
-    name: 'Portfólio',
+    name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Esse é meu principal projeto no momento para demonstrar minhas habilidades em Frontend e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de filtro e idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com uma API, que planejo adicionar em breve.',
@@ -66,7 +66,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Alimentador de Drones',
+    name: 'Drone Feeder',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Projeto completo de back-end que lida com entregas por drones, feito em equipe do zero. Além das rotas CRUD, existem algumas rotas para lidar com vídeos. Foram feitos testes com H2, JUnit e JaCoCo para cobertura de código.',
@@ -96,7 +96,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Minhas Séries',
+    name: 'My Series',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'API RESTful com alguns endpoints para lidar com séries e seus episódios. Foi feito com Spring e o tratamento de exceções com ControllerAdvice e ExceptionHandler. Adicionei também um circuit breaker em uma rota.',
@@ -123,7 +123,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Loja de Carros',
+    name: 'Car Shop',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'API RESTful com um CRUD para lidar com carros. Segui os conceitos de SOLID, OOP e utilizei genéricos para reutilização.',
@@ -153,7 +153,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'App de Receitas',
+    name: 'Recipes App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Projeto Front-end de um aplicativo de receitas feito em equipe. Fui responsável por desenvolver as principais páginas e filtros. Não fui responsável pelo design. Para o desenvolvimento do projeto, foram usados dois bancos de dados de duas APIs diferentes, um para comida e outro para bebidas. Dividimos as tarefas para não sobrecarregar ninguém na equipe, e conseguimos entregar o projeto adiantado.',
@@ -207,7 +207,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Registra Especialistas',
+    name: 'Register Specialties',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'API RESTful com CRUD para gerenciamento de profissionais e suas especialidades. Foi feita com Spring e implementando a especificação JAX-RS com a biblioteca Jersey.',
@@ -234,7 +234,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'App de Blogs',
+    name: 'Blogs App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'API REST com diversos endpoints de CRUD para gerenciamento de posts de blogs com Javascript. Uma observação é que o framework Joi foi usado para validações e autenticações de middleware.',
@@ -261,7 +261,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'App de Carteira',
+    name: 'Wallet App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Aplicativo de carteira front-end que desenvolvi para consolidar minhas habilidades com Redux. Infelizmente, não desenvolvi o design desse site, mas ele está totalmente funcional.',
@@ -288,7 +288,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Agenda Limpa',
+    name: 'Clean Schedule',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Estou desenvolvendo esta API para treinar Clean Architecture, TDD, DDD e consolidar conceitos de SOLID. Acredito que essas habilidades são muito importantes para evoluir como profissional.',
@@ -318,7 +318,7 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Lista de tarefas',
+    name: 'To do list',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
     description: 'Um aplicativo de lista de tarefas para treinar Material UI. Ainda estou desenvolvendo o front-end e UI, mas o deploy já está publicado! O backend foi feito inicialmente com Node, Express, Sequelize e MySQL, mas vou criar outro com outras tecnologias. No entanto, você pode acessar o antigo no meu GitHub.',
