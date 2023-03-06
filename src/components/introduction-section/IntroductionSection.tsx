@@ -8,7 +8,7 @@ export const IntroductionSection: React.FC = () => {
 
   return (
     <section className='flex flex-col xl:flex-row justify-evenly items-center 2xl:gap-32 gap-3 -mt-8 xl:-mt-10 2xl:mt-0 h-screen md:h-auto'>
-      <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-10'>
+      <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-5 md:mt-14 xl:mt-10'>
         <h1 className='text-customBlue-900 text-6xl font-semibold text-center xl:text-left'>Felipe Malliagros</h1>
         <div className='text-customBlue-500 text-2xl font-semibold mt-7 text-center xl:text-left'>
           {language === 'pt-br' && (
