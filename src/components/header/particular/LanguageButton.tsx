@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ILanguageOptions, useLanguageContext } from '../../../contexts';
+import { ILanguageOptions, useLanguageContext, useSearchContext } from '../../../contexts';
 
 export interface ILanguageButtonProps {
   className: string;
@@ -29,6 +29,14 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
   
   const { translations, changeLanguage, languageNames, language } = useLanguageContext();
 
+  const { setSearch, setApplyFiltersBoolean, applyFiltersBoolean, defineCheckBoxes } = useSearchContext();
+
+  useEffect(() => {
+    defineCheckBoxes(true);
+    setSearch('');
+    setApplyFiltersBoolean(!applyFiltersBoolean);
+  }, [language]);
+  
   return (
     <div ref={languageRef} className={`${className} md:hover:scale-95 scale-90`}>
       <button className={`flex h-10 items-center ${hasText ? 'justify-end' : 'justify-center'} space-x-[5px] xl:w-full w-10 h-10 hover:bg-customGray-200 md:hover:bg-secondary-500 rounded-full -ml-2 xl:ml-0`}
@@ -40,10 +48,12 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
         {isOpenLanguage && Object.entries(languageNames).map(([languageShort, languageName]) => (
           <button key={languageShort} className={`${languageShort === language && 'text-customGray-600 bg-secondary-500 cursor-not-allowed'} border-b hover:bg-customGray-200 w-full px-2 pt-3 pb-2 font-medium text-customBlue-500 uppercase text-sm -mb-1`}
             onClick={() => {
-              changeLanguage(languageShort as ILanguageOptions);
-              setIsOpenLanguage(false);
-              if (setIsRenderLanguage) {
-                setIsRenderLanguage(false);
+              if (languageShort !== language) {
+                changeLanguage(languageShort as ILanguageOptions);
+                setIsOpenLanguage(false);
+                if (setIsRenderLanguage) {
+                  setIsRenderLanguage(false);
+                }
               }
             }}
           >

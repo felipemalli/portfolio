@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLanguageContext } from '../../../contexts';
 
 export interface IInfoFrameProps {
   creator: string;
@@ -10,6 +11,8 @@ type IStringList = string[][]
 export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: IInfoFrameProps) => {
   const [page, setPage] = useState<number>(0);
   const [stringList, setStringList] = useState<IStringList>();
+
+  const { translations } = useLanguageContext();
 
   function divideStringIntoLists(str: string, stringLength: number) {
     const stringList = [];
@@ -33,9 +36,9 @@ export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: I
   }
 
   useEffect(() => {
-    let STRING_LIMIT = 166;
+    let STRING_LIMIT = 160;
     if (creator !== 'Felipe Vahia Malliagros') {
-      STRING_LIMIT = 114;
+      STRING_LIMIT = 111;
     }
     setStringList(divideStringIntoLists(description, STRING_LIMIT));
     setPage(0);
@@ -43,7 +46,7 @@ export const InfoFrame: React.FC<IInfoFrameProps> = ({ creator, description }: I
 
   return (
     <div className='h-full w-full flex flex-col items-center'>
-      {creator != 'Felipe Vahia Malliagros' && <p className='text-sm font-light border rounded-md border-customGray-500 pt-0.5 w-full text-center  mb-1.5'>Instructor - {creator}</p>}
+      {creator != 'Felipe Vahia Malliagros' && <p className='text-sm font-light border rounded-md border-customGray-500 pt-0.5 w-full text-center  mb-1.5'>{translations.instructor} - {creator}</p>}
       <div className="h-screen w-full border border-customGray-500 rounded-lg relative">
         {stringList && stringList[page].map((string) => (
           <p className={`w-full text-[13px] ${creator != 'Felipe Vahia Malliagros' ? 'pt-[8px] pb-[5px]' : 'pt-[4px]'} px-1.5 font-light flex justify-start`} key={string + String(Date.now())}>

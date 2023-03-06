@@ -30,7 +30,15 @@ const languageNames: ILanguageNames = {
 };
 
 export const LanguageProvider: React.FC<IChildrenProps> = ({ children }: IChildrenProps) => {
-  const [language, setLanguage] = useState<ILanguageOptions>('pt-br');
+  const defaultLanguage = navigator.language.split('-')[0];
+  let initial_language: ILanguageOptions;
+  if (defaultLanguage === 'pt' || defaultLanguage === 'es') {
+    initial_language = 'pt-br';
+  } else {
+    initial_language = 'en';
+  }
+
+  const [language, setLanguage] = useState<ILanguageOptions>(initial_language);
   const [translations, setTranslations] = useState<ITranslation>({});
 
   useEffect(() => {

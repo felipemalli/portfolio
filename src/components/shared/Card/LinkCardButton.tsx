@@ -1,3 +1,4 @@
+import { useLanguageContext } from '../../../contexts';
 import { ILinkName } from '../../../interfaces';
 import { openUrl } from '../../../utils/openUrl';
 
@@ -8,6 +9,8 @@ interface ILinkButtonProps {
 }
 
 export const LinkButton: React.FC<ILinkButtonProps> = ({ enable, name, link }: ILinkButtonProps) => {
+  const { translations } = useLanguageContext();
+
   return (
     <button className={`transition-all duration-200 w-full h-8 rounded-md text-sm
       ${name === 'Certificate' ? 'bg-green-400' : 'bg-customGray-400'}
@@ -16,7 +19,7 @@ export const LinkButton: React.FC<ILinkButtonProps> = ({ enable, name, link }: I
       ${!enable && 'opacity-50 cursor-default'}`}
     onClick={() => enable && openUrl(link)}
     >
-      {name}
+      {name === 'Certificate' ? translations.certificate : name}
     </button>
   );
 };
