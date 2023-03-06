@@ -22,7 +22,7 @@ export const LandingPage: React.FC = () => {
           <ContentCardSection />
         </AnimatedDiv>
       </article>
-      <div className='absolute bg-primary-300 mt-80 w-screen h-[50rem] sm-[h-60rem] md:h-[59rem] 2xl:h-[47.5rem] -z-10'/>
+      <div className='absolute bg-primary-300 mt-[15rem] w-screen h-[50rem] sm-[h-60rem] md:h-[59rem] 2xl:h-[47.5rem] -z-10'/>
       <article className='mx-auto 3xl:w-[114.938rem]'>
         <AboutSection />
       </article>

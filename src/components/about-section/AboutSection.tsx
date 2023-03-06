@@ -6,7 +6,7 @@ export const AboutSection: React.FC = () => {
   const { translations } = useLanguageContext();
   
   return (
-    <section className='flex-col mt-64 mx-auto md:mx-0 overflow-hidden'>
+    <section className='flex-col mt-[10rem] mx-auto md:mx-0 overflow-hidden'>
       <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv translation='translateX(-200px)'>
           <div className='flex-col relative w-[85vw] md-w-auto'>
