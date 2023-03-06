@@ -2,7 +2,7 @@ import { ICard } from '../../interfaces';
 
 export const ptBrCourses: ICard[] = [
   {
-    name: 'Microservices com NodeJS and React',
+    name: 'Microservices com NodeJS e React',
     type: 'course',
     creator: 'Stephen Grinder',
     description: 'Aprendi Kubernetes e toda lógica de microserviços, com seus vários problemas e alternativas. O curso ensinou como funciona um message broker e sua integração com os diversos Microsserviços. Em geral, aprendi como construir, implantar e dimensionar um aplicativo de e-commerce usando microsserviços.',
@@ -54,7 +54,7 @@ export const ptBrCourses: ICard[] = [
     },
   },
   {
-    name: 'Desenvolvimento web Full Stack',
+    name: 'Desenvolvimento Web Full Stack',
     type: 'course',
     creator: 'Trybe',
     description: 'Onde eu comecei a programar. Além das milhares de horas investidas em aprendizado, fiz uma quantidade enorme de projetos neste curso. A maioria não está no GitHub.',
@@ -83,7 +83,7 @@ export const ptBrCourses: ICard[] = [
     },
   },
   {
-    name: 'Java Bootcamp',
+    name: 'Bootcamp de Java',
     type: 'course',
     creator: 'Wipro and Trybe',
     description: 'Eu aprendi Java para o backend do zero ao deploy. Hibernate, Spring, Quarkus, JUnit, Docker, mais sobre injeções de dependência e muitos outros conhecimentos. Eu fiz muitos projetos neste curso e a maioria não está no GitHub.',
@@ -109,7 +109,7 @@ export const ptBrCourses: ICard[] = [
     },
   },
   {
-    name: 'PRO FIGMA | User interface design from beginner to expert',
+    name: 'PRO FIGMA | Interface de usuário do iniciante ao expert',
     type: 'course',
     creator: 'Lucas Marte',
     description: 'Estou aprendendo a usar o Figma para projetar minhas páginas móveis / web e muitas dicas sobre UI/UX.',
@@ -132,7 +132,7 @@ export const ptBrCourses: ICard[] = [
     }
   },
   {
-    name: 'Tailwind CSS from scratch | Learn by building projects',
+    name: 'Tailwind CSS do zero | Aprenda construindo projetos',
     type: 'course',
     creator: 'Brad Traversy',
     description: 'Estou aprendendo Tailwind e como fazer excelentes projetos com esta tecnologia. Já usei os conhecimentos deste curso nesta página do meu portfólio.',
@@ -155,7 +155,7 @@ export const ptBrCourses: ICard[] = [
     }
   },
   {
-    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
+    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture e SOLID',
     type: 'course',
     creator: 'Rodrigo Manguinho',
     description: 'Estou aprendendo muito com TDD e Arquitetura Limpa. E está sendo uma ótima oportunidade para consolidar os conceitos de SOLID. Acredito serem habilidades muito importantes a se adquirir para evoluir como profissional',
