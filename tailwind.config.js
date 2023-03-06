@@ -8,7 +8,7 @@ export default {
       colors: {
         primary: {
           300: '#E48383',
-          500: '#D5685A',
+          500: '#D46666',
         },
         secondary: {
           500: '#fbfbfb',
