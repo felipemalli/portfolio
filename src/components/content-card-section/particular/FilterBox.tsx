@@ -1,20 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import { useLanguageContext } from '../../../contexts';
-import { ICheckboxProps } from '../../../hooks';
+import { useLanguageContext, useSearchContext } from '../../../contexts';
 import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 
 export interface IFilterBoxProps {
-  checkboxes: ICheckboxProps[];
-  handleCheckboxChange: (id: number) => void;
   applyFilters: () => void;
   giveCheckboxAreas: () => string[];
 }
 
-export const FilterBox: React.FC<IFilterBoxProps> = ({ checkboxes, handleCheckboxChange, applyFilters, giveCheckboxAreas }: IFilterBoxProps) => {
+export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckboxAreas }: IFilterBoxProps) => {
   const [filterBox, setFilterBox] = useState<boolean>(false);
   const filterBoxRef = useRef<HTMLDivElement | null>(null);
   const filterBoxButton = useRef<HTMLButtonElement | null>(null);
 
+  const { checkboxes, handleCheckboxChange } = useSearchContext();
   const { translations } = useLanguageContext();
 
   useEffect(() => {

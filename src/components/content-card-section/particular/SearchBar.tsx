@@ -1,22 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useChangeAreaContext, useCourseContext, useLanguageContext, useProjectContext, useSearchContext, useSkillContext } from '../../../contexts';
-import { useCheckbox } from '../../../hooks';
 import { ICard } from '../../../interfaces';
 import { FilterBox } from './FilterBox';
 
 export const SearchBar: React.FC = () => {
-  const { search, setSearch, applyFiltersBoolean } = useSearchContext();
+  const { search, setSearch, applyFiltersBoolean, checkboxes } = useSearchContext();
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const { translations } = useLanguageContext();
-
-  const checkboxValues = [
-    { id: 1, value: 'frontend', label: 'FrontEnd', isChecked: true },
-    { id: 2, value: 'backend', label: 'BackEnd', isChecked: true },
-    { id: 3, value: 'devops', label: 'DevOps', isChecked: true },
-  ];
-  
-  const { checkboxes, handleCheckboxChange } = useCheckbox(checkboxValues);
 
   useEffect(() => {
     const handleEnterPress = (event: KeyboardEvent) => {
@@ -29,7 +20,6 @@ export const SearchBar: React.FC = () => {
       inputRef.current?.removeEventListener('keydown', handleEnterPress);
     };
   });
-
 
   const { allProjects, setFilteredProjects } = useProjectContext();
   const { allCourses, setFilteredCourses } = useCourseContext();
@@ -147,7 +137,7 @@ export const SearchBar: React.FC = () => {
         </button> 
       }
       {areaName === 'knowledge' &&
-        <FilterBox checkboxes={checkboxes} handleCheckboxChange={handleCheckboxChange} applyFilters={applyFilters} giveCheckboxAreas={giveCheckboxAreas}/>
+        <FilterBox applyFilters={applyFilters} giveCheckboxAreas={giveCheckboxAreas}/>
       }
     </div>
   );
