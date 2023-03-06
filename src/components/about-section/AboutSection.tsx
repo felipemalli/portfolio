@@ -61,8 +61,8 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
         </InViewDiv>
+        <div className=" md:hidden absolute h-3/5 top-[25%] right-0 w-screen bg-primary-300 -z-20" />
       </aside>
-      <div className="absolute h-3/5 top-[25%] right-0 w-screen bg-primary-300 -z-20" />
     </section>
   );
 };
