@@ -20,5 +20,7 @@
   "search_placeholder": "Procure a Tecnologia",
   "filterbox_info": "Cards com",
   "instructor": "Instrutor",
-  "certificate": "Certificado"
+  "certificate": "Certificado",
+  "courses_not_found": "Cursos não encontrados",
+  "projects_not_found": "Projetos não encontrados"
 }

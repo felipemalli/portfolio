@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguageContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { useCourseContext } from '../../../contexts/CourseContext';
 import { courses } from '../../../data/courses';
@@ -9,6 +10,8 @@ import { Card } from '../../shared/Card/Card';
 export const CourseArea: React.FC = () => {
   const { areaName } = useChangeAreaContext();
   const { setAllCourses, filteredCourses, setFilteredCourses } = useCourseContext();
+
+  const { language, translations } = useLanguageContext();
 
   useEffect(() => {
     setFilteredCourses(courses);
@@ -21,7 +24,7 @@ export const CourseArea: React.FC = () => {
       {filteredCourses.map((course: ICard) => (
         <Card key={course.name} card={course}/>
       ))}
-      {filteredCourses.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Courses not found 😭</h3>}
+      {filteredCourses.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>{translations.courses_not_found} 😭</h3>}
     </AnimatedDiv>
   );
 };

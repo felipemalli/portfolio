@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguageContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { useProjectContext } from '../../../contexts/ProjectContext';
 import { projects } from '../../../data/projects';
@@ -9,6 +10,8 @@ import { Card } from '../../shared/Card/Card';
 export const ProjectArea: React.FC = () => {
   const { areaName } = useChangeAreaContext();
   const { setAllProjects, filteredProjects, setFilteredProjects } = useProjectContext();
+
+  const { language, translations } = useLanguageContext();
 
   useEffect(() => {
     setFilteredProjects(projects);
@@ -21,7 +24,7 @@ export const ProjectArea: React.FC = () => {
       {filteredProjects.map((project: ICard) => (
         <Card key={project.name} card={project}/>
       ))}
-      {filteredProjects.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Projects not found 😭</h3>}
+      {filteredProjects.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>{translations.courses_not_found} 😭</h3>}
     </AnimatedDiv>
   );
 };

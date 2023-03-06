@@ -20,5 +20,7 @@
   "search_placeholder": "Seach Technology",
   "filterbox_info": "Cards with",
   "instructor": "Instructor",
-  "certificate": "Certificate"
+  "certificate": "Certificate",
+  "courses_not_found": "Courses not found",
+  "projects_not_found": "Projects not found"
 }
