@@ -18,7 +18,7 @@ export const ContentArea: React.FC<IContentaArea> = ({data, filteredData, setFil
   useEffect(() => {
     setFiltered(data);
     setAll(data);
-  }, []);
+  }, [data]);
 
   return (
     <AnimatedDiv animationState={areaName === 'knowledge' ? 'start' : 'stop'} initialAnimation='opacity-50' finalAnimation='opacity-100' duration='duration-400'

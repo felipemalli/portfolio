@@ -37,7 +37,7 @@ export const TopContentCard: React.FC = () => {
         {areaName === 'knowledge' ? `${translations.content_card_top_title}` : 'BackEnd + DevOps'}
       </h2>
       <SliderFiveColumns CARD_SIZE={CARD_SIZE}>
-        <ContentArea data={enProjects} filteredData={filteredProjects} setFiltered={setFilteredProjects} setAll={setAllProjects} notFoundTranslation={translations.projects_not_found} />
+        <ContentArea data={projects} filteredData={filteredProjects} setFiltered={setFilteredProjects} setAll={setAllProjects} notFoundTranslation={translations.projects_not_found} />
         <SkillArea type={'top'} skills={topSkills} setFilteredSkills={setFilteredTopSkills} setAllSkills={setAllTopSkills} filteredSkills={filteredTopSkills} />
       </SliderFiveColumns>
     </div>
