@@ -33,7 +33,7 @@ export const IntroductionSection: React.FC = () => {
             {translations.introduction_left_button}
           </button>
           <button className='w-32 h-14 border border-primary-500 hover:bg-customGray-300 text-customBlue-500 active:bg-green-400 rounded-md text-sm transition-color duration-200'
-            onClick={() => openUrl('https://github.com/felipemalli')}
+            onClick={() => openUrl('https://github.com/felipemalli?tab=repositories')}
           >
             {translations.introduction_right_button}
           </button>
