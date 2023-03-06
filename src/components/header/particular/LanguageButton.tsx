@@ -3,10 +3,11 @@ import { ILanguageOptions, useLanguageContext } from '../../../contexts';
 
 export interface ILanguageButtonProps {
   className: string;
+  setIsRenderLanguage?: (arg: boolean) => void;
   hasText?: boolean;
 }
 
-export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasText }: ILanguageButtonProps) => {
+export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasText, setIsRenderLanguage }: ILanguageButtonProps) => {
   const [isOpenLanguage, setIsOpenLanguage] = useState(false);
   const languageRef = useRef<HTMLDivElement | null>(null);
 
@@ -20,16 +21,19 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
   const handleClickOutside = (event: MouseEvent) => {
     if (languageRef.current && languageRef.current !== event.target && !languageRef.current.contains(event.target as Node)) {
       setIsOpenLanguage(false);
+      if (setIsRenderLanguage) {
+        setIsRenderLanguage(false);
+      }
     }
   };
   
   const { translations, changeLanguage, languageNames, language } = useLanguageContext();
 
   return (
-    <div ref={languageRef} className={`${className}`}>
-      <button className={`flex h-10 items-center ${hasText ? 'justify-end' : 'justify-center'} space-x-[5px] w-full`}
+    <div ref={languageRef} className={`${className} md:hover:scale-105`}>
+      <button className={`flex h-10 items-center ${hasText ? 'justify-end' : 'justify-center'} space-x-[5px] xl:w-full w-10 h-10 hover:bg-customGray-200 md:hover:bg-secondary-500 rounded-full -ml-2 xl:ml-0`}
         onClick={ () => setIsOpenLanguage(!isOpenLanguage)}>
-        {hasText && <p className='font-semibold text-customBlue-500  hover:text-customBlue-700 uppercase text-sm -mb-1 tracking-widest'>{translations.language}</p>}
+        {hasText && <p className='font-semibold text-customBlue-500 uppercase text-sm -mb-1 tracking-widest'>{translations.language}</p>}
         <img className='flex h-6 w-6' src='./assets/icons/languageGlobe.svg' alt='Language icon'/>
       </button>
       <div className='absolute top-10 left-1/2 -translate-x-1/2 flex flex-col gap-1'>
@@ -38,6 +42,9 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
             onClick={() => {
               changeLanguage(languageShort as ILanguageOptions);
               setIsOpenLanguage(false);
+              if (setIsRenderLanguage) {
+                setIsRenderLanguage(false);
+              }
             }}
           >
             {languageName}
