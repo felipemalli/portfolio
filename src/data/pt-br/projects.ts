@@ -1,6 +1,6 @@
-import { ICard } from '../interfaces';
+import { ICard } from '../../interfaces';
 
-export const projects: ICard[] = [
+export const ptBrProjects: ICard[] = [
   {
     name: 'Portfolio',
     type: 'project',

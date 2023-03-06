@@ -1,6 +1,6 @@
-import { ICard } from '../interfaces';
+import { ICard } from '../../interfaces';
 
-export const courses: ICard[] = [
+export const enCourses: ICard[] = [
   {
     name: 'Microservices with NodeJS and React',
     type: 'course',
