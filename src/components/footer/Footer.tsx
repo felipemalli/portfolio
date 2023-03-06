@@ -10,8 +10,8 @@ export const Footer: React.FC = () => {
       </div>
       <p className='hidden lg:flex lg:absolute lg:left-10 font-medium text-sm text-secondary-700'>© 2023 Felipe Vahia Malliagros</p>
       <nav className='items-center space-x-28 md:space-x-36 lg:space-x-28 xl:space-x-48 text-secondary-700 font-medium sm:text-sm text-xs'>
-        <NavOptionLink className='hover:opacity-80' url='https://github.com/felipemalli'>Github</NavOptionLink>
         <NavOptionLink className='hover:opacity-80' url='https://www.linkedin.com/in/felipe-vahia-malliagros'>Linkedin</NavOptionLink>
+        <NavOptionLink className='hover:opacity-80' url='https://github.com/felipemalli'>Github</NavOptionLink>
       </nav>
     </footer>
   );
