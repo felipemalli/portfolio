@@ -41,14 +41,18 @@ export const Header: React.FC = () => {
                 <NavOptionNavigation className='hover:scale-105 hover:bg-customGray-200 md:hover:bg-transparent w-screen h-10 md:w-auto flex items-center justify-center' componentId='content' areaNameNav='skills'>{translations.nav_skills}</NavOptionNavigation>
                 <NavOptionNavigation className='hover:scale-105 hover:bg-customGray-200 md:hover:bg-transparent w-screen h-10 md:w-auto flex items-center justify-center' componentId='about'>{translations.nav_about}</NavOptionNavigation>
                 <NavOptionLink className='hover:scale-105 hover:bg-customGray-200 md:hover:bg-transparent w-screen h-10 md:w-auto flex items-center justify-center' url='https://www.linkedin.com/in/felipe-vahia-malliagros/'>{translations.nav_contact}</NavOptionLink>
-                {isMd && !isXl && <LanguageButton className='relative flex-col items-center gap-1' />}
+                {isMd && !isXl && <LanguageButton className='relative flex-col items-center gap-1 pb-0.5' />}
               </nav>
             </div>
             <div className='flex gap-4'>
               {!isMd && isRenderLanguage && <LanguageButton className='relative flex-col items-center gap-1'  setIsRenderLanguage={setIsRenderLanguage} />}
               <button ref={navButton} type='button' className='h-10 w-10 hover:bg-customGray-200 block md:hidden focus:outline-none rounded-full pl-2' onClick={() => {
+                if (isOpenNav) {
+                  (setIsRenderLanguage(false));
+                } else {
+                  setIsRenderLanguage(!isRenderLanguage);
+                }
                 setIsOpenNav(!isOpenNav);
-                setIsRenderLanguage(!isRenderLanguage);
               }}>
                 {isOpenNav 
                   ? <img className='w-6' src='./assets/icons/closeIcon.svg' alt='Headline closed button'></img>
@@ -59,7 +63,7 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      {isXl && <LanguageButton hasText={true} className='absolute right-[0%] xl:right-[2%] 2xl:right-[3.2%] 3xl:right-[4%] top-[22px] flex-col items-center gap-1' />}
+      {isXl && <LanguageButton hasText={true} className='absolute xl:right-[3%] 2xl:right-[3.2%] 3xl:right-[4%] top-[22px] flex-col items-center gap-1' />}
     </header>
   );
 };
