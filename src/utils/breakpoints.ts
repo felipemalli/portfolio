@@ -23,6 +23,7 @@ const formatedBreakpoints = {
   isLg: { minWidth: +(breakpoints['lg'].replace('px', '')) },
   isMd: { minWidth: +(breakpoints['md'].replace('px', '')) },
   isSm: { minWidth: +(breakpoints['sm'].replace('px', '')) },
+  smallHeight: { minHeight: 568 }
 };
 
 export { formatedBreakpoints as breakpoints };
