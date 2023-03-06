@@ -158,7 +158,7 @@ export const ptBrCourses: ICard[] = [
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
     type: 'course',
     creator: 'Rodrigo Manguinho',
-    description: 'Estou aprendendo muito com TDD e Arquitetura Limpa. E está sendo uma ótima oportunidade para consolidar os conceitos de SOLID.',
+    description: 'Estou aprendendo muito com TDD e Arquitetura Limpa. E está sendo uma ótima oportunidade para consolidar os conceitos de SOLID. Acredito serem habilidades muito importantes a se adquirir para evoluir como profissional',
     inProgress: true,
     image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
     techAreas: {
