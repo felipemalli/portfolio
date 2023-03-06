@@ -21,7 +21,7 @@ export const AboutSection: React.FC = () => {
             </div>
             <div className='flex flex-col items-center justify-center z-10 
             
-            md:w-[628px] md:h-[320px] -mt-72 md:ml-20
+            md:w-[628px] min-h-[290px] md:h-[320px] -mt-72 md:ml-20
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
