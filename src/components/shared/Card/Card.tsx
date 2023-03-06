@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ICard, ITechAreaNames } from '../../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
 import { InfoFrame } from './InfoFrame';
@@ -33,6 +33,11 @@ export const Card: React.FC<ICardProps> = ({ card }: ICardProps) => {
   const hasFrontend = !!(card.techAreas.frontend && card.techAreas.frontend.skills.length > 0);
   const hasBackend = !!(card.techAreas.backend && card.techAreas.backend.skills.length > 0);
   const hasDevops = !!(card.techAreas.devops && card.techAreas.devops.skills.length > 0);
+
+  useEffect(() => {
+    setFrame({ screen: 'photoFrame' });
+  }, [card.description]);
+  
 
   return (
     <div className={`touch-none md:touch-auto select-none ${CARD_MARGIN_X} transition ease-in-out hover:scale-105 hover:shadow-md flex flex-col justify-evenly ${CARD_WIDTH} content-between items-center border rounded-2xl border-gray-300  ${card.type === 'project' ? 'h-[14.3rem] bg-secondary-700' : 'h-[14.75rem] bg-secondary-900'}`}>
