@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
 
 
   return (
-    <header>
+    <header id='header'>
       <div className='w-fill md:mx-8 lg:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
         <div className='flex justify-between md:justify-center -mb-[88px] xl:justify-start p-6 md:my-4 xl:ml-20 2xl:ml-12'>
           <img className='flex h-6 w-6 scale-75 xl:-ml-28 2xl:-ml-16 mr-10 2xl:mr-16 mt-2'  src='./assets/background/icon.png' alt='Felipevm icon'/>
