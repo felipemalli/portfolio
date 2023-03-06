@@ -20,5 +20,12 @@ export function useCheckbox(initialState: ICheckboxProps[]) {
     setCheckboxes(updatedCheckboxes);
   };
 
-  return { checkboxes, handleCheckboxChange };
+  const defineCheckBoxes = (isChecked: boolean) => {
+    const updatedCheckboxes = checkboxes.map((checkbox) => {
+      return { ...checkbox, isChecked: isChecked };
+    });
+    setCheckboxes(updatedCheckboxes);
+  };
+
+  return { checkboxes, handleCheckboxChange, defineCheckBoxes };
 }
