@@ -24,7 +24,7 @@ export const ptBrProjects: ICard[] = [
       },
       {
         name: 'Browser',
-        link: ''
+        link: 'https://www.felipemalli.com'
       },
       {
         name: 'API',
