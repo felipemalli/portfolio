@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLanguageContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { useProjectContext } from '../../../contexts/ProjectContext';
-import { projects } from '../../../data/projects';
+import { enProjects, ptBrProjects } from '../../../data';
 import { ICard } from '../../../interfaces';
 import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 import { Card } from '../../shared/Card/Card';
@@ -14,9 +14,14 @@ export const ProjectArea: React.FC = () => {
   const { language, translations } = useLanguageContext();
 
   useEffect(() => {
-    setFilteredProjects(projects);
-    setAllProjects(projects);
-  }, []);
+    if (language === 'pt-br') {
+      setFilteredProjects(ptBrProjects);
+      setAllProjects(ptBrProjects);
+    } else {
+      setFilteredProjects(enProjects);
+      setAllProjects(enProjects);
+    }
+  }, [language]);
 
   return (
     <AnimatedDiv animationState={areaName === 'knowledge' ? 'start' : 'stop'} initialAnimation='opacity-50' finalAnimation='opacity-100' duration='duration-400'
