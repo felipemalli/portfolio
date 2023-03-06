@@ -30,7 +30,7 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
   const { translations, changeLanguage, languageNames, language } = useLanguageContext();
 
   return (
-    <div ref={languageRef} className={`${className} md:hover:scale-105`}>
+    <div ref={languageRef} className={`${className} md:hover:scale-95 scale-90`}>
       <button className={`flex h-10 items-center ${hasText ? 'justify-end' : 'justify-center'} space-x-[5px] xl:w-full w-10 h-10 hover:bg-customGray-200 md:hover:bg-secondary-500 rounded-full -ml-2 xl:ml-0`}
         onClick={ () => setIsOpenLanguage(!isOpenLanguage)}>
         {hasText && <p className='font-semibold text-customBlue-500 uppercase text-sm -mb-1 tracking-widest'>{translations.language}</p>}
