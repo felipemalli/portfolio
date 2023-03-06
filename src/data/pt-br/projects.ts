@@ -5,7 +5,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Portfólio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Este é meu principal projeto no momento para demonstrar minhas habilidades em Frontend e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com API, que planejo adicionar em breve.',
+    description: 'Este é meu principal projeto no momento para demonstrar minhas habilidades em Frontend e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de filtro e idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com uma API, que planejo adicionar em breve.',
     inProgress: false,
     image: '/assets/projects/portfolio.webp',
     techAreas: {
@@ -39,7 +39,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Trybe Futebol Club',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'I developed a RESTful Back-end for a already implemented Front-End. This project consolidated my knowledge about OOP and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of free use of Heroku.',
+    description: 'Desenvolvi uma API RESTful completa com alguns testes para um Front-end já implementado para lidar com dados de partidas de futebol. Documentei a API com o Postman. Este projeto consolidou meu conhecimento sobre OOP e integração entre Front-end e Back-end. Realizei o deploy desse projeto com Docker e Heroku, mas ele não está mais online devido ao fim do uso gratuito do Heroku.',
     inProgress: false,
     image: '/assets/projects/trybefutebolclub.webp',
     techAreas: {
@@ -69,7 +69,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Drone Feeder',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Back-end project of a drone delivery made in team. Besides the basic routes, there are some routes to handle videos. Tests were made with H2, JUnit and JaCoCo for code coverage.',
+    description: 'Projeto completo de back-end de entrega por drone feito em equipe do zero. Além das rotas CRUD, existem algumas rotas para lidar com vídeos. Foram feitos testes com H2, JUnit e JaCoCo para cobertura de código.',
     inProgress: false,
     image: '/assets/projects/dronefeeder.webp',
     techAreas: {
@@ -99,7 +99,7 @@ export const ptBrProjects: ICard[] = [
     name: 'My Series',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'API REST with a couple routes for handling series and your episodes. It was made with Spring and handling exceptions with ControllerAdvice and ExceptionHandler. I also add a circuit breaker in one route.',
+    description: 'API RESTful com alguns endpoints para lidar com séries e seus episódios. Foi feito com Spring e o tratamento de exceções com ControllerAdvice e ExceptionHandler. Adicionei também um circuit breaker em uma rota.',
     inProgress: false,
     image: '/assets/projects/myseries.webp',
     techAreas: {
@@ -126,7 +126,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Car Shop',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'API with a simple CRUD for handling cars. I follow the concepts of SOLID, OOP and using generics for reuse.',
+    description: 'API RESTful com um CRUD para lidar com carros. Segui os conceitos de SOLID, OOP e utilizei genéricos para reutilização.',
     inProgress: false,
     image: '/assets/projects/carshop.webp',
     techAreas: {
@@ -153,37 +153,10 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
-    name: 'Miles Program',
-    type: 'project',
-    creator: 'Felipe Vahia Malliagros',
-    description: 'API REST for handling miles with Quarkus. This was a challenge of Java bootcamp that I did. In a project in the middle stage of development, I had to implement several functionalities for the project work.',
-    inProgress: false,
-    image: '/assets/projects/milesprogram.webp',
-    techAreas: {
-      backend: {
-        skills: ['Java', 'Quarkus', 'Hibernate', 'OOP'],
-      },
-    },
-    links: [
-      {
-        name: 'Code',
-        link: 'https://github.com/felipemalli/miles-program'
-      },
-      {
-        name: 'Browser',
-        link: ''
-      },
-      {
-        name: 'API',
-        link: ''
-      },
-    ],
-  },
-  {
     name: 'Recipes App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Front-End project of a recipes app made in team. It was used in the development of the project, two databases of 2 different APIs, one for food and the other for drinks. We divided the tasks so as not to overload anyone on the team, and we were able to deliver the project in advance.',
+    description: 'Projeto Front-end de um aplicativo de receitas feito em equipe. Fui responsável por desenvolver as principais páginas e filtros. Não fui responsável pelo design. Para o desenvolvimento do projeto, foram usados dois bancos de dados de duas APIs diferentes, um para comida e outro para bebidas. Dividimos as tarefas para não sobrecarregar ninguém na equipe, e conseguimos entregar o projeto adiantado.',
     inProgress: false,
     image: '/assets/projects/recipesapp.webp',
     techAreas: {
@@ -207,10 +180,37 @@ export const ptBrProjects: ICard[] = [
     ],
   },
   {
+    name: 'Miles Program',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'API RESTful para lidar com milhas usando Quarkus. Este foi um desafio interessante do bootcamp de Java que fiz, pois, em um projeto em fase intermediária de desenvolvimento, tive que implementar várias funcionalidades para que o projeto funcionasse.',
+    inProgress: false,
+    image: '/assets/projects/milesprogram.webp',
+    techAreas: {
+      backend: {
+        skills: ['Java', 'Quarkus', 'Hibernate', 'OOP'],
+      },
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/miles-program'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: ''
+      },
+    ],
+  },
+  {
     name: 'Register Specialties',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'API REST with simple CRUD for handling professionals and their specialties. It was made with Spring and implementing JAX-RS specification with jersey library.',
+    description: 'API RESTful com CRUD para gerenciamento de profissionais e suas especialidades. Foi feita com Spring e implementando a especificação JAX-RS com a biblioteca Jersey.',
     inProgress: false,
     image: '/assets/projects/registerspecialties.webp',
     techAreas: {
@@ -237,7 +237,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Blogs App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'API REST with various CRUD endpoints for handling blogs posts. One observation is that Joi was used for middleware validations.',
+    description: 'API REST com diversos endpoints de CRUD para gerenciamento de posts de blogs com Javascript. Uma observação é que o framework Joi foi usado para validações e autenticações de middleware.',
     inProgress: false,
     image: '/assets/projects/blogsapp.webp',
     techAreas: {
@@ -264,7 +264,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Wallet App',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Front-end wallet app that I developed to improve my skills with Redux',
+    description: 'Aplicativo de carteira front-end que desenvolvi para consolidar minhas habilidades com Redux. Infelizmente, não desenvolvi o design deste site, mas ele está totalmente funcional.',
     inProgress: false,
     image: '/assets/projects/walletapp.webp',
     techAreas: {
@@ -291,7 +291,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Clean Schedule',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'I\'m doing this API to train Clean Arquitecture, TDD, DDD and for consolidate more SOLID concepts.',
+    description: 'Estou desenvolvendo esta API para treinar Clean Architecture, TDD, DDD e consolidar conceitos de SOLID. Acredito que essas habilidades são muito importantes para evoluir como profissional.',
     inProgress: true,
     image: '/assets/projects/cleanschedule.webp',
     techAreas: {
@@ -321,7 +321,7 @@ export const ptBrProjects: ICard[] = [
     name: 'To do list',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'To do list for train material UI. The backend was made with Node, Express, Sequelize and MySQL, but I\'m going to create another one with other technologies. But you can access the old one in my github.',
+    description: 'Um aplicativo de lista de tarefas para treinar Material UI. Ainda estou desenvolvendo o front-end e UI, mas o deploy já está publicado! O backend foi feito inicialmente com Node, Express, Sequelize e MySQL, mas vou criar outro com outras tecnologias. No entanto, você pode acessar o antigo no meu GitHub.',
     inProgress: true,
     image: '/assets/projects/todolist.webp',
     techAreas: {
@@ -351,7 +351,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Musicall',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'A full-stack project of a a web music page. I\'m learning a lot with Nest, Prisma and Next doing this project. Its development is paused, but I will return.',
+    description: 'Projeto full-stack de uma página de música na web. Estou aprendendo muito com Nest, Prisma e Next fazendo este projeto. O desenvolvimento está pausado, mas pretendo retomá-lo, pois apesar de já conhecer as tecnologias, quero treiná-las em um projeto pessoal.',
     inProgress: true,
     image: '/assets/projects/musicall.webp',
     techAreas: {
@@ -384,7 +384,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Shipinsane',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Game developed for a Fluminense Federal University (UFF) discipline. It was excellent to train logic a lot and work with OOP and python. It\'s possible to play the game, just follow the steps of code link.',
+    description: 'Desenvolvi esse jogo para uma disciplina da Universidade Federal Fluminense (UFF). Foi excelente para treinar muita lógica complexa e trabalhar com OOP e Python. É possível jogar o jogo, basta seguir os passos no link "Code"!',
     inProgress: false,
     image: '/assets/projects/shipinsane.webp',
     techAreas: {
