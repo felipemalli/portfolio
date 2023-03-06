@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchContext } from '../../../contexts';
+import { useLanguageContext, useSearchContext } from '../../../contexts';
 import { ITechAreaNames } from '../../../interfaces';
 
 export interface ISkillFrameProps {
@@ -13,6 +13,8 @@ type ISkillsByEight = string[][]
 export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inProgress }: ISkillFrameProps) => {
   const [page, setPage] = useState<number>(0);
   const [skillsByEight, setSkillsByEight] = useState<ISkillsByEight>();
+
+  const { translations } = useLanguageContext();
 
   const maxCharactersAndSpaces = (str: string) => {
     const characters = str.length;
@@ -66,7 +68,7 @@ export const SkillFrame: React.FC<ISkillFrameProps> = ({ techArea, skills, inPro
           <img src='/assets/icons/circularArrow.svg' alt='Next page button'></img>
         </button>
       )}
-      {inProgress && <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>In progress</div>}
+      {inProgress && <div className='absolute bg-alert w-full text-center font-medium text-customBlue-700 text-sm py-1.5 opacity-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>{translations.in_progress}</div>}
     </div>
   );
 };
