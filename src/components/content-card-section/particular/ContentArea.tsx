@@ -26,7 +26,7 @@ export const ContentArea: React.FC<IContentaArea> = ({data, filteredData, setFil
       {filteredData.map((course: ICard) => (
         <Card key={course.name} card={course}/>
       ))}
-      {filteredData.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>{notFoundTranslation} 😭</h3>}
+      {filteredData.length === 0 && <h3 className='flex justify-center items-center text-center break-normal absolute left-1/2 -translate-x-1/2 font-semibold md:text-2xl opacity-50'>{notFoundTranslation}</h3>}
     </AnimatedDiv>
   );
 };
