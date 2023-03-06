@@ -48,10 +48,12 @@ export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasT
         {isOpenLanguage && Object.entries(languageNames).map(([languageShort, languageName]) => (
           <button key={languageShort} className={`${languageShort === language && 'text-customGray-600 bg-secondary-500 cursor-not-allowed'} border-b hover:bg-customGray-200 w-full px-2 pt-3 pb-2 font-medium text-customBlue-500 uppercase text-sm -mb-1`}
             onClick={() => {
-              changeLanguage(languageShort as ILanguageOptions);
-              setIsOpenLanguage(false);
-              if (setIsRenderLanguage) {
-                setIsRenderLanguage(false);
+              if (languageShort !== language) {
+                changeLanguage(languageShort as ILanguageOptions);
+                setIsOpenLanguage(false);
+                if (setIsRenderLanguage) {
+                  setIsRenderLanguage(false);
+                }
               }
             }}
           >
