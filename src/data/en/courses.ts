@@ -158,7 +158,7 @@ export const enCourses: ICard[] = [
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
     type: 'course',
     creator: 'Rodrigo Manguinho',
-    description: 'I am learning a lot about TDD and Clean Architecture, which has been a great opportunity to solidify my understanding of SOLID principles.',
+    description: 'I am learning a lot about TDD and Clean Architecture, which has been a great opportunity to solidify my understanding of SOLID principles. I believe these are very important skills to know for evolve as a professional',
     inProgress: true,
     image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
     techAreas: {
