@@ -1,9 +1,13 @@
+import { useLanguageContext } from '../../contexts';
 import { InViewDiv } from '../../utils/InViewDiv';
 
 export const AboutSection: React.FC = () => {
+
+  const { translations } = useLanguageContext();
+  
   return (
     <section className='flex-col mt-96 mx-auto md:mx-0 overflow-hidden'>
-      <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 2xl:px-[200px]'>
+      <aside id='about' className='flex relative justify-center md:flex-none md:justify-start md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv translation='translateX(-200px)'>
           <div className='flex-col relative w-[85vw] md-w-auto'>
             <div className='relative
@@ -12,26 +16,26 @@ export const AboutSection: React.FC = () => {
             
             md:rounded-tl-[200px] bg-secondary-500 lg:border border-primary-300 -z-10'>
               <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-28 text-customBlue-700'>
-              About
+                {translations.about_first_card_title}
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center z-10 
             
-            md:w-[628px] md:h-[320px] -mt-72 md:ml-20
+            md:w-[628px] min-h-[290px] md:h-[320px] -mt-72 md:ml-20
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
               <p>
-                I{'\''}m Felipe Vahia Malliagros, 22 years old and reside in Rio de Janeiro, the capital city. Although I started a degree in civil engineering, I decided to switch career paths. Since then, I have been dedicated to studying programming, which I love.
+                {translations.about_first_card_first_paragraph}
               </p>
               <p className='mt-2'>
-                At Trybe, I interned for four months and gained experience with Scrum methodology. I created and improved content, exercises and projects that utilized HTML, CSS, JavaScript (ES6), React (Context, Redux), and testing with Jest and React Testing Library.
+                {translations.about_first_card_second_paragraph}
               </p>
             </div>
           </div>
         </InViewDiv>
         <div className="absolute h-1/2 -bottom-1/2 right-0 w-screen bg-primary-300 -z-20" />
       </aside>
-      <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 2xl:px-[200px]'>
+      <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv>
           <div className='flex-col w-[85vw] md:w-auto'>
             <div className='relative
@@ -40,7 +44,7 @@ export const AboutSection: React.FC = () => {
               
               md:rounded-tr-[200px] bg-secondary-500 md:border border-primary-300 -z-10'>
               <h2 className='absolute top-14 font-semibold text-3xl md:text-4xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-28 text-customBlue-700'>
-              Academics
+                {translations.about_second_card_title}
               </h2>
             </div>
             <div className='flex flex-col items-center justify-center z-10 
@@ -48,11 +52,11 @@ export const AboutSection: React.FC = () => {
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
             bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
-              <p>
-              I{'\''}m graduating in Computer Science from UFF and have been actively developing my skills in cloud computing and microservices. In addition to my personal studies, I aim to align my educational path with the needs of the organization that I am work on.
+              <p> 
+                {translations.about_second_card_first_paragraph} 
               </p>
               <p className='mt-2'>
-                After extensive study, I feel confident to work with any technology in the market.
+                {translations.about_second_card_second_paragraph}
               </p>
             </div>
           </div>

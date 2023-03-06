@@ -1,4 +1,3 @@
-import { backgroundImages } from '../assets';
 import { AboutSection } from '../components/about-section/AboutSection';
 import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
 import { Footer } from '../components/footer/Footer';
@@ -9,23 +8,22 @@ import { AnimatedDiv } from '../utils/AnimatedDiv';
 export const LandingPage: React.FC = () => {
   return (
     <main>
-      <article className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
+      <article>
+        <div className='absolute -top-1 w-10 -z-10 invisible xl:visible'>
+          <div className="relative overflow-hidden -z-10 w-screen h-[100vw]">
+            <img src='/assets/background/circle.svg' className='absolute top-0 left-1/2 -z-10 w-[50vw] h-[60vw]' alt='Background circle'></img>
+          </div>
+        </div>
         <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' position='relative' zindex={10}>
           <Header />
         </AnimatedDiv>
- 
-        <AnimatedDiv initialAnimation='translate-y-170 opacity-50' finalAnimation='translate-y-0 opacity-100' duration='duration-1900' position='relative' zindex={0}>
+        <AnimatedDiv className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:m-auto' initialAnimation='translate-y-170 opacity-50' finalAnimation='translate-y-0 opacity-100' duration='duration-1900' position='relative' zindex={0}>
           <IntroductionSection />
           <ContentCardSection />
         </AnimatedDiv>
-        <div className='absolute top-0 right-0 w-screen -z-10 invisible xl:visible'>
-          <div className="relative w-100% h-[60vw] overflow-hidden -z-10">
-            <img src={backgroundImages.circle} className='absolute -right-[65%] -top-[85%] -z-10 scale-125' alt='Background circle'></img>
-          </div>
-        </div>
       </article>
       <div className='absolute bg-primary-300 mt-48 w-screen h-[60rem] md:h-[71rem] 2xl:h-[60rem] -z-10'/>
-      <article className='mx-auto 2xl:w-[114.938rem]'>
+      <article className='mx-auto 3xl:w-[114.938rem]'>
         <AboutSection />
       </article>
       <Footer />

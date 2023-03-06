@@ -6,6 +6,7 @@ import tailwindConfig from '../../tailwind.config.js'; // this error is due to t
 const fullConfig = resolveConfig(tailwindConfig);
 
 interface IBreakpoints {
+  '3xl': string,
   '2xl': string,
   'xl': string,
   'lg': string,
@@ -16,11 +17,13 @@ interface IBreakpoints {
 const breakpoints: IBreakpoints = fullConfig.theme.screens;
 
 const formatedBreakpoints = {
+  is3xl: { minWidth: +(breakpoints['3xl'].replace('px', '')) },
   is2xl: { minWidth: +(breakpoints['2xl'].replace('px', '')) },
   isXl: { minWidth: +(breakpoints['xl'].replace('px', '')) },
   isLg: { minWidth: +(breakpoints['lg'].replace('px', '')) },
   isMd: { minWidth: +(breakpoints['md'].replace('px', '')) },
   isSm: { minWidth: +(breakpoints['sm'].replace('px', '')) },
+  smallHeight: { minHeight: 568 }
 };
 
 export { formatedBreakpoints as breakpoints };
