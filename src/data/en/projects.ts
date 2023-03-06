@@ -5,7 +5,7 @@ export const enProjects: ICard[] = [
     name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Project developed to expose my knowledge. I started by designing the design in figma (you can check the figma sketch on code link), and then applied it to the front-end and decided to change some details. I avoid to use dependencies, so it has only react and tailwind (to be fair, I used a reacttype animation for this little animation on subtitle). OBS: I will develop a backend for this application soon! Since I developed this frontend project already receiving structured and scalable data (you can check at src/data), it would be easy to implement the backend. So, I\'m going take this opportunity to train something new with the backend/devops.',
+    description: 'This is my main project at the moment to showcases my Frontend and UI/UX skills. I intentionally avoided use of auxiliary libraries and frameworks (except one for the subtitle). The carousel, animations, language system, responsiveness and everything were all created using only React, Tailwind, and CSS. Prior to development, I spent several days crafting the design in Figma, which the draft can be viewed in the "Code" link. The code is structured, scalable, flexible and ready for API integration, with I plans to add soon.',
     inProgress: false,
     image: '/assets/projects/portfolio.webp',
     techAreas: {

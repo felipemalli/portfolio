@@ -2,10 +2,10 @@ import { ICard } from '../../interfaces';
 
 export const ptBrProjects: ICard[] = [
   {
-    name: 'Portfolio',
+    name: 'Portfólio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Project developed to expose my knowledge. I started by designing the design in figma (you can check the figma sketch on code link), and then applied it to the front-end and decided to change some details. I avoid to use dependencies, so it has only react and tailwind (to be fair, I used a reacttype animation for this little animation on subtitle). OBS: I will develop a backend for this application soon! Since I developed this frontend project already receiving structured and scalable data (you can check at src/data), it would be easy to implement the backend. So, I\'m going take this opportunity to train something new with the backend/devops.',
+    description: 'Este é meu principal projeto no momento para demonstrar minhas habilidades em Frontend e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com API, que planejo adicionar em breve.',
     inProgress: false,
     image: '/assets/projects/portfolio.webp',
     techAreas: {
