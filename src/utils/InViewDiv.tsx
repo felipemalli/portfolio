@@ -23,7 +23,7 @@ export const InViewDiv: React.FC<IInViewProps> = ({ children, translation = 'tra
           }
         });
       },
-      { threshold: 0.20 }
+      { threshold: 0.30 }
     );
     if (ref.current) {
       observer.observe(ref.current);
