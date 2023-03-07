@@ -22,5 +22,6 @@
   "instructor": "Instructor",
   "certificate": "Certificate",
   "courses_not_found": "Courses not found",
-  "projects_not_found": "Projects not found"
+  "projects_not_found": "Projects not found",
+  "skills_not_found": "Skills not found"
 }

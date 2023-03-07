@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguageContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { AnimatedDiv } from '../../../utils/AnimatedDiv';
 import { SkillCard } from '../../shared/SkillCard/SkillCard';
@@ -14,6 +15,8 @@ interface ISkillAreaProps {
 export const SkillArea: React.FC<ISkillAreaProps> = ({ type, skills, setFilteredSkills, setAllSkills, filteredSkills }: ISkillAreaProps) => {
   const { areaName } = useChangeAreaContext();
 
+  const { translations } = useLanguageContext();
+
   useEffect(() => {
     setFilteredSkills(skills);
     setAllSkills(skills);
@@ -25,7 +28,7 @@ export const SkillArea: React.FC<ISkillAreaProps> = ({ type, skills, setFiltered
       {filteredSkills.map((skill) => (
         <SkillCard key={skill} type={type} name={skill}/> 
       ))}
-      {filteredSkills.length === 0 && <h3 className='break-normal absolute left-1/2 -translate-x-1/2 font-semibold text-base sm:text-2xl opacity-50'>Skill not found 😭</h3>}
+      {filteredSkills.length === 0 && <h3 className='flex justify-center items-center text-center break-normal absolute left-1/2 -translate-x-1/2 font-semibold md:text-2xl opacity-50'>{translations.skills_not_found}</h3>}
     </AnimatedDiv>
   );
 };
