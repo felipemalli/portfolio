@@ -20,7 +20,7 @@ export const NavOptionNavigation: React.FC<NavOptionNavigationProps> = ({ childr
   };
 
   return (
-    <a href={`#${componentId}`} className={`${className}`} onClick={(e) => handleClick(e)}>
+    <a href={`#${componentId}`} className={`${className} transition-opacity duration-200`} onClick={(e) => handleClick(e)}>
       {children}
     </a>
   );

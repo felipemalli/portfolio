@@ -9,7 +9,7 @@ interface NavOptionLinkProps extends IChildrenProps {
 
 export const NavOptionLink: React.FC<NavOptionLinkProps> = ({ children, url, className }: NavOptionLinkProps) => {
   return (
-    <a className={`${className} cursor-pointer`} onClick={() => openUrl(url)}>
+    <a className={`${className} cursor-pointer transition-opacity duration-200`} onClick={() => openUrl(url)}>
       {children}
     </a>
   );
