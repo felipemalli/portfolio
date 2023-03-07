@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
     <header id='header'>
       <div className='w-fill md:mx-8 lg:mx-16 2xl:w-[89.938rem] 2xl:m-auto'>
         <div className='flex justify-between md:justify-center -mb-[88px] xl:justify-start p-6 md:my-4 xl:ml-20 2xl:ml-12'>
-          <img className='flex h-6 w-6 scale-75 xl:-ml-28 2xl:-ml-16 mr-10 2xl:mr-16 mt-2'  src='./assets/background/icon.png' alt='Felipevm icon'/>
+          <img className='flex h-6 w-6 scale-75 xl:-ml-28 2xl:-ml-16 mr-10 2xl:mr-16 mt-2'  src='./assets/background/felipeBrand.png' alt='Felipevm brand'/>
           <div>
             <div className={`${!isOpenNav ? 'hidden' : 'absolute'} w-screen md:w-auto md:flex md:relative right-1/2 translate-x-1/2 mt-12 md:mt-0 border-y md:border-none`}>
               <nav ref={navRef} className={'flex flex-col md:flex-row items-center text-center py-4 md:py-0 space-y-2 md:space-y-0 md:space-x-8 2xl:space-x-10 uppercase text-customBlue-500 tracking-widest font-semibold bg-secondary-900 md:bg-transparent'} onClick={() => setIsOpenNav(false)}>
