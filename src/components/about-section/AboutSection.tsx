@@ -23,7 +23,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] min-h-[290px] md:h-[320px] -mt-72 md:ml-20
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 tracking-wide'>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14'>
               <p>
                 {translations.about_first_card_first_paragraph}
               </p>
@@ -51,7 +51,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 tracking-wide'>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14'>
               <p> 
                 {translations.about_second_card_first_paragraph} 
               </p>
