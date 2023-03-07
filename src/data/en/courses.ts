@@ -109,6 +109,29 @@ export const enCourses: ICard[] = [
     },
   },
   {
+    name: 'Tailwind CSS from scratch | Learn by building projects',
+    type: 'course',
+    creator: 'Brad Traversy',
+    description: 'I learned how to create excellent projects using Tailwind. Some CSS properties were used to complement the framework.',
+    inProgress: false,
+    image: '/assets/courses/tailwind_bradtraversy.webp',
+    techAreas: {
+      frontend:{
+        skills: ['Tailwind', 'CSS', 'HTML'],
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: 'https://www.udemy.com/certificate/UC-4fa3753b-2413-4adf-a933-6c479d9ac386/',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 12.5,
+    }
+  },
+  {
     name: 'PRO FIGMA | User interface design from beginner to expert',
     type: 'course',
     creator: 'Lucas Marte',
@@ -129,29 +152,6 @@ export const enCourses: ICard[] = [
     bottonRightTag: {
       name: 'Hours',
       value: 14.5,
-    }
-  },
-  {
-    name: 'Tailwind CSS from scratch | Learn by building projects',
-    type: 'course',
-    creator: 'Brad Traversy',
-    description: 'I am learning Tailwind and how to create excellent projects using this technology. I have already utilized the knowledge gained from this course on my portfolio page.',
-    inProgress: true,
-    image: '/assets/courses/tailwind_bradtraversy.webp',
-    techAreas: {
-      frontend:{
-        skills: ['Tailwind', 'CSS', 'HTML'],
-      }
-    },
-    links: [
-      {
-        name: 'Certificate',
-        link: '',
-      }
-    ],
-    bottonRightTag: {
-      name: 'Hours',
-      value: 12.5,
     }
   },
   {

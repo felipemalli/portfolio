@@ -109,6 +109,29 @@ export const ptBrCourses: ICard[] = [
     },
   },
   {
+    name: 'Tailwind CSS do zero | Aprenda construindo projetos',
+    type: 'course',
+    creator: 'Brad Traversy',
+    description: 'Eu aprendi como fazer projetos excelentes com Tailwind. Algumas propriedades de CSS foram utilizadas para complementar o framework.',
+    inProgress: false,
+    image: '/assets/courses/tailwind_bradtraversy.webp',
+    techAreas: {
+      frontend:{
+        skills: ['Tailwind', 'CSS', 'HTML'],
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: 'https://www.udemy.com/certificate/UC-4fa3753b-2413-4adf-a933-6c479d9ac386/',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 12.5,
+    }
+  },
+  {
     name: 'PRO FIGMA | Interface de usuário do iniciante ao expert',
     type: 'course',
     creator: 'Lucas Marte',
@@ -129,29 +152,6 @@ export const ptBrCourses: ICard[] = [
     bottonRightTag: {
       name: 'Hours',
       value: 14.5,
-    }
-  },
-  {
-    name: 'Tailwind CSS do zero | Aprenda construindo projetos',
-    type: 'course',
-    creator: 'Brad Traversy',
-    description: 'Estou aprendendo Tailwind e como fazer excelentes projetos com esta tecnologia. Já usei os conhecimentos deste curso nesta página do meu portfólio.',
-    inProgress: true,
-    image: '/assets/courses/tailwind_bradtraversy.webp',
-    techAreas: {
-      frontend:{
-        skills: ['Tailwind', 'CSS', 'HTML'],
-      }
-    },
-    links: [
-      {
-        name: 'Certificate',
-        link: '',
-      }
-    ],
-    bottonRightTag: {
-      name: 'Hours',
-      value: 12.5,
     }
   },
   {
