@@ -33,12 +33,12 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckbo
       {filterBox && (
         <AnimatedDiv initialAnimation='opacity-0' finalAnimation='opacity-100' reference={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
-            <p className='text-sm text-center uppercase'>{translations.filterbox_info}</p>
+            <p className='text-sm text-center uppercase tracking-wide'>{translations.filterbox_info}</p>
             <hr className='bg-customGray-600 h-[0.5px] w-full border-none  mt-1 -mb-1'></hr>
           </div>
           {checkboxes.map(({id, value, label, isChecked}) => (
 
-            <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full'>
+            <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full tracking-wide'>
               <input
                 type="checkbox"
                 value={value}
