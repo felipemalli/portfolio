@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      {isXl && <LanguageButton hasText={true} className='absolute xl:right-[2.4%] 2xl:right-[3.4%] 3xl:right-[4.4%] top-[22px] flex-col items-center gap-1' />}
+      {isXl && <LanguageButton hasText={true} className='absolute xl:right-[2.7%] 2xl:right-[3.4%] 3xl:right-[4.4%] top-[22px] flex-col items-center gap-1' />}
     </header>
   );
 };
