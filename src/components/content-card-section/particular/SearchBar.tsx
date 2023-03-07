@@ -120,7 +120,7 @@ export const SearchBar: React.FC = () => {
 
   return (
     <div className='flex items-center bg-secondary-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-72 h-9 rounded-full p-0.5 shadow-md hover:shadow-lg'>
-      <button className='flex justify-center items-center w-7 h-7 left-1 pr-0.5 rounded-full absolute bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400'
+      <button className='flex justify-center items-center w-7 h-7 left-1 pr-0.5 rounded-full absolute bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400 transition-colors duration-200'
         onClick={() => applyFilters()}>
         <img className='w-3.5' src='./assets/icons/searchIcon.svg' alt='Search technology'></img>
       </button>
@@ -131,7 +131,7 @@ export const SearchBar: React.FC = () => {
         value={search}
       />
       {showCleanText &&
-        <button className={`w-7 h-7 ${areaName === 'knowledge' ? 'right-11' : 'right-[4px]'} rounded-full absolute  bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400`}
+        <button className={`w-7 h-7 ${areaName === 'knowledge' ? 'right-11' : 'right-[4px]'} rounded-full absolute  bg-customGray-400 hover:bg-customGray-200 active:bg-customGray-400 transition-colors duration-200`}
           onClick={() => setSearch('')}>
           <p className='text-icon text-center text-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pb-[1px] pl-[1px]'>x</p>
         </button> 

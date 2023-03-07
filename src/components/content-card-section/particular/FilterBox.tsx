@@ -54,7 +54,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckbo
           ))}
         </AnimatedDiv>
       )}
-      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-customGray-600  hover:bg-customGray-200 active:bg-customGray-400 ${filterBox ? 'bg-customGray-200' : 'bg-customGray-400'} `}
+      <button ref={filterBoxButton} className={`rounded-r-full border-y-2 border-r-2 h-8 pr-2.5 pl-2 border-customGray-600  hover:bg-customGray-200 active:bg-customGray-400 ${filterBox ? 'bg-customGray-200' : 'bg-customGray-400'} transition-colors duration-200`}
         onClick={() => setFilterBox(!filterBox)}>
         <svg className={`${giveCheckboxAreas().length < 3 ? 'stroke-primary-500' : 'stroke-icon'} `} xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none">
           <g strokeLinecap="round" strokeWidth="2">
