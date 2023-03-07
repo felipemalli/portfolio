@@ -38,7 +38,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckbo
           </div>
           {checkboxes.map(({id, value, label, isChecked}) => (
 
-            <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full'>
+            <label key={id} htmlFor={`checkbox-${id}`} className='flex h-8 items-center text-sm ml-1 gap-2 -mb-1 w-full tracking-wide'>
               <input
                 type="checkbox"
                 value={value}

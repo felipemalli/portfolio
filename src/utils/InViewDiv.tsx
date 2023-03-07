@@ -7,7 +7,7 @@ interface IInViewProps extends IChildrenProps {
   delay?: string;
 }
 
-export const InViewDiv: React.FC<IInViewProps> = ({ children, translation = 'translateX(200px)', duration = '0.9s', delay = '0s'}: IInViewProps) => {
+export const InViewDiv: React.FC<IInViewProps> = ({ children, translation, duration = '0.9s', delay = '0s'}: IInViewProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
 

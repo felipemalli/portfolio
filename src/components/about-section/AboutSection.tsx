@@ -23,7 +23,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] min-h-[290px] md:h-[320px] -mt-72 md:ml-20
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14'>
               <p>
                 {translations.about_first_card_first_paragraph}
               </p>
@@ -36,7 +36,7 @@ export const AboutSection: React.FC = () => {
         <div className="absolute h-2/3 -bottom-[45%] right-0 w-screen bg-primary-300 -z-20" />
       </aside>
       <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 3xl:px-[200px]'>
-        <InViewDiv>
+        <InViewDiv translation = 'translateX(200px)'>
           <div className='flex-col w-[85vw] md:w-auto'>
             <div className='relative
             
@@ -51,7 +51,7 @@ export const AboutSection: React.FC = () => {
             
             md:w-[628px] md:h-[320px] -mt-72 md:-ml-60
             
-            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14 '>
+            bg-secondary-500 border-2 border-primary-300 md:rounded-[50px] text-base text-customBlue-700 p-10 md:p-14'>
               <p> 
                 {translations.about_second_card_first_paragraph} 
               </p>
