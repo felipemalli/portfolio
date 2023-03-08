@@ -1,6 +1,6 @@
 import { useLanguageContext } from '../../../contexts';
 import { ILinkName } from '../../../interfaces';
-import { openUrl } from '../../../utils/openUrl';
+import { openUrl } from '../../../utils';
 
 interface ILinkButtonProps {
   enable: boolean,

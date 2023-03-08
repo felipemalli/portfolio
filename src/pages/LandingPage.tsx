@@ -5,7 +5,7 @@ import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
 import { useOnScreen } from '../hooks';
-import { AnimatedDiv } from '../utils/AnimatedDiv';
+import { AnimatedDiv } from '../utils';
 
 export const LandingPage: React.FC = () => {
   const ref = useRef(null);

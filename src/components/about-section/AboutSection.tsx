@@ -1,5 +1,5 @@
 import { useLanguageContext } from '../../contexts';
-import { InViewDiv } from '../../utils/InViewDiv';
+import { InViewDiv } from '../../utils';
 
 export const AboutSection: React.FC = () => {
 

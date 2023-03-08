@@ -1,7 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useLanguageContext } from '../../contexts';
-import { AnimatedDiv } from '../../utils/AnimatedDiv';
-import { openUrl } from '../../utils/openUrl';
+import { AnimatedDiv, openUrl } from '../../utils';
 
 export const IntroductionSection: React.FC = () => {
   const { translations, language } = useLanguageContext();

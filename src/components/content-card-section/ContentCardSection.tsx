@@ -1,6 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-import { breakpoints } from '../../utils/breakpoints';
-import { moveScreenToCenterOfId } from '../../utils/moveScreenToCenterOfId';
+import { breakpoints, moveScreenToCenterOfId } from '../../utils';
 import { BottonContentCard } from './BottonContentCard';
 import { ChangeAreaButtons } from './particular/changeAreaButtons';
 import { SearchBar } from './particular/SearchBar';
