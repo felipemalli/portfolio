@@ -13,11 +13,6 @@ export const LandingPage: React.FC = () => {
 
   return (
     <main ref={ref}>
-      <div className='absolute -top-1 w-10 -z-10 invisible xl:visible'>
-        <div className="relative overflow-hidden -z-10 w-screen h-[100vw]">
-          <img src='/assets/background/circle.svg' className='absolute top-0 left-1/2 -z-10 w-[50vw] h-[60vw]' alt='Background circle'></img>
-        </div>
-      </div>
       {isOnScreen && (
         <>
           <article>
@@ -35,6 +30,11 @@ export const LandingPage: React.FC = () => {
           <Footer />
         </>
       )}
+      <div className='absolute -top-1 w-10 -z-10 invisible xl:visible'>
+        <div className="relative overflow-hidden -z-10 w-screen h-[100vw]">
+          <img src='/assets/background/circle.svg' className='absolute top-0 left-1/2 -z-10 w-[50vw] h-[60vw]' alt='Background circle'></img>
+        </div>
+      </div>
     </main>
   );
 };
