@@ -1,14 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { ILanguageOptions, useLanguageContext, useSearchContext } from '../../../contexts';
 
 export interface ILanguageButtonProps {
+  isOpenLanguage: boolean;
+  setIsOpenLanguage: (arg: boolean) => void;
   className: string;
   setIsRenderLanguage?: (arg: boolean) => void;
   hasText?: boolean;
 }
 
-export const LanguageButton: React.FC<ILanguageButtonProps> = ({ className, hasText, setIsRenderLanguage }: ILanguageButtonProps) => {
-  const [isOpenLanguage, setIsOpenLanguage] = useState(false);
+export const LanguageButton: React.FC<ILanguageButtonProps> = ({ isOpenLanguage, setIsOpenLanguage, className, hasText, setIsRenderLanguage }: ILanguageButtonProps) => {
+
   const languageRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
