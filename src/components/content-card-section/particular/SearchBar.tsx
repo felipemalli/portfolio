@@ -124,7 +124,7 @@ export const SearchBar: React.FC = () => {
         onClick={() => applyFilters()}>
         <img className='w-3.5' src='./assets/icons/searchIcon.svg' alt='Search technology'></img>
       </button>
-      <input type="text" className='text-sm pl-8 bg-customGray-400 rounded-full border-2 border-customGray-600 w-full h-8 focus:border-r-2 focus:border-primary-500 outline-none'
+      <input type="text" className={`text-sm pl-8 bg-customGray-400 rounded-full border-2 border-customGray-600 w-full h-8 focus:border-r-2 focus:border-primary-500 outline-none ${areaName === 'knowledge' ? 'pr-[72px]' : 'pr-[32px]'}`}
         placeholder={translations.search_placeholder}
         ref={inputRef}
         onChange={(e) => setSearch(e.target.value)}
