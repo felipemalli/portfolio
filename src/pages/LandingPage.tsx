@@ -1,19 +1,21 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { AboutSection } from '../components/about-section/AboutSection';
 import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
 import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
 import { useOnScreen } from '../hooks';
-import { AnimatedDiv } from '../utils/AnimatedDiv';
+import { AnimatedDiv } from '../utils';
 
 export const LandingPage: React.FC = () => {
   const ref = useRef(null);
   const isOnScreen = useOnScreen(ref);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
     <main ref={ref}>
-      {isOnScreen && (
+      {!isImageLoaded && <img src='/assets/background/felipeEmpty.webp' className='hidden' onLoad={() => setIsImageLoaded(true)} alt='Felipe image'/>}
+      {isOnScreen && isImageLoaded && (
         <>
           <article>
             <AnimatedDiv initialAnimation='-translate-y-24' finalAnimation='translate-y-0' duration='duration-1800' position='relative' zindex={10}>

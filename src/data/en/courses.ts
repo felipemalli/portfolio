@@ -135,8 +135,8 @@ export const enCourses: ICard[] = [
     name: 'PRO FIGMA | User interface design from beginner to expert',
     type: 'course',
     creator: 'Lucas Marte',
-    description: 'I am learning how to use Figma to design my mobile/web pages and many tips about UI/UX.',
-    inProgress: true,
+    description: 'I learned how to use Figma to design my mobile/web pages and many tips about UI/UX.',
+    inProgress: false,
     image: '/assets/courses/profigma_lucasmarte.webp',
     techAreas: {
       frontend:{
@@ -146,7 +146,7 @@ export const enCourses: ICard[] = [
     links: [
       {
         name: 'Certificate',
-        link: '',
+        link: 'https://www.udemy.com/certificate/UC-94672cc3-5804-44fd-86a7-0c0d97c10d57/',
       }
     ],
     bottonRightTag: {

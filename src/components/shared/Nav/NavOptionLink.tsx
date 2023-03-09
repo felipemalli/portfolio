@@ -1,6 +1,6 @@
 import React from 'react';
 import { IChildrenProps } from '../../../interfaces';
-import { openUrl } from '../../../utils/openUrl';
+import { openUrl } from '../../../utils';
 
 interface NavOptionLinkProps extends IChildrenProps {
   url: string;

@@ -1,10 +1,11 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useLanguageContext } from '../../contexts';
-import { AnimatedDiv } from '../../utils/AnimatedDiv';
-import { openUrl } from '../../utils/openUrl';
+import { AnimatedDiv, openUrl } from '../../utils';
 
 export const IntroductionSection: React.FC = () => {
   const { translations, language } = useLanguageContext();
+
+
 
   return (
     <section className='flex flex-col xl:flex-row justify-evenly items-center 2xl:gap-32 gap-3 -mt-8 xl:-mt-10 2xl:mt-0 h-screen md:h-auto'>

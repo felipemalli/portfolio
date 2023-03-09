@@ -135,8 +135,8 @@ export const ptBrCourses: ICard[] = [
     name: 'PRO FIGMA | Interface de usuário do iniciante ao expert',
     type: 'course',
     creator: 'Lucas Marte',
-    description: 'Estou aprendendo a usar o Figma para projetar minhas páginas móveis / web e muitas dicas sobre UI/UX.',
-    inProgress: true,
+    description: 'Eu aprendi a usar o Figma para projetar minhas páginas mobile/web e muitas dicas sobre UI/UX.',
+    inProgress: false,
     image: '/assets/courses/profigma_lucasmarte.webp',
     techAreas: {
       frontend:{
@@ -146,7 +146,7 @@ export const ptBrCourses: ICard[] = [
     links: [
       {
         name: 'Certificate',
-        link: '',
+        link: 'https://www.udemy.com/certificate/UC-94672cc3-5804-44fd-86a7-0c0d97c10d57/',
       }
     ],
     bottonRightTag: {

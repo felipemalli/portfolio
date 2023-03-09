@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { IChildrenProps } from '../interfaces';
-import { breakpoints } from '../utils/breakpoints';
+import { breakpoints } from '../utils';
 
 type MediaQuery = {
   isSm: boolean;

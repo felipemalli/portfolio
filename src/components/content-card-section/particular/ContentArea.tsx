@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
 import { ICard } from '../../../interfaces';
-import { AnimatedDiv } from '../../../utils/AnimatedDiv';
+import { AnimatedDiv } from '../../../utils';
 import { Card } from '../../shared/Card/Card';
 
 interface IContentaArea {

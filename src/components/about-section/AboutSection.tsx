@@ -1,5 +1,5 @@
 import { useLanguageContext } from '../../contexts';
-import { InViewDiv } from '../../utils/InViewDiv';
+import { InViewDiv } from '../../utils';
 
 export const AboutSection: React.FC = () => {
 
@@ -33,7 +33,7 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
         </InViewDiv>
-        <div className="absolute h-2/3 -bottom-[45%] right-0 w-screen bg-primary-300 -z-20" />
+        <div className="absolute h-2/3 -bottom-[50%] right-0 w-screen bg-primary-300 -z-20" />
       </aside>
       <aside className='flex relative justify-center md:justify-end items-end mt-36 md:mt-52 2xl:mt-6 md:px-6 lg:px-16 3xl:px-[200px]'>
         <InViewDiv translation = 'translateX(200px)'>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLanguageContext } from '../../../contexts';
 import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
-import { AnimatedDiv } from '../../../utils/AnimatedDiv';
+import { AnimatedDiv } from '../../../utils';
 import { SkillCard } from '../../shared/SkillCard/SkillCard';
 
 interface ISkillAreaProps {

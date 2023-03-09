@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLanguageContext, useSearchContext } from '../../../contexts';
-import { AnimatedDiv } from '../../../utils/AnimatedDiv';
+import { AnimatedDiv } from '../../../utils';
 
 export interface IFilterBoxProps {
   applyFilters: () => void;
