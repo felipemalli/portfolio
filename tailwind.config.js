@@ -43,14 +43,9 @@ export default {
       },
       transitionDuration: {
         '400': '400ms',
-        '600': '600ms',
         '1400': '1400ms',
-        '1500': '1500ms',
-        '1600': '1600ms',
-        '1700': '1700ms',
         '1800': '1800ms',
         '1900': '1900ms',
-        '2000': '2000ms',
       },
       translate: {
         '150': '600px',
@@ -65,9 +60,4 @@ export default {
     },
   },
   plugins: [],
-  variants: {
-    extend: {
-      display: ['group-hover'],
-    },
-  },
 };
