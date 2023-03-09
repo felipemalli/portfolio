@@ -12,13 +12,9 @@ export const LandingPage: React.FC = () => {
   const isOnScreen = useOnScreen(ref);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-
   return (
     <main ref={ref}>
-      {!isImageLoaded && <img src='/assets/background/felipeEmpty.webp' className='hidden' onLoad={handleImageLoad} alt='Felipe image'/>}
+      {!isImageLoaded && <img src='/assets/background/felipeEmpty.webp' className='hidden' onLoad={() => setIsImageLoaded(true)} alt='Felipe image'/>}
       {isOnScreen && isImageLoaded && (
         <>
           <article>
