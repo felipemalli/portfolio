@@ -5,6 +5,8 @@ import { AnimatedDiv, openUrl } from '../../utils';
 export const IntroductionSection: React.FC = () => {
   const { translations, language } = useLanguageContext();
 
+
+
   return (
     <section className='flex flex-col xl:flex-row justify-evenly items-center 2xl:gap-32 gap-3 -mt-8 xl:-mt-10 2xl:mt-0 h-screen md:h-auto'>
       <div className='flex flex-col justify-center lg:w-[32rem] xl:-mb-12 2xl:mb-0 mt-5 md:mt-14 xl:mt-10'>
