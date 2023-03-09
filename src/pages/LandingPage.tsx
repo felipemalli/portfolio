@@ -18,7 +18,7 @@ export const LandingPage: React.FC = () => {
 
   return (
     <main ref={ref}>
-      <img src='/assets/background/felipeEmpty.webp' className='hidden' onLoad={handleImageLoad} alt='Felipe image'></img>
+      {!isImageLoaded && <img src='/assets/background/felipeEmpty.webp' className='hidden' onLoad={handleImageLoad} alt='Felipe image'/>}
       {isOnScreen && isImageLoaded && (
         <>
           <article>
