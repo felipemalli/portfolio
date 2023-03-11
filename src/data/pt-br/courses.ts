@@ -65,7 +65,7 @@ export const ptBrCourses: ICard[] = [
         skills: ['Javascript', 'Typescript', 'HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
       },
       backend: {
-        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
+        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'SQL', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
       },
       devops: {
         skills: ['Docker'],
@@ -152,6 +152,29 @@ export const ptBrCourses: ICard[] = [
     bottonRightTag: {
       name: 'Hours',
       value: 14.5,
+    }
+  },
+  {
+    name: 'Google Data Analytics',
+    type: 'course',
+    creator: 'Google',
+    description: 'Estou aprendendo como realizar análises, limpar, visualizar, apresentar e processar dados. Além disso, estou usando planilhas para realizar cálculos complexos.',
+    inProgress: true,
+    image: '/assets/courses/dataanalytics_google.webp',
+    techAreas: {
+      backend: {
+        skills: ['SQL', 'R', 'Tableau']
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: '',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 189,
     }
   },
   {
