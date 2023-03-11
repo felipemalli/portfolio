@@ -65,7 +65,7 @@ export const enCourses: ICard[] = [
         skills: ['Javascript', 'Typescript', 'HTML', 'CSS', 'React', 'Redux', 'React Testing Library', 'Jest', 'Mocha/Chai/Sinon'],
       },
       backend: {
-        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
+        skills: ['Javascript', 'Typescript', 'Python', 'Node', 'Express', 'Sequelize', 'SQL', 'MySQL', 'MongoDB', 'Mongoose', 'Jest', 'SOLID', 'OOP', 'Design Patterns', 'Web Scraping', 'JWT']
       },
       devops: {
         skills: ['Docker'],
