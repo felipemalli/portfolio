@@ -155,6 +155,29 @@ export const enCourses: ICard[] = [
     }
   },
   {
+    name: 'Google Data Analytics',
+    type: 'course',
+    creator: 'Google',
+    description: 'I am learning how to run analyses, clean, visualize, present and process data. Also, using spreadsheets to perform complex calculations.',
+    inProgress: true,
+    image: '/assets/courses/dataanalytics_google.webp',
+    techAreas: {
+      backend: {
+        skills: ['SQL', 'R', 'Tableau']
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: '',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 189,
+    }
+  },
+  {
     name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
     type: 'course',
     creator: 'Rodrigo Manguinho',
