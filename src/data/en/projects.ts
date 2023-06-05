@@ -2,6 +2,40 @@ import { ICard } from '../../interfaces';
 
 export const enProjects: ICard[] = [
   {
+    name: 'Fit Home',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'Organization and timer project for home workouts. The most professional Back-end I\'ve ever developed, completely uncoupled. I used TDD, DDD, Clean Architecture, SOLID principles, and various design patterns. It also has 100% of test coverage. I plan to deploy it on AWS soon and create a Front-end in the future.',
+    inProgress: false,
+    image: '/assets/projects/fithome.webp',
+    techAreas: {
+      backend: {
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'Husky']
+      },
+      frontend: {
+        skills: ['Figma'],
+        inProgress: true,
+      },
+      devops: {
+        skills: ['Docker', 'Github Actions', 'CI/CD'],
+      }
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/fit-home'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: ''
+      },
+    ],
+  },
+  {
     name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
@@ -36,36 +70,6 @@ export const enProjects: ICard[] = [
     }
   },
   {
-    name: 'Trybe Futebol Club',
-    type: 'project',
-    creator: 'Felipe Vahia Malliagros',
-    description: 'I developed a complete RESTful API with some tests for an already implemented Front-End to handle football match data. I documented the API with Postman. This project consolidated my knowledge about OOP and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of the free use of Heroku.',
-    inProgress: false,
-    image: '/assets/projects/trybefutebolclub.webp',
-    techAreas: {
-      backend: {
-        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
-      },
-      devops: {
-        skills: ['Docker'],
-      }
-    },
-    links: [
-      {
-        name: 'Code',
-        link: 'https://github.com/felipemalli/trybe-futebol-club'
-      },
-      {
-        name: 'Browser',
-        link: ''
-      },
-      {
-        name: 'API',
-        link: 'https://documenter.getpostman.com/view/20084845/UzBjsnsX'
-      },
-    ],
-  },
-  {
     name: 'Drone Feeder',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
@@ -92,6 +96,36 @@ export const enProjects: ICard[] = [
       {
         name: 'API',
         link: 'https://github.com/felipemalli/drone-feeder#documenta%C3%A7%C3%A3o-da-api'
+      },
+    ],
+  },
+  {
+    name: 'Trybe Futebol Club',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'I developed a complete RESTful API with some tests for an already implemented Front-End to handle football match data. I documented the API with Postman. This project consolidated my knowledge about OOP and integration between Front-end and Back-end. I deployed this project with Docker and Heroku, but it\'s not online anymore due to the end of the free use of Heroku.',
+    inProgress: false,
+    image: '/assets/projects/trybefutebolclub.webp',
+    techAreas: {
+      backend: {
+        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
+      },
+      devops: {
+        skills: ['Docker'],
+      }
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/trybe-futebol-club'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: 'https://documenter.getpostman.com/view/20084845/UzBjsnsX'
       },
     ],
   },
@@ -276,36 +310,6 @@ export const enProjects: ICard[] = [
       {
         name: 'Code',
         link: 'https://github.com/felipemalli/wallet-app'
-      },
-      {
-        name: 'Browser',
-        link: ''
-      },
-      {
-        name: 'API',
-        link: ''
-      },
-    ],
-  },
-  {
-    name: 'Clean Schedule',
-    type: 'project',
-    creator: 'Felipe Vahia Malliagros',
-    description: 'I am creating this API to practice Clean Architecture, TDD, DDD, and to further solidify my understanding of SOLID principles. I believe these skills are essential for professional growth.',
-    inProgress: true,
-    image: '/assets/projects/cleanschedule.webp',
-    techAreas: {
-      backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
-      },
-      devops: {
-        skills: ['Docker'],
-      }
-    },
-    links: [
-      {
-        name: 'Code',
-        link: 'https://github.com/felipemalli/clean_schedule_api'
       },
       {
         name: 'Browser',

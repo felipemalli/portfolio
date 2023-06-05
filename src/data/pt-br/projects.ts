@@ -2,10 +2,44 @@ import { ICard } from '../../interfaces';
 
 export const ptBrProjects: ICard[] = [
   {
+    name: 'Fit Home',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Utilizei TDD, DDD, Clean Architecture, SOLID e uso de vários design patterns. Ele também tem 100% de cobertura de teste. Pretendo subir ele na AWS em breve e criar um Front-end no futuro.',
+    inProgress: false,
+    image: '/assets/projects/fithome.webp',
+    techAreas: {
+      backend: {
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'Husky']
+      },
+      frontend: {
+        skills: ['Figma'],
+        inProgress: true,
+      },
+      devops: {
+        skills: ['Docker', 'Github Actions', 'CI/CD'],
+      }
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/fit-home'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: ''
+      },
+    ],
+  },
+  {
     name: 'Portfolio',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Esse é meu principal projeto no momento para demonstrar minhas habilidades em Frontend e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de filtro e idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com uma API, que planejo adicionar em breve.',
+    description: 'Esse é meu principal projeto no momento para demonstrar minhas habilidades em Front-end e UI/UX. Intencionalmente evitei bibliotecas e frameworks auxiliares (exceto uma para o subtítulo). O carrossel, animações, sistema de filtro e idiomas, responsividade e tudo mais foram criados utilizando apenas React, Tailwind e CSS. Antes de iniciar o desenvolvimento, dediquei vários dias para aprimorar o design no Figma, cujo esboço pode ser visualizado no link "Code". O código é estruturado, escalável, flexível e pronto para integração com uma API, que planejo adicionar em breve.',
     inProgress: false,
     image: '/assets/projects/portfolio.webp',
     techAreas: {
@@ -36,36 +70,6 @@ export const ptBrProjects: ICard[] = [
     }
   },
   {
-    name: 'Trybe Futebol Club',
-    type: 'project',
-    creator: 'Felipe Vahia Malliagros',
-    description: 'Desenvolvi uma API RESTful completa com alguns testes para um Front-end já implementado para lidar com dados de partidas de futebol. Documentei a API com o Postman. Esse projeto consolidou meu conhecimento sobre OOP e integração entre Front-end e Back-end. Realizei o deploy desse projeto com Docker e Heroku, mas ele não está mais online devido ao fim do uso gratuito do Heroku.',
-    inProgress: false,
-    image: '/assets/projects/trybefutebolclub.webp',
-    techAreas: {
-      backend: {
-        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
-      },
-      devops: {
-        skills: ['Docker'],
-      }
-    },
-    links: [
-      {
-        name: 'Code',
-        link: 'https://github.com/felipemalli/trybe-futebol-club'
-      },
-      {
-        name: 'Browser',
-        link: ''
-      },
-      {
-        name: 'API',
-        link: 'https://documenter.getpostman.com/view/20084845/UzBjsnsX'
-      },
-    ],
-  },
-  {
     name: 'Drone Feeder',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
@@ -92,6 +96,36 @@ export const ptBrProjects: ICard[] = [
       {
         name: 'API',
         link: 'https://github.com/felipemalli/drone-feeder#documenta%C3%A7%C3%A3o-da-api'
+      },
+    ],
+  },
+  {
+    name: 'Trybe Futebol Club',
+    type: 'project',
+    creator: 'Felipe Vahia Malliagros',
+    description: 'Desenvolvi uma API RESTful completa com alguns testes para um Front-end já implementado para lidar com dados de partidas de futebol. Documentei a API com o Postman. Esse projeto consolidou meu conhecimento sobre OOP e integração entre Frontend e Backend. Realizei o deploy desse projeto com Docker e Heroku, mas ele não está mais online devido ao fim do uso gratuito do Heroku.',
+    inProgress: false,
+    image: '/assets/projects/trybefutebolclub.webp',
+    techAreas: {
+      backend: {
+        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
+      },
+      devops: {
+        skills: ['Docker'],
+      }
+    },
+    links: [
+      {
+        name: 'Code',
+        link: 'https://github.com/felipemalli/trybe-futebol-club'
+      },
+      {
+        name: 'Browser',
+        link: ''
+      },
+      {
+        name: 'API',
+        link: 'https://documenter.getpostman.com/view/20084845/UzBjsnsX'
       },
     ],
   },
@@ -276,36 +310,6 @@ export const ptBrProjects: ICard[] = [
       {
         name: 'Code',
         link: 'https://github.com/felipemalli/wallet-app'
-      },
-      {
-        name: 'Browser',
-        link: ''
-      },
-      {
-        name: 'API',
-        link: ''
-      },
-    ],
-  },
-  {
-    name: 'Clean Schedule',
-    type: 'project',
-    creator: 'Felipe Vahia Malliagros',
-    description: 'Estou desenvolvendo esta API para treinar Clean Architecture, TDD, DDD e consolidar conceitos de SOLID. Acredito que essas habilidades são muito importantes para evoluir como profissional.',
-    inProgress: true,
-    image: '/assets/projects/cleanschedule.webp',
-    techAreas: {
-      backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
-      },
-      devops: {
-        skills: ['Docker'],
-      }
-    },
-    links: [
-      {
-        name: 'Code',
-        link: 'https://github.com/felipemalli/clean_schedule_api'
       },
       {
         name: 'Browser',

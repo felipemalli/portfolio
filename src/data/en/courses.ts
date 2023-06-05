@@ -2,6 +2,32 @@ import { ICard } from '../../interfaces';
 
 export const enCourses: ICard[] = [
   {
+    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
+    type: 'course',
+    creator: 'Rodrigo Manguinho',
+    description: 'I learned a lot from this project about architecture and best practices. I learned about TDD, DDD, Clean Architecture, consolidating SOLID principles and applying various design patterns. I also learned how to document with Swagger and apply GraphQL to an existing REST application.',
+    inProgress: false,
+    image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
+    techAreas: {
+      backend: {
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'GraphQL', 'Husky']
+      },
+      devops: {
+        skills: ['Docker'],
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: 'https://www.udemy.com/certificate/UC-5cda355a-b611-4475-87f2-799a37e7e53c/',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 47.5,
+    }
+  },
+  {
     name: 'Microservices with NodeJS and React',
     type: 'course',
     creator: 'Stephen Grinder',
@@ -152,55 +178,6 @@ export const enCourses: ICard[] = [
     bottonRightTag: {
       name: 'Hours',
       value: 14.5,
-    }
-  },
-  {
-    name: 'Google Data Analytics',
-    type: 'course',
-    creator: 'Google',
-    description: 'I am learning how to run analyses, clean, visualize, present and process data. Also, using spreadsheets to perform complex calculations.',
-    inProgress: true,
-    image: '/assets/courses/dataanalytics_google.webp',
-    techAreas: {
-      backend: {
-        skills: ['SQL', 'R', 'Tableau']
-      }
-    },
-    links: [
-      {
-        name: 'Certificate',
-        link: '',
-      }
-    ],
-    bottonRightTag: {
-      name: 'Hours',
-      value: 189,
-    }
-  },
-  {
-    name: 'NodeJs, Typescript, TDD, DDD, Clean Architecture and SOLID',
-    type: 'course',
-    creator: 'Rodrigo Manguinho',
-    description: 'I am learning a lot about TDD and Clean Architecture, which has been a great opportunity to solidify my understanding of SOLID principles. I believe these are very important skills to know for evolve as a professional',
-    inProgress: true,
-    image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
-    techAreas: {
-      backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'GraphQL', 'MongoDB', 'Mongoose', 'Swagger', 'SOLID', 'OOP', 'Husky', 'CI/CD']
-      },
-      devops: {
-        skills: ['Docker', 'CI/CD'],
-      }
-    },
-    links: [
-      {
-        name: 'Certificate',
-        link: '',
-      }
-    ],
-    bottonRightTag: {
-      name: 'Hours',
-      value: 47.5,
     }
   },
 ];
