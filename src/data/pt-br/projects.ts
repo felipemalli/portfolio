@@ -5,12 +5,12 @@ export const ptBrProjects: ICard[] = [
     name: 'Fit Home',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Utilizei TDD, DDD, Clean Architecture, SOLID e uso de vários design patterns. Ele também tem 100% de cobertura de teste. Pretendo subir ele na AWS em breve e criar um Front-end no futuro.',
+    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Utilizei TDD, DDD, Clean Architecture, SOLID e uso de vários design patterns. Ele também tem 100% de cobertura de teste. Embora grande parte do Back-end já esteja concluído, ainda estou terminando algumas rotas. Depois, planejo realizar deploy na AWS e criar um Front-end. Já criei um esboço no Figma (não é a versão final) que usei para auxiliar na criação da arquitetura do projeto, cujo esboço pode ser visualizado no link "Code".',
     inProgress: false,
     image: '/assets/projects/fithome.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'Husky']
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT', 'Husky']
       },
       frontend: {
         skills: ['Figma'],
@@ -31,7 +31,7 @@ export const ptBrProjects: ICard[] = [
       },
       {
         name: 'API',
-        link: ''
+        link: 'https://github.com/felipemalli/fit-home#documentation'
       },
     ],
   },
