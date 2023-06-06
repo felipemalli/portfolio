@@ -135,6 +135,29 @@ export const ptBrCourses: ICard[] = [
     },
   },
   {
+    name: 'Go: O Guia Completo do Desenvolvedor (Golang)',
+    type: 'course',
+    creator: 'Stephen Grinder',
+    description: 'Aprendi a utilizar Go. O curso cobriu todos os tópicos essenciais, até channels e go routines.',
+    inProgress: false,
+    image: '/assets/courses/go_stephengrinder.webp',
+    techAreas: {
+      backend:{
+        skills: ['Go'],
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: 'https://www.udemy.com/certificate/UC-5ad998c9-9c55-450c-a31e-84afe71b0d07/',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 9,
+    }
+  },
+  {
     name: 'Tailwind CSS do zero | Aprenda construindo projetos',
     type: 'course',
     creator: 'Brad Traversy',

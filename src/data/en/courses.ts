@@ -135,6 +135,29 @@ export const enCourses: ICard[] = [
     },
   },
   {
+    name: 'Go: The Complete Developer\'s Guide (Golang)',
+    type: 'course',
+    creator: 'Stephen Grinder',
+    description: 'I learned how use Go. The course covered all the essential topics, right down to channels and go routines.',
+    inProgress: false,
+    image: '/assets/courses/go_stephengrinder.webp',
+    techAreas: {
+      backend:{
+        skills: ['Go'],
+      }
+    },
+    links: [
+      {
+        name: 'Certificate',
+        link: 'https://www.udemy.com/certificate/UC-5ad998c9-9c55-450c-a31e-84afe71b0d07/',
+      }
+    ],
+    bottonRightTag: {
+      name: 'Hours',
+      value: 9,
+    }
+  },
+  {
     name: 'Tailwind CSS from scratch | Learn by building projects',
     type: 'course',
     creator: 'Brad Traversy',
