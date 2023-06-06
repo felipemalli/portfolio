@@ -10,7 +10,7 @@ export const enCourses: ICard[] = [
     image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT', 'GraphQL', 'Husky']
+        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT', 'GraphQL']
       },
       devops: {
         skills: ['Docker'],

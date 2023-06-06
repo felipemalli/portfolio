@@ -2,7 +2,7 @@ const otherSkills: string[] = ['Microservices', 'Design Patterns', 'TDD', 'OOP',
 
 const devopsSkills: string[] = ['Docker', 'Kubernetes', 'AWS', 'Github Actions', 'Scaffolding'];
 
-const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'SQL', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'H2', 'Python', 'JWT', 'Cookies', 'Husky', 'R', 'Tableau'];
+const backendSkills: string[] = ['Javascript', 'Typescript', 'Node', 'Express', 'Sequelize', 'Prisma', 'Nest', 'Jest', 'SQL', 'MySQL', 'MongoDB', 'Swagger', 'Java', 'Spring', 'Hibernate', 'Quarkus', 'JUnit', 'H2', 'Python', 'JWT', 'Cookies'];
 
 const frontendSkills: string[] = ['HTML', 'CSS', 'Javascript', 'Typescript', 'React', 'Redux', 'Next', 'Jest', 'React Testing Library', 'Tailwind', 'Material-UI', 'Styled Components', 'Figma'];
 
