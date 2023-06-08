@@ -5,12 +5,12 @@ export const enProjects: ICard[] = [
     name: 'Fit Home',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Organization and timer project for home workouts. The most professional Back-end I\'ve ever developed, completely uncoupled. I used TDD, DDD, Clean Architecture, SOLID principles, and various design patterns. It also has 100% of test coverage. Although much of Back-end is already done, I\'m still finishing some routes. After, I plan to deploy it on AWS and create a Front-end. I\'ve already created a sketch in Figma (not the final version) that I used to help create the project\'s architecture, which can be viewed in the "Code" link.',
+    description: 'Organization and timer project for home workouts. The most professional Back-end I\'ve ever developed, completely uncoupled. I created with TDD, DDD and Clean Architecture. I followed principles of SOLID, DRY, YAGNI and KISS and used various design patterns. It also has 100% of test coverage. Although much of Back-end is already done, I\'m still finishing some routes. After, I plan to deploy it on AWS and create a Front-end. I\'ve already created a sketch in Figma (not the final version) that I used to help create the project\'s architecture, which can be viewed in the "Code" link.',
     inProgress: false,
     image: '/assets/projects/fithome.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT']
+        skills: ['Typescript', 'Node', 'Express', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT']
       },
       frontend: {
         skills: ['Figma'],
@@ -108,7 +108,7 @@ export const enProjects: ICard[] = [
     image: '/assets/projects/trybefutebolclub.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
+        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
       },
       devops: {
         skills: ['Docker'],

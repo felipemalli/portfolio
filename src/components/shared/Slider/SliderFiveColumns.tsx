@@ -68,6 +68,12 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     };
   }, [timeoutId]);
 
+  const [checkActualSlider, setCheckActualSlider] = useState(false);
+
+  useEffect(() => {
+    checkEndOfScroll();
+  }, [checkActualSlider]);
+
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
       setButtonClickable(false);
@@ -79,7 +85,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
         setTimeoutId(newTimeoutId);
       });
-      checkEndOfScroll();
+      setCheckActualSlider(!checkActualSlider); // ensures checkEndOfScroll() will run with correct slider (user can change the slider while handleClick is in setTimeOut)
     }
   };
 
