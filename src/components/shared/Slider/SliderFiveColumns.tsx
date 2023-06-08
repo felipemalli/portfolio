@@ -68,6 +68,12 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
     };
   }, [timeoutId]);
 
+  const [changeAreaProtection, setChangeAreaProtection] = useState(false);
+
+  useEffect(() => {
+    checkEndOfScroll();
+  }, [changeAreaProtection]);
+
   const handleClick = async (scroll: () => void) => {
     if (buttonClickable) {
       setButtonClickable(false);
@@ -79,7 +85,9 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
         }, TIME_TO_CARD_SCROLL * cardsScrollMultiplier);
         setTimeoutId(newTimeoutId);
       });
+  
       checkEndOfScroll();
+      setChangeAreaProtection(!changeAreaProtection);
     }
   };
 
