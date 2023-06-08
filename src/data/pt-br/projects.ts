@@ -5,12 +5,12 @@ export const ptBrProjects: ICard[] = [
     name: 'Fit Home',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Utilizei TDD, DDD, Clean Architecture, SOLID e uso de vários design patterns. Ele também tem 100% de cobertura de teste. Embora grande parte do Back-end já esteja concluído, ainda estou terminando algumas rotas. Depois, planejo realizar deploy na AWS e criar um Front-end. Já criei um esboço no Figma (não é a versão final) que usei para auxiliar na criação da arquitetura do projeto, cujo esboço pode ser visualizado no link "Code".',
+    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Criei com TDD, DDD e Clean Architecture. Segui os princíipos do SOLID, DRY, YAGNI e KISS e usei vários design patterns. Ele também tem 100% de cobertura de teste. Embora grande parte do Back-end já esteja concluído, ainda estou terminando algumas rotas. Depois, planejo realizar deploy na AWS e criar um Front-end. Já criei um esboço no Figma (não é a versão final) que usei para auxiliar na criação da arquitetura do projeto, que pode ser visualizado no link "Code".',
     inProgress: false,
     image: '/assets/projects/fithome.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT']
+        skills: ['Typescript', 'Node', 'Express', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT']
       },
       frontend: {
         skills: ['Figma'],
@@ -103,12 +103,12 @@ export const ptBrProjects: ICard[] = [
     name: 'Trybe Futebol Club',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Desenvolvi uma API RESTful completa com alguns testes para um Front-end já implementado para lidar com dados de partidas de futebol. Documentei a API com o Postman. Esse projeto consolidou meu conhecimento sobre OOP e integração entre Frontend e Backend. Realizei o deploy desse projeto com Docker e Heroku, mas ele não está mais online devido ao fim do uso gratuito do Heroku.',
+    description: 'Desenvolvi uma API RESTful completa com alguns testes para um Front-end já implementado para lidar com dados de partidas de futebol. Documentei a API com o Postman. Esse projeto consolidou meu conhecimento sobre POO e integração entre Frontend e Backend. Realizei o deploy desse projeto com Docker e Heroku, mas ele não está mais online devido ao fim do uso gratuito do Heroku.',
     inProgress: false,
     image: '/assets/projects/trybefutebolclub.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Jest', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
+        skills: ['Typescript', 'Node', 'Express', 'Sequelize', 'MySQL', 'Mocha/Chai/Sinon', 'JWT', 'OOP'],
       },
       devops: {
         skills: ['Docker'],
