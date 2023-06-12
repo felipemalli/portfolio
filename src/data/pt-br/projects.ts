@@ -5,7 +5,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Fit Home',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Fiz o deploy do backend no Amazon EC2, que está conectado ao MongoDB Atlas. Criei com TDD, DDD e Clean Architecture. Segui os princíipos do SOLID, DRY, YAGNI e KISS e usei vários design patterns. Ele também tem 100% de cobertura de teste. Embora grande parte do Back-end já esteja concluído, ainda estou terminando algumas rotas. Depois, planejo criar um Front-end. Já criei um esboço no Figma (não é a versão final) que usei para auxiliar na criação da arquitetura do projeto, que pode ser visualizado no link "Code".',
+    description: 'Projeto para organizar e cronometrar exercícios. O Back-end mais profissional que já realizei, completamente desacoplado. Fiz o deploy do backend no Amazon EC2, que está conectado ao MongoDB Atlas. Criei com TDD, DDD e Clean Architecture. Segui os princíipos do SOLID, DRY, YAGNI e KISS e usei vários design patterns. Ele também tem 100% de cobertura de testes. Embora grande parte do Back-end já esteja concluído, ainda estou terminando algumas rotas. Depois, planejo criar um Front-end. Já criei um esboço no Figma (não é a versão final) que usei para auxiliar na criação da arquitetura do projeto, que pode ser visualizado no link "Code".',
     inProgress: false,
     image: '/assets/projects/fithome.webp',
     techAreas: {
@@ -73,7 +73,7 @@ export const ptBrProjects: ICard[] = [
     name: 'Drone Feeder',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Projeto completo de back-end que lida com entregas por drones, feito em equipe do zero. Além das rotas CRUD, existem algumas rotas para lidar com vídeos. Foram feitos testes com H2, JUnit e JaCoCo para cobertura de código.',
+    description: 'Projeto completo de back-end que lida com entregas por drones, feito em equipe do zero. Além das rotas CRUD, existem algumas rotas para lidar com vídeos. Foram feitos testes com H2, JUnit e JaCoCo para cobertura de testes.',
     inProgress: false,
     image: '/assets/projects/dronefeeder.webp',
     techAreas: {
