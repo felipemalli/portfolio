@@ -5,7 +5,7 @@ export const enProjects: ICard[] = [
     name: 'Fit Home',
     type: 'project',
     creator: 'Felipe Vahia Malliagros',
-    description: 'Organization and timer project for home workouts. The most professional Back-end I\'ve ever developed, completely uncoupled. I created with TDD, DDD and Clean Architecture. I followed principles of SOLID, DRY, YAGNI and KISS and used various design patterns. It also has 100% of test coverage. Although much of Back-end is already done, I\'m still finishing some routes. After, I plan to deploy it on AWS and create a Front-end. I\'ve already created a sketch in Figma (not the final version) that I used to help create the project\'s architecture, which can be viewed in the "Code" link.',
+    description: 'Organization and timer project for home workouts. The most professional Back-end I\'ve ever developed, completely uncoupled. I deployed the backend on Amazon EC2, which is connected to MongoDB Atlas. I created with TDD, DDD and Clean Architecture. I followed principles of SOLID, DRY, YAGNI and KISS and used various design patterns. It also has 100% of test coverage. Although much of Back-end is already done, I\'m still finishing some routes. After, I plan to create a Front-end. I\'ve already created a sketch in Figma (not the final version) that I used to help create the project\'s architecture, which can be viewed in the "Code" link.',
     inProgress: false,
     image: '/assets/projects/fithome.webp',
     techAreas: {
@@ -17,7 +17,7 @@ export const enProjects: ICard[] = [
         inProgress: true,
       },
       devops: {
-        skills: ['Docker', 'Github Actions', 'CI/CD'],
+        skills: ['AWS', 'Docker', 'Github Actions', 'CI/CD'],
       }
     },
     links: [
