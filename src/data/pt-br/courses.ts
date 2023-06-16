@@ -10,7 +10,7 @@ export const ptBrCourses: ICard[] = [
     image: '/assets/courses/cleanarchitecture_rodrigomanguinho.webp',
     techAreas: {
       backend: {
-        skills: ['Typescript', 'Node', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT', 'GraphQL']
+        skills: ['Typescript', 'Node', 'Express', 'Clean Architecture', 'TDD', 'DDD', 'Design Patterns', 'Jest', 'MongoDB', 'Swagger', 'SOLID', 'OOP', 'JWT', 'GraphQL']
       },
       devops: {
         skills: ['Docker'],
@@ -60,7 +60,7 @@ export const ptBrCourses: ICard[] = [
     name: 'Amazon Web Services (AWS): Essencial',
     type: 'course',
     creator: 'Geek University',
-    description: 'Eu aprendi todas as ferramentas essenciais da AWS. IAM, serviços de rede e conectividade, EC2, S3, serviço SQL (RDS), serviço NoSQL (DynamoDB), Cloud Trail e CloudWatch, Balanceamento de carga elástico, Route 53, CloudFront e uma rápida visão da computação sem servidor (funções Lambda).',
+    description: 'Eu aprendi todas as ferramentas essenciais da AWS. IAM, serviços de rede e conectividade, EC2, S3, serviço SQL (RDS), serviço NoSQL (DynamoDB), Cloud Trail e CloudWatch, Elastic Load Balancer, Route 53, CloudFront e uma rápida visão de serverless (funções Lambda).',
     inProgress: false,
     image: '/assets/courses/aws_geekuniversity.webp',
     techAreas: {

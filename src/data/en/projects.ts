@@ -31,7 +31,7 @@ export const enProjects: ICard[] = [
       },
       {
         name: 'API',
-        link: 'https://github.com/felipemalli/fit-home#documentation'
+        link: 'http://54.233.146.212:5050/api-docs/'
       },
     ],
   },
@@ -49,6 +49,9 @@ export const enProjects: ICard[] = [
       backend: {
         skills: [''],
         inProgress: true,
+      },
+      devops: {
+        skills: ['Github Actions', 'CI/CD'],
       }
     },
     links: [
