@@ -60,7 +60,7 @@ export const enCourses: ICard[] = [
     name: 'Amazon Web Services (AWS): Essential',
     type: 'course',
     creator: 'Geek University',
-    description: 'I learned all essential AWS tools including IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancing, Route 53, CloudFront and a brief overview of serverless computing (Lambda functions).',
+    description: 'I learned all essential AWS tools including IAM, network and connectivity services, EC2, S3, SQL service (RDS), NoSQL service (DynamoDB), Cloud Trail and CloudWatch, Elastic Load Balancer, Route 53, CloudFront and a brief overview of serverless computing (Lambda functions).',
     inProgress: false,
     image: '/assets/courses/aws_geekuniversity.webp',
     techAreas: {
