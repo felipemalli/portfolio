@@ -49,6 +49,9 @@ export const enProjects: ICard[] = [
       backend: {
         skills: [''],
         inProgress: true,
+      },
+      devops: {
+        skills: ['Github Actions', 'CI/CD'],
       }
     },
     links: [

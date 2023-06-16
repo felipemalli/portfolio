@@ -49,6 +49,9 @@ export const ptBrProjects: ICard[] = [
       backend: {
         skills: [''],
         inProgress: true,
+      },
+      devops: {
+        skills: ['Github Actions', 'CI/CD'],
       }
     },
     links: [
@@ -58,7 +61,7 @@ export const ptBrProjects: ICard[] = [
       },
       {
         name: 'Browser',
-        link: 'https://www.felipemalli.com'
+        link: 'https://felipemalli.com'
       },
       {
         name: 'API',
