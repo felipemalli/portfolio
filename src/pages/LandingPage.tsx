@@ -31,26 +31,20 @@ export const LandingPage: React.FC = () => {
                   PRINCIPAL PROJETO
               </h2>
               <div className='border-t-4 md:border-0 md:border-l-4 border-primary-500 h-fit -mt-1 px-4 md:pl-12 pt-14 pb-5'>
-                <div className='border h-full'>
-                  <div className='flex gap-5 lg:gap-14 border flex-col lg:flex-row'>
+                <div className='h-full'>
+                  <div className='flex gap-5 lg:gap-14 flex-col lg:flex-row'>
                     <h3 className='text-customBlue-900 text-5xl font-medium whitespace-nowrap self-start'>Fit Home</h3>
                     <p className='text-3xl text-customBlue-500 self-end'>Solução fullstack para organizar e cronometrar exercícios físicos.</p>
                   </div>
-                  <div className='flex gap-6 mt-10 border flex-col sm:flex-row'>
-                    <button className='w-36 h-10 duration-200 active:bg-green-400 hover:bg-customGray-300 text-3xl font-light cursor-default border border-customBlue-500 rounded-2xl text-customBlue-900'>
-                      Backend
-                    </button>
-                    <button className='w-36 h-10 duration-200 active:bg-green-400 hover:bg-customGray-300 text-3xl font-light cursor-default border border-customBlue-500 rounded-2xl text-customBlue-900'>
-                    Frontend
-                    </button>
-                    <button className='w-36 h-10 duration-200 active:bg-green-400 hover:bg-customGray-300 text-3xl font-light cursor-default border border-customBlue-500 rounded-2xl text-customBlue-900'>
-                    DevOps
-                    </button>
+                  <div className='flex gap-6 mt-4 flex-col sm:flex-row'>
+                    <label htmlFor="underline_select" className="sr-only">Technology select</label>
+                    <select id="underline_select" className="w-32 py-2 text-2xl font-light text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none">
+                      <option value="backend" selected className='text-2xl font-light bg-secondary-500 border-none'>Backend</option>
+                      <option value="frontend" className='text-2xl font-light bg-secondary-500'>Frontend</option>
+                    </select>
                   </div>
                   <div className='h-[30rem]'></div>
-
                 </div>
-                
               </div>
             </section>
           </article>
