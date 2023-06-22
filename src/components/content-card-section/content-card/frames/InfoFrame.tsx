@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLanguageContext } from '../../../contexts';
+import { useLanguageContext } from '../../../../contexts';
 
 export interface IInfoFrameProps {
   creator: string;

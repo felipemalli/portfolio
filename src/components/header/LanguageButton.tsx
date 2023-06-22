@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ILanguageOptions, useLanguageContext, useSearchContext } from '../../../contexts';
+import { ILanguageOptions, useLanguageContext, useSearchContext } from '../../contexts';
 
 export interface ILanguageButtonProps {
   isOpenLanguage: boolean;

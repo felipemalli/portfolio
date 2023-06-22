@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
-import { ICard } from '../../../interfaces';
-import { AnimatedDiv } from '../../../utils';
-import { Card } from '../../shared/Card/Card';
+import { useChangeAreaContext } from '../../../../contexts';
+import { ICard } from '../../../../interfaces';
+import { AnimatedDiv } from '../../../../utils';
+import { Card } from '../cards/Card';
 
 interface IContentaArea {
   data: ICard[]

@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import { useLanguageContext } from '../../../contexts';
-import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
-import { AnimatedDiv } from '../../../utils';
-import { SkillCard } from '../../shared/SkillCard/SkillCard';
+import { useChangeAreaContext, useLanguageContext } from '../../../../contexts';
+import { AnimatedDiv } from '../../../../utils';
+import { SkillCard } from '../cards/SkillCard';
 
 interface ISkillAreaProps {
   type: 'top' | 'botton';

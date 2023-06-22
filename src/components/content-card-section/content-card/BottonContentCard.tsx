@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useCourseContext, useLanguageContext, useSkillContext } from '../../contexts';
-import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
-import { enCourses, ptBrCourses } from '../../data';
-import { bottonSkills } from '../../data/universal/skills';
-import { ICard } from '../../interfaces';
-import { CARD_SIZE } from '../shared/Card/Card';
-import { SliderFiveColumns } from '../shared/Slider/SliderFiveColumns';
-import { ContentArea } from './particular/ContentArea';
-import { SkillArea } from './particular/SkillArea';
+import { useCourseContext, useLanguageContext, useSkillContext } from '../../../contexts';
+import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
+import { enCourses, ptBrCourses } from '../../../data';
+import { bottonSkills } from '../../../data/universal/skills';
+import { ICard } from '../../../interfaces';
+import { CARD_SIZE } from './cards/Card';
+import { SliderFiveColumns } from './slider/SliderFiveColumns';
+import { ContentArea } from './areas/ContentArea';
+import { SkillArea } from './areas/SkillArea';
 
 export const BottonContentCard: React.FC = () => {
   const { areaName } = useChangeAreaContext();

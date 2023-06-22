@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useLanguageContext, useSearchContext } from '../../../contexts';
-import { ITechAreaNames } from '../../../interfaces';
+import { useLanguageContext, useSearchContext } from '../../../../contexts';
+import { ITechAreaNames } from '../../../../interfaces';
 
 export interface ISkillFrameProps {
   techArea: ITechAreaNames;

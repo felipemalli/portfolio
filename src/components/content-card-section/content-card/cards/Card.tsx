@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { ICard, ITechAreaNames } from '../../../interfaces';
+import { ICard, ITechAreaNames } from '../../../../interfaces';
 import { ButtonCardManager } from './ButtonCardManager';
-import { InfoFrame } from './InfoFrame';
-import { PhotoFrame } from './PhotoFrame';
-import { SkillFrame } from './SkillFrame';
+import { InfoFrame } from '../frames/InfoFrame';
+import { PhotoFrame } from '../frames/PhotoFrame';
+import { SkillFrame } from '../frames/SkillFrame';
 
 const CARD_WIDTH = 'w-[224px]';
 const CARD_MARGIN_X = 'mx-[9px]';

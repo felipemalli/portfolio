@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLanguageContext, useMediaQueryContext } from '../../contexts';
-import { NavOptionLink } from '../shared/Nav/NavOptionLink';
-import { NavOptionNavigation } from '../shared/Nav/NavOptionNavigation';
-import { LanguageButton } from './particular/LanguageButton';
+import { NavOptionLink } from '../shared/nav/NavOptionLink';
+import { NavOptionNavigation } from '../shared/nav/NavOptionNavigation';
+import { LanguageButton } from './LanguageButton';
 
 export const Header: React.FC = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);

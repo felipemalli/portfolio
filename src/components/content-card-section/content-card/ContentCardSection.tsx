@@ -1,8 +1,10 @@
 import { useMediaQuery } from 'react-responsive';
-import { breakpoints, moveScreenToCenterOfId } from '../../utils';
+import { breakpoints, moveScreenToCenterOfId } from '../../../utils';
+import { ChangeAreaButtons } from '../search/changeAreaButtons';
+import { SearchBar } from '../search/SearchBar';
 import { BottonContentCard } from './BottonContentCard';
-import { ChangeAreaButtons } from './particular/changeAreaButtons';
-import { SearchBar } from './particular/SearchBar';
+
+
 import { TopContentCard } from './TopContentCard';
 
 export const ContentCardSection: React.FC = () => {

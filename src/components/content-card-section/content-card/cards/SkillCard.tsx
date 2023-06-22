@@ -1,5 +1,5 @@
-import { useChangeAreaContext, useSearchContext } from '../../../contexts';
-import { ISkillCard } from '../../../interfaces';
+import { useChangeAreaContext, useSearchContext } from '../../../../contexts';
+import { ISkillCard } from '../../../../interfaces';
 
 const CARD_WIDTH = 'w-[224px]';
 const CARD_MARGIN_X = 'mx-[9px]';

@@ -1,14 +1,14 @@
-import { useLanguageContext } from '../../../contexts';
-import { ILinkName } from '../../../interfaces';
-import { openUrl } from '../../../utils';
+import { useLanguageContext } from '../../../../contexts';
+import { ILinkName } from '../../../../interfaces';
+import { openUrl } from '../../../../utils';
 
-interface ILinkButtonProps {
+interface ILinkCardButtonProps {
   enable: boolean,
   name: ILinkName,
   link: string,
 }
 
-export const LinkButton: React.FC<ILinkButtonProps> = ({ enable, name, link }: ILinkButtonProps) => {
+export const LinkCardButton: React.FC<ILinkCardButtonProps> = ({ enable, name, link }: ILinkCardButtonProps) => {
   const { translations } = useLanguageContext();
 
   return (

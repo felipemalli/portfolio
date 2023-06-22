@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { AboutSection } from '../components/about-section/AboutSection';
-import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
+import { ContentCardSection } from '../components/content-card-section/content-card/ContentCardSection';
 import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';

@@ -1,5 +1,5 @@
-import { useLanguageContext } from '../../../contexts';
-import { IBottonRightTag } from '../../../interfaces';
+import { useLanguageContext } from '../../../../contexts';
+import { IBottonRightTag } from '../../../../interfaces';
 
 export interface IPhotoFrameProps {
   image?: string;

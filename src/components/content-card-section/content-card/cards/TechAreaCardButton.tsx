@@ -1,4 +1,4 @@
-import { ITechAreaNames } from '../../../interfaces/ITechAreaNames';
+import { ITechAreaNames } from '../../../../interfaces';
 import { IFrameState } from './Card';
 
 interface ITechAreaButtonProps {

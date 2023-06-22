@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useLanguageContext, useProjectContext, useSkillContext } from '../../contexts';
-import { useChangeAreaContext } from '../../contexts/ChangeAreaContext';
-import { enProjects, ptBrProjects } from '../../data';
-import { topSkills } from '../../data/universal/skills';
-import { ICard } from '../../interfaces';
-import { CARD_SIZE } from '../shared/Card/Card';
-import { SliderFiveColumns } from '../shared/Slider/SliderFiveColumns';
-import { ContentArea } from './particular/ContentArea';
-import { SkillArea } from './particular/SkillArea';
+import { useChangeAreaContext, useLanguageContext, useProjectContext, useSkillContext } from '../../../contexts';
+import { enProjects, ptBrProjects, topSkills } from '../../../data';
+import { ICard } from '../../../interfaces';
+import { SliderFiveColumns } from './slider/SliderFiveColumns';
+import { ContentArea } from './areas/ContentArea';
+import { SkillArea } from './areas/SkillArea';
+import { CARD_SIZE } from './cards/Card';
 
 export const TopContentCard: React.FC = () => {
   const { areaName } = useChangeAreaContext();

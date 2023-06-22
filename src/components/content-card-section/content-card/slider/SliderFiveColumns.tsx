@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useCourseContext, useMediaQueryContext, useProjectContext } from '../../../contexts';
-import { useChangeAreaContext } from '../../../contexts/ChangeAreaContext';
-import { IChildrenProps } from '../../../interfaces';
+import { useCourseContext, useMediaQueryContext, useProjectContext } from '../../../../contexts';
+import { useChangeAreaContext } from '../../../../contexts/ChangeAreaContext';
+import { IChildrenProps } from '../../../../interfaces';
 
 interface ISliderProps extends IChildrenProps {
   CARD_SIZE: number

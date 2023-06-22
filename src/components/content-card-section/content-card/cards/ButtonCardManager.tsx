@@ -1,6 +1,6 @@
-import { ILinkName } from '../../../interfaces';
+import { ILinkName } from '../../../../interfaces';
 import { IFrameState } from './Card';
-import { LinkButton } from './LinkCardButton';
+import { LinkCardButton } from './LinkCardButton';
 import { TechAreaButton } from './TechAreaCardButton';
 
 interface IButtonCardManagerProps {
@@ -24,7 +24,7 @@ export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTec
       {frame.screen === 'infoFrame' ? (
         <>
           {links.map(({name, link}) => (
-            <LinkButton key={name + String(Date.now())} enable={!!link} name={name} link={link}/>
+            <LinkCardButton key={name + String(Date.now())} enable={!!link} name={name} link={link}/>
           ))}
         </>
       ) : otherTechAreaName ? (
