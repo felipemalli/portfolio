@@ -56,7 +56,10 @@ export const LandingPage: React.FC = () => {
                         Após criar um exercício, ele vira um modelo, que poderá ser utilizado em quantas séries quiser. Logo, ao alterar a configuração, todas as séries que utilizam o mesmo modelo serão alteradas. Isso foi planejado para evitar desgaste do cliente ao precisar modificar em vários lugares caso deseje mudar alguma configuração (como aumento de dificuldade do exercício, por exemplo).
                         <br></br>
                         <br></br>
-                        Além disso, será possível configurar diferentes variações para o mesmo exercício e cada série poderá escolher a variação desejada.
+                        Além disso, será possível configurar diferentes variações para o mesmo exercício e escolher a desejada em cada série. Cada uma delas, além da descrição, o cliente poderá definir um link personalizado que redireciona para um vídeo/blog ensinando como realizar tal variação.
+                        <br></br>
+                        <br></br>
+                        Após o projeto ficar pronto, ainda planejo adicionar exercícios já configurados que serão sugeridos.
                       </p>
                     </div>
                   </div>
