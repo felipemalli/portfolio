@@ -38,12 +38,28 @@ export const LandingPage: React.FC = () => {
                   </div>
                   <div className='flex gap-6 mt-4 flex-col sm:flex-row'>
                     <label htmlFor="underline_select" className="sr-only">Technology select</label>
-                    <select id="underline_select" className="w-32 py-2 text-2xl font-light text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none">
-                      <option value="backend" selected className='text-2xl font-light bg-secondary-500 border-none'>Backend</option>
+                    <select id="underline_select" className="w-36 py-2 text-2xl font-light text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none">
+                      <option value="backend" selected className='text-2xl font-light bg-secondary-500 border-none'>Introdução</option>
+                      <option value="backend" className='text-2xl font-light bg-secondary-500 border-none'>Backend</option>
                       <option value="frontend" className='text-2xl font-light bg-secondary-500'>Frontend</option>
                     </select>
                   </div>
-                  <div className='h-[30rem]'></div>
+                  <div className='mt-10 h-[30rem] text-xl text-customBlue-500 flex'>
+                    <div className='max-w-5xl'>
+                      <p>
+                        É comum ao fazer exercícios físicos em casa se perder no tempo, e esse projeto visa solucionar o problema e ainda organizar seu treino. A grande motivação para finalizá-lo é que eu sou o mais interessado em utilizá-lo.
+                        <br/>
+                        <br></br>
+                        O aplicativo terá um timer preciso que percorre cada repetição e os devidos tempos de descanso até concluir todas as séries do treino, tudo configurável pelo cliente.
+                        <br></br>
+                        <br></br>
+                        Após criar um exercício, ele vira um modelo, que poderá ser utilizado em quantas séries quiser. Logo, ao alterar a configuração, todas as séries que utilizam o mesmo modelo serão alteradas. Isso foi planejado para evitar desgaste do cliente ao precisar modificar em vários lugares caso deseje mudar alguma configuração (como aumento de dificuldade do exercício, por exemplo).
+                        <br></br>
+                        <br></br>
+                        Além disso, será possível configurar diferentes variações para o mesmo exercício e cada série poderá escolher a variação desejada.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
