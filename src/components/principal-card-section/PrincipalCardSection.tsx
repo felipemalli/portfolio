@@ -40,18 +40,17 @@ export const PrincipalCardSection: React.FC = () => {
             <div className='w-full hidden 2xl:block'>
               <img src={'/assets/projects/fithomeOriginal.webp'} alt='Card image' className='bg-customGray-400 rounded-3xl border-2 border-customGray-500  h-full w-full'/> 
             </div>
-            <div className='max-w-4xl text-[18px] 2xl:py-5'>
+            <div className='max-w-4xl md:text-[18px] 2xl:py-5'>
               <p>
                 É comum ao fazer exercícios físicos em casa se perder com o tempo, e esse é o problema principal que o projeto soluciona, além de montar uma agenda organizada dos seus treinos.
-                <br/>
-                <br></br>
+          
                 O aplicativo terá um timer preciso que percorre o tempo de cada repetição e descanso de um exercício (configuráveis pelo cliente) até concluir todas as séries do treino.
                 <br></br>
                 <br></br>
-                Ele também tem liberdade de criar e configurar os exercícios, que viram um modelo e podem ser utilizados em quantas séries quiser. Logo, ao alterar uma configuração de um exercício, todas as séries em que ele estiver serão alteradas. Dessa forma, evita-se modificar em vários lugares para mudar alguma configuração (aumentar o peso, por exemplo).
+                O cliente também tem liberdade de criar e configurar os exercícios, que viram um modelo e podem ser utilizados em quantas séries quiser. Logo, ao alterar uma configuração de um exercício, todas as séries em que ele estiver serão alteradas. Dessa forma, evita-se modificar em vários lugares para mudar alguma configuração (aumentar o peso, por exemplo).
                 <br></br>
                 <br></br>
-                Além disso, será possível configurar diferentes variações para o mesmo exercício e selecionar em cada série a variação desejada. O cliente ainda poderá definir um link personalizado que redireciona para um video/blog ensinando como realizar a variação, além da descrição.
+                Além disso, será possível atribuir diferentes variações para o mesmo exercício e selecionar em cada série a variação desejada. O cliente ainda poderá definir um link personalizado que redireciona para um video/blog ensinando como realizar a variação, além da descrição.
               </p>
             </div>
           </div>

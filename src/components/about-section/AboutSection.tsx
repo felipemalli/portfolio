@@ -15,7 +15,7 @@ export const AboutSection: React.FC = () => {
             md:w-[544px] md:-mr-20 min-h-[416px]
             
             md:rounded-tl-[200px] bg-secondary-500 border border-primary-300 -z-10'>
-              <h2 className='absolute top-12 md:top-11 font-medium text-3xl md:text-5xl right-1/2 translate-x-1/2 md:translate-x-0 md:right-20 text-customBlue-700'>
+              <h2 className='absolute top-12 font-medium text-3xl md:text-[44px] right-1/2 translate-x-1/2 md:translate-x-0 md:right-20 text-customBlue-700'>
                 {translations.about_first_card_title}
               </h2>
             </div>
@@ -27,8 +27,7 @@ export const AboutSection: React.FC = () => {
               <p>
                 {translations.about_first_card_first_paragraph}
               </p>
-              <br/>
-              <p>
+              <p className='mt-4'>
                 {translations.about_first_card_second_paragraph}
               </p>
             </div>
@@ -44,7 +43,7 @@ export const AboutSection: React.FC = () => {
               md:w-[544px] md:-ml-20 min-h-[416px]
               
               md:rounded-tr-[200px] bg-secondary-500 border border-primary-300 -z-10'>
-              <h2 className='absolute top-12 md:top-11 font-medium text-3xl md:text-5xl left-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 text-customBlue-700'>
+              <h2 className='absolute top-12 font-medium text-3xl md:text-[44px] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 text-customBlue-700'>
                 {translations.about_second_card_title}
               </h2>
             </div>
@@ -56,8 +55,7 @@ export const AboutSection: React.FC = () => {
               <p> 
                 {translations.about_second_card_first_paragraph} 
               </p>
-              <br/>
-              <p>
+              <p className='mt-4'>
                 {translations.about_second_card_second_paragraph}
               </p>
             </div>
