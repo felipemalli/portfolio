@@ -3,8 +3,8 @@ import { IChildrenProps } from '../../../interfaces';
 import { openUrl } from '../../../utils';
 
 interface NavOptionLinkProps extends IChildrenProps {
-  url: string;
-  className?: string;
+  url: string
+  className?: string
 }
 
 export const NavOptionLink: React.FC<NavOptionLinkProps> = ({ children, url, className }: NavOptionLinkProps) => {

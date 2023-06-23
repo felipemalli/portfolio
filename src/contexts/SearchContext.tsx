@@ -3,13 +3,13 @@ import { ICheckboxProps, useCheckbox } from '../hooks';
 import { IChildrenProps } from '../interfaces';
 
 interface ISearchContextData {
-  search: string;
-  setSearch: (value: string) => void;
-  applyFiltersBoolean: boolean;
-  setApplyFiltersBoolean: (value: boolean) => void;
-  checkboxes: ICheckboxProps[];
-  handleCheckboxChange: (id: number) => void;
-  defineCheckBoxes: (isChecked: boolean) => void;
+  search: string
+  setSearch: (value: string) => void
+  applyFiltersBoolean: boolean
+  setApplyFiltersBoolean: (value: boolean) => void
+  checkboxes: ICheckboxProps[]
+  handleCheckboxChange: (id: number) => void
+  defineCheckBoxes: (isChecked: boolean) => void
 }
 
 const SearchContext = React.createContext({} as ISearchContextData);

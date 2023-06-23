@@ -5,17 +5,17 @@ import { TechAreaButton } from './TechAreaCardButton';
 
 interface IButtonCardManagerProps {
   enableTechArea: {
-    hasFrontend: boolean, 
-    hasBackend: boolean,
-    hasDevops: boolean,
+    hasFrontend: boolean
+    hasBackend: boolean
+    hasDevops: boolean
   },
   links: {
-    name: ILinkName,
-    link: string,
-  }[],
+    name: ILinkName
+    link: string
+  }[]
   frame: IFrameState
-  setFrame: (arg0: IFrameState) => void,
-  otherTechAreaName?: string,
+  setFrame: (arg0: IFrameState) => void
+  otherTechAreaName?: string
 }
 
 export const ButtonCardManager: React.FC<IButtonCardManagerProps> = ({ enableTechArea: {hasFrontend, hasBackend, hasDevops}, links, frame, setFrame, otherTechAreaName }: IButtonCardManagerProps) => {

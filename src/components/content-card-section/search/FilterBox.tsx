@@ -3,8 +3,8 @@ import { useLanguageContext, useSearchContext } from '../../../contexts';
 import { AnimatedDiv } from '../../../utils';
 
 export interface IFilterBoxProps {
-  applyFilters: () => void;
-  giveCheckboxAreas: () => string[];
+  applyFilters: () => void
+  giveCheckboxAreas: () => string[]
 }
 
 export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckboxAreas }: IFilterBoxProps) => {

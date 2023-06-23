@@ -2,11 +2,11 @@ import { ITechAreaNames } from '../../../../interfaces';
 import { IFrameState } from './Card';
 
 interface ITechAreaButtonProps {
-  enable: boolean,
-  techAreaAbreviation: string,
-  techArea: ITechAreaNames,
-  frame: IFrameState,
-  setFrame: (arg0: IFrameState) => void,
+  enable: boolean
+  techAreaAbreviation: string
+  techArea: ITechAreaNames
+  frame: IFrameState
+  setFrame: (arg0: IFrameState) => void
 }
 
 export const TechAreaButton: React.FC<ITechAreaButtonProps> = ({ enable, techAreaAbreviation, techArea, frame, setFrame }: ITechAreaButtonProps) => {

@@ -4,8 +4,8 @@ import { IChildrenProps } from '../interfaces';
 export type IAreaName = 'knowledge' | 'skills'
 
 interface IChangeAreaContextData {
-  areaName: IAreaName;
-  toggleChangeArea: () => void;
+  areaName: IAreaName
+  toggleChangeArea: () => void
 }
 
 const ChangeAreaContext = createContext({} as IChangeAreaContextData);

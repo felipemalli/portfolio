@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useLanguageContext } from '../../../../contexts';
 
 export interface IInfoFrameProps {
-  creator: string;
-  description: string;
+  creator: string
+  description: string
 }
 
 type IStringList = string[][]

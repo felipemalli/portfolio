@@ -25,7 +25,7 @@ export const SliderFiveColumns: React.FC<ISliderProps> = ({ children, CARD_SIZE 
   const { filteredProjects } = useProjectContext();
   const { filteredCourses } = useCourseContext();
 
-  type Timeout = ReturnType<typeof setTimeout>;
+  type Timeout = ReturnType<typeof setTimeout>
   const [timeoutId, setTimeoutId] = useState<Timeout | null>(null);
   
   useEffect(() => {

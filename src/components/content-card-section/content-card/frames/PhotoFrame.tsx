@@ -2,13 +2,13 @@ import { useLanguageContext } from '../../../../contexts';
 import { IBottonRightTag } from '../../../../interfaces';
 
 export interface IPhotoFrameProps {
-  image?: string;
-  inProgress: boolean;
+  image?: string
+  inProgress: boolean
   bottonRightTag?: {
-    name: IBottonRightTag,
+    name: IBottonRightTag
     value?: number
   }
-  backgroundColor: string,
+  backgroundColor: string
 }
 
 export const PhotoFrame: React.FC<IPhotoFrameProps> = ({ image, inProgress, bottonRightTag, backgroundColor }: IPhotoFrameProps) => {

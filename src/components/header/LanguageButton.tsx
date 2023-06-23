@@ -2,11 +2,11 @@ import { useEffect, useRef } from 'react';
 import { ILanguageOptions, useLanguageContext, useSearchContext } from '../../contexts';
 
 export interface ILanguageButtonProps {
-  isOpenLanguage: boolean;
-  setIsOpenLanguage: (arg: boolean) => void;
-  className: string;
-  setIsRenderLanguage?: (arg: boolean) => void;
-  hasText?: boolean;
+  isOpenLanguage: boolean
+  setIsOpenLanguage: (arg: boolean) => void
+  className: string
+  setIsRenderLanguage?: (arg: boolean) => void
+  hasText?: boolean
 }
 
 export const LanguageButton: React.FC<ILanguageButtonProps> = ({ isOpenLanguage, setIsOpenLanguage, className, hasText, setIsRenderLanguage }: ILanguageButtonProps) => {

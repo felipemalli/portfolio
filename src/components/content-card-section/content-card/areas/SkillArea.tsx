@@ -4,11 +4,11 @@ import { AnimatedDiv } from '../../../../utils';
 import { SkillCard } from '../cards/SkillCard';
 
 interface ISkillAreaProps {
-  type: 'top' | 'botton';
-  skills: string[];
-  setFilteredSkills: (value: string[]) => void,
-  setAllSkills: (value: string[]) => void,
-  filteredSkills: string[];
+  type: 'top' | 'botton'
+  skills: string[]
+  setFilteredSkills: (value: string[]) => void
+  setAllSkills: (value: string[]) => void
+  filteredSkills: string[]
 }
 
 export const SkillArea: React.FC<ISkillAreaProps> = ({ type, skills, setFilteredSkills, setAllSkills, filteredSkills }: ISkillAreaProps) => {

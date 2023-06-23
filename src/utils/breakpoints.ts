@@ -6,12 +6,12 @@ import tailwindConfig from '../../tailwind.config.js'; // this error is due to t
 const fullConfig = resolveConfig(tailwindConfig);
 
 interface IBreakpoints {
-  '3xl': string,
-  '2xl': string,
-  'xl': string,
-  'lg': string,
-  'md': string,
-  'sm': string,
+  '3xl': string
+  '2xl': string
+  'xl': string
+  'lg': string
+  'md': string
+  'sm': string
 }
 
 const breakpoints: IBreakpoints = fullConfig.theme.screens;

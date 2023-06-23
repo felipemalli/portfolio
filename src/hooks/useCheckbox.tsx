@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 export interface ICheckboxProps {
-  id: number;
-  value: string;
-  label: string;
-  isChecked: boolean;
+  id: number
+  value: string
+  label: string
+  isChecked: boolean
 }
 
 export function useCheckbox(initialState: ICheckboxProps[]) {

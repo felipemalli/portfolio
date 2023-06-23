@@ -6,10 +6,10 @@ import { Card } from '../cards/Card';
 
 interface IContentaArea {
   data: ICard[]
-  filteredData: ICard[] | [],
-  setFiltered: (arg: ICard[]) => void,
-  setAll: (arg: ICard[]) => void,
-  notFoundTranslation: string,
+  filteredData: ICard[] | []
+  setFiltered: (arg: ICard[]) => void
+  setAll: (arg: ICard[]) => void
+  notFoundTranslation: string
 }
 
 export const ContentArea: React.FC<IContentaArea> = ({data, filteredData, setFiltered, setAll, notFoundTranslation}: IContentaArea) => {

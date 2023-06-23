@@ -4,7 +4,7 @@ import { ContentCardSection } from '../components/content-card-section/content-c
 import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
-import { PrincipalCardSection } from '../components/principal-card-section/PrincipalCardSection';
+import { PrincipalCardSection } from '../components/main-card-section/PrincipalCardSection';
 import { useOnScreen } from '../hooks';
 import { AnimatedDiv } from '../utils';
 

@@ -3,9 +3,9 @@ import { ILinkName } from '../../../../interfaces';
 import { openUrl } from '../../../../utils';
 
 interface ILinkCardButtonProps {
-  enable: boolean,
-  name: ILinkName,
-  link: string,
+  enable: boolean
+  name: ILinkName
+  link: string
 }
 
 export const LinkCardButton: React.FC<ILinkCardButtonProps> = ({ enable, name, link }: ILinkCardButtonProps) => {

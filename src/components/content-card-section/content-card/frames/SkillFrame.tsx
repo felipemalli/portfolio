@@ -3,9 +3,9 @@ import { useLanguageContext, useSearchContext } from '../../../../contexts';
 import { ITechAreaNames } from '../../../../interfaces';
 
 export interface ISkillFrameProps {
-  techArea: ITechAreaNames;
-  inProgress?: boolean,
-  skills: string[];
+  techArea: ITechAreaNames
+  inProgress?: boolean
+  skills: string[]
 }
 
 type ISkillsByEight = string[][]

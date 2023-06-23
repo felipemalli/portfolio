@@ -4,9 +4,9 @@ import { IChildrenProps } from '../../../interfaces';
 import { moveScreenToCenterOfId } from '../../../utils';
 
 interface NavOptionNavigationProps extends IChildrenProps {
-  componentId: string;
-  areaNameNav?: IAreaName;
-  className?: string;
+  componentId: string
+  areaNameNav?: IAreaName
+  className?: string
 }
 
 export const NavOptionNavigation: React.FC<NavOptionNavigationProps> = ({ children, componentId, areaNameNav, className }: NavOptionNavigationProps) => {

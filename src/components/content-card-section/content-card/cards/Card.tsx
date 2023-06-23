@@ -10,11 +10,11 @@ const CARD_MARGIN_X = 'mx-[9px]';
 export const CARD_SIZE = +(CARD_WIDTH.replace(/[^0-9]/g, '')) + (2*(+(CARD_MARGIN_X.replace(/[^0-9]/g, ''))));
 
 export interface ICardProps {
-  card: ICard,
+  card: ICard
 }
 
 export interface IFrameState {
-  screen: 'photoFrame' | 'infoFrame' | 'skillFrame',
+  screen: 'photoFrame' | 'infoFrame' | 'skillFrame'
   techArea?: ITechAreaNames
 }
 

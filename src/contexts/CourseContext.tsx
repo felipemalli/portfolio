@@ -2,11 +2,11 @@ import { createContext, useCallback, useContext, useState } from 'react';
 import { ICard, IChildrenProps } from '../interfaces';
 
 interface ICourseContextData {
-  allCourses: ICard[];
-  setAllCourses: (allCourses: ICard[]) => void;
+  allCourses: ICard[]
+  setAllCourses: (allCourses: ICard[]) => void
 
   filteredCourses: ICard[] | []
-  setFilteredCourses: (filteredCourses: ICard[]) => void;
+  setFilteredCourses: (filteredCourses: ICard[]) => void
 }
 
 const CourseContext = createContext({} as ICourseContextData);
