@@ -7,7 +7,7 @@ import { IMainProject, ITextContent } from '../../interfaces/IMainCard';
 export const MainProjectSection: React.FC = () => {
   const { translations, language } = useLanguageContext();
   const [selectedProjectName] = useState<string>('Fit Home');
-  const [selectedThemeName, setSelectedThemeName] = useState<string>('Introduction');
+  const [selectedThemeName, setSelectedThemeName] = useState<string>('');
   const [selectedSubThemeName, setSelectedSubThemeName] = useState<string>('');
   const [contentPage, setContentPage] = useState<number>(0);
 
@@ -26,8 +26,12 @@ export const MainProjectSection: React.FC = () => {
   }, [translations, language]);
 
   const selectedProject = mainProjects.find((project) => project.name === selectedProjectName);
-  const selectedTheme = selectedProject?.theme.find((theme) => theme.name === selectedThemeName);
+  const selectedTheme = selectedProject?.theme.find((theme) => theme.name === selectedThemeName) || selectedProject?.theme[0];
   const selectedSubTheme = selectedTheme?.subtheme.find((subTheme) => subTheme.name === selectedSubThemeName) || selectedTheme?.subtheme[0];
+
+  useEffect(() => {
+    selectedTheme && setSelectedThemeName(selectedTheme?.name);
+  }, [selectedTheme]);
 
   useEffect(() => {
     selectedSubTheme && setSelectedSubThemeName(selectedSubTheme?.name);
@@ -66,9 +70,9 @@ export const MainProjectSection: React.FC = () => {
                 setSelectedThemeName(e.target.value);
               }}
             >
-              <option value="Introduction" className='md:text-2xl font-light bg-secondary-500 border-none'>Introdução</option>
-              <option value="Backend" className='md:text-2xl font-light bg-secondary-500 border-none'>Backend</option>
-              <option value="Frontend" className='md:text-2xl font-light bg-secondary-500'>Frontend</option>
+              {selectedProject?.theme.map((theme) => (
+                <option key={theme.name} value={theme.name} className='md:text-2xl font-light bg-secondary-500'>{theme.name}</option>
+              ))}
             </select>
             <div className='flex gap-6 text-lg font-light w-fit text-customBlue-700'>
               {selectedSubTheme?.name && selectedTheme && selectedTheme?.subtheme.map((subTheme) => (
@@ -82,8 +86,8 @@ export const MainProjectSection: React.FC = () => {
           </div>
           {selectedThemeName && (
             <div className='mt-10 text-customBlue-500 flex gap-10'>
-              <div className='w-full hidden 2xl:block'>
-                <img src={'/assets/projects/fithomeOriginal.webp'} alt='Card image' className='bg-customGray-400 rounded-3xl border-2 border-customGray-500 h-96 w-96'/> 
+              <div className='hidden 2xl:block'>
+                <img src={'/assets/projects/fithomeOriginal.webp'} alt='Card image' className='bg-customGray-400 rounded-3xl border-2 border-customGray-500 h-96 w-[26rem]'/> 
               </div>
               <div className='max-w-4xl md:text-[18px] 2xl:py-5'>
                 <p>
@@ -96,7 +100,7 @@ export const MainProjectSection: React.FC = () => {
         {selectedSubTheme?.content && selectedSubTheme?.content.length > 1 && (
           <div className='flex justify-center gap-10 mt-8'>
             {selectedSubTheme?.content.map((_, index) => (
-              <button key={index} className={`w-6 h-6 rounded-full ${index === contentPage ? 'bg-customGray-400' : 'bg-customGray-600'}`}
+              <button key={index} className={`w-6 h-6 rounded-full ${index === contentPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}
                 onClick={() => setContentPage(index)}
               />
             ))}

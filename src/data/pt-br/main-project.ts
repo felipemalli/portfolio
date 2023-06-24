@@ -41,21 +41,21 @@ export const ptBrMainProjects: IMainProject[] = [{
           ]
         },
         {
-          name: 'Testes',
-          contentPage: 0,
-          content: [
-            {
-              text: 'Testes text',
-              className: ''
-            }
-          ]
-        },
-        {
           name: 'Design Patterns',
           contentPage: 0,
           content: [
             {
               text: 'Design Patterns text',
+              className: ''
+            }
+          ]
+        },
+        {
+          name: 'Testes',
+          contentPage: 0,
+          content: [
+            {
+              text: 'Testes text',
               className: ''
             }
           ]
