@@ -29,6 +29,14 @@ export const ptBrMainProjects: IMainProject[] = [{
             {
               text: 'Architecture text',
               className: ''
+            },
+            {
+              text: 'Architecture page 2 text',
+              className: ''
+            },
+            {
+              text: 'Architecture page 3 text',
+              className: ''
             }
           ]
         },
