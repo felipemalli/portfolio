@@ -1,28 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useChangeAreaContext, useLanguageContext, useProjectContext, useSkillContext } from '../../../contexts';
 import { enProjects, ptBrProjects, topSkills } from '../../../data';
-import { ICard } from '../../../interfaces';
+import { ContentArea, SkillArea } from './areas';
 import { SliderFiveColumns } from './slider/SliderFiveColumns';
-import { ContentArea } from './areas/ContentArea';
-import { SkillArea } from './areas/SkillArea';
 import { CARD_SIZE } from './cards/Card';
 
 export const TopContentCard: React.FC = () => {
   const { areaName } = useChangeAreaContext();
-  const { setFilteredTopSkills, setAllTopSkills, filteredTopSkills } = useSkillContext();
-
   const { translations, language } = useLanguageContext();
-  const { filteredProjects, setFilteredProjects, setAllProjects } = useProjectContext();
 
-  const [projects, setProjects] = useState<ICard[]>([]);
+  const { setFilteredTopSkills, setAllTopSkills, filteredTopSkills } = useSkillContext();
+  const { filteredProjects, setFilteredProjects, setAllProjects, allProjects } = useProjectContext();
 
   const handleData = () => {
     if (language === 'pt-br') {
-      setProjects(ptBrProjects);
+      setAllProjects(ptBrProjects);
     } else {
-      setProjects(enProjects);
+      setAllProjects(enProjects);
     }
-    setFilteredProjects(projects);
+    setFilteredProjects(allProjects);
   };
 
   useEffect(() => {
@@ -35,7 +31,7 @@ export const TopContentCard: React.FC = () => {
         {areaName === 'knowledge' ? `${translations.content_card_top_title}` : 'BackEnd + DevOps'}
       </h2>
       <SliderFiveColumns CARD_SIZE={CARD_SIZE}>
-        <ContentArea data={projects} filteredData={filteredProjects} setFiltered={setFilteredProjects} setAll={setAllProjects} notFoundTranslation={translations.projects_not_found} />
+        <ContentArea data={allProjects} filteredData={filteredProjects} setFiltered={setFilteredProjects} notFoundTranslation={translations.projects_not_found} />
         <SkillArea type={'top'} skills={topSkills} setFilteredSkills={setFilteredTopSkills} setAllSkills={setAllTopSkills} filteredSkills={filteredTopSkills} />
       </SliderFiveColumns>
     </div>
