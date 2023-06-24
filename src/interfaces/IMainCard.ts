@@ -1,19 +1,23 @@
-interface ITextContent {
+export interface ITextContent {
   text: string
   className: string
 }
 
-interface IImageContent {
+export interface IImageContent {
   image: string
   subtitle: string
   className: string
 }
 
-export interface IMainCard2 {
-  theme: string
-  subtheme?: string
-  pagination: {
-    page: number
-    content: (ITextContent | IImageContent)[]
+export interface IMainProject {
+  name: string
+  description: string
+  theme: {
+    name: string
+    subtheme: {
+      name: string
+      contentPage: number
+      content: (ITextContent | IImageContent)[]
+    }[]
   }[]
 }
