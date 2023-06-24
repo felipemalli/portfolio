@@ -5,7 +5,7 @@ export interface ITextContent {
 
 export interface IImageContent {
   image: string
-  subtitle: string
+  subtitle?: string
   className: string
 }
 
@@ -16,8 +16,8 @@ export interface IMainProject {
     name: string
     subtheme: {
       name: string
-      contentPage: number
-      content: (ITextContent | IImageContent)[]
+      selectedPage: number
+      pages: (ITextContent | IImageContent)[][]
     }[]
   }[]
 }

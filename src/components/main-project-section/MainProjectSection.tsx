@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { useState } from 'react';
 import { useLanguageContext } from '../../contexts';
 import { ptBrMainProjects } from '../../data/pt-br/main-project';
-import { IMainProject, ITextContent } from '../../interfaces/IMainCard';
+import { IImageContent, IMainProject, ITextContent } from '../../interfaces/IMainCard';
 
 export const MainProjectSection: React.FC = () => {
   const { translations, language } = useLanguageContext();
   const [selectedProjectName] = useState<string>('Fit Home');
   const [selectedThemeName, setSelectedThemeName] = useState<string>('');
   const [selectedSubThemeName, setSelectedSubThemeName] = useState<string>('');
-  const [contentPage, setContentPage] = useState<number>(0);
+  const [selectedPage, setSelectedPage] = useState<number>(0);
 
   const [mainProjects, setMainProjects] = useState<IMainProject[]>([]);
 
@@ -35,21 +35,46 @@ export const MainProjectSection: React.FC = () => {
 
   useEffect(() => {
     selectedSubTheme && setSelectedSubThemeName(selectedSubTheme?.name);
-    selectedSubTheme && setContentPage(selectedSubTheme?.contentPage);
+    selectedSubTheme && setSelectedPage(selectedSubTheme?.selectedPage);
   }, [selectedSubTheme]);
   // const selectedContentPage = selectedSubTheme?.content.find(content => content. === subTheme);
   // console.log(selectedSubTheme);
 
-  const formatText = () => {
-    const firstContent = (selectedSubTheme?.content[contentPage] || selectedSubTheme?.content[0]) as ITextContent;
-    const firstText = firstContent.text;
-    const formattedText = firstText.split('\n').map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        <br />
-      </React.Fragment>
-    ));
-    return formattedText;
+  const renderContent = (): ReactNode => {
+    const actualPage = (selectedSubTheme?.pages[selectedPage] || selectedSubTheme?.pages[0]) || [];
+    return actualPage.map((content) => {
+      if ('text' in content) {
+        const textContent = content as ITextContent;
+        const { text, className } = textContent;
+        const formattedText = text.split('\n').map((line, index) => (
+          <p className={`max-w-4xl ${className}`} key={index}>
+            {line}
+            <br/>
+          </p>
+        ));
+        const formattedTextGroup = (
+          <div className='flex flex-col justify-center'>
+            {formattedText.map((fText) => fText)}
+          </div>
+        );
+        return formattedTextGroup;
+      }
+      if ('image' in content) {
+        const imageContent = content as IImageContent;
+        const { image, subtitle, className } = imageContent;
+        const formattedImage = (
+          <div className={`hidden 2xl:block ${className}`}>
+            <img src={image} className={'bg-customGray-400 rounded-3xl border-2 border-customGray-500 h-96'}/>
+            {subtitle && (
+              <p className='text-sm px-5 pt-3'>
+                {subtitle}
+              </p>
+            )}
+          </div>
+        );
+        return formattedImage;
+      }
+    });
   };
 
   return (
@@ -85,23 +110,18 @@ export const MainProjectSection: React.FC = () => {
             </div>
           </div>
           {selectedThemeName && (
-            <div className='mt-10 text-customBlue-500 flex gap-10'>
-              <div className='hidden 2xl:block'>
-                <img src={'/assets/projects/fithomeOriginal.webp'} alt='Card image' className='bg-customGray-400 rounded-3xl border-2 border-customGray-500 h-96 w-[26rem]'/> 
-              </div>
-              <div className='max-w-4xl md:text-[18px] 2xl:py-5'>
-                <p>
-                  {mainProjects.length && formatText()}
-                </p>
+            <div className='mt-6 text-customBlue-500 gap-10'>
+              <div className='md:text-[18px] 2xl:py-5 flex gap-10'>
+                {mainProjects.length && renderContent()}
               </div>
             </div>
           )}
         </div>
-        {selectedSubTheme?.content && selectedSubTheme?.content.length > 1 && (
-          <div className='flex justify-center gap-10 mt-8'>
-            {selectedSubTheme?.content.map((_, index) => (
-              <button key={index} className={`w-6 h-6 rounded-full ${index === contentPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}
-                onClick={() => setContentPage(index)}
+        {selectedSubTheme?.pages && selectedSubTheme?.pages.length > 1 && (
+          <div className='flex justify-center gap-10 mt-8 2xl:mt-28'>
+            {selectedSubTheme?.pages.map((_, index) => (
+              <button key={index} className={`w-6 h-6 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}
+                onClick={() => setSelectedPage(index)}
               />
             ))}
           </div>
