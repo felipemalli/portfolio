@@ -47,10 +47,13 @@ export const MainProjectSection: React.FC = () => {
         const textContent = content as ITextContent;
         const { text, className } = textContent;
         const formattedText = text.split('\n').map((line, index) => (
-          <p className={`max-w-4xl ${className}`} key={index}>
-            {line}
-            <br/>
-          </p>
+          <>
+            {line.length === 0 ? <br/> : (
+              <p className={`max-w-4xl ${className}`} key={index}>
+                {line}
+              </p>
+            )}
+          </>
         ));
         const formattedTextGroup = (
           <div className='flex flex-col justify-center'>
