@@ -1,6 +1,6 @@
 import { ReactNode, useEffect } from 'react';
 import { useState } from 'react';
-import { useLanguageContext } from '../../contexts';
+import { useLanguageContext, useMediaQueryContext } from '../../contexts';
 import { ptBrMainProjects } from '../../data/pt-br/main-project';
 import { IImageContent, IMainProject, ITextContent } from '../../interfaces/IMainCard';
 
@@ -100,50 +100,69 @@ export const MainProjectSection: React.FC = () => {
     );
   };
 
+  const { isXl } = useMediaQueryContext();
+
   return (
     <section>
-      <h2 className='flex text-center items-center justify-center bg-primary-500 text-secondary-700 select-none h-16 md:h-20 w-screen md:w-fit font-medium text-2xl md:text-3xl px-6 md:rounded-t-3xl border border-customBlue-300'>
+      <h2 className='flex text-center items-center justify-center bg-primary-500 text-secondary-700 select-none h-16 md:h-20 w-screen md:w-fit font-medium text-xl md:text-3xl px-6 md:rounded-t-3xl border border-customBlue-300'>
         PRINCIPAL PROJETO
       </h2>
-      <div className='border-t-4 md:border-0 md:border-l-4 border-primary-500 h-fit -mt-1 px-8 md:pl-12 pt-8 md:pt-14 pb-5'>
+      <div className='border-t-4 md:border-0 md:border-l-4 border-primary-500 h-fit -mt-1 px-4 md:pl-12 pt-8 md:pt-14'>
         <div className='flex gap-5 2xl:gap-14 flex-col 2xl:flex-row'>
-          <h3 className='text-customBlue-900 text-4xl md:text-5xl font-medium whitespace-nowrap self-start'>{selectedProject && selectedProject.name}</h3>
-          <p className='text-xl md:text-3xl text-customBlue-500 2xl:self-end'>{selectedProject && selectedProject.description}</p>
+          <h3 className='text-customBlue-900 text-3xl md:text-[44px] font-medium whitespace-nowrap self-start'>{selectedProject && selectedProject.name}</h3>
+          <p className='text-xl md:text-[26px] text-customBlue-500 2xl:self-end'>{selectedProject && selectedProject.description}</p>
         </div>
-        <div className='flex gap-10 mt-8 flex-col md:flex-row md:items-center'>
-          <select className="w-fit pr-1 py-2 md:text-2xl font-light text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none" 
+        <div className='flex gap-5 md:gap-10 mt-4 md:mt-8 flex-row'>
+          <select className="w-fit pr-2 py-2 text-lg md:text-2xl font-light text-customBlue-700 md:text-gray-600 bg-transparent border-0 border-b-2 border-gray-200 focus:outline-none" 
             defaultValue={'Introduction'}
             onChange={(e) => {
               setSelectedThemeName(e.target.value);
             }}
           >
             {selectedProject?.theme.map((theme) => (
-              <option key={theme.name} value={theme.name} className='md:text-2xl font-light bg-secondary-500'>{theme.name}</option>
+              <option key={theme.name} value={theme.name} className='text-lg md:text-2xl font-light bg-secondary-600 text-customBlue-700 md:text-gray-600'>{theme.name}</option>
             ))}
           </select>
-          <div className='flex gap-6 text-lg font-light w-fit text-customBlue-700'>
-            {selectedSubTheme?.name && selectedTheme && selectedTheme?.subtheme.map((subTheme) => (
-              <button key={subTheme.name} className={`${subTheme.name === selectedSubTheme.name && 'font-medium'} whitespace-nowrap uppercase`}
-                onClick={() => setSelectedSubThemeName(subTheme.name)}
-              >
-                {subTheme.name}
-              </button>
-            ))}
-          </div>
+          <label htmlFor="underline_select" className="sr-only">Underline select</label>
+          {
+            selectedTheme && selectedSubTheme?.name && (
+              isXl ? (
+                <div className='flex gap-6 text-lg font-light w-fit text-customBlue-700'>
+                  {selectedTheme?.subtheme.map((subTheme) => (
+                    <button key={subTheme.name} className={`${subTheme.name === selectedSubTheme.name && 'font-medium'} whitespace-nowrap uppercase`}
+                      onClick={() => setSelectedSubThemeName(subTheme.name)}
+                    >
+                      {subTheme.name}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <select className="bg-transparent border-b-2 py-2 pr-2 text-sm md:text-lg font-light w-fit text-customBlue-700 md:text-gray-600 uppercase whitespace-nowrap self-end" 
+                  onChange={(e) => {
+                    setSelectedSubThemeName(e.target.value);
+                  }}
+                >
+                  {selectedTheme?.subtheme.map((subTheme) => (
+                    <option key={subTheme.name} value={subTheme.name} className='font-light text-customBlue-700 md:text-gray-600'>{subTheme.name}</option>
+                  ))}
+                </select>
+              )
+            )
+          }
         </div>
         {selectedSubTheme?.pages && selectedSubTheme?.pages.length > 1 && (
-          <div className='flex justify-center gap-10 mt-1 mb-3 2xl:mt-2 2xl:-mb-1'>
+          <div className='flex justify-center gap-10 mt-4 xl:mt-2 -mb-4 md:-mb-6'>
             {selectedSubTheme?.pages.map((_, index) => (
               <button key={index} className={'w-10 h-10 rounded-full hover:bg-customGray-200 flex justify-center items-center'}
                 onClick={() => setSelectedPage(index)}>
-                <div className={`w-4 h-4 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}/>
+                <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}/>
               </button>
             ))}
           </div>
         )}
         {selectedThemeName && (
-          <div className='text-customBlue-500 gap-10'>
-            <div className='md:text-[18px] 2xl:py-5 flex gap-10'>
+          <div className='text-customBlue-500 gap-10 mt-2 md:mt-5'>
+            <div className='md:text-[18px] py-5 flex gap-10'>
               {mainProjects.length && renderContent()}
             </div>
           </div>
