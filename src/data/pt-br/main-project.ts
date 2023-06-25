@@ -69,7 +69,7 @@ export const ptBrMainProjects: IMainProject[] = [{
           pages: [
             [
               {
-                text: 'O Composite foi utilizado para a validação inicial dos parâmetros enviados à requisição. \n\n O Bridge foi utilizado para garantir o desacoplamento entre as camadas da arquitetura. Por exemplo, o data usecase DbAddAccount recebe um objeto do tipo AddAccountRepository, que pode ser qualquer banco de dados. OBS: No caso dessa aplicação, apenas tenho o AccountMongoRepository no infra (referente ao MongoDB). \n\n Existe um Adapter para cada desacoplar cada dependência do projeto. \n\n Um Decorator de logs foi aplicado sobre cada controller para registrar os erros 500 em uma coleção separada no banco de dados.',
+                text: 'O **Composite** foi utilizado para a validação inicial dos parâmetros enviados à requisição. \n\n O **Bridge** foi utilizado para garantir o desacoplamento entre as camadas da arquitetura. Por exemplo, o data usecase DbAddAccount recebe um objeto do tipo AddAccountRepository, que pode ser qualquer banco de dados. OBS: No caso dessa aplicação, apenas tenho o AccountMongoRepository no infra (referente ao MongoDB). \n\n Existe um **Adapter** para cada desacoplar cada dependência do projeto. \n\n Um **Decorator** de logs foi aplicado sobre cada controller para registrar os erros 500 em uma coleção separada no banco de dados.',
                 className: ''
               },
               {
@@ -80,11 +80,11 @@ export const ptBrMainProjects: IMainProject[] = [{
             ],
             [
               {
-                text: 'O Abstract Factory foi utilizado com o Adapter para lidar com as rotas e middlewares e o Factory para auxilixar a composição na camada principal e nos SUT (System Under Test) de cada classe do projeto. \n\n O objeto MongoHelper criado funciona como um Singleton para conexão e acesso às coleções do banco de dados (os módulos do JS/TS especificamente funcionam como Singleton, então basta exporta o objeto). \n\n O Strategy foi utilizado para a composição na camada principal de todas as classes do projeto, garantindo maior desacoplamento e flexibilidade para trocar cada variação de classe do projeto. \n\n Pode-se considerar que o Chain of Responsability foi utilizado nos middlewares do express (com o uso do next()), já que cada um é responsável por executar uma tarefa específica e passar o controle para o próximo na cadeia.',
+                text: 'O **Abstract Factory** foi utilizado com o Adapter para lidar com as rotas e middlewares e o **Factory** para auxilixar a composição na camada principal e nos SUT (System Under Test) de cada classe do projeto. \n\n O objeto MongoHelper criado funciona como um **Singleton** para conexão e acesso às coleções do banco de dados (os módulos do JS/TS especificamente funcionam como Singleton, então basta exporta o objeto). \n\n O **Strategy** foi utilizado para a composição na camada principal de todas as classes do projeto, garantindo maior desacoplamento e flexibilidade para trocar cada variação de classe do projeto. \n\n Pode-se considerar que o **Chain of Responsability** foi utilizado nos middlewares do express (com o uso do next()), já que cada um é responsável por executar uma tarefa específica e passar o controle para o próximo na cadeia.',
                 className: ''
               },
               {
-                image: '/assets/main-projects/fit-home/architectureComposite.png',
+                image: '/assets/main-projects/fit-home/architectureAdapter.png',
                 subtitle: 'Demonstração de como foi estruturado o composite no projeto, além de um dos adapters utilizado. Os pontilhados são interfaces.',
                 className: 'w-[60rem]'
               }

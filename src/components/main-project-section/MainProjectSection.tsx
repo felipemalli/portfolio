@@ -50,7 +50,11 @@ export const MainProjectSection: React.FC = () => {
           <>
             {line.length === 0 ? <br/> : (
               <p className={`max-w-4xl ${className}`} key={index}>
-                {line}
+                {line.split(/\*\*(.*?)\*\*/g).map((word, index) => (
+                  index % 2 === 1 ?
+                    <strong key={index}>{word}</strong>
+                    :
+                    word))}
               </p>
             )}
           </>
