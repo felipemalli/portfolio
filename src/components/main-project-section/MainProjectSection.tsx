@@ -132,16 +132,17 @@ export const MainProjectSection: React.FC = () => {
           </div>
         </div>
         {selectedSubTheme?.pages && selectedSubTheme?.pages.length > 1 && (
-          <div className='flex justify-center gap-10 my-6 2xl:mb-0'>
+          <div className='flex justify-center gap-10 mt-1 mb-3 2xl:mt-2 2xl:-mb-1'>
             {selectedSubTheme?.pages.map((_, index) => (
-              <button key={index} className={`w-4 h-4 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}
-                onClick={() => setSelectedPage(index)}
-              />
+              <button key={index} className={'w-10 h-10 rounded-full hover:bg-customGray-200 flex justify-center items-center'}
+                onClick={() => setSelectedPage(index)}>
+                <div className={`w-4 h-4 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}/>
+              </button>
             ))}
           </div>
         )}
         {selectedThemeName && (
-          <div className='mt-2 text-customBlue-500 gap-10'>
+          <div className='text-customBlue-500 gap-10'>
             <div className='md:text-[18px] 2xl:py-5 flex gap-10'>
               {mainProjects.length && renderContent()}
             </div>
