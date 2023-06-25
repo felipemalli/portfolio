@@ -85,8 +85,8 @@ export const ptBrMainProjects: IMainProject[] = [{
               },
               {
                 image: '/assets/main-projects/fit-home/architectureAdapter.png',
-                subtitle: 'Demonstração de como foi estruturado o composite no projeto, além de um dos adapters utilizado. Os pontilhados são interfaces.',
-                className: 'w-[60rem]'
+                subtitle: 'Uso do Adapter com o Abstract Factory no redirecionamento das rotas na prática. O auth é um middleware das rotas, que pode ser considerado como uma aplicação do Chain of Responsability.',
+                className: 'w-[35rem]'
               }
             ]
           ],
