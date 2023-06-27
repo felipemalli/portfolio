@@ -80,10 +80,10 @@ export const MainProjectSection: React.FC = () => {
     const imageContent = content as IImageContent;
     const { image, subtitle, className } = imageContent;
     const formattedImage = (
-      <div className={`hidden 2xl:flex flex-col justify-center ${className}`}>
-        <img src={image} className={'bg-customGray-400 rounded-3xl border-2 border-customGray-500'}/>
+      <div className={`${!subtitle && 'hidden'} flex flex-col align-middle justify-center `}>
+        <img src={image} className={`flex g-customGray-400 rounded-3xl border-2 border-customGray-500 ${className}`}/>
         {subtitle && (
-          <p className='text-sm px-5 pt-3'>
+          <p className={`block text-sm px-5 pt-3 ${className}`}>
             {subtitle}
           </p>
         )}
@@ -151,7 +151,7 @@ export const MainProjectSection: React.FC = () => {
           }
         </div>
         {selectedSubTheme?.pages && selectedSubTheme?.pages.length > 1 && (
-          <div className='flex justify-center gap-10 mt-4 xl:mt-2 -mb-4 md:-mb-6'>
+          <div className='flex lg:-ml-40 xl:-ml-96 2xl:ml-0 justify-center gap-10 mt-4 xl:mt-2 -mb-4 md:-mb-6'>
             {selectedSubTheme?.pages.map((_, index) => (
               <button key={index} className={'w-10 h-10 rounded-full hover:bg-customGray-200 flex justify-center items-center'}
                 onClick={() => setSelectedPage(index)}>
@@ -162,7 +162,7 @@ export const MainProjectSection: React.FC = () => {
         )}
         {selectedThemeName && (
           <div className='text-customBlue-500 gap-10 mt-2 md:mt-5'>
-            <div className='md:text-[18px] py-5 flex gap-10'>
+            <div className='md:text-[18px] py-5 flex flex-col 2xl:flex-row gap-10'>
               {mainProjects.length && renderContent()}
             </div>
           </div>
