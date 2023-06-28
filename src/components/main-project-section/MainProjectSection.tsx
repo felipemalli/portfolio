@@ -129,7 +129,7 @@ export const MainProjectSection: React.FC = () => {
               isXl ? (
                 <div className='flex gap-6 text-lg font-light w-fit text-customBlue-700'>
                   {selectedTheme?.subtheme.map((subTheme) => (
-                    <button key={subTheme.name} className={`${subTheme.name === selectedSubTheme.name && 'font-medium'} whitespace-nowrap uppercase`}
+                    <button key={subTheme.name} className={`${subTheme.name === selectedSubTheme.name && 'font-medium'} whitespace-nowrap uppercase hover:opacity-75`}
                       onClick={() => setSelectedSubThemeName(subTheme.name)}
                     >
                       {subTheme.name}
@@ -153,7 +153,7 @@ export const MainProjectSection: React.FC = () => {
         {selectedSubTheme?.pages && selectedSubTheme?.pages.length > 1 && (
           <div className='flex lg:-ml-40 xl:-ml-96 2xl:ml-0 justify-center gap-10 mt-4 xl:mt-2 -mb-4 md:-mb-6'>
             {selectedSubTheme?.pages.map((_, index) => (
-              <button key={index} className={'w-10 h-10 rounded-full hover:bg-customGray-200 flex justify-center items-center'}
+              <button key={index} className={'w-10 h-10 rounded-full hover:bg-customGray-200 flex justify-center items-center transition-all duration-200 '}
                 onClick={() => setSelectedPage(index)}>
                 <div className={`w-3 h-3 md:w-4 md:h-4 rounded-full ${index === selectedPage ? 'bg-customGray-300' : 'bg-customGray-600'}`}/>
               </button>

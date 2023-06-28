@@ -45,6 +45,8 @@ export const ptBrMainProjects: IMainProject[] = [{
                 subtitle: 'Estrutura da entidade Workout e Exercise na aplicação.',
                 className: 'sm:max-w-[34rem]'
               },
+
+
               {
                 text: 'A camada do centro dessa arquitetura é a **domain**, onde as entidades, conceitos e regras de negócio (com seus casos de uso) são representadas, bem como as interações e comportamentos entre eles. \n\n Nela, a maioria das decisões e lógica de negócio é implementada. Isso ajuda a manter a separação de responsabilidades e facilita a evolução e manutenção do sistema ao longo do tempo.',
                 className: '2xl:max-w-[20rem]'
@@ -57,7 +59,7 @@ export const ptBrMainProjects: IMainProject[] = [{
             ],
             [
               {
-                text: 'A camada **data** implementa as regras de negócio. Para que seja possível, segrega as responsabilidades em casos de uso específicos que podem ser implementados por dependências (como um banco de dados, por exemplo) na camada infra. \n\n A camada **infra** se conecta diretamente às dependências (frameworks, bibliotecas e bancos de dados). Dessa forma, consegue implementar os casos de uso da data e validation. \n\n A camada **presentation** utiliza as regras de negócio (protocolos do domínio, implementados pela data) e protocolos utilitários (nesse projeto, apenas implementados pela validation). Tem o papel de compor o resultado de cada rota e lidar com os erros por meio dos controladores e middlewares. \n\n A camada **validation** possui o papel de implementar um protocolo utilitário proposto pelo presentation à respeito de validações dos parâmetros passados pelo usuário. Em caso de necessidade, também propõe casos de uso a serem implementados por um framework na camada infra. ',
+                text: 'A camada **data** implementa as regras de negócio. Para que seja possível, segregar as responsabilidades em casos de uso específicos que podem ser implementados por dependências (como um banco de dados, por exemplo) na camada infra. \n\n A camada **infra** se conecta diretamente às dependências (frameworks, bibliotecas e bancos de dados). Dessa forma, consegue implementar os casos de uso da data e validation. \n\n A camada **presentation** utiliza as regras de negócio (protocolos do domínio, implementados pela data) e protocolos utilitários (nesse projeto, apenas implementados pela validation). Tem o papel de compor o resultado de cada rota e lidar com os erros por meio dos controladores e middlewares. \n\n A camada **validation** possui o papel de implementar um protocolo utilitário proposto pelo presentation à respeito de validações dos parâmetros passados pelo usuário. Em caso de necessidade, também propõe casos de uso a serem implementados por um framework na camada infra. ',
                 className: ''
               },
               {
@@ -69,7 +71,7 @@ export const ptBrMainProjects: IMainProject[] = [{
             [
               {
                 image: '/assets/main-projects/fit-home/architectureLayers.png',
-                subtitle: 'Demonstração da arquitetura do projeto na prática, através do SignUpController seguindo o caminho do caso de uso Authentication. A camada main está oculta para melhor visualização. Os pontilhados são protocolos (interfaces).',
+                subtitle: 'Demonstração da arquitetura do projeto na prática, através do SignUpController seguindo o caminho do caso de uso Authentication. A camada main está oculta para melhor visualização. Os pontilhados são protocolos (interfaces). Mais explicações nas páginas anteriores.',
                 className: 'xl:max-w-[70rem]'
               },
             ],
@@ -77,7 +79,7 @@ export const ptBrMainProjects: IMainProject[] = [{
               {
                 image: '/assets/main-projects/fit-home/architectureMainLayer.png',
                 subtitle: 'Demonstração da arquitetura da camada Main para o SignUpController e também como se dá sua interação com as demais camadas.',
-                className: 'md:max-w-[46rem]'
+                className: 'md:max-w-[48rem]'
               },
               {
                 text: 'Por fim, todas as classes são instânciadas e há a composição do projeto como um todo na camada **main**. \n\n Além disso, ela é responsável pelas configurações gerais, rotas, adaptar o express para se adequar à camada presentation e a documentação com o Swagger.',
