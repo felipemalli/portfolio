@@ -80,7 +80,7 @@ export const MainProjectSection: React.FC = () => {
     const imageContent = content as IImageContent;
     const { image, subtitle, className } = imageContent;
     const formattedImage = (
-      <div className={`${!subtitle && 'hidden'} flex flex-col align-middle justify-center `}>
+      <div className={`${!subtitle && 'hidden'} 2xl:flex flex-col align-middle justify-center `}>
         <img src={image} className={`flex g-customGray-400 rounded-3xl border-2 border-customGray-500 ${className}`}/>
         {subtitle && (
           <p className={`block text-sm px-5 pt-3 ${className}`}>
