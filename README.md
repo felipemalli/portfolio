@@ -19,39 +19,39 @@ The data of knowledge cards in this project follow this structure:
 type ILinkName = 'Certificate' | 'Code' | 'Browser' | 'API'
 type IBottonRightTag = 'Hours' | 'Browser'
 interface ICard {
-  name: string,
-  type: string,
-  creator: string,
-  description: string,
-  inProgress: boolean,
-  image?: string,
+  name: string
+  type: string
+  creator: string
+  description: string
+  inProgress: boolean
+  image?: string
   techAreas: {
     frontend?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-    backend?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-    devops?: {
-      inProgress?: boolean,
-      skills: string[],
-    },
-    other?: {
-      name?: string,
-      inProgress?: boolean,
-      skills: string[],
+      inProgress?: boolean
+      skills: string[]
     }
-  },
+    backend?: {
+      inProgress?: boolean
+      skills: string[]
+    }
+    devops?: {
+      inProgress?: boolean
+      skills: string[]
+    }
+    other?: {
+      name?: string
+      inProgress?: boolean
+      skills: string[]
+    }
+  }
   links: {
-    name: ILinkName,
-    link: string,
-  }[],
+    name: ILinkName
+    link: string
+  }[]
   bottonRightTag?: {
-    name: IBottonRightTag,
+    name: IBottonRightTag
     value?: number
-  },
+  }
 }
 ```
 

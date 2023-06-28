@@ -2,17 +2,17 @@ import { createContext, useCallback, useContext, useState } from 'react';
 import { IChildrenProps } from '../interfaces';
 
 interface ISkillContextData {
-  allBottonSkills: string[];
-  setAllBottonSkills: (allBottonSkills: string[]) => void;
+  allBottonSkills: string[]
+  setAllBottonSkills: (allBottonSkills: string[]) => void
 
   filteredBottonSkills: string[] | []
-  setFilteredBottonSkills: (filteredBottonSkills: string[]) => void;
+  setFilteredBottonSkills: (filteredBottonSkills: string[]) => void
 
-  allTopSkills: string[];
-  setAllTopSkills: (allBottonSkills: string[]) => void;
+  allTopSkills: string[]
+  setAllTopSkills: (allBottonSkills: string[]) => void
 
   filteredTopSkills: string[] | []
-  setFilteredTopSkills: (filteredTopSkills: string[]) => void;
+  setFilteredTopSkills: (filteredTopSkills: string[]) => void
 }
 
 const SkillContext = createContext({} as ISkillContextData);

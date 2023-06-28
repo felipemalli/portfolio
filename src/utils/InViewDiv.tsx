@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { IChildrenProps } from '../interfaces';
 
 interface IInViewProps extends IChildrenProps {
-  translation?: string;
-  duration?: string;
-  delay?: string;
+  translation?: string
+  duration?: string
+  delay?: string
 }
 
 export const InViewDiv: React.FC<IInViewProps> = ({ children, translation, duration = '0.9s', delay = '0s'}: IInViewProps) => {

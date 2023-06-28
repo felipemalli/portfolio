@@ -2,11 +2,11 @@ import { createContext, useCallback, useContext, useState } from 'react';
 import { ICard, IChildrenProps } from '../interfaces';
 
 interface IProjectContextData {
-  allProjects: ICard[];
-  setAllProjects: (allProjects: ICard[]) => void;
+  allProjects: ICard[]
+  setAllProjects: (allProjects: ICard[]) => void
 
   filteredProjects: ICard[] | []
-  setFilteredProjects: (filteredProjects: ICard[]) => void;
+  setFilteredProjects: (filteredProjects: ICard[]) => void
 }
 
 const ProjectContext = createContext({} as IProjectContextData);

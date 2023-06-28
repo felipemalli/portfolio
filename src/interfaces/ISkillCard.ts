@@ -1,4 +1,4 @@
 export interface ISkillCard {
-  type: 'top' | 'botton';
-  name: string;
+  type: 'top' | 'botton'
+  name: string
 }

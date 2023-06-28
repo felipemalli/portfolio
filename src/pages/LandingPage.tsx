@@ -1,9 +1,10 @@
 import { useRef, useState } from 'react';
 import { AboutSection } from '../components/about-section/AboutSection';
-import { ContentCardSection } from '../components/content-card-section/ContentCardSection';
+import { ContentCardSection } from '../components/content-card-section/content-card/ContentCardSection';
 import { Footer } from '../components/footer/Footer';
 import { Header } from '../components/header/Header';
 import { IntroductionSection } from '../components/introduction-section/IntroductionSection';
+import { MainProjectSection } from '../components/main-project-section/MainProjectSection';
 import { useOnScreen } from '../hooks';
 import { AnimatedDiv } from '../utils';
 
@@ -24,6 +25,9 @@ export const LandingPage: React.FC = () => {
               <IntroductionSection />
               <ContentCardSection />
             </AnimatedDiv>
+          </article>
+          <article className='w-fill md:mx-16 2xl:w-[89.938rem] 2xl:mx-auto mt-44'>
+            <MainProjectSection />
           </article>
           <div className='absolute bg-primary-300 mt-[15rem] w-screen h-[50rem] sm-[h-60rem] md:h-[59rem] 2xl:h-[47.5rem] -z-10'/>
           <article className='mx-auto 3xl:w-[114.938rem]'>

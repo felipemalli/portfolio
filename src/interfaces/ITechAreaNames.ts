@@ -1,1 +1,1 @@
-export type ITechAreaNames = 'frontend' | 'backend' | 'devops' | 'other';
+export type ITechAreaNames = 'frontend' | 'backend' | 'devops' | 'other'

@@ -4,12 +4,12 @@ import { IChildrenProps } from '../interfaces';
 import { breakpoints } from '../utils';
 
 type MediaQuery = {
-  isSm: boolean;
-  isMd: boolean;
-  isLg: boolean;
-  isXl: boolean;
-  is2xl: boolean;
-  is3xl: boolean;
+  isSm: boolean
+  isMd: boolean
+  isLg: boolean
+  isXl: boolean
+  is2xl: boolean
+  is3xl: boolean
 };
 
 const MediaQueryContext = createContext<MediaQuery>({
