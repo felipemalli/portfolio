@@ -35,7 +35,7 @@ export const ptBrMainProjects: IMainProject[] = [{
           pages: [
             [
               {
-                text: 'A arquitetura do projeto segue os princípios do **DDD** e **Clean Architecture**, com camadas bem definidas e desacopladas aplicando inversão de dependências.  \n\n O objetivo foi criar um software mais flexível, escalável, fácil de testar. Dessa forma permite-se que tudo (regras de negócio, dependências, lógicas...) seja modificado e evoluído com menor impacto em outras partes do sistema (e com confiança, devido aos testes). \n\n Para aplicar esse modelo, diversos design patterns e conceitos do **SOLID**, **DRY** (não repetir códigos), **YAGNI** (sem código desnecessário) e **KISS** (manter simplicidade) foram seguidos. \n\n Além do total desacoplamento, outro exemplo de flexibilidade e escalabilidade é a ausência de um model (entidade) genérico para o account. Realizei dessa forma para evitar propriedades opcionais desnecessárias com o crescimento do projeto. Logo, nesse caso, cada caso de uso possui seu próprio model.',
+                text: 'A arquitetura do projeto segue os princípios do **DDD** e **Clean Architecture**, com camadas bem definidas e desacopladas aplicando inversão de dependências.  \n\n O objetivo foi criar um software mais flexível, escalável, fácil de testar. Dessa forma permite-se que tudo (regras de negócio, dependências, lógicas...) seja modificado e evoluído com menor impacto em outras partes do sistema (e com confiança, devido aos testes). \n\n Para aplicar esse modelo, diversos design patterns e conceitos de **POO**, **SOLID**, **DRY** (não repetir códigos), **YAGNI** (sem código desnecessário) e **KISS** (manter simplicidade) foram seguidos. \n\n Além do total desacoplamento, outro exemplo de flexibilidade e escalabilidade é a ausência de um model (entidade) genérico para o account. Realizei dessa forma para evitar propriedades opcionais desnecessárias com o crescimento do projeto. Logo, nesse caso, cada caso de uso possui seu próprio model.',
                 className: ''
               }
             ],
@@ -95,7 +95,7 @@ export const ptBrMainProjects: IMainProject[] = [{
             [
   
               {
-                text: 'O **Composite** foi utilizado para a validação inicial dos parâmetros enviados à requisição. \n\n O **Bridge** foi utilizado para garantir o desacoplamento entre as camadas da arquitetura. Por exemplo, o data usecase DbAddAccount recebe um objeto do tipo AddAccountRepository, que pode ser qualquer banco de dados. OBS: No caso dessa aplicação, apenas tenho o AccountMongoRepository no infra (referente ao MongoDB). \n\n Existe um **Adapter** para cada desacoplar cada dependência do projeto. \n\n Um **Decorator** de logs foi aplicado sobre cada controller para registrar os erros 500 em uma coleção separada no banco de dados.',
+                text: 'O **Composite** foi utilizado para a validação inicial dos parâmetros enviados à requisição. \n\n O **Bridge** foi utilizado para garantir o desacoplamento entre as camadas da arquitetura. Por exemplo, o data usecase DbAddAccount recebe um objeto do tipo AddAccountRepository, que pode ser qualquer banco de dados. OBS: No caso dessa aplicação é o AccountMongoRepository referente ao MongoDB, no infra. \n\n Existe um **Adapter** para cada desacoplar cada dependência do projeto. \n\n Um **Decorator** de logs foi aplicado sobre cada controller para registrar os erros 500 em uma coleção separada no banco de dados.',
                 className: ''
               },
               {
@@ -129,7 +129,7 @@ export const ptBrMainProjects: IMainProject[] = [{
                 className: 'xl:max-w-[50rem]'
               },
               {
-                text: 'O projeto possui **100%** de **cobertura de testes** com testes unitários e de integração. Logo, para cada classe funcional existe um arquivo de teste unitário, que foi desenvolvido com a metodologia do **TDD** (teste primeiro, funcionalidade depois). \n\n  Os testes foram desenvolvidos com o **Jest** e a biblioteca **supertest** para os de integração. Eles foram divididos em arquivos com final .spec.ts para unitários e .test.ts de integração. Dessa forma, foi possível separar os comandos ”npm run test:unit” e ”npm run test:integration” facilmente.',
+                text: 'O projeto possui **100%** de **cobertura de testes** com testes unitários e de integração. Logo, para cada classe funcional existe um arquivo de teste unitário, que foi desenvolvido seguindo o **Desenvolvimento Orientado a Testes (TDD)**, onde testes foram criados antes das funcionalidades. \n\n  Os testes foram desenvolvidos com o **Jest** e a biblioteca **supertest** para os de integração. Eles foram divididos em arquivos com final .spec.ts para unitários e .test.ts de integração. Dessa forma, foi possível separar os comandos ”npm run test:unit” e ”npm run test:integration” facilmente.',
                 className: ''
               }
             ],
