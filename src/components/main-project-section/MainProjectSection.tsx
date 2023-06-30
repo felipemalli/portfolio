@@ -1,7 +1,7 @@
 import { ReactNode, useEffect } from 'react';
 import { useState } from 'react';
 import { useLanguageContext, useMediaQueryContext } from '../../contexts';
-import { ptBrMainProjects } from '../../data/pt-br/main-project';
+import { ptBrMainProjects, enMainProjects } from '../../data';
 import { IImageContent, IMainProject, ITextContent } from '../../interfaces/IMainCard';
 
 export const MainProjectSection: React.FC = () => {
@@ -17,7 +17,7 @@ export const MainProjectSection: React.FC = () => {
     if (language === 'pt-br') {
       setMainProjects(ptBrMainProjects);
     } else {
-      setMainProjects(ptBrMainProjects);
+      setMainProjects(enMainProjects);
     }
   };
   
@@ -37,8 +37,6 @@ export const MainProjectSection: React.FC = () => {
     selectedSubTheme && setSelectedSubThemeName(selectedSubTheme?.name);
     selectedSubTheme && setSelectedPage(selectedSubTheme?.selectedPage);
   }, [selectedSubTheme]);
-  // const selectedContentPage = selectedSubTheme?.content.find(content => content. === subTheme);
-  // console.log(selectedSubTheme);
 
   const handleBold = (sentence: string): (string | JSX.Element)[] => {
     return sentence.split(/\*\*(.*?)\*\*/g).map((word, index) => (
@@ -104,8 +102,8 @@ export const MainProjectSection: React.FC = () => {
 
   return (
     <section>
-      <h2 className='flex text-center items-center justify-center bg-primary-500 text-secondary-700 select-none h-16 md:h-20 w-screen md:w-fit font-medium text-xl md:text-3xl px-6 md:rounded-t-3xl border border-customBlue-300'>
-        PRINCIPAL PROJETO
+      <h2 className='flex text-center items-center justify-center bg-primary-500 text-secondary-700 select-none h-16 md:h-20 w-screen md:w-fit font-medium text-xl md:text-3xl px-6 md:rounded-t-3xl border border-customBlue-300 uppercase'>
+        {translations.main_project_title}
       </h2>
       <div className='border-t-4 md:border-0 md:border-l-4 border-primary-500 h-fit -mt-1 px-4 md:pl-12 pt-8 md:pt-14'>
         <div className='flex gap-5 2xl:gap-14 flex-col 2xl:flex-row'>

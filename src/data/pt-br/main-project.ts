@@ -5,7 +5,7 @@ export const ptBrMainProjects: IMainProject[] = [{
   description: 'Solução fullstack para organizar e cronometrar exercícios físicos.',
   theme: [
     {
-      name: 'Introduction',
+      name: 'Introdução',
       subtheme: [
         {
           name: '',
@@ -30,7 +30,7 @@ export const ptBrMainProjects: IMainProject[] = [{
       name: 'Backend',
       subtheme: [
         {
-          name: 'Architecture',
+          name: 'Arquitetura',
           selectedPage: 0,
           pages: [
             [
