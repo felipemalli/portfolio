@@ -61,7 +61,7 @@ export const ptBrProjects: ICard[] = [
       },
       {
         name: 'Browser',
-        link: 'https://felipemalli.com'
+        link: 'https://felipemalliagros.com'
       },
       {
         name: 'API',
