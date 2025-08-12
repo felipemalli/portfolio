@@ -29,7 +29,7 @@ export const FilterBox: React.FC<IFilterBoxProps> = ({ applyFilters, giveCheckbo
   };
 
   return (
-    <div className='absolute right-[2px]'>
+    <div className='absolute right-[2px] top-[2px]'>
       {filterBox && (
         <AnimatedDiv initialAnimation='opacity-0' finalAnimation='opacity-100' reference={filterBoxRef} className='absolute flex flex-col justify-between w-32 h-44 p-2.5 right-0 bottom-10 rounded-xl bg-customGray-400 border-4 border-customGray-600'>
           <div>
